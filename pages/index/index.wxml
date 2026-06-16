@@ -13,28 +13,28 @@
   </view>
 
   <view class="entry-list">
-    <button class="entry entry-recipe pressable" hover-class="pressing" bindtap="goRecipe">
+    <view class="entry entry-recipe pressable" hover-class="pressing" bindtap="goRecipe">
       <image class="entry-image" src="/assets/recipes/default-meal.png" mode="aspectFill" />
       <view class="entry-copy">
         <view class="entry-title">好好吃饭</view>
         <view class="entry-desc">安排宝宝每日三餐</view>
       </view>
       <view class="entry-arrow">→</view>
-    </button>
+    </view>
 
-    <button class="entry entry-supervise pressable" hover-class="pressing" bindtap="goSupervise">
+    <view class="entry entry-supervise pressable" hover-class="pressing" bindtap="goSupervise">
       <image class="entry-image phone-image" src="/assets/ui/home-phone-illustration.png" mode="aspectFit" />
       <view class="entry-copy">
         <view class="entry-title">乖乖吃饭</view>
         <view class="entry-desc">陪宝宝专心吃饭</view>
       </view>
       <view class="entry-arrow">→</view>
-    </button>
+    </view>
   </view>
 
   <view class="home-note">
     <text class="note-dot"></text>
-    <text class="baby-dot">宝</text>
+    <image class="baby-note-icon" src="/assets/generated/baby-note-icon.png" mode="aspectFit" />
     <text>适合 12-36 月龄宝宝三餐参考</text>
     <text class="note-dot"></text>
   </view>

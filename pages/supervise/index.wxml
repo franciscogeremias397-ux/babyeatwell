@@ -9,7 +9,8 @@
 
   <view wx:elif="{{stage === 'calling'}}" class="calling-screen">
     <image class="calling-avatar" src="/assets/ui/dogdan-logo-full.png" mode="aspectFit" />
-    <view class="calling-text">正在呼叫狗蛋叔叔...</view>
+    <view class="calling-text">正在呼叫狗蛋叔叔</view>
+    <view class="calling-time">{{callingTimerText}}</view>
   </view>
 
   <view wx:elif="{{stage === 'done'}}" class="done-screen">
@@ -20,40 +21,19 @@
 
   <view wx:else class="call-screen">
     <video
-      wx:if="{{videoA}}"
-      id="videoA"
-      class="call-video {{videoAClass}}"
-      src="{{videoA}}"
+      wx:if="{{currentVideo}}"
+      id="callVideo"
+      class="call-video active"
+      src="{{currentVideo}}"
       object-fit="cover"
-      autoplay="{{activeSlot === 'A'}}"
-      loop="{{loopVideo}}"
+      autoplay="{{true}}"
+      loop="{{isLooping}}"
       controls="{{false}}"
       show-center-play-btn="{{false}}"
       show-fullscreen-btn="{{false}}"
       enable-progress-gesture="{{false}}"
-      data-slot="A"
       bindcanplay="onVideoReady"
       bindloadedmetadata="onVideoReady"
-      bindprogress="onVideoReady"
-      binderror="onVideoError"
-      bindended="onVideoEnded"
-    />
-    <video
-      wx:if="{{videoB}}"
-      id="videoB"
-      class="call-video {{videoBClass}}"
-      src="{{videoB}}"
-      object-fit="cover"
-      autoplay="{{activeSlot === 'B'}}"
-      loop="{{loopVideo}}"
-      controls="{{false}}"
-      show-center-play-btn="{{false}}"
-      show-fullscreen-btn="{{false}}"
-      enable-progress-gesture="{{false}}"
-      data-slot="B"
-      bindcanplay="onVideoReady"
-      bindloadedmetadata="onVideoReady"
-      bindprogress="onVideoReady"
       binderror="onVideoError"
       bindended="onVideoEnded"
     />
@@ -61,23 +41,22 @@
     <view class="call-shade"></view>
 
     <view class="call-top">
-      <view>
-        <view class="callee">狗蛋叔叔</view>
-        <view class="call-status">{{callStatusText}}</view>
+      <view class="callee">狗蛋叔叔</view>
+      <view class="call-status">{{callStatusText}}</view>
+      <view class="call-meta">
+        <text class="online">在线</text>
+        <text class="timer">{{timerText}}</text>
       </view>
-      <text class="timer">{{timerText}}</text>
     </view>
 
-    <view class="online">在线</view>
-
-    <view wx:if="{{stage === 'connected'}}" class="control-bar">
-      <button class="control warn pressable" hover-class="pressing" bindtap="playWarning" disabled="{{isSwitching || stage === 'ending'}}">
+    <view wx:if="{{stage === 'connected' && videoMode !== 'opening'}}" class="control-bar">
+      <button class="control warn pressable" hover-class="pressing" bindtap="playWarning" disabled="{{isSwitching || videoMode !== 'idle'}}">
         <image class="control-image" src="/assets/ui/action-remind.png" mode="aspectFit" />
       </button>
-      <button class="control praise pressable" hover-class="pressing" bindtap="playPraise" disabled="{{isSwitching || stage === 'ending'}}">
+      <button class="control praise pressable" hover-class="pressing" bindtap="playPraise" disabled="{{isSwitching || videoMode !== 'idle'}}">
         <image class="control-image" src="/assets/ui/action-praise.png" mode="aspectFit" />
       </button>
-      <button class="control finish pressable" hover-class="pressing" bindtap="finishCall" disabled="{{stage === 'ending'}}">
+      <button class="control finish pressable" hover-class="pressing" bindtap="finishCall" disabled="{{isSwitching}}">
         <image class="control-image" src="/assets/ui/action-wave.png" mode="aspectFit" />
       </button>
     </view>

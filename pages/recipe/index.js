@@ -24,6 +24,16 @@ Page({
     });
   },
 
+  goBack() {
+    wx.navigateBack({
+      fail() {
+        wx.redirectTo({
+          url: '/pages/index/index'
+        });
+      }
+    });
+  },
+
   goProfile() {
     wx.navigateTo({
       url: '/pages/recipe-profile/index'

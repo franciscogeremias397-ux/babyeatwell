@@ -20,6 +20,6 @@ module.exports = {
     finish: candidates('/videos/finish/finish-001.mp4', '/videos/finish-001.mp4', '/finish-001.mp4')
   },
   audio: {
-    ringtone: candidates('/audio/opening-001.mp3', '/audio/ringtone.mp3', '/audio/太近.mp3', '/太近.mp3')
+    ringtone: '/assets/audio/ringtone.m4a'
   }
 };

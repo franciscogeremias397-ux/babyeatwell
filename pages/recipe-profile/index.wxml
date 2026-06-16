@@ -1,4 +1,6 @@
 <view class="page profile-page">
+  <view class="custom-back pressable" hover-class="pressing" bindtap="goBack">‹</view>
+
   <view class="profile-head">
     <view class="title">宝宝档案</view>
     <view class="subtitle">完善信息，生成更合适的食谱</view>

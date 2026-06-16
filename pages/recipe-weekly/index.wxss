@@ -1,33 +1,27 @@
 .weekly-page {
-  padding: 76rpx 30rpx calc(150rpx + env(safe-area-inset-bottom));
-  background: linear-gradient(180deg, #fff8ef 0%, #f9fbf8 56%, #eef8ff 100%);
+  padding: calc(104rpx + env(safe-area-inset-top)) 30rpx calc(150rpx + env(safe-area-inset-bottom));
+  background: #ffffff;
 }
 
 .weekly-hero {
   position: relative;
-  min-height: 245rpx;
+  min-height: 200rpx;
   animation: fadeRise 380ms ease both;
 }
 
 .hero-copy {
   position: relative;
   z-index: 2;
-  width: 62%;
-  padding-top: 10rpx;
-}
-
-.title {
-  margin-top: 0;
-  color: #173051;
-  font-size: 42rpx;
-  line-height: 1.18;
+  width: 66%;
+  padding-top: 18rpx;
 }
 
 .stage-line {
-  margin-top: 18rpx;
+  margin-top: 0;
   color: #5d87c2;
   font-size: 28rpx;
   font-weight: 900;
+  line-height: 1.35;
 }
 
 .usage-note {
@@ -56,9 +50,9 @@
 .hero-image {
   position: absolute;
   right: 0;
-  top: 0;
-  width: 210rpx;
-  height: 180rpx;
+  top: -6rpx;
+  width: 190rpx;
+  height: 162rpx;
   border-radius: 28rpx;
 }
 
@@ -67,7 +61,7 @@
   margin-top: 0;
   border: 3rpx solid #cfe7ff;
   border-radius: 28rpx;
-  background: rgba(255, 255, 255, 0.94);
+  background: #ffffff;
   box-shadow: 0 18rpx 46rpx rgba(75, 118, 148, 0.1);
   animation: fadeRise 420ms ease 80ms both;
 }
@@ -176,7 +170,7 @@
   grid-template-columns: 230rpx 1fr;
   gap: 18rpx;
   padding: 20rpx 0 30rpx;
-  background: linear-gradient(180deg, rgba(239, 248, 255, 0) 0%, rgba(239, 248, 255, 0.95) 38%, #eff8ff 100%);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.95) 38%, #ffffff 100%);
 }
 
 .regenerate,

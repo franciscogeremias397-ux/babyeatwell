@@ -1,5 +1,5 @@
 .detail-page {
-  padding: 76rpx 44rpx calc(156rpx + env(safe-area-inset-bottom));
+  padding: calc(104rpx + env(safe-area-inset-top)) 44rpx calc(156rpx + env(safe-area-inset-bottom));
   background: linear-gradient(180deg, #fff8ef 0%, #f8f6ef 54%, #eef8ff 100%);
 }
 
@@ -8,7 +8,7 @@
 }
 
 .title {
-  margin-top: 12rpx;
+  margin-top: 0;
   color: #173051;
   font-size: 48rpx;
 }
@@ -82,9 +82,14 @@
   display: flex;
   align-items: center;
   min-height: 48rpx;
-  padding-left: 18rpx;
-  border-left: 8rpx solid #75d48a;
-  border-radius: 4rpx;
+  gap: 14rpx;
+}
+
+.section-icon {
+  flex: 0 0 46rpx;
+  width: 46rpx;
+  height: 46rpx;
+  border-radius: 50%;
 }
 
 .chip-list {

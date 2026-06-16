@@ -20,6 +20,16 @@ Page({
     });
   },
 
+  goBack() {
+    wx.navigateBack({
+      fail() {
+        wx.redirectTo({
+          url: '/pages/index/index'
+        });
+      }
+    });
+  },
+
   downloadRecipe() {
     const item = this.data.recipe;
     if (!item) return;

@@ -50,6 +50,16 @@ Page({
     this.generate();
   },
 
+  goBack() {
+    wx.navigateBack({
+      fail() {
+        wx.redirectTo({
+          url: '/pages/index/index'
+        });
+      }
+    });
+  },
+
   generate() {
     const plan = recipe.generateWeeklyPlan();
     wx.setStorageSync('latestWeeklyPlan', plan);

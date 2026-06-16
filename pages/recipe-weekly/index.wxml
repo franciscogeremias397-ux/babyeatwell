@@ -1,8 +1,9 @@
 <view class="page weekly-page">
+  <view class="custom-back pressable" hover-class="pressing" bindtap="goBack">‹</view>
+
   <view class="weekly-hero">
     <view class="hero-copy">
-      <view class="title">{{profile.nickname}}的一周食谱</view>
-      <view class="stage-line">{{ageMonths}} 月龄 · {{stageName}}</view>
+      <view class="stage-line">{{profile.nickname}} · {{ageMonths}} 月龄 · {{stageName}}</view>
       <view class="usage-note">食材用量为家庭参考量 <text class="info-dot">i</text></view>
     </view>
     <image class="hero-image" src="/assets/recipes/default-meal.png" mode="aspectFill" />

@@ -1,5 +1,5 @@
 .profile-page {
-  padding: 86rpx 44rpx calc(156rpx + env(safe-area-inset-bottom));
+  padding: calc(104rpx + env(safe-area-inset-top)) 44rpx calc(156rpx + env(safe-area-inset-bottom));
   background: linear-gradient(180deg, #ffffff 0%, #f5fbff 72%, #eef7ff 100%);
 }
 

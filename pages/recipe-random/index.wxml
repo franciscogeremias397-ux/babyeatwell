@@ -1,11 +1,18 @@
 <view class="page random-page">
-  <view class="random-head">
-    <text class="eyebrow">随机一餐</text>
-    <view class="title">今天抽到这一餐</view>
-    <view class="subtitle">{{profile.nickname}} · {{ageMonths}} 月龄</view>
-  </view>
+  <view class="custom-back pressable" hover-class="pressing" bindtap="goBack">‹</view>
 
   <view wx:if="{{warning}}" class="empty-state">{{warning}}</view>
+
+  <view wx:elif="{{isDrawing}}" class="draw-card">
+    <view class="draw-orbit">
+      <view class="draw-spark draw-spark-a"></view>
+      <view class="draw-spark draw-spark-b"></view>
+      <view class="draw-spark draw-spark-c"></view>
+      <image class="draw-image" src="/assets/ui/random-meal.png" mode="aspectFit" />
+    </view>
+    <view class="draw-title">正在抽取</view>
+    <view class="draw-name">{{rollingName}}</view>
+  </view>
 
   <block wx:elif="{{recipe}}">
     <view class="result-card">
@@ -17,6 +24,7 @@
 
     <view class="info-section">
       <view class="section-heading">
+        <image class="section-icon" src="/assets/generated/icon-ingredients.png" mode="aspectFit" />
         <view class="section-title">食材用量</view>
       </view>
       <view class="chip-list">
@@ -26,6 +34,7 @@
 
     <view class="info-section">
       <view class="section-heading">
+        <image class="section-icon" src="/assets/generated/icon-nutrition.png" mode="aspectFit" />
         <view class="section-title">营养亮点</view>
       </view>
       <view wx:for="{{recipe.nutritionHighlights}}" wx:key="*this" class="paragraph">{{item}}</view>
@@ -33,13 +42,14 @@
 
     <view class="info-section">
       <view class="section-heading">
+        <image class="section-icon" src="/assets/generated/icon-caution.png" mode="aspectFit" />
         <view class="section-title">注意事项</view>
       </view>
       <view wx:for="{{recipe.cautions}}" wx:key="*this" class="paragraph">{{item}}</view>
     </view>
 
     <view class="random-actions bottom-safe">
-      <button class="secondary-button change-button" hover-class="pressing" bindtap="draw">换一餐</button>
+      <button class="secondary-button change-button" hover-class="pressing" bindtap="draw" disabled="{{isDrawing}}">换一餐</button>
       <button class="primary-button download-button" hover-class="pressing" bindtap="downloadRecipe">下载食谱</button>
     </view>
   </block>

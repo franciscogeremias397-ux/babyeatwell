@@ -1,76 +1,68 @@
 const assets = require('./assets');
 
-function first(candidates) {
-  return Array.isArray(candidates) ? candidates[0] : candidates;
-}
-
-function getSlotState(slot) {
-  return {
-    activeSlot: slot,
-    videoAClass: slot === 'A' ? 'active' : '',
-    videoBClass: slot === 'B' ? 'active' : ''
-  };
+function toList(candidates) {
+  if (!Array.isArray(candidates)) return candidates ? [candidates] : [];
+  return candidates.filter(Boolean);
 }
 
 Page({
   data: {
     stage: 'home',
     timerText: '00:00',
-    videoA: '',
-    videoB: '',
-    activeSlot: 'A',
-    videoAClass: 'active',
-    videoBClass: '',
-    loopVideo: true,
+    callingTimerText: '00:00',
+    currentVideo: '',
+    isLooping: false,
     isSwitching: false,
-    callStatusText: '正在呼叫...'
+    callStatusText: '通话中',
+    videoMode: 'idle'
   },
 
   onUnload() {
-    this.stopTimer();
-    this.stopRingtone();
-    this.clearFinishTimer();
-    this.clearSwitchGuardTimer();
+    this.clearAllRuntime();
   },
 
   startCall() {
-    this.clearSwitchGuardTimer();
-    this.pendingVideo = null;
+    this.clearAllRuntime();
     this.setData({
       stage: 'calling',
       timerText: '00:00',
-      loopVideo: true,
-      callStatusText: '正在呼叫...'
+      callingTimerText: '00:00',
+      currentVideo: '',
+      isLooping: false,
+      isSwitching: false,
+      callStatusText: '正在呼叫',
+      videoMode: 'calling'
     });
     this.playRingtone();
+    this.startCallingTimer();
     this.connectTimer = setTimeout(() => {
       this.stopRingtone();
+      this.stopCallingTimer();
       this.startTimer();
       this.setData({
         stage: 'connected',
-        callStatusText: '通话中'
+        callStatusText: '通话中',
+        timerText: '00:00'
       }, () => {
-        this.switchVideo(assets.videos.idle, { immediate: true });
+        this.playVideo(assets.videos.opening, {
+          mode: 'opening',
+          loop: false
+        });
       });
-    }, 1800);
+    }, 4200);
   },
 
   reset() {
-    this.stopTimer();
-    this.clearFinishTimer();
-    this.clearSwitchGuardTimer();
-    this.pendingVideo = null;
+    this.clearAllRuntime();
     this.setData({
       stage: 'home',
       timerText: '00:00',
-      videoA: '',
-      videoB: '',
-      activeSlot: 'A',
-      videoAClass: 'active',
-      videoBClass: '',
-      loopVideo: true,
+      callingTimerText: '00:00',
+      currentVideo: '',
+      isLooping: false,
       isSwitching: false,
-      callStatusText: '正在呼叫...'
+      callStatusText: '通话中',
+      videoMode: 'idle'
     });
   },
 
@@ -85,29 +77,35 @@ Page({
   },
 
   playWarning() {
+    if (this.data.stage !== 'connected' || this.data.videoMode !== 'idle') return;
     const group = this.randomItem(assets.videos.warning);
-    this.switchVideo(group);
+    this.playVideo(group, {
+      mode: 'action',
+      loop: false
+    });
   },
 
   playPraise() {
+    if (this.data.stage !== 'connected' || this.data.videoMode !== 'idle') return;
     const group = this.randomItem(assets.videos.praise);
-    this.switchVideo(group);
+    this.playVideo(group, {
+      mode: 'action',
+      loop: false
+    });
   },
 
   finishCall() {
+    if (this.data.stage === 'ending') return;
     this.stopRingtone();
-    this.stopTimer();
     this.setData({
       stage: 'ending',
-      loopVideo: false,
-      callStatusText: '正在结束...'
+      isLooping: false,
+      callStatusText: '正在结束'
     });
-    this.switchVideo(assets.videos.finish);
-    this.finishTimer = setTimeout(() => {
-      this.setData({
-        stage: 'done'
-      });
-    }, 3200);
+    this.playVideo(assets.videos.finish, {
+      mode: 'finish',
+      loop: false
+    });
   },
 
   randomItem(list) {
@@ -115,110 +113,126 @@ Page({
     return list[Math.floor(Math.random() * list.length)];
   },
 
-  switchVideo(candidates, options = {}) {
-    const list = Array.isArray(candidates) ? candidates : [candidates];
+  playVideo(candidates, options = {}) {
+    const list = toList(candidates);
     if (!list.length) return;
 
-    const nextSlot = this.data.activeSlot === 'A' ? 'B' : 'A';
-    this.pendingVideo = {
-      slot: options.immediate ? this.data.activeSlot : nextSlot,
-      candidates: list,
-      index: 0,
-      immediate: !!options.immediate
-    };
-
-    const slot = this.pendingVideo.slot;
+    this.videoCandidates = list;
+    this.videoCandidateIndex = 0;
+    this.clearVideoReadyGuard();
     this.setData({
-      isSwitching: !options.immediate,
-      [slot === 'A' ? 'videoA' : 'videoB']: first(list)
+      currentVideo: list[0],
+      videoMode: options.mode || 'action',
+      isLooping: !!options.loop,
+      isSwitching: true
+    }, () => {
+      this.scheduleVideoReadyGuard();
+      this.playCurrentVideo();
+    });
+  },
+
+  playIdle() {
+    this.playVideo(assets.videos.idle, {
+      mode: 'idle',
+      loop: true
+    });
+  },
+
+  onVideoReady() {
+    if (!this.data.isSwitching) return;
+    this.clearVideoReadyGuard();
+    this.setData({
+      isSwitching: false
+    }, () => {
+      this.playCurrentVideo();
+    });
+  },
+
+  onVideoError() {
+    const list = this.videoCandidates || [];
+    const nextIndex = (this.videoCandidateIndex || 0) + 1;
+    if (nextIndex < list.length) {
+      this.videoCandidateIndex = nextIndex;
+      this.clearVideoReadyGuard();
+      this.setData({
+        currentVideo: list[nextIndex],
+        isSwitching: true
+      }, () => {
+        this.scheduleVideoReadyGuard();
+        this.playCurrentVideo();
+      });
+      return;
+    }
+
+    const mode = this.data.videoMode;
+    this.clearVideoReadyGuard();
+    this.setData({
+      isSwitching: false
     });
 
-    if (options.immediate) {
-      this.setData({
-        ...getSlotState(slot),
-        isSwitching: false
-      });
-      this.playSlot(slot);
-    } else {
-      this.scheduleSwitchGuard(slot);
+    if (mode === 'finish') {
+      this.finishToDone();
+      return;
     }
-  },
 
-  onVideoReady(event) {
-    const slot = event.currentTarget.dataset.slot;
-    this.completeVideoSwitch(slot);
-  },
+    if (mode === 'opening' || mode === 'action') {
+      this.playIdle();
+      return;
+    }
 
-  onVideoError(event) {
-    const slot = event.currentTarget.dataset.slot;
-    if (!this.pendingVideo || this.pendingVideo.slot !== slot) return;
-
-    const nextIndex = this.pendingVideo.index + 1;
-    if (nextIndex >= this.pendingVideo.candidates.length) {
-      this.clearSwitchGuardTimer();
-      this.pendingVideo = null;
-      this.setData({
-        isSwitching: false
-      });
+    if (mode === 'idle') {
       wx.showToast({
         title: '视频加载失败',
         icon: 'none'
       });
-      return;
     }
-
-    this.pendingVideo.index = nextIndex;
-    this.setData({
-      [slot === 'A' ? 'videoA' : 'videoB']: this.pendingVideo.candidates[nextIndex]
-    });
-    this.scheduleSwitchGuard(slot);
-  },
-
-  completeVideoSwitch(slot) {
-    if (!this.pendingVideo || this.pendingVideo.slot !== slot) return;
-
-    this.clearSwitchGuardTimer();
-    this.setData({
-      ...getSlotState(slot),
-      isSwitching: false
-    });
-    this.playSlot(slot);
-    this.pendingVideo = null;
-  },
-
-  scheduleSwitchGuard(slot) {
-    this.clearSwitchGuardTimer();
-    this.switchGuardTimer = setTimeout(() => {
-      this.completeVideoSwitch(slot);
-    }, 1200);
   },
 
   onVideoEnded() {
-    if (this.data.stage === 'ending') {
-      this.clearFinishTimer();
-      this.setData({
-        stage: 'done'
-      });
+    const mode = this.data.videoMode;
+    if (mode === 'finish') {
+      this.finishToDone();
       return;
     }
-    if (this.data.stage === 'connected') {
-      this.switchVideo(assets.videos.idle);
+    if (mode === 'opening' || mode === 'action') {
+      this.playIdle();
     }
   },
 
-  playSlot(slot) {
-    const id = slot === 'A' ? 'videoA' : 'videoB';
-    const context = wx.createVideoContext(id, this);
+  playCurrentVideo() {
+    if (!this.data.currentVideo) return;
+    const context = wx.createVideoContext('callVideo', this);
     context.play();
+  },
+
+  stopCurrentVideo() {
+    const context = wx.createVideoContext('callVideo', this);
+    context.stop();
   },
 
   playRingtone() {
     this.stopRingtone();
-    const audio = wx.createInnerAudioContext();
-    audio.src = first(assets.audio.ringtone);
-    audio.loop = true;
-    audio.play();
-    this.ringtone = audio;
+    const list = toList(assets.audio.ringtone);
+    if (!list.length) return;
+
+    const playAt = (index) => {
+      const audio = wx.createInnerAudioContext();
+      audio.src = list[index];
+      audio.loop = true;
+      audio.onError(() => {
+        audio.destroy();
+        if (this.ringtone === audio) {
+          this.ringtone = null;
+        }
+        if (index + 1 < list.length && this.data.stage === 'calling') {
+          playAt(index + 1);
+        }
+      });
+      audio.play();
+      this.ringtone = audio;
+    };
+
+    playAt(0);
   },
 
   stopRingtone() {
@@ -228,17 +242,37 @@ Page({
     this.ringtone = null;
   },
 
+  startCallingTimer() {
+    this.stopCallingTimer();
+    this.callingStartedAt = Date.now();
+    this.callingTimer = setInterval(() => {
+      this.setData({
+        callingTimerText: this.formatDuration(Date.now() - this.callingStartedAt)
+      });
+    }, 500);
+  },
+
+  stopCallingTimer() {
+    if (!this.callingTimer) return;
+    clearInterval(this.callingTimer);
+    this.callingTimer = null;
+  },
+
   startTimer() {
     this.stopTimer();
     this.startedAt = Date.now();
     this.timer = setInterval(() => {
-      const seconds = Math.floor((Date.now() - this.startedAt) / 1000);
-      const minuteText = String(Math.floor(seconds / 60)).padStart(2, '0');
-      const secondText = String(seconds % 60).padStart(2, '0');
       this.setData({
-        timerText: `${minuteText}:${secondText}`
+        timerText: this.formatDuration(Date.now() - this.startedAt)
       });
     }, 500);
+  },
+
+  formatDuration(duration) {
+    const seconds = Math.floor(duration / 1000);
+    const minuteText = String(Math.floor(seconds / 60)).padStart(2, '0');
+    const secondText = String(seconds % 60).padStart(2, '0');
+    return `${minuteText}:${secondText}`;
   },
 
   stopTimer() {
@@ -247,20 +281,46 @@ Page({
     this.timer = null;
   },
 
+  finishToDone() {
+    this.stopTimer();
+    this.clearVideoReadyGuard();
+    this.setData({
+      stage: 'done',
+      currentVideo: '',
+      isLooping: false,
+      isSwitching: false,
+      videoMode: 'idle'
+    });
+  },
+
+  scheduleVideoReadyGuard() {
+    this.clearVideoReadyGuard();
+    this.videoReadyGuard = setTimeout(() => {
+      this.onVideoReady();
+    }, 1200);
+  },
+
+  clearVideoReadyGuard() {
+    if (!this.videoReadyGuard) return;
+    clearTimeout(this.videoReadyGuard);
+    this.videoReadyGuard = null;
+  },
+
+  clearAllRuntime() {
+    this.stopTimer();
+    this.stopCallingTimer();
+    this.stopRingtone();
+    this.stopCurrentVideo();
+    this.clearFinishTimer();
+    this.clearVideoReadyGuard();
+    this.videoCandidates = [];
+    this.videoCandidateIndex = 0;
+  },
+
   clearFinishTimer() {
-    if (this.finishTimer) {
-      clearTimeout(this.finishTimer);
-      this.finishTimer = null;
-    }
     if (this.connectTimer) {
       clearTimeout(this.connectTimer);
       this.connectTimer = null;
     }
-  },
-
-  clearSwitchGuardTimer() {
-    if (!this.switchGuardTimer) return;
-    clearTimeout(this.switchGuardTimer);
-    this.switchGuardTimer = null;
   }
 });

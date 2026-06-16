@@ -1,28 +1,84 @@
 .random-page {
-  padding: 76rpx 44rpx calc(156rpx + env(safe-area-inset-bottom));
+  padding: calc(112rpx + env(safe-area-inset-top)) 44rpx calc(156rpx + env(safe-area-inset-bottom));
   background: linear-gradient(180deg, #fff8ef 0%, #f8f6ef 54%, #eef8ff 100%);
 }
 
-.random-head {
+.draw-card {
+  position: relative;
+  overflow: hidden;
+  margin-top: 0;
+  padding: 56rpx 30rpx 62rpx;
+  text-align: center;
+  border-radius: 42rpx;
+  background: rgba(255, 255, 255, 0.96);
+  box-shadow: 0 20rpx 52rpx rgba(96, 86, 70, 0.1);
   animation: fadeRise 360ms ease both;
 }
 
-.title {
-  margin-top: 12rpx;
-  color: #173051;
-  font-size: 50rpx;
+.draw-orbit {
+  position: relative;
+  width: 320rpx;
+  height: 320rpx;
+  margin: 0 auto;
+  border-radius: 50%;
+  background: radial-gradient(circle, #f4fff1 0%, #fff7e8 72%);
+  animation: drawPulse 920ms ease-in-out infinite;
 }
 
-.subtitle {
-  margin-top: 14rpx;
-  color: #7a978c;
-  font-size: 30rpx;
-  font-weight: 800;
+.draw-image {
+  position: absolute;
+  top: 34rpx;
+  left: 34rpx;
+  width: 252rpx;
+  height: 252rpx;
+  animation: drawWobble 420ms ease-in-out infinite;
+}
+
+.draw-spark {
+  position: absolute;
+  width: 18rpx;
+  height: 18rpx;
+  border-radius: 50%;
+  background: #ffbe4f;
+  box-shadow: 0 0 0 8rpx rgba(255, 190, 79, 0.14);
+}
+
+.draw-spark-a {
+  top: 38rpx;
+  right: 52rpx;
+}
+
+.draw-spark-b {
+  bottom: 56rpx;
+  left: 44rpx;
+  background: #69b6ff;
+}
+
+.draw-spark-c {
+  right: 34rpx;
+  bottom: 76rpx;
+  background: #ff91a3;
+}
+
+.draw-title {
+  margin-top: 36rpx;
+  color: #58b784;
+  font-size: 28rpx;
+  font-weight: 900;
+}
+
+.draw-name {
+  margin-top: 16rpx;
+  color: #173051;
+  font-size: 42rpx;
+  font-weight: 900;
+  line-height: 1.2;
+  animation: drawName 240ms ease-in-out infinite;
 }
 
 .result-card {
   position: relative;
-  margin-top: 38rpx;
+  margin-top: 0;
   padding: 34rpx 30rpx 38rpx;
   text-align: center;
   border-radius: 42rpx;
@@ -90,9 +146,14 @@
   display: flex;
   align-items: center;
   min-height: 48rpx;
-  padding-left: 18rpx;
-  border-left: 8rpx solid #75d48a;
-  border-radius: 4rpx;
+  gap: 14rpx;
+}
+
+.section-icon {
+  flex: 0 0 46rpx;
+  width: 46rpx;
+  height: 46rpx;
+  border-radius: 50%;
 }
 
 .chip-list {
@@ -140,4 +201,34 @@
   min-height: 88rpx;
   font-size: 30rpx;
   font-weight: 900;
+}
+
+@keyframes drawPulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.035);
+  }
+}
+
+@keyframes drawWobble {
+  0%,
+  100% {
+    transform: rotate(-2deg) scale(1);
+  }
+  50% {
+    transform: rotate(3deg) scale(1.035);
+  }
+}
+
+@keyframes drawName {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-4rpx);
+  }
 }

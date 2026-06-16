@@ -1,23 +1,16 @@
 .recipe-home {
   overflow: hidden;
-  padding-top: 92rpx;
+  padding-top: calc(112rpx + env(safe-area-inset-top));
   background: linear-gradient(180deg, #ffffff 0%, #f5fbff 72%, #eef7ff 100%);
-}
-
-.title-img {
-  display: block;
-  width: 430rpx;
-  height: 128rpx;
-  animation: fadeRise 360ms ease both;
 }
 
 .hero {
   position: relative;
   display: flex;
   align-items: center;
-  min-height: 410rpx;
-  margin-top: 34rpx;
-  animation: fadeRise 420ms ease 40ms both;
+  min-height: 338rpx;
+  margin-top: 0;
+  animation: fadeRise 420ms ease both;
 }
 
 .hero-copy {
@@ -27,7 +20,7 @@
 }
 
 .title {
-  margin-top: 22rpx;
+  margin-top: 8rpx;
   color: #1d2b34;
   font-size: 66rpx;
   letter-spacing: 0;
@@ -40,11 +33,11 @@
 
 .hero-image {
   position: absolute;
-  right: -34rpx;
-  top: 6rpx;
-  width: 395rpx;
-  height: 395rpx;
-  border-radius: 42rpx;
+  right: -50rpx;
+  top: -6rpx;
+  width: 392rpx;
+  height: 392rpx;
+  border-radius: 38rpx;
   animation: softFloat 4s ease-in-out infinite;
 }
 
@@ -53,7 +46,7 @@
   align-items: center;
   gap: 22rpx;
   min-height: 112rpx;
-  margin-top: 6rpx;
+  margin-top: 2rpx;
   padding: 14rpx 28rpx;
   text-align: left;
   border-radius: 58rpx;
@@ -63,17 +56,11 @@
 }
 
 .avatar {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   flex: 0 0 72rpx;
   width: 72rpx;
   height: 72rpx;
-  color: #1f2d3c;
-  font-size: 34rpx;
-  font-weight: 900;
-  border-radius: 22rpx;
-  background: #fff6e8;
+  border-radius: 50%;
+  background: #ffffff;
   box-shadow: inset 0 0 0 3rpx #ffffff;
 }
 
@@ -110,9 +97,12 @@
 }
 
 .actions {
-  display: grid;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  width: 100%;
   gap: 34rpx;
-  margin-top: 50rpx;
+  margin-top: 38rpx;
 }
 
 .action-card {
@@ -120,6 +110,9 @@
   overflow: hidden;
   display: flex;
   align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  max-width: none;
   min-height: 324rpx;
   padding: 24rpx 28rpx;
   text-align: left;
@@ -146,9 +139,9 @@
 }
 
 .action-image {
-  flex: 0 0 315rpx;
-  width: 315rpx;
-  height: 270rpx;
+  flex: 0 0 230rpx;
+  width: 230rpx;
+  height: 230rpx;
   border-radius: 34rpx;
   background: #ffffff;
 }
@@ -161,9 +154,10 @@
 
 .action-title {
   color: #3f8ffc;
-  font-size: 50rpx;
+  font-size: 42rpx;
   font-weight: 900;
   line-height: 1.15;
+  white-space: nowrap;
   text-shadow: 0 4rpx 0 rgba(255, 255, 255, 0.84);
 }
 
@@ -174,7 +168,7 @@
 .action-desc {
   margin-top: 16rpx;
   color: #6a7d99;
-  font-size: 29rpx;
+  font-size: 27rpx;
   font-weight: 800;
   line-height: 1.35;
 }
@@ -183,11 +177,12 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  flex: 0 0 86rpx;
-  width: 86rpx;
-  height: 86rpx;
+  flex: 0 0 66rpx;
+  width: 66rpx;
+  height: 66rpx;
+  margin-left: 10rpx;
   color: #3f8ffc;
-  font-size: 56rpx;
+  font-size: 44rpx;
   font-weight: 900;
   border-radius: 50%;
   background: #ffffff;

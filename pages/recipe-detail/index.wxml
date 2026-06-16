@@ -1,7 +1,8 @@
 <view class="page detail-page">
+  <view class="custom-back pressable" hover-class="pressing" bindtap="goBack">‹</view>
+
   <view wx:if="{{recipe}}">
     <view class="detail-head">
-      <text class="eyebrow">食谱详情</text>
       <view class="title">{{recipe.name}}</view>
       <view class="subtitle">{{recipe.ageMinMonths}}-{{recipe.ageMaxMonths}} 月龄 · {{recipe.mealTypesText}}</view>
     </view>
@@ -27,6 +28,7 @@
 
     <view class="detail-section">
       <view class="section-heading">
+        <image class="section-icon" src="/assets/generated/icon-ingredients.png" mode="aspectFit" />
         <view class="section-title">食材用量</view>
       </view>
       <view class="chip-list">
@@ -36,6 +38,7 @@
 
     <view class="detail-section">
       <view class="section-heading">
+        <image class="section-icon" src="/assets/generated/icon-nutrition.png" mode="aspectFit" />
         <view class="section-title">营养亮点</view>
       </view>
       <view wx:for="{{recipe.nutritionHighlights}}" wx:key="*this" class="paragraph">{{item}}</view>
@@ -43,6 +46,7 @@
 
     <view class="detail-section">
       <view class="section-heading">
+        <image class="section-icon" src="/assets/generated/icon-steps.png" mode="aspectFit" />
         <view class="section-title">制作步骤</view>
       </view>
       <view wx:for="{{recipe.steps}}" wx:key="*this" class="step-row">
@@ -53,6 +57,7 @@
 
     <view class="detail-section">
       <view class="section-heading">
+        <image class="section-icon" src="/assets/generated/icon-caution.png" mode="aspectFit" />
         <view class="section-title">注意事项</view>
       </view>
       <view wx:for="{{recipe.cautions}}" wx:key="*this" class="paragraph">{{item}}</view>

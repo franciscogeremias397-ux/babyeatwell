@@ -31,6 +31,16 @@ Page({
     });
   },
 
+  goBack() {
+    wx.navigateBack({
+      fail() {
+        wx.redirectTo({
+          url: '/pages/index/index'
+        });
+      }
+    });
+  },
+
   markOptions(options, selectedTags) {
     const selected = new Set((selectedTags || []).map((item) => item.standardTag));
     return options.map((item) => ({

@@ -1,40 +1,39 @@
 <view class="page recipe-home">
-  <image class="title-img" src="/assets/ui/haohao-title.png" mode="aspectFit" />
+  <view class="custom-back pressable" hover-class="pressing" bindtap="goBack">‹</view>
 
   <view class="hero">
     <view class="hero-copy">
-      <view class="eyebrow">每日三餐参考</view>
       <view class="title">宝宝今天</view>
       <view class="title title-blue">吃什么？</view>
     </view>
-    <image class="hero-image" src="/assets/recipes/default-meal.png" mode="aspectFill" />
+    <image class="hero-image" src="/assets/generated/recipe-hero-today.png" mode="aspectFit" />
   </view>
 
-  <button class="baby-line pressable" hover-class="pressing" bindtap="goProfile">
-    <view class="avatar">厨</view>
+  <view class="baby-line pressable" hover-class="pressing" bindtap="goProfile">
+    <image class="avatar" src="/assets/generated/baby-chef-avatar.png" mode="aspectFit" />
     <view class="baby-name">{{profile.nickname}} · {{ageMonths}} 月龄</view>
     <view class="edit-pill">✎</view>
-  </button>
+  </view>
 
   <view wx:if="{{warning}}" class="notice">{{warning}}</view>
 
   <view class="actions">
-    <button class="action-card weekly pressable" hover-class="pressing" bindtap="goWeekly">
-      <image class="action-image" src="/assets/recipes/default-meal.png" mode="aspectFill" />
+    <view class="action-card weekly pressable" hover-class="pressing" bindtap="goWeekly">
+      <image class="action-image" src="/assets/recipes/default-meal.png" mode="aspectFit" />
       <view class="action-copy">
         <view class="action-title">一周食谱</view>
         <view class="action-desc">生成一周宝宝食谱</view>
       </view>
       <view class="action-arrow">→</view>
-    </button>
-    <button class="action-card random pressable" hover-class="pressing" bindtap="goRandom">
-      <image class="action-image" src="/assets/ui/random-meal.png" mode="aspectFill" />
+    </view>
+    <view class="action-card random pressable" hover-class="pressing" bindtap="goRandom">
+      <image class="action-image" src="/assets/ui/random-meal.png" mode="aspectFit" />
       <view class="action-copy">
         <view class="action-title">随机一餐</view>
         <view class="action-desc">不知道吃什么？抽一餐</view>
       </view>
       <view class="action-arrow">→</view>
-    </button>
+    </view>
   </view>
 
   <view class="footer-note">

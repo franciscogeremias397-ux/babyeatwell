@@ -116,6 +116,25 @@ button::after {
   padding-bottom: env(safe-area-inset-bottom);
 }
 
+.custom-back {
+  position: fixed;
+  top: calc(28rpx + env(safe-area-inset-top));
+  left: 28rpx;
+  z-index: 40;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 64rpx;
+  height: 64rpx;
+  color: #31506f;
+  font-size: 52rpx;
+  font-weight: 900;
+  line-height: 1;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.86);
+  box-shadow: 0 10rpx 24rpx rgba(64, 104, 144, 0.12);
+}
+
 @keyframes fadeRise {
   from {
     opacity: 0;
