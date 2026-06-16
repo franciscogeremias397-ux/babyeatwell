@@ -11,10 +11,9 @@ Page({
     const item = recipeUtil.findRecipe(query.id);
     if (!item) return;
     this.setData({
-      recipe: {
-        ...item,
+      recipe: Object.assign({}, item, {
         mealTypesText: (item.mealTypes || []).join(' / ')
-      },
+      }),
       ingredientChips: (item.ingredients || []).map((ingredient) => `${ingredient.name} ${ingredient.amount}${ingredient.unit}`),
       image: '/assets/recipes/default-meal.png'
     });
@@ -39,17 +38,23 @@ Page({
       '',
       `食材：${recipeUtil.summarizeIngredients(item)}`,
       '',
-      '制作步骤：',
-      ...(item.steps || []).map((step, index) => `${index + 1}. ${step}`),
+      '制作步骤：'
+    ]
+      .concat((item.steps || []).map((step, index) => `${index + 1}. ${step}`))
+      .concat([
+        '',
+        '营养亮点：'
+      ])
+      .concat(item.nutritionHighlights || [])
+      .concat([
       '',
-      '营养亮点：',
-      ...(item.nutritionHighlights || []),
-      '',
-      '注意事项：',
-      ...(item.cautions || []),
-      '',
-      '本食谱为家庭饮食参考，不替代医生或营养师建议。'
-    ];
+        '注意事项：'
+      ])
+      .concat(item.cautions || [])
+      .concat([
+        '',
+        '本食谱为家庭饮食参考，不替代医生或营养师建议。'
+      ]);
     wx.setClipboardData({
       data: lines.join('\n'),
       success() {

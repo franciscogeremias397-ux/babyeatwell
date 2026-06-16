@@ -21,18 +21,16 @@ function buildDisplayDays(days) {
   return (days || []).map((day, index) => {
     const date = new Date(monday);
     date.setDate(monday.getDate() + index);
-    return {
-      ...day,
+    return Object.assign({}, day, {
       dateText: formatMonthDay(date),
       accent: DAY_COLORS[index % DAY_COLORS.length],
-      meals: (day.meals || []).map((meal) => ({
-        ...meal,
+      meals: (day.meals || []).map((meal) => Object.assign({}, meal, {
         id: meal.recipe ? meal.recipe.id : '',
         image: DEFAULT_MEAL_IMAGE,
         name: meal.recipe ? meal.recipe.name : '暂无食谱',
         desc: meal.recipe ? `${meal.recipe.texture} · ${meal.recipe.mainStaple}` : ''
       }))
-    };
+    });
   });
 }
 
@@ -63,10 +61,9 @@ Page({
   generate() {
     const plan = recipe.generateWeeklyPlan();
     wx.setStorageSync('latestWeeklyPlan', plan);
-    this.setData({
-      ...plan,
+    this.setData(Object.assign({}, plan, {
       displayDays: buildDisplayDays(plan.days)
-    });
+    }));
   },
 
   goDetail(event) {
@@ -82,7 +79,7 @@ Page({
     this.data.days.forEach((day) => {
       lines.push(day.dayName);
       day.meals.forEach((meal) => {
-        lines.push(`${meal.mealType}：${meal.recipe.name}`);
+        lines.push(`${meal.mealType}：${meal.recipe ? meal.recipe.name : '暂无食谱'}`);
       });
       lines.push('');
     });

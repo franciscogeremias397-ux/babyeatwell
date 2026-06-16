@@ -1,7 +1,12 @@
 <view class="page random-page">
   <view class="custom-back pressable" hover-class="pressing" bindtap="goBack">‹</view>
 
-  <view wx:if="{{warning}}" class="empty-state">{{warning}}</view>
+  <view wx:if="{{warning || emptyText}}" class="empty-card">
+    <image class="empty-image" src="/assets/ui/random-meal.png" mode="aspectFit" />
+    <view class="empty-title">还没抽到合适的一餐</view>
+    <view class="empty-copy">{{warning || emptyText}}</view>
+    <button class="detail-link retry-button pressable" hover-class="pressing" bindtap="draw">再抽一次</button>
+  </view>
 
   <view wx:elif="{{isDrawing}}" class="draw-card">
     <view class="draw-orbit">
@@ -14,7 +19,7 @@
     <view class="draw-name">{{rollingName}}</view>
   </view>
 
-  <block wx:elif="{{recipe}}">
+  <view wx:elif="{{recipe}}" class="result-content">
     <view class="result-card">
       <image class="recipe-image" src="{{image}}" mode="aspectFill" />
       <view class="recipe-name-pill">{{recipe.name}}</view>
@@ -52,5 +57,12 @@
       <button class="secondary-button change-button" hover-class="pressing" bindtap="draw" disabled="{{isDrawing}}">换一餐</button>
       <button class="primary-button download-button" hover-class="pressing" bindtap="downloadRecipe">下载食谱</button>
     </view>
-  </block>
+  </view>
+
+  <view wx:else class="empty-card">
+    <image class="empty-image" src="/assets/ui/random-meal.png" mode="aspectFit" />
+    <view class="empty-title">正在准备随机一餐</view>
+    <view class="empty-copy">如果页面停在这里，可以点下面重新抽取。</view>
+    <button class="detail-link retry-button pressable" hover-class="pressing" bindtap="draw">开始抽取</button>
+  </view>
 </view>

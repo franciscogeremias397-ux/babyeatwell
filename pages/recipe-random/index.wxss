@@ -15,6 +15,47 @@
   animation: fadeRise 360ms ease both;
 }
 
+.empty-card {
+  position: relative;
+  overflow: hidden;
+  margin-top: 0;
+  padding: 48rpx 34rpx 54rpx;
+  text-align: center;
+  border-radius: 42rpx;
+  border: 2rpx solid rgba(194, 224, 255, 0.72);
+  background: rgba(255, 255, 255, 0.96);
+  box-shadow: 0 20rpx 52rpx rgba(96, 86, 70, 0.1);
+  animation: fadeRise 360ms ease both;
+}
+
+.empty-image {
+  display: block;
+  width: 260rpx;
+  height: 260rpx;
+  margin: 0 auto;
+}
+
+.empty-title {
+  margin-top: 26rpx;
+  color: #173051;
+  font-size: 38rpx;
+  font-weight: 900;
+  line-height: 1.25;
+}
+
+.empty-copy {
+  margin-top: 18rpx;
+  color: #7790ad;
+  font-size: 27rpx;
+  font-weight: 700;
+  line-height: 1.55;
+}
+
+.retry-button {
+  min-width: 200rpx;
+  margin-top: 30rpx;
+}
+
 .draw-orbit {
   position: relative;
   width: 320rpx;
@@ -85,6 +126,10 @@
   background: rgba(255, 255, 255, 0.94);
   box-shadow: 0 20rpx 52rpx rgba(96, 86, 70, 0.1);
   animation: fadeRise 420ms ease 60ms both;
+}
+
+.result-content {
+  padding-bottom: 10rpx;
 }
 
 .recipe-image {

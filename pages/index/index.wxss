@@ -1,19 +1,25 @@
 .home-page {
   position: relative;
   overflow: hidden;
-  padding: 44rpx 34rpx calc(166rpx + env(safe-area-inset-bottom));
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  min-height: 100vh;
+  padding: calc(170rpx + env(safe-area-inset-top)) 34rpx calc(72rpx + env(safe-area-inset-bottom));
   background: linear-gradient(180deg, #ffffff 0%, #f4f9ff 78%, #eef7ff 100%);
 }
 
 .hero {
-  padding-top: 88rpx;
+  position: relative;
+  top: 28rpx;
+  padding-top: 0;
   text-align: center;
   animation: fadeRise 420ms ease both;
 }
 
 .brand-title {
-  width: 520rpx;
-  height: 128rpx;
+  width: 486rpx;
+  height: 120rpx;
 }
 
 .dot-line {
@@ -21,7 +27,7 @@
   align-items: center;
   justify-content: center;
   gap: 16rpx;
-  margin-top: 36rpx;
+  margin-top: 26rpx;
 }
 
 .dot-line text,
@@ -55,8 +61,8 @@
   flex-direction: column;
   align-items: stretch;
   width: 100%;
-  gap: 28rpx;
-  margin-top: 58rpx;
+  gap: 46rpx;
+  margin-top: 170rpx;
 }
 
 .entry {
@@ -67,7 +73,7 @@
   justify-content: flex-start;
   width: 100%;
   max-width: none;
-  min-height: 286rpx;
+  min-height: 268rpx;
   padding: 24rpx 24rpx;
   text-align: left;
   border-radius: 42rpx;
@@ -158,14 +164,11 @@
 }
 
 .home-note {
-  position: absolute;
-  right: 0;
-  bottom: calc(90rpx + env(safe-area-inset-bottom));
-  left: 0;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 18rpx;
+  margin-top: 260rpx;
   color: #6a7d99;
   font-size: 27rpx;
   font-weight: 900;

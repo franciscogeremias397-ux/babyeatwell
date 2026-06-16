@@ -227,13 +227,13 @@
 .control-bar {
   position: absolute;
   z-index: 6;
-  right: 108rpx;
-  bottom: calc(74rpx + env(safe-area-inset-bottom));
-  left: 108rpx;
+  right: 82rpx;
+  bottom: calc(54rpx + env(safe-area-inset-bottom));
+  left: 82rpx;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  min-height: 100rpx;
+  min-height: 164rpx;
 }
 
 .control {
@@ -241,11 +241,11 @@
   align-items: center;
   justify-content: center;
   min-width: 0;
-  width: 94rpx;
-  height: 94rpx;
+  width: 156rpx;
+  height: 156rpx;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.94);
-  box-shadow: 0 14rpx 28rpx rgba(0, 0, 0, 0.22);
+  background: transparent;
+  box-shadow: none;
 }
 
 .control[disabled] {
@@ -253,6 +253,6 @@
 }
 
 .control-image {
-  width: 76rpx;
-  height: 76rpx;
+  width: 156rpx;
+  height: 156rpx;
 }

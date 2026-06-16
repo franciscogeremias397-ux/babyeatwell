@@ -43,8 +43,7 @@ Page({
 
   markOptions(options, selectedTags) {
     const selected = new Set((selectedTags || []).map((item) => item.standardTag));
-    return options.map((item) => ({
-      ...item,
+    return options.map((item) => Object.assign({}, item, {
       checked: selected.has(item.standardTag)
     }));
   },

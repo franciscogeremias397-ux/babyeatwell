@@ -1,6 +1,7 @@
 const BASE = 'https://sg.gouqii.com/guai-guai-chi-fan/assets/miniprogram-hq-20260604';
 
-function candidates(...paths) {
+function candidates() {
+  const paths = Array.prototype.slice.call(arguments);
   return paths.map((path) => `${BASE}${path}`);
 }
 

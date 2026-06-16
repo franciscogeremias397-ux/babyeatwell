@@ -12,7 +12,8 @@ Page({
     mealTypesText: '',
     image: '/assets/recipes/default-meal.png',
     isDrawing: false,
-    rollingName: '宝宝餐'
+    rollingName: '宝宝餐',
+    emptyText: ''
   },
 
   onLoad() {
@@ -37,15 +38,15 @@ Page({
     const result = recipeUtil.pickRandomMeal();
     this.clearDrawTimers();
 
-    if (result.warning || !result.recipe) {
-      this.setData({
-        ...result,
+    if (result.warning) {
+      this.setData(Object.assign({}, result, {
         recipe: null,
         ingredientChips: [],
         mealTypesText: '',
         isDrawing: false,
-        rollingName: '宝宝餐'
-      });
+        rollingName: '宝宝餐',
+        emptyText: result.warning
+      }));
       return;
     }
 
@@ -53,7 +54,12 @@ Page({
       .filter((item) => item.suitableForRandomMeal)
       .map((item) => item.name)
       .slice(0, 16);
-    const names = rollingNames.length ? rollingNames : [result.recipe.name];
+    const names = rollingNames.length ? rollingNames : [
+      '番茄牛肉软饭',
+      '南瓜鸡肉粥',
+      '虾仁青菜面',
+      '山药蒸蛋羹'
+    ];
     let cursor = 0;
 
     this.pendingResult = result;
@@ -66,7 +72,8 @@ Page({
       recipe: null,
       ingredientChips: [],
       mealTypesText: '',
-      rollingName: names[0]
+      rollingName: names[0],
+      emptyText: ''
     });
 
     this.drawInterval = setInterval(() => {
@@ -84,16 +91,30 @@ Page({
   },
 
   applyResult(result) {
+    if (!result || !result.recipe) {
+      this.setData({
+        recipe: null,
+        ingredients: '',
+        ingredientChips: [],
+        mealTypesText: '',
+        image: '/assets/recipes/default-meal.png',
+        isDrawing: false,
+        rollingName: '宝宝餐',
+        emptyText: '暂时没有匹配到合适的一餐，可以调整宝宝档案里的过敏或不吃食材后再试。'
+      });
+      return;
+    }
+
     const ingredientChips = result.recipe ? (result.recipe.ingredients || []).slice(0, 5).map((item) => `${item.name} ${item.amount}${item.unit}`) : [];
-    this.setData({
-      ...result,
+    this.setData(Object.assign({}, result, {
       ingredients: result.recipe ? recipeUtil.summarizeIngredients(result.recipe) : '',
       ingredientChips,
       mealTypesText: result.recipe ? (result.recipe.mealTypes || []).join(' / ') : '',
       image: '/assets/recipes/default-meal.png',
       isDrawing: false,
-      rollingName: result.recipe ? result.recipe.name : '宝宝餐'
-    });
+      rollingName: result.recipe ? result.recipe.name : '宝宝餐',
+      emptyText: ''
+    }));
   },
 
   clearDrawTimers() {
@@ -124,14 +145,18 @@ Page({
       '',
       `食材：${recipeUtil.summarizeIngredients(item)}`,
       '',
-      '制作步骤：',
-      ...(item.steps || []).map((step, index) => `${index + 1}. ${step}`),
+      '制作步骤：'
+    ]
+      .concat((item.steps || []).map((step, index) => `${index + 1}. ${step}`))
+      .concat([
+        '',
+        '营养亮点：'
+      ])
+      .concat(item.nutritionHighlights || [])
+      .concat([
       '',
-      '营养亮点：',
-      ...(item.nutritionHighlights || []),
-      '',
-      '本食谱为家庭饮食参考，不替代医生或营养师建议。'
-    ];
+        '本食谱为家庭饮食参考，不替代医生或营养师建议。'
+      ]);
     wx.setClipboardData({
       data: lines.join('\n'),
       success() {

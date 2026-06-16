@@ -72,12 +72,11 @@ function getProfile() {
 function saveProfile(profile) {
   const now = new Date().toISOString();
   const existing = wx.getStorageSync('babyProfile') || {};
-  const next = {
+  const next = Object.assign({}, profile, {
     babyId: existing.babyId || 'baby_001',
     createdAt: existing.createdAt || now,
-    ...profile,
     updatedAt: now
-  };
+  });
   wx.setStorageSync('babyProfile', next);
   return next;
 }
@@ -143,15 +142,18 @@ function recipeConflicts(recipe, blockedTags) {
     [recipe.proteinType, recipe.proteinCategory, recipe.mainStaple]
   ];
 
-  return fields.flat().some((rawTag) => {
-    const tag = normalizeTag(rawTag);
-    if (blockedTags.has(tag)) return true;
-    if (tag === '鱼类' && blockedTags.has('鱼类')) return true;
-    if (tag === '虾' && blockedTags.has('虾')) return true;
-    if (tag === '大豆' && blockedTags.has('大豆')) return true;
-    if (tag === '小麦' && blockedTags.has('小麦')) return true;
-    return false;
-  });
+  for (let i = 0; i < fields.length; i += 1) {
+    const group = fields[i];
+    for (let j = 0; j < group.length; j += 1) {
+      const tag = normalizeTag(group[j]);
+      if (blockedTags.has(tag)) return true;
+      if (tag === '鱼类' && blockedTags.has('鱼类')) return true;
+      if (tag === '虾' && blockedTags.has('虾')) return true;
+      if (tag === '大豆' && blockedTags.has('大豆')) return true;
+      if (tag === '小麦' && blockedTags.has('小麦')) return true;
+    }
+  }
+  return false;
 }
 
 function getAvailableRecipes(profile) {
@@ -243,11 +245,10 @@ function remember(recipe, context) {
 function generateWeeklyPlan(profile = getProfile()) {
   const availability = getAvailableRecipes(profile);
   if (availability.warning) {
-    return {
-      ...availability,
+    return Object.assign({}, availability, {
       profile,
       days: []
-    };
+    });
   }
 
   const breakfastPool = availability.recipes.filter((recipe) => hasMeal(recipe, BREAKFAST));
@@ -286,32 +287,29 @@ function generateWeeklyPlan(profile = getProfile()) {
     };
   });
 
-  return {
-    ...availability,
+  return Object.assign({}, availability, {
     profile,
     days
-  };
+  });
 }
 
 function pickRandomMeal(profile = getProfile()) {
   const availability = getAvailableRecipes(profile);
   if (availability.warning) {
-    return {
-      ...availability,
+    return Object.assign({}, availability, {
       profile,
       recipe: null
-    };
+    });
   }
 
   const mealPool = availability.recipes.filter((recipe) => {
     return recipe.suitableForRandomMeal && (hasMeal(recipe, LUNCH) || hasMeal(recipe, DINNER));
   });
   const recipe = mealPool[Math.floor(Math.random() * mealPool.length)] || null;
-  return {
-    ...availability,
+  return Object.assign({}, availability, {
     profile,
     recipe
-  };
+  });
 }
 
 function findRecipe(recipeId) {
