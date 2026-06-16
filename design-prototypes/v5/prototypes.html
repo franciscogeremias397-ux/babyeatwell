@@ -1,0 +1,1270 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>宝贝乖乖吃饭 v5 干净原型</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      margin: 0;
+      background: #eef6fd;
+      color: #122640;
+      font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif;
+    }
+
+    .shot {
+      position: relative;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at 18% 10%, rgba(230, 246, 255, 0.7), transparent 26%),
+        linear-gradient(180deg, #fff 0%, #f7fcff 72%, #eef9ff 100%);
+    }
+
+    .mobile {
+      width: 853px;
+      height: 1844px;
+    }
+
+    .board {
+      width: 1536px;
+      height: 1024px;
+      padding: 24px 16px 20px;
+      background:
+        radial-gradient(circle at 20% 0%, #ffffff 0%, #eef7ff 44%, #e9f4ff 100%);
+    }
+
+    .capsule {
+      position: absolute;
+      top: 48px;
+      right: 30px;
+      width: 172px;
+      height: 62px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.84);
+      border: 1px solid rgba(35, 47, 64, 0.1);
+      box-shadow: 0 8px 24px rgba(30, 56, 92, 0.1);
+    }
+
+    .capsule::before {
+      content: "...";
+      position: absolute;
+      left: 34px;
+      top: 7px;
+      font-size: 34px;
+      font-weight: 950;
+      color: #111;
+      letter-spacing: 2px;
+    }
+
+    .capsule::after {
+      content: "";
+      position: absolute;
+      right: 27px;
+      top: 15px;
+      width: 25px;
+      height: 25px;
+      border-radius: 50%;
+      border: 7px solid #111;
+    }
+
+    .mini-capsule {
+      top: 28px;
+      right: 22px;
+      width: 80px;
+      height: 33px;
+      background: rgba(255, 255, 255, 0.85);
+    }
+
+    .mini-capsule::before {
+      left: 14px;
+      top: 0;
+      font-size: 22px;
+      color: #111;
+    }
+
+    .mini-capsule::after {
+      right: 11px;
+      top: 8px;
+      width: 13px;
+      height: 13px;
+      border-width: 4px;
+    }
+
+    .home .brand {
+      position: absolute;
+      left: 98px;
+      top: 180px;
+      width: 658px;
+      height: auto;
+    }
+
+    .subtitle {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 414px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 15px;
+      color: #556782;
+      font-size: 28px;
+      font-weight: 900;
+    }
+
+    .dot {
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background: #71adff;
+    }
+
+    .dot.pink {
+      background: #ffa6b4;
+    }
+
+    .dot.green {
+      background: #87cd8d;
+    }
+
+    .entry-list {
+      position: absolute;
+      left: 38px;
+      right: 38px;
+      top: 545px;
+      display: grid;
+      gap: 38px;
+    }
+
+    .entry-card {
+      position: relative;
+      display: grid;
+      grid-template-columns: 344px 1fr 86px;
+      align-items: center;
+      min-height: 490px;
+      column-gap: 12px;
+      padding: 36px 28px;
+      border-radius: 58px;
+      border: 2px solid #b9dcff;
+      background: linear-gradient(180deg, #f4fbff 0%, #eef8ff 100%);
+      box-shadow: 0 18px 46px rgba(79, 134, 190, 0.1);
+    }
+
+    .entry-card.green {
+      border-color: #bce8ae;
+      background: linear-gradient(180deg, #fbfff6 0%, #f1ffec 100%);
+    }
+
+    .entry-card .meal-img {
+      width: 344px;
+      height: 344px;
+      object-fit: cover;
+      border-radius: 36px;
+      filter: drop-shadow(0 16px 20px rgba(98, 146, 189, 0.12));
+    }
+
+    .entry-card .phone-img {
+      width: 344px;
+      height: 320px;
+      object-fit: cover;
+      border-radius: 36px;
+      filter: drop-shadow(0 16px 18px rgba(99, 151, 83, 0.1));
+    }
+
+    .entry-title {
+      color: #1681ff;
+      font-size: 57px;
+      font-weight: 950;
+      line-height: 1.05;
+      text-shadow: 0 4px 0 rgba(255, 255, 255, 0.8);
+    }
+
+    .green .entry-title {
+      color: #36b43e;
+    }
+
+    .entry-desc {
+      margin-top: 23px;
+      color: #52647e;
+      font-size: 30px;
+      font-weight: 850;
+      white-space: nowrap;
+    }
+
+    .arrow {
+      display: grid;
+      place-items: center;
+      width: 84px;
+      height: 84px;
+      border-radius: 50%;
+      color: #fff;
+      font-size: 58px;
+      font-weight: 950;
+      background: linear-gradient(180deg, #58a7ff 0%, #1678f0 100%);
+      box-shadow: 0 14px 28px rgba(38, 125, 240, 0.25);
+    }
+
+    .green .arrow {
+      background: linear-gradient(180deg, #6dd661 0%, #3eb538 100%);
+      box-shadow: 0 14px 28px rgba(62, 181, 56, 0.24);
+    }
+
+    .home-age {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 210px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 19px;
+      color: #657895;
+      font-size: 29px;
+      font-weight: 900;
+    }
+
+    .baby-icon {
+      display: grid;
+      place-items: center;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: #eef6ff;
+      color: #2684f6;
+      font-size: 19px;
+      box-shadow: 0 6px 14px rgba(63, 135, 229, 0.18);
+    }
+
+    .haohao .title-img {
+      position: absolute;
+      left: 50px;
+      top: 108px;
+      width: 430px;
+    }
+
+    .haohao-hero {
+      position: absolute;
+      left: 46px;
+      right: 40px;
+      top: 300px;
+      height: 430px;
+    }
+
+    .eyebrow {
+      color: #34b864;
+      font-size: 28px;
+      font-weight: 950;
+    }
+
+    .haohao h1 {
+      margin: 26px 0 0;
+      color: #1d2b34;
+      font-size: 68px;
+      line-height: 1.18;
+      font-weight: 950;
+      letter-spacing: 0;
+    }
+
+    .haohao .hero-meal {
+      position: absolute;
+      right: 12px;
+      top: -10px;
+      width: 420px;
+      height: 420px;
+      object-fit: cover;
+      filter: drop-shadow(0 22px 24px rgba(88, 130, 164, 0.13));
+    }
+
+    .profile-strip {
+      position: absolute;
+      left: 46px;
+      right: 46px;
+      top: 748px;
+      display: grid;
+      grid-template-columns: 95px 1fr 70px;
+      align-items: center;
+      height: 112px;
+      padding: 14px 28px;
+      border-radius: 58px;
+      background: rgba(255, 255, 255, 0.92);
+      box-shadow: 0 18px 44px rgba(75, 122, 168, 0.12);
+    }
+
+    .chef {
+      display: grid;
+      place-items: center;
+      width: 74px;
+      height: 74px;
+      border-radius: 22px;
+      background: #fff6e8;
+      font-size: 42px;
+    }
+
+    .profile-strip strong {
+      color: #202b3d;
+      font-size: 37px;
+      font-weight: 950;
+    }
+
+    .edit-icon {
+      display: grid;
+      place-items: center;
+      width: 52px;
+      height: 52px;
+      border-radius: 16px;
+      border: 2px solid #e0edff;
+      color: #1785ff;
+      font-size: 29px;
+      font-weight: 900;
+    }
+
+    .meal-actions {
+      position: absolute;
+      left: 42px;
+      right: 42px;
+      top: 930px;
+      display: grid;
+      gap: 38px;
+    }
+
+    .meal-action {
+      display: grid;
+      grid-template-columns: 360px 1fr 88px;
+      align-items: center;
+      min-height: 335px;
+      padding: 25px 28px;
+      border-radius: 46px;
+      border: 2px solid #b9dcff;
+      background: linear-gradient(180deg, #f4fbff 0%, #eef8ff 100%);
+    }
+
+    .meal-action.green {
+      border-color: #bce8ae;
+      background: linear-gradient(180deg, #fbfff6 0%, #f1ffec 100%);
+    }
+
+    .meal-action img {
+      width: 335px;
+      height: 280px;
+      object-fit: cover;
+      border-radius: 32px;
+    }
+
+    .meal-action .random-img {
+      object-fit: contain;
+      background: #fff5e4;
+    }
+
+    .meal-action-title {
+      color: #1681ff;
+      font-size: 52px;
+      font-weight: 950;
+      text-shadow: 0 4px 0 rgba(255, 255, 255, 0.8);
+    }
+
+    .meal-action.green .meal-action-title {
+      color: #25a632;
+    }
+
+    .meal-action-desc {
+      margin-top: 18px;
+      color: #56677f;
+      font-size: 29px;
+      font-weight: 850;
+      line-height: 1.35;
+    }
+
+    .doctor-note {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 86px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 18px;
+      color: #73849c;
+      font-size: 28px;
+      font-weight: 850;
+    }
+
+    .shield {
+      display: grid;
+      place-items: center;
+      width: 32px;
+      height: 32px;
+      border-radius: 9px;
+      background: linear-gradient(180deg, #278aff, #166deb);
+      color: #fff;
+      font-size: 21px;
+      font-weight: 950;
+    }
+
+    .phone-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      height: 100%;
+    }
+
+    .phone-wrap {
+      position: relative;
+      height: 100%;
+    }
+
+    .phone {
+      position: relative;
+      width: 100%;
+      height: 914px;
+      overflow: hidden;
+      padding: 88px 28px 34px;
+      border-radius: 28px;
+      background: linear-gradient(180deg, #fff 0%, #fbfdff 100%);
+      box-shadow: 0 22px 52px rgba(75, 114, 150, 0.14);
+    }
+
+    .phone.green-bg {
+      background: linear-gradient(180deg, #fff 0%, #fbfff7 100%);
+    }
+
+    .phone.warm {
+      background: linear-gradient(180deg, #fff 0%, #fffaf0 100%);
+    }
+
+    .phone.dark {
+      color: #fff;
+      background: #14100d;
+    }
+
+    .back {
+      position: absolute;
+      left: 15px;
+      top: 38px;
+      color: #0e1825;
+      font-size: 30px;
+      font-weight: 400;
+    }
+
+    .phone h2 {
+      margin: 0;
+      color: #13283f;
+      font-size: 26px;
+      line-height: 1.14;
+      font-weight: 950;
+    }
+
+    .phone .meta {
+      margin-top: 10px;
+      color: #58708d;
+      font-size: 14px;
+      line-height: 1.4;
+      font-weight: 750;
+    }
+
+    .profile-form {
+      margin-top: 32px;
+      padding: 20px 18px;
+      border-radius: 22px;
+      background: #fff;
+      box-shadow: 0 12px 28px rgba(91, 129, 164, 0.11);
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      height: 46px;
+      align-items: center;
+      border-bottom: 1px solid #edf2f7;
+      font-size: 15px;
+      font-weight: 900;
+    }
+
+    .form-row:last-child {
+      border-bottom: 0;
+    }
+
+    .form-row span:last-child {
+      color: #7a8fa8;
+      text-align: right;
+      font-weight: 800;
+    }
+
+    .form-section {
+      margin-top: 28px;
+    }
+
+    .form-section-title {
+      color: #172b43;
+      font-size: 17px;
+      font-weight: 950;
+    }
+
+    .form-section-title small {
+      color: #8ba0b4;
+      font-size: 13px;
+      font-weight: 800;
+    }
+
+    .chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 13px;
+    }
+
+    .chip {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 56px;
+      height: 32px;
+      padding: 0 13px;
+      border-radius: 12px;
+      border: 1px solid #b9d7ff;
+      color: #267be8;
+      background: #f3f9ff;
+      font-size: 14px;
+      font-weight: 900;
+    }
+
+    .save {
+      position: absolute;
+      left: 30px;
+      right: 30px;
+      bottom: 46px;
+      display: grid;
+      place-items: center;
+      height: 60px;
+      border-radius: 32px;
+      background: linear-gradient(180deg, #61d577, #38af5a);
+      color: #fff;
+      font-size: 21px;
+      font-weight: 950;
+      box-shadow: 0 16px 32px rgba(55, 174, 89, 0.28);
+    }
+
+    .weekly-title-row {
+      display: grid;
+      grid-template-columns: 1fr 112px;
+      gap: 12px;
+      align-items: center;
+    }
+
+    .weekly-title-row img {
+      width: 112px;
+      height: 90px;
+      object-fit: cover;
+      border-radius: 18px;
+    }
+
+    .weekly-table {
+      overflow: hidden;
+      margin-top: 18px;
+      border: 1.5px solid #c8e3ff;
+      border-radius: 18px;
+      background: #fff;
+    }
+
+    .weekly-head,
+    .weekly-row {
+      display: grid;
+      grid-template-columns: 58px repeat(3, 1fr);
+      align-items: center;
+      text-align: center;
+    }
+
+    .weekly-head {
+      height: 42px;
+      background: #e8f5ff;
+      color: #255d8f;
+      font-size: 13px;
+      font-weight: 950;
+    }
+
+    .weekly-row {
+      height: 73px;
+      border-top: 1px solid #edf2f6;
+      font-size: 9.5px;
+      font-weight: 850;
+      line-height: 1.14;
+    }
+
+    .day {
+      color: #18314e;
+      font-size: 13px;
+      font-weight: 950;
+    }
+
+    .day span {
+      display: block;
+      margin-top: 4px;
+      color: #8aa0b9;
+      font-size: 10px;
+      font-weight: 800;
+    }
+
+    .meal-mini img {
+      display: block;
+      width: 34px;
+      height: 34px;
+      margin: 0 auto 4px;
+      border-radius: 8px;
+      object-fit: cover;
+    }
+
+    .bottom-actions {
+      position: absolute;
+      left: 28px;
+      right: 28px;
+      bottom: 34px;
+      display: grid;
+      grid-template-columns: 1fr 1.3fr;
+      gap: 12px;
+    }
+
+    .ghost,
+    .solid {
+      display: grid;
+      place-items: center;
+      height: 58px;
+      border-radius: 999px;
+      font-size: 18px;
+      font-weight: 950;
+    }
+
+    .ghost {
+      color: #3bb75a;
+      border: 1.5px solid #8add9c;
+      background: #fff;
+    }
+
+    .solid {
+      color: #fff;
+      background: linear-gradient(180deg, #62d577, #39af5b);
+      box-shadow: 0 14px 26px rgba(55, 174, 89, 0.26);
+    }
+
+    .recipe-card {
+      margin-top: 20px;
+      padding: 16px 16px 14px;
+      border-radius: 28px;
+      background: #fff;
+      box-shadow: 0 16px 34px rgba(89, 128, 160, 0.1);
+      text-align: center;
+    }
+
+    .recipe-card img {
+      width: 224px;
+      height: 224px;
+      object-fit: cover;
+      border-radius: 24px;
+    }
+
+    .recipe-name {
+      margin-top: 10px;
+      color: #253136;
+      font-size: 26px;
+      font-weight: 950;
+    }
+
+    .pill-button {
+      display: inline-grid;
+      place-items: center;
+      height: 40px;
+      margin-top: 11px;
+      padding: 0 22px;
+      border-radius: 999px;
+      color: #2bae52;
+      background: #e5faec;
+      font-size: 14px;
+      font-weight: 950;
+    }
+
+    .section {
+      margin-top: 12px;
+      padding: 13px;
+      border-radius: 22px;
+      background: #fff;
+      box-shadow: 0 12px 26px rgba(89, 128, 160, 0.08);
+    }
+
+    .section-title {
+      color: #1c2e3e;
+      font-size: 19px;
+      font-weight: 950;
+    }
+
+    .section p {
+      margin: 8px 0 0;
+      color: #566d72;
+      font-size: 13px;
+      line-height: 1.65;
+      font-weight: 760;
+    }
+
+    .detail-hero {
+      width: 100%;
+      height: 232px;
+      margin-top: 12px;
+      object-fit: cover;
+      border-radius: 26px;
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      margin-top: 12px;
+      padding: 12px;
+      border-radius: 22px;
+      background: #fff;
+      box-shadow: 0 12px 26px rgba(89, 128, 160, 0.08);
+      text-align: center;
+    }
+
+    .stat-label {
+      color: #8a9fa1;
+      font-size: 13px;
+      font-weight: 850;
+    }
+
+    .stat-value {
+      margin-top: 5px;
+      color: #253136;
+      font-size: 17px;
+      font-weight: 950;
+    }
+
+    .caption {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 4px;
+      color: #184370;
+      text-align: center;
+      font-size: 20px;
+      font-weight: 900;
+    }
+
+    .dog-start {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-top: 112px;
+      background: linear-gradient(180deg, #fff 0%, #fbfff7 100%);
+    }
+
+    .dog-start .dog-logo {
+      width: 180px;
+      height: 190px;
+      object-fit: contain;
+    }
+
+    .dog-start .guai-logo {
+      width: 292px;
+      margin-top: 44px;
+      object-fit: contain;
+      filter: drop-shadow(0 10px 16px rgba(89, 134, 80, 0.1));
+    }
+
+    .call-only {
+      position: relative;
+      display: grid;
+      place-items: center;
+      width: 118px;
+      height: 118px;
+      margin-top: 92px;
+      border-radius: 50%;
+      background: linear-gradient(180deg, #fff 0%, #ecfff1 100%);
+      box-shadow:
+        0 16px 30px rgba(72, 188, 98, 0.22),
+        inset 0 -8px 0 rgba(88, 201, 108, 0.13),
+        inset 0 0 0 7px rgba(125, 218, 143, 0.17);
+    }
+
+    .call-only::before {
+      content: "";
+      position: absolute;
+      inset: -15px;
+      border-radius: inherit;
+      border: 5px solid rgba(111, 216, 136, 0.15);
+    }
+
+    .call-only img {
+      width: 88px;
+      height: 62px;
+      object-fit: contain;
+    }
+
+    .calling {
+      display: grid;
+      place-items: center;
+      background:
+        radial-gradient(circle at 50% 42%, rgba(255,255,255,0.08), transparent 34%),
+        linear-gradient(180deg, #211710 0%, #130f0c 62%, #16100d 100%);
+    }
+
+    .calling .call-avatar {
+      position: absolute;
+      top: 220px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 168px;
+      height: 168px;
+      border-radius: 50%;
+      object-fit: contain;
+      background: #fff;
+      box-shadow: 0 22px 52px rgba(0, 0, 0, 0.34);
+      margin-top: 0;
+    }
+
+    .calling-text {
+      position: absolute;
+      top: 425px;
+      left: 0;
+      right: 0;
+      color: #fff;
+      font-size: 27px;
+      font-weight: 950;
+      text-align: center;
+      text-shadow: 0 6px 18px rgba(0, 0, 0, 0.46);
+    }
+
+    .video {
+      background: #090806;
+      padding: 0;
+    }
+
+    .video .idle {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .video::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(0,0,0,0.08) 0%, rgba(0,0,0,0.02) 44%, rgba(0,0,0,0.75) 100%);
+    }
+
+    .call-info {
+      position: absolute;
+      z-index: 1;
+      left: 24px;
+      top: 46px;
+      color: #fff;
+      text-shadow: 0 5px 18px rgba(0, 0, 0, 0.4);
+    }
+
+    .call-info h3 {
+      margin: 0;
+      font-size: 25px;
+      line-height: 1.1;
+      font-weight: 950;
+    }
+
+    .call-info span {
+      display: block;
+      margin-top: 10px;
+      color: rgba(255, 255, 255, 0.78);
+      font-size: 16px;
+      font-weight: 850;
+    }
+
+    .online {
+      position: absolute;
+      z-index: 1;
+      left: 24px;
+      top: 115px;
+      display: grid;
+      place-items: center;
+      width: 55px;
+      height: 30px;
+      border-radius: 999px;
+      background: #ef3f36;
+      color: #fff;
+      font-size: 14px;
+      font-weight: 950;
+    }
+
+    .timer {
+      position: absolute;
+      z-index: 1;
+      right: 22px;
+      top: 94px;
+      display: grid;
+      place-items: center;
+      width: 70px;
+      height: 34px;
+      border-radius: 999px;
+      background: rgba(0, 0, 0, 0.5);
+      color: #fff;
+      font-size: 17px;
+      font-weight: 850;
+    }
+
+    .video-actions {
+      position: absolute;
+      z-index: 2;
+      left: 45px;
+      right: 45px;
+      bottom: 76px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .video-action {
+      display: grid;
+      place-items: center;
+      width: 58px;
+      height: 58px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.97);
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.28);
+    }
+
+    .video-action img {
+      width: 46px;
+      height: 46px;
+      object-fit: contain;
+    }
+
+    .bye {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-top: 122px;
+      background: #fff;
+    }
+
+    .bye .dog-logo {
+      width: 185px;
+      height: 200px;
+      object-fit: contain;
+    }
+
+    .bye .goodbye-logo {
+      width: 290px;
+      margin-top: 58px;
+      object-fit: contain;
+    }
+
+    .again {
+      display: grid;
+      place-items: center;
+      width: 202px;
+      height: 58px;
+      margin-top: 58px;
+      border-radius: 999px;
+      color: #fff;
+      background: linear-gradient(180deg, #64d77a, #38af5a);
+      font-size: 22px;
+      font-weight: 950;
+      box-shadow: 0 16px 32px rgba(55, 174, 89, 0.28);
+    }
+
+    .interaction-row {
+      position: absolute;
+      left: 16px;
+      right: 16px;
+      bottom: 12px;
+      display: grid;
+      grid-template-columns: 230px repeat(3, 1fr);
+      align-items: center;
+      height: 94px;
+      padding: 0 38px;
+      border: 1px dashed #bddcff;
+      border-radius: 12px;
+      color: #224a77;
+      background: rgba(255, 255, 255, 0.7);
+    }
+
+    .interaction-title {
+      color: #1579f2;
+      font-size: 24px;
+      font-weight: 950;
+    }
+
+    .interaction-item {
+      display: grid;
+      grid-template-columns: 72px 1fr;
+      align-items: center;
+      gap: 18px;
+      font-size: 16px;
+      font-weight: 850;
+      line-height: 1.45;
+    }
+
+    .interaction-item img {
+      width: 62px;
+      height: 62px;
+      border-radius: 50%;
+      background: #fff;
+      box-shadow: 0 10px 22px rgba(75, 114, 150, 0.12);
+    }
+
+    #dogdan .phone {
+      height: 780px;
+    }
+
+    #dogdan .caption {
+      bottom: 110px;
+    }
+
+    body.hash-home .shot:not(#home),
+    body.hash-haohao .shot:not(#haohao),
+    body.hash-recipe .shot:not(#recipe),
+    body.hash-dogdan .shot:not(#dogdan) {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <section class="shot mobile home" id="home">
+    <div class="capsule"></div>
+    <img class="brand" src="assets/home-brand-title.png" alt="宝贝乖乖吃饭" />
+    <div class="subtitle">
+      <span class="dot"></span><span class="dot pink"></span><span class="dot"></span>
+      <span>让宝宝吃饭更轻松</span>
+      <span class="dot"></span><span class="dot pink"></span><span class="dot green"></span>
+    </div>
+    <div class="entry-list">
+      <div class="entry-card">
+        <img class="meal-img" src="assets/default-meal.png" alt="" />
+        <div>
+          <div class="entry-title">好好吃饭</div>
+          <div class="entry-desc">安排宝宝每日三餐</div>
+        </div>
+        <div class="arrow">→</div>
+      </div>
+      <div class="entry-card green">
+        <img class="phone-img" src="assets/home-phone-illustration.png" alt="" />
+        <div>
+          <div class="entry-title">乖乖吃饭</div>
+          <div class="entry-desc">陪宝宝专心吃饭</div>
+        </div>
+        <div class="arrow">→</div>
+      </div>
+    </div>
+    <div class="home-age">
+      <span class="dot"></span>
+      <span class="baby-icon">宝</span>
+      <span>适合 12-36 月龄宝宝三餐参考</span>
+      <span class="dot"></span>
+    </div>
+  </section>
+
+  <section class="shot mobile haohao" id="haohao">
+    <div class="capsule"></div>
+    <img class="title-img" src="assets/haohao-title.png" alt="好好吃饭" />
+    <div class="haohao-hero">
+      <div class="eyebrow">每日三餐参考</div>
+      <h1>宝宝今天<br />吃什么?</h1>
+      <img class="hero-meal" src="assets/default-meal.png" alt="" />
+    </div>
+    <div class="profile-strip">
+      <div class="chef">厨</div>
+      <strong>啾啾 · 32 月龄</strong>
+      <div class="edit-icon">✎</div>
+    </div>
+    <div class="meal-actions">
+      <div class="meal-action">
+        <img src="assets/default-meal.png" alt="" />
+        <div>
+          <div class="meal-action-title">一周食谱</div>
+          <div class="meal-action-desc">生成一周宝宝食谱</div>
+        </div>
+        <div class="arrow">→</div>
+      </div>
+      <div class="meal-action green">
+        <img class="random-img" src="assets/random-meal.png" alt="" />
+        <div>
+          <div class="meal-action-title">随机一餐</div>
+          <div class="meal-action-desc">不知道吃什么?<br />抽一餐</div>
+        </div>
+        <div class="arrow">→</div>
+      </div>
+    </div>
+    <div class="doctor-note"><span class="shield">+</span><span>家庭饮食参考，不替代专业医生建议</span></div>
+  </section>
+
+  <section class="shot board" id="recipe">
+    <div class="phone-grid">
+      <div class="phone-wrap">
+        <div class="phone">
+          <div class="back">‹</div>
+          <div class="capsule mini-capsule"></div>
+          <h2>宝宝档案</h2>
+          <div class="meta">完善信息，生成更合适的食谱</div>
+          <div class="profile-form">
+            <div class="form-row"><span>宝宝昵称</span><span>啾啾</span></div>
+            <div class="form-row"><span>出生日期</span><span>2022-10-08</span></div>
+          </div>
+          <div class="form-section">
+            <div class="form-section-title">过敏食材 <small>（可多选）</small></div>
+            <div class="chips">
+              <span class="chip">鸡蛋</span><span class="chip">牛奶</span><span class="chip">海鲜</span><span class="chip">+ 添加</span>
+            </div>
+          </div>
+          <div class="form-section">
+            <div class="form-section-title">不爱吃的食物 <small>（可多选）</small></div>
+            <div class="chips">
+              <span class="chip">香菜</span><span class="chip">胡萝卜</span><span class="chip">+ 添加</span>
+            </div>
+          </div>
+          <div class="save">保存</div>
+        </div>
+        <div class="caption">① 宝宝档案</div>
+      </div>
+
+      <div class="phone-wrap">
+        <div class="phone">
+          <div class="back">‹</div>
+          <div class="capsule mini-capsule"></div>
+          <div class="weekly-title-row">
+            <div>
+              <h2>啾啾的一周食谱</h2>
+              <div class="meta">32 月龄 · 幼儿餐稳定期</div>
+            </div>
+            <img src="assets/default-meal.png" alt="" />
+          </div>
+          <div class="weekly-table">
+            <div class="weekly-head"><div>日期</div><div>早餐</div><div>午餐</div><div>晚餐</div></div>
+            <div class="weekly-row"><div class="day">周一<span>06/08</span></div><div class="meal-mini"><img src="assets/default-meal.png" />番茄鸡蛋软面</div><div class="meal-mini"><img src="assets/default-meal.png" />香菇鸡肉焖饭</div><div class="meal-mini"><img src="assets/default-meal.png" />胡萝卜黑软饺子</div></div>
+            <div class="weekly-row"><div class="day">周二<span>06/09</span></div><div class="meal-mini"><img src="assets/default-meal.png" />奶香燕麦香蕉粥</div><div class="meal-mini"><img src="assets/default-meal.png" />西兰花虾仁软饭</div><div class="meal-mini"><img src="assets/default-meal.png" />牛肉胡萝卜小馄饨</div></div>
+            <div class="weekly-row"><div class="day">周三<span>06/10</span></div><div class="meal-mini"><img src="assets/default-meal.png" />豆腐鸡蛋羹</div><div class="meal-mini"><img src="assets/default-meal.png" />南瓜牛肉焖饭</div><div class="meal-mini"><img src="assets/default-meal.png" />冬瓜虾仁面片汤</div></div>
+            <div class="weekly-row"><div class="day">周四<span>06/11</span></div><div class="meal-mini"><img src="assets/default-meal.png" />紫薯燕麦粥</div><div class="meal-mini"><img src="assets/default-meal.png" />鳕鱼番茄蔬菜面</div><div class="meal-mini"><img src="assets/default-meal.png" />鸡肉西兰花土豆泥饭</div></div>
+            <div class="weekly-row"><div class="day">周五<span>06/12</span></div><div class="meal-mini"><img src="assets/default-meal.png" />玉米鸡蛋软饼</div><div class="meal-mini"><img src="assets/default-meal.png" />香菇油菜鸡肉面</div><div class="meal-mini"><img src="assets/default-meal.png" />山药排骨软饭</div></div>
+            <div class="weekly-row"><div class="day">周六<span>06/13</span></div><div class="meal-mini"><img src="assets/default-meal.png" />南瓜馒头丁蔬菜汤</div><div class="meal-mini"><img src="assets/default-meal.png" />西葫芦猪肉小饺子</div><div class="meal-mini"><img src="assets/default-meal.png" />番茄牛肉粥</div></div>
+            <div class="weekly-row"><div class="day">周日<span>06/14</span></div><div class="meal-mini"><img src="assets/default-meal.png" />鸡肉蔬菜小米粥</div><div class="meal-mini"><img src="assets/default-meal.png" />土豆牛肉软饭</div><div class="meal-mini"><img src="assets/default-meal.png" />青菜豆腐面</div></div>
+          </div>
+          <div class="bottom-actions"><div class="ghost">↻ 重新生成</div><div class="solid">⇩ 下载食谱</div></div>
+        </div>
+        <div class="caption">② 一周食谱</div>
+      </div>
+
+      <div class="phone-wrap">
+        <div class="phone warm">
+          <div class="back">‹</div>
+          <div class="capsule mini-capsule"></div>
+          <div class="eyebrow">随机一餐</div>
+          <h2>今天抽到这一餐</h2>
+          <div class="meta">啾啾 · 32 月龄</div>
+          <div class="recipe-card">
+            <img src="assets/default-meal.png" alt="" />
+            <div class="recipe-name">番茄牛肉意面</div>
+            <div class="meta">19-36 月龄 · 午餐 / 晚餐</div>
+            <div class="pill-button">查看完整做法 ›</div>
+          </div>
+          <div class="section">
+            <div class="section-title">食材用量</div>
+            <div class="chips"><span class="chip">意面 45g</span><span class="chip">牛肉末 35g</span><span class="chip">番茄 60g</span><span class="chip">西兰花 20g</span></div>
+          </div>
+          <div class="section">
+            <div class="section-title">营养亮点</div>
+            <p>番茄富含维生素 C，牛肉提供优质蛋白，意面提供能量，营养均衡。</p>
+          </div>
+          <div class="bottom-actions"><div class="ghost">↝ 换一餐</div><div class="solid">⇩ 下载食谱</div></div>
+        </div>
+        <div class="caption">③ 随机一餐</div>
+      </div>
+
+      <div class="phone-wrap">
+        <div class="phone warm">
+          <div class="back">‹</div>
+          <div class="capsule mini-capsule"></div>
+          <div class="eyebrow">食谱详情</div>
+          <h2>香菇鸡肉焖饭</h2>
+          <div class="meta">19-36 月龄 · 午餐 / 晚餐</div>
+          <img class="detail-hero" src="assets/default-meal.png" alt="" />
+          <div class="stats">
+            <div><div class="stat-label">形态</div><div class="stat-value">焖饭、小块</div></div>
+            <div><div class="stat-label">主食</div><div class="stat-value">大米</div></div>
+            <div><div class="stat-label">蛋白</div><div class="stat-value">鸡肉</div></div>
+          </div>
+          <div class="section">
+            <div class="section-title">食材用量</div>
+            <div class="chips"><span class="chip">米饭 80g</span><span class="chip">鸡肉丁 35g</span><span class="chip">香菇 20g</span><span class="chip">胡萝卜 25g</span></div>
+          </div>
+          <div class="section">
+            <div class="section-title">营养亮点</div>
+            <p>鸡肉提供优质蛋白，香菇和胡萝卜增加蔬菜摄入。</p>
+          </div>
+          <div class="section">
+            <div class="section-title">制作步骤</div>
+            <p>1. 鸡肉丁炒散至变色。<br />2. 加入蔬菜和米饭焖软。</p>
+          </div>
+          <div class="save">▣ 下载食谱卡</div>
+        </div>
+        <div class="caption">④ 食谱详情</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="shot board" id="dogdan">
+    <div class="phone-grid">
+      <div class="phone-wrap">
+        <div class="phone dog-start green-bg">
+          <div class="capsule mini-capsule"></div>
+          <img class="dog-logo" src="assets/dogdan-logo-transparent.png" alt="" />
+          <img class="guai-logo" src="assets/guai-title-transparent.png" alt="乖乖吃饭" />
+          <div class="call-only"><img src="assets/call-button-large-transparent.png" alt="" /></div>
+        </div>
+        <div class="caption">① 入口页</div>
+      </div>
+
+      <div class="phone-wrap">
+        <div class="phone dark calling">
+          <div class="capsule mini-capsule"></div>
+          <img class="call-avatar" src="assets/dogdan-logo-transparent.png" alt="" />
+          <div class="calling-text">正在呼叫狗蛋叔叔...</div>
+        </div>
+        <div class="caption">② 呼叫页</div>
+      </div>
+
+      <div class="phone-wrap">
+        <div class="phone dark video">
+          <img class="idle" src="assets/idle.jpg" alt="" />
+          <div class="capsule mini-capsule"></div>
+          <div class="call-info"><h3>狗蛋叔叔</h3><span>通话中</span></div>
+          <div class="online">在线</div>
+          <div class="timer">00:02</div>
+          <div class="video-actions">
+            <div class="video-action"><img src="assets/action-remind.png" alt="" /></div>
+            <div class="video-action"><img src="assets/action-praise.png" alt="" /></div>
+            <div class="video-action"><img src="assets/action-wave.png" alt="" /></div>
+          </div>
+        </div>
+        <div class="caption">③ 通话页（空闲视频循环播放）</div>
+      </div>
+
+      <div class="phone-wrap">
+        <div class="phone bye">
+          <div class="capsule mini-capsule"></div>
+          <img class="dog-logo" src="assets/dogdan-logo-transparent.png" alt="" />
+          <img class="goodbye-logo" src="assets/goodbye-transparent.png" alt="明天见" />
+          <div class="again">再来一次</div>
+        </div>
+        <div class="caption">④ 结束页</div>
+      </div>
+    </div>
+    <div class="interaction-row">
+      <div class="interaction-title">互动行为提示</div>
+      <div class="interaction-item"><img src="assets/action-remind.png" alt="" /><div>点击【提醒】<br />播放提醒视频</div></div>
+      <div class="interaction-item"><img src="assets/action-praise.png" alt="" /><div>点击【鼓励】<br />播放鼓励视频</div></div>
+      <div class="interaction-item"><img src="assets/action-wave.png" alt="" /><div>点击【再见】<br />播放后进入结束页</div></div>
+    </div>
+  </section>
+
+  <script>
+    const target = (window.location.hash || "#home").slice(1);
+    document.body.classList.add(`hash-${target}`);
+  </script>
+</body>
+</html>

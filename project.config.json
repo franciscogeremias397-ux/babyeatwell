@@ -1,0 +1,80 @@
+{
+  "description": "宝贝乖乖吃饭微信小程序恢复版",
+  "packOptions": {
+    "ignore": [
+      {
+        "value": "sessions",
+        "type": "folder"
+      },
+      {
+        "value": "design-options",
+        "type": "folder"
+      },
+      {
+        "value": "design-options-v2",
+        "type": "folder"
+      },
+      {
+        "value": "random-draw-preview.gif",
+        "type": "file"
+      },
+      {
+        "value": "preview-*.png",
+        "type": "glob"
+      },
+      {
+        "value": "preview-*.json",
+        "type": "glob"
+      },
+      {
+        "value": "upload-*.json",
+        "type": "glob"
+      },
+      {
+        "value": ".DS_Store",
+        "type": "file"
+      }
+    ],
+    "include": []
+  },
+  "setting": {
+    "bundle": false,
+    "coverView": true,
+    "es6": true,
+    "enhance": true,
+    "ignoreDevUnusedFiles": true,
+    "ignoreUploadUnusedFiles": true,
+    "minified": true,
+    "postcss": true,
+    "preloadBackgroundData": false,
+    "urlCheck": true,
+    "compileWorklet": false,
+    "uglifyFileName": false,
+    "uploadWithSourceMap": true,
+    "packNpmManually": false,
+    "packNpmRelationList": [],
+    "minifyWXSS": true,
+    "minifyWXML": true,
+    "localPlugins": false,
+    "disableUseStrict": false,
+    "useCompilerPlugins": false,
+    "condition": false,
+    "swc": false,
+    "disableSWC": true,
+    "babelSetting": {
+      "ignore": [],
+      "disablePlugins": [],
+      "outputPath": ""
+    }
+  },
+  "compileType": "miniprogram",
+  "libVersion": "3.8.10",
+  "appid": "wxd23e3a3fbd980d36",
+  "projectname": "baobei-guaiguai-chifan",
+  "condition": {},
+  "editorSetting": {
+    "tabIndent": "insertSpaces",
+    "tabSize": 2
+  },
+  "simulatorPluginLibVersion": {}
+}

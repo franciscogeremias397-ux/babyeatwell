@@ -1,0 +1,68 @@
+<view class="page detail-page">
+  <view wx:if="{{recipe}}">
+    <view class="detail-head">
+      <text class="eyebrow">食谱详情</text>
+      <view class="title">{{recipe.name}}</view>
+      <view class="subtitle">{{recipe.ageMinMonths}}-{{recipe.ageMaxMonths}} 月龄 · {{recipe.mealTypesText}}</view>
+    </view>
+
+    <view class="detail-hero">
+      <image class="hero-image" src="{{image}}" mode="aspectFill" />
+    </view>
+
+    <view class="stats-card">
+      <view class="stat-item">
+        <view class="stat-label">形态</view>
+        <view class="stat-value">{{recipe.texture}}</view>
+      </view>
+      <view class="stat-item">
+        <view class="stat-label">主食</view>
+        <view class="stat-value">{{recipe.mainStaple}}</view>
+      </view>
+      <view class="stat-item">
+        <view class="stat-label">蛋白</view>
+        <view class="stat-value">{{recipe.proteinType}}</view>
+      </view>
+    </view>
+
+    <view class="detail-section">
+      <view class="section-heading">
+        <view class="section-title">食材用量</view>
+      </view>
+      <view class="chip-list">
+        <view wx:for="{{ingredientChips}}" wx:key="*this" class="chip">{{item}}</view>
+      </view>
+    </view>
+
+    <view class="detail-section">
+      <view class="section-heading">
+        <view class="section-title">营养亮点</view>
+      </view>
+      <view wx:for="{{recipe.nutritionHighlights}}" wx:key="*this" class="paragraph">{{item}}</view>
+    </view>
+
+    <view class="detail-section">
+      <view class="section-heading">
+        <view class="section-title">制作步骤</view>
+      </view>
+      <view wx:for="{{recipe.steps}}" wx:key="*this" class="step-row">
+        <text class="step-index">{{index + 1}}</text>
+        <text class="step-text">{{item}}</text>
+      </view>
+    </view>
+
+    <view class="detail-section">
+      <view class="section-heading">
+        <view class="section-title">注意事项</view>
+      </view>
+      <view wx:for="{{recipe.cautions}}" wx:key="*this" class="paragraph">{{item}}</view>
+      <view class="disclaimer">本食谱为家庭饮食参考，不替代医生、营养师或儿保建议。</view>
+    </view>
+
+    <view class="detail-actions bottom-safe">
+      <button class="primary-button detail-download" hover-class="pressing" bindtap="downloadRecipe">下载食谱卡</button>
+    </view>
+  </view>
+
+  <view wx:else class="empty-state">没有找到这道食谱。</view>
+</view>

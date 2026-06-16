@@ -1,0 +1,684 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>宝贝乖乖吃饭 v4 原型</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      margin: 0;
+      min-height: 100%;
+      background: #edf5fc;
+      font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif;
+    }
+
+    .shot {
+      position: relative;
+      overflow: hidden;
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+    }
+
+    .mobile-shot {
+      width: 853px;
+      height: 1844px;
+    }
+
+    .board-shot {
+      width: 1536px;
+      height: 1024px;
+    }
+
+    .home {
+      background-image: url("../v2/01-home-option2.png");
+    }
+
+    .haohao {
+      background-image: url("../v2/02-haohuo-page-smaller-title.png");
+    }
+
+    .recipe-flow {
+      background-image: url("../v2/03-recipe-flow-pages.png");
+    }
+
+    .dogdan-flow {
+      background-image: url("../v2/04-dogdan-supervise-flow.png");
+    }
+
+    .home-top-clean {
+      position: absolute;
+      left: 0;
+      top: 116px;
+      width: 853px;
+      height: 430px;
+      background: linear-gradient(180deg, #fff 0%, #fff 92%, rgba(255, 255, 255, 0) 100%);
+    }
+
+    .home-title-crop {
+      position: absolute;
+      left: 112px;
+      top: 172px;
+      width: 820px;
+      height: 210px;
+      transform: scale(0.75);
+      transform-origin: top left;
+      background-image: url("../v2/01-home-option2.png");
+      background-repeat: no-repeat;
+      background-size: 853px 1844px;
+      background-position: -18px -184px;
+    }
+
+    .home-subtitle {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 420px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 13px;
+      color: #53617a;
+      font-size: 26px;
+      font-weight: 900;
+      letter-spacing: 0;
+    }
+
+    .dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #72b1ff;
+      flex: 0 0 auto;
+    }
+
+    .dot.pink {
+      background: #ffa7b4;
+    }
+
+    .dot.green {
+      background: #85ca89;
+    }
+
+    .home-bottom-clean {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 1538px;
+      bottom: 0;
+      background: linear-gradient(180deg, #f6fbff 0%, #eef9ff 100%);
+    }
+
+    .home-age-note {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 1600px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 18px;
+      color: #657792;
+      font-size: 25px;
+      font-weight: 900;
+      letter-spacing: 0;
+    }
+
+    .home-age-note .baby-mark {
+      display: grid;
+      place-items: center;
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      background: #eef6ff;
+      color: #2c84f4;
+      font-size: 18px;
+      box-shadow: 0 4px 12px rgba(66, 140, 236, 0.18);
+    }
+
+    .haohao-top-clean {
+      position: absolute;
+      left: 0;
+      top: 96px;
+      width: 853px;
+      height: 196px;
+      background: linear-gradient(180deg, #fff 0%, #fff 82%, rgba(255, 255, 255, 0) 100%);
+    }
+
+    .haohao-title-crop {
+      position: absolute;
+      left: 52px;
+      top: 112px;
+      width: 690px;
+      height: 170px;
+      background-image: url("../v2/02-haohuo-page-smaller-title.png");
+      background-repeat: no-repeat;
+      background-size: 853px 1844px;
+      background-position: -176px -108px;
+    }
+
+    .phone-cover {
+      position: absolute;
+      border-radius: 24px;
+      background: linear-gradient(180deg, #fff 0%, #fbfdff 100%);
+    }
+
+    .profile-redraw {
+      position: absolute;
+      left: 31px;
+      top: 96px;
+      width: 320px;
+      height: 812px;
+      padding: 18px 22px;
+      border-radius: 24px;
+      background: linear-gradient(180deg, #fff 0%, #fbfdff 100%);
+      color: #0f2742;
+    }
+
+    .profile-redraw h2 {
+      margin: 0;
+      font-size: 26px;
+      font-weight: 950;
+      line-height: 1.15;
+    }
+
+    .profile-redraw .meta {
+      margin-top: 10px;
+      color: #526d89;
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .profile-card {
+      margin-top: 30px;
+      padding: 18px;
+      border-radius: 22px;
+      background: #fff;
+      box-shadow: 0 12px 28px rgba(84, 125, 166, 0.12);
+    }
+
+    .field-row {
+      display: grid;
+      grid-template-columns: 96px 1fr;
+      align-items: center;
+      height: 44px;
+      border-bottom: 1px solid #edf2f7;
+      color: #17304b;
+      font-size: 15px;
+      font-weight: 850;
+    }
+
+    .field-row + .field-row {
+      margin-top: 8px;
+    }
+
+    .field-row span:last-child {
+      color: #7d91aa;
+      text-align: right;
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .chip-section {
+      margin-top: 26px;
+    }
+
+    .chip-title {
+      color: #17304b;
+      font-size: 17px;
+      font-weight: 950;
+    }
+
+    .chip-subtle {
+      color: #89a0b5;
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 9px;
+      margin-top: 12px;
+    }
+
+    .chip {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 54px;
+      height: 30px;
+      padding: 0 13px;
+      border-radius: 12px;
+      border: 1px solid #cfe0f2;
+      background: #f8fbff;
+      color: #416486;
+      font-size: 14px;
+      font-weight: 820;
+    }
+
+    .chip.selected {
+      border-color: #9fc7fb;
+      background: #eef6ff;
+      color: #267be8;
+    }
+
+    .save-btn {
+      position: absolute;
+      left: 21px;
+      right: 21px;
+      bottom: 18px;
+      display: grid;
+      place-items: center;
+      height: 60px;
+      border-radius: 30px;
+      background: linear-gradient(180deg, #62d073 0%, #39af5b 100%);
+      color: #fff;
+      font-size: 21px;
+      font-weight: 950;
+      box-shadow: 0 16px 30px rgba(53, 171, 86, 0.28);
+    }
+
+    .remove-logo {
+      position: absolute;
+      height: 68px;
+      border-radius: 0;
+      background: #fff;
+    }
+
+    .remove-logo.weekly {
+      left: 482px;
+      top: 35px;
+      width: 190px;
+    }
+
+    .remove-logo.profile {
+      left: 96px;
+      top: 35px;
+      width: 188px;
+    }
+
+    .remove-logo.random {
+      left: 860px;
+      top: 35px;
+      width: 190px;
+    }
+
+    .remove-logo.detail {
+      left: 1238px;
+      top: 35px;
+      width: 190px;
+    }
+
+    .weekly-redraw {
+      position: absolute;
+      left: 401px;
+      top: 191px;
+      width: 348px;
+      height: 555px;
+      overflow: hidden;
+      border: 1.5px solid #cce4ff;
+      border-radius: 19px;
+      background: #fff;
+      color: #0f2742;
+      box-shadow: 0 10px 24px rgba(92, 136, 180, 0.08);
+    }
+
+    .weekly-head,
+    .weekly-row {
+      display: grid;
+      grid-template-columns: 70px repeat(3, 1fr);
+      align-items: center;
+      text-align: center;
+    }
+
+    .weekly-head {
+      height: 42px;
+      background: #eaf6ff;
+      color: #29628f;
+      font-size: 13px;
+      font-weight: 950;
+    }
+
+    .weekly-row {
+      height: 73px;
+      border-top: 1px solid #eef3f8;
+      font-size: 10px;
+      font-weight: 820;
+      line-height: 1.2;
+    }
+
+    .day {
+      color: #18334f;
+      font-size: 14px;
+      font-weight: 950;
+    }
+
+    .day span {
+      display: block;
+      margin-top: 4px;
+      color: #89a3bc;
+      font-size: 10px;
+      font-weight: 800;
+    }
+
+    .meal img {
+      display: block;
+      width: 34px;
+      height: 34px;
+      margin: 0 auto 4px;
+      border-radius: 8px;
+      object-fit: cover;
+    }
+
+    .dog-start-clean-text {
+      position: absolute;
+      left: 70px;
+      top: 452px;
+      width: 260px;
+      height: 88px;
+      background: #fff;
+    }
+
+    .dog-start-clean-button {
+      position: absolute;
+      left: 56px;
+      top: 585px;
+      width: 292px;
+      height: 168px;
+      background: #fbfff5;
+    }
+
+    .dog-call-icon {
+      position: absolute;
+      left: 144px;
+      top: 600px;
+      display: grid;
+      place-items: center;
+      width: 118px;
+      height: 118px;
+      border-radius: 999px;
+      background: linear-gradient(180deg, #fff 0%, #ecfff1 100%);
+      box-shadow:
+        0 14px 28px rgba(71, 186, 94, 0.22),
+        inset 0 -7px 0 rgba(87, 200, 101, 0.13),
+        inset 0 0 0 6px rgba(126, 218, 139, 0.16);
+    }
+
+    .dog-call-icon::before {
+      content: "";
+      position: absolute;
+      inset: -13px;
+      border: 4px solid rgba(116, 213, 131, 0.14);
+      border-radius: inherit;
+    }
+
+    .dog-call-icon img {
+      width: 118px;
+      height: 79px;
+      border-radius: 36px;
+      object-fit: cover;
+    }
+
+    .calling-redraw {
+      position: absolute;
+      left: 413px;
+      top: 24px;
+      width: 342px;
+      height: 779px;
+      border-radius: 13px;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at 50% 34%, rgba(255, 255, 255, 0.08), transparent 34%),
+        linear-gradient(180deg, #20160f 0%, #130e0b 48%, #1b120d 100%);
+      color: #fff;
+    }
+
+    .calling-redraw .capsule,
+    .video-actions-redraw .capsule {
+      position: absolute;
+      right: 21px;
+      top: 18px;
+      width: 78px;
+      height: 30px;
+      border-radius: 999px;
+      background: rgba(0, 0, 0, 0.42);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .calling-redraw .capsule::before,
+    .video-actions-redraw .capsule::before {
+      content: "...";
+      position: absolute;
+      left: 15px;
+      top: 1px;
+      color: #fff;
+      font-size: 21px;
+      font-weight: 950;
+    }
+
+    .calling-redraw .capsule::after,
+    .video-actions-redraw .capsule::after {
+      content: "";
+      position: absolute;
+      right: 12px;
+      top: 8px;
+      width: 13px;
+      height: 13px;
+      border-radius: 50%;
+      border: 3px solid #fff;
+    }
+
+    .calling-avatar {
+      position: absolute;
+      left: 93px;
+      top: 225px;
+      width: 156px;
+      height: 156px;
+      border-radius: 50%;
+      object-fit: contain;
+      background: #fff;
+      box-shadow: 0 24px 58px rgba(0, 0, 0, 0.38);
+    }
+
+    .calling-copy {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 448px;
+      text-align: center;
+      font-size: 26px;
+      font-weight: 950;
+      text-shadow: 0 6px 20px rgba(0, 0, 0, 0.45);
+    }
+
+    .video-actions-redraw {
+      position: absolute;
+      left: 779px;
+      top: 24px;
+      width: 344px;
+      height: 779px;
+      pointer-events: none;
+    }
+
+    .video-actions-cover {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 270px;
+      background: linear-gradient(180deg, rgba(7, 5, 4, 0) 0%, rgba(8, 6, 4, 0.99) 28%, rgba(8, 6, 4, 1) 100%);
+    }
+
+    .video-actions {
+      position: absolute;
+      left: 34px;
+      right: 34px;
+      bottom: 46px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .video-action {
+      display: grid;
+      place-items: center;
+      width: 62px;
+      height: 62px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.96);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.24);
+    }
+
+    .video-action img {
+      width: 49px;
+      height: 49px;
+      object-fit: contain;
+    }
+
+    body.hash-home .shot:not(.home),
+    body.hash-haohao .shot:not(.haohao),
+    body.hash-recipe-flow .shot:not(.recipe-flow),
+    body.hash-dogdan-flow .shot:not(.dogdan-flow) {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <section class="shot mobile-shot home" id="home">
+    <div class="home-top-clean"></div>
+    <div class="home-title-crop" aria-hidden="true"></div>
+    <div class="home-subtitle">
+      <span class="dot"></span><span class="dot pink"></span><span class="dot"></span>
+      <span>让宝宝吃饭更轻松</span>
+      <span class="dot"></span><span class="dot pink"></span><span class="dot green"></span>
+    </div>
+    <div class="home-bottom-clean"></div>
+    <div class="home-age-note">
+      <span class="dot"></span>
+      <span class="baby-mark">宝</span>
+      <span>适合 12-36 月龄宝宝三餐参考</span>
+      <span class="dot"></span>
+    </div>
+  </section>
+
+  <section class="shot mobile-shot haohao" id="haohao">
+    <div class="haohao-top-clean"></div>
+    <div class="haohao-title-crop" aria-hidden="true"></div>
+  </section>
+
+  <section class="shot board-shot recipe-flow" id="recipe-flow">
+    <div class="profile-redraw">
+      <h2>宝宝档案</h2>
+      <div class="meta">完善信息，生成更合适的食谱</div>
+      <div class="profile-card">
+        <div class="field-row"><span>宝宝昵称</span><span>啾啾</span></div>
+        <div class="field-row"><span>出生日期</span><span>2022-10-08</span></div>
+      </div>
+      <div class="chip-section">
+        <div class="chip-title">过敏食材 <span class="chip-subtle">（可多选）</span></div>
+        <div class="chips">
+          <span class="chip selected">鸡蛋</span>
+          <span class="chip selected">牛奶</span>
+          <span class="chip selected">海鲜</span>
+          <span class="chip">+ 添加</span>
+        </div>
+      </div>
+      <div class="chip-section">
+        <div class="chip-title">不爱吃的食物 <span class="chip-subtle">（可多选）</span></div>
+        <div class="chips">
+          <span class="chip selected">香菜</span>
+          <span class="chip selected">胡萝卜</span>
+          <span class="chip">+ 添加</span>
+        </div>
+      </div>
+      <div class="save-btn">保存</div>
+    </div>
+
+    <div class="remove-logo profile"></div>
+    <div class="remove-logo weekly"></div>
+    <div class="remove-logo random"></div>
+    <div class="remove-logo detail"></div>
+
+    <div class="weekly-redraw">
+      <div class="weekly-head">
+        <div>日期</div><div>早餐</div><div>午餐</div><div>晚餐</div>
+      </div>
+      <div class="weekly-row">
+        <div class="day">周一<span>06/08</span></div>
+        <div class="meal"><img src="../../assets/recipes/default-meal.png" />番茄鸡蛋软面</div>
+        <div class="meal"><img src="../../assets/recipes/default-meal.png" />香菇鸡肉焖饭</div>
+        <div class="meal"><img src="../../assets/recipes/default-meal.png" />胡萝卜黑软饺子</div>
+      </div>
+      <div class="weekly-row">
+        <div class="day">周二<span>06/09</span></div>
+        <div class="meal"><img src="../../assets/recipes/default-meal.png" />奶香燕麦香蕉粥</div>
+        <div class="meal"><img src="../../assets/recipes/default-meal.png" />西兰花虾仁软饭</div>
+        <div class="meal"><img src="../../assets/recipes/default-meal.png" />牛肉胡萝卜小馄饨</div>
+      </div>
+      <div class="weekly-row">
+        <div class="day">周三<span>06/10</span></div>
+        <div class="meal"><img src="../../assets/recipes/default-meal.png" />豆腐鸡蛋羹</div>
+        <div class="meal"><img src="../../assets/recipes/default-meal.png" />南瓜牛肉焖饭</div>
+        <div class="meal"><img src="../../assets/recipes/default-meal.png" />冬瓜虾仁面片汤</div>
+      </div>
+      <div class="weekly-row">
+        <div class="day">周四<span>06/11</span></div>
+        <div class="meal"><img src="../../assets/recipes/default-meal.png" />紫薯燕麦粥</div>
+        <div class="meal"><img src="../../assets/recipes/default-meal.png" />鳕鱼番茄蔬菜面</div>
+        <div class="meal"><img src="../../assets/recipes/default-meal.png" />鸡肉西兰花土豆泥饭</div>
+      </div>
+      <div class="weekly-row">
+        <div class="day">周五<span>06/12</span></div>
+        <div class="meal"><img src="../../assets/recipes/default-meal.png" />玉米鸡蛋软饼</div>
+        <div class="meal"><img src="../../assets/recipes/default-meal.png" />香菇油菜鸡肉面</div>
+        <div class="meal"><img src="../../assets/recipes/default-meal.png" />山药排骨软饭</div>
+      </div>
+      <div class="weekly-row">
+        <div class="day">周六<span>06/13</span></div>
+        <div class="meal"><img src="../../assets/recipes/default-meal.png" />南瓜馒头丁蔬菜汤</div>
+        <div class="meal"><img src="../../assets/recipes/default-meal.png" />西葫芦猪肉小饺子</div>
+        <div class="meal"><img src="../../assets/recipes/default-meal.png" />番茄牛肉粥</div>
+      </div>
+      <div class="weekly-row">
+        <div class="day">周日<span>06/14</span></div>
+        <div class="meal"><img src="../../assets/recipes/default-meal.png" />鸡肉蔬菜小米粥</div>
+        <div class="meal"><img src="../../assets/recipes/default-meal.png" />土豆牛肉软饭</div>
+        <div class="meal"><img src="../../assets/recipes/default-meal.png" />青菜豆腐面</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="shot board-shot dogdan-flow" id="dogdan-flow">
+    <div class="dog-start-clean-text"></div>
+    <div class="dog-start-clean-button"></div>
+    <div class="dog-call-icon">
+      <img src="../../assets/ui/call-button.png" alt="" />
+    </div>
+
+    <div class="calling-redraw">
+      <div class="capsule"></div>
+      <img class="calling-avatar" src="../../assets/ui/dogdan-logo.png" alt="" />
+      <div class="calling-copy">正在呼叫狗蛋叔叔...</div>
+    </div>
+
+    <div class="video-actions-redraw">
+      <div class="video-actions-cover"></div>
+      <div class="video-actions">
+        <div class="video-action"><img src="../../assets/ui/action-remind.png" alt="" /></div>
+        <div class="video-action"><img src="../../assets/ui/action-praise.png" alt="" /></div>
+        <div class="video-action"><img src="../../assets/ui/action-wave.png" alt="" /></div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    const target = (window.location.hash || "#home").slice(1);
+    document.body.classList.add(`hash-${target}`);
+  </script>
+</body>
+</html>

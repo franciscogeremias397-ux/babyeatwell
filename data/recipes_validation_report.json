@@ -1,0 +1,31 @@
+{
+  "generatedAt": "2026-06-09T12:41:03.077709Z",
+  "recipeCount": 80,
+  "requiredFields": [
+    "id",
+    "name",
+    "stageId",
+    "ageMinMonths",
+    "ageMaxMonths",
+    "mealTypes",
+    "suitableForWeeklyPlan",
+    "suitableForRandomMeal",
+    "texture",
+    "dishType",
+    "mainStaple",
+    "proteinType",
+    "proteinCategory",
+    "vegetableTags",
+    "frequencyLimitPerWeek",
+    "ingredients",
+    "nutritionHighlights",
+    "steps",
+    "allergens",
+    "avoidTags",
+    "cautions",
+    "image",
+    "imagePrompt"
+  ],
+  "errors": [],
+  "status": "pass"
+}

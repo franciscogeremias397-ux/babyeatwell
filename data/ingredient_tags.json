@@ -1,0 +1,323 @@
+[
+  {
+    "category": "蛋类",
+    "standardTag": "鸡蛋",
+    "displayName": "鸡蛋",
+    "isCommonAllergen": true,
+    "relatedTags": [
+      "鸡蛋",
+      "蛋黄",
+      "蛋清",
+      "蛋羹",
+      "蛋花",
+      "蒸蛋"
+    ]
+  },
+  {
+    "category": "奶类",
+    "standardTag": "牛奶",
+    "displayName": "牛奶/奶制品",
+    "isCommonAllergen": true,
+    "relatedTags": [
+      "牛奶",
+      "配方奶",
+      "纯牛奶",
+      "奶酪",
+      "奶类",
+      "芝士"
+    ]
+  },
+  {
+    "category": "谷物/面食",
+    "standardTag": "小麦",
+    "displayName": "小麦/面食",
+    "isCommonAllergen": true,
+    "relatedTags": [
+      "小麦",
+      "面粉",
+      "面条",
+      "宝宝面",
+      "儿童面",
+      "意面",
+      "馒头",
+      "馄饨皮",
+      "饺子皮",
+      "面片",
+      "小面片",
+      "面食"
+    ]
+  },
+  {
+    "category": "豆制品",
+    "standardTag": "大豆",
+    "displayName": "大豆/豆制品",
+    "isCommonAllergen": true,
+    "relatedTags": [
+      "大豆",
+      "黄豆",
+      "豆腐",
+      "豆浆",
+      "豆制品",
+      "嫩豆腐"
+    ]
+  },
+  {
+    "category": "水产",
+    "standardTag": "鱼类",
+    "displayName": "鱼类",
+    "isCommonAllergen": true,
+    "relatedTags": [
+      "鱼",
+      "鱼类",
+      "鱼肉",
+      "鳕鱼",
+      "鳕鱼肉",
+      "三文鱼",
+      "鲈鱼",
+      "龙利鱼"
+    ]
+  },
+  {
+    "category": "水产",
+    "standardTag": "虾",
+    "displayName": "虾",
+    "isCommonAllergen": true,
+    "relatedTags": [
+      "虾",
+      "虾仁",
+      "虾皮",
+      "甲壳类",
+      "大虾",
+      "鲜虾",
+      "河虾",
+      "海虾"
+    ]
+  },
+  {
+    "category": "坚果",
+    "standardTag": "坚果",
+    "displayName": "坚果",
+    "isCommonAllergen": true,
+    "relatedTags": [
+      "坚果",
+      "花生",
+      "核桃",
+      "杏仁",
+      "腰果"
+    ]
+  },
+  {
+    "category": "肉类",
+    "standardTag": "猪肉",
+    "displayName": "猪肉",
+    "isCommonAllergen": false,
+    "relatedTags": [
+      "猪肉",
+      "猪肉末",
+      "排骨",
+      "排骨肉",
+      "猪肝"
+    ]
+  },
+  {
+    "category": "肉类",
+    "standardTag": "牛肉",
+    "displayName": "牛肉",
+    "isCommonAllergen": false,
+    "relatedTags": [
+      "牛肉",
+      "牛肉末",
+      "牛肉丁"
+    ]
+  },
+  {
+    "category": "肉类",
+    "standardTag": "鸡肉",
+    "displayName": "鸡肉",
+    "isCommonAllergen": false,
+    "relatedTags": [
+      "鸡肉",
+      "鸡肉末",
+      "鸡肉丁",
+      "鸡肉丝",
+      "鸡肉松"
+    ]
+  },
+  {
+    "category": "蔬菜",
+    "standardTag": "番茄",
+    "displayName": "番茄/西红柿",
+    "isCommonAllergen": false,
+    "relatedTags": [
+      "番茄",
+      "西红柿",
+      "蕃茄",
+      "小番茄",
+      "圣女果"
+    ]
+  },
+  {
+    "category": "蔬菜",
+    "standardTag": "胡萝卜",
+    "displayName": "胡萝卜",
+    "isCommonAllergen": false,
+    "relatedTags": [
+      "胡萝卜",
+      "红萝卜",
+      "胡罗卜"
+    ]
+  },
+  {
+    "category": "蔬菜",
+    "standardTag": "南瓜",
+    "displayName": "南瓜",
+    "isCommonAllergen": false,
+    "relatedTags": [
+      "南瓜",
+      "贝贝南瓜"
+    ]
+  },
+  {
+    "category": "蔬菜",
+    "standardTag": "西兰花",
+    "displayName": "西兰花",
+    "isCommonAllergen": false,
+    "relatedTags": [
+      "西兰花",
+      "西蓝花"
+    ]
+  },
+  {
+    "category": "蔬菜",
+    "standardTag": "青菜",
+    "displayName": "青菜/绿叶菜",
+    "isCommonAllergen": false,
+    "relatedTags": [
+      "青菜",
+      "小青菜",
+      "上海青",
+      "油菜",
+      "小油菜",
+      "绿叶菜",
+      "娃娃菜",
+      "白菜",
+      "菠菜"
+    ]
+  },
+  {
+    "category": "菌菇",
+    "standardTag": "香菇",
+    "displayName": "香菇/菌菇",
+    "isCommonAllergen": false,
+    "relatedTags": [
+      "香菇",
+      "菌菇",
+      "蘑菇"
+    ]
+  },
+  {
+    "category": "蔬菜",
+    "standardTag": "土豆",
+    "displayName": "土豆",
+    "isCommonAllergen": false,
+    "relatedTags": [
+      "土豆",
+      "马铃薯"
+    ]
+  },
+  {
+    "category": "蔬菜",
+    "standardTag": "山药",
+    "displayName": "山药",
+    "isCommonAllergen": false,
+    "relatedTags": [
+      "山药",
+      "淮山"
+    ]
+  },
+  {
+    "category": "蔬菜",
+    "standardTag": "冬瓜",
+    "displayName": "冬瓜",
+    "isCommonAllergen": false,
+    "relatedTags": [
+      "冬瓜"
+    ]
+  },
+  {
+    "category": "蔬菜",
+    "standardTag": "丝瓜",
+    "displayName": "丝瓜",
+    "isCommonAllergen": false,
+    "relatedTags": [
+      "丝瓜"
+    ]
+  },
+  {
+    "category": "蔬菜",
+    "standardTag": "西葫芦",
+    "displayName": "西葫芦",
+    "isCommonAllergen": false,
+    "relatedTags": [
+      "西葫芦"
+    ]
+  },
+  {
+    "category": "蔬菜",
+    "standardTag": "玉米",
+    "displayName": "玉米",
+    "isCommonAllergen": false,
+    "relatedTags": [
+      "玉米",
+      "玉米粒",
+      "鲜玉米粒"
+    ]
+  },
+  {
+    "category": "蔬菜",
+    "standardTag": "青豆",
+    "displayName": "青豆/豌豆",
+    "isCommonAllergen": false,
+    "relatedTags": [
+      "青豆",
+      "豌豆"
+    ]
+  },
+  {
+    "category": "水果",
+    "standardTag": "香蕉",
+    "displayName": "香蕉",
+    "isCommonAllergen": false,
+    "relatedTags": [
+      "香蕉"
+    ]
+  },
+  {
+    "category": "水果",
+    "standardTag": "苹果",
+    "displayName": "苹果",
+    "isCommonAllergen": false,
+    "relatedTags": [
+      "苹果"
+    ]
+  },
+  {
+    "category": "水果",
+    "standardTag": "红枣",
+    "displayName": "红枣",
+    "isCommonAllergen": false,
+    "relatedTags": [
+      "红枣",
+      "枣"
+    ]
+  },
+  {
+    "category": "谷物/薯类",
+    "standardTag": "紫薯",
+    "displayName": "紫薯",
+    "isCommonAllergen": false,
+    "relatedTags": [
+      "紫薯"
+    ]
+  }
+]

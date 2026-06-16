@@ -1,0 +1,20 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/recipe/index",
+    "pages/recipe-profile/index",
+    "pages/recipe-weekly/index",
+    "pages/recipe-random/index",
+    "pages/recipe-detail/index",
+    "pages/supervise/index"
+  ],
+  "window": {
+    "navigationBarTitleText": "宝贝乖乖吃饭",
+    "navigationBarBackgroundColor": "#F8F6EF",
+    "navigationBarTextStyle": "black",
+    "backgroundColor": "#F8F6EF"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "lazyCodeLoading": "requiredComponents"
+}

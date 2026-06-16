@@ -1,0 +1,106 @@
+.profile-page {
+  padding: 86rpx 44rpx calc(156rpx + env(safe-area-inset-bottom));
+  background: linear-gradient(180deg, #ffffff 0%, #f5fbff 72%, #eef7ff 100%);
+}
+
+.profile-head {
+  animation: fadeRise 360ms ease both;
+}
+
+.title {
+  margin-top: 0;
+  color: #173051;
+  font-size: 50rpx;
+}
+
+.form {
+  display: grid;
+  gap: 28rpx;
+  margin-top: 42rpx;
+}
+
+.field {
+  padding: 34rpx 30rpx;
+  border-radius: 30rpx;
+  background: rgba(255, 255, 255, 0.94);
+  box-shadow: 0 16rpx 40rpx rgba(76, 118, 154, 0.08);
+  animation: fadeRise 420ms ease both;
+}
+
+.field:nth-child(2) {
+  animation-delay: 40ms;
+}
+
+.field:nth-child(3) {
+  animation-delay: 80ms;
+}
+
+.field:nth-child(4) {
+  animation-delay: 120ms;
+}
+
+.label {
+  margin-bottom: 20rpx;
+  color: #173051;
+  font-size: 29rpx;
+  font-weight: 900;
+}
+
+.input,
+.picker-value {
+  min-height: 86rpx;
+  padding: 0 24rpx;
+  color: #173051;
+  font-size: 30rpx;
+  font-weight: 700;
+  border-radius: 22rpx;
+  background: #f4f8fc;
+}
+
+.picker-value {
+  display: flex;
+  align-items: center;
+}
+
+.tag-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16rpx;
+}
+
+.tag {
+  display: flex;
+  align-items: center;
+  min-height: 68rpx;
+  padding: 0 18rpx 0 10rpx;
+  color: #267be8;
+  font-size: 25rpx;
+  font-weight: 800;
+  border-radius: 34rpx;
+  border: 2rpx solid #b9d7ff;
+  background: #f3f9ff;
+}
+
+.tag checkbox {
+  transform: scale(0.72);
+}
+
+.custom-input {
+  margin-top: 20rpx;
+}
+
+.save-bar {
+  position: fixed;
+  right: 40rpx;
+  bottom: 0;
+  left: 40rpx;
+  z-index: 20;
+  padding: 20rpx 0 30rpx;
+  background: linear-gradient(180deg, rgba(239, 248, 255, 0) 0%, rgba(239, 248, 255, 0.94) 42%, #eff8ff 100%);
+}
+
+.save-button {
+  min-height: 96rpx;
+  font-size: 34rpx;
+  font-weight: 900;
+}

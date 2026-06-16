@@ -1,0 +1,254 @@
+.supervise-page {
+  min-height: 100vh;
+  color: #ffffff;
+  background: #ffffff;
+}
+
+.start-screen,
+.calling-screen,
+.done-screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  padding: calc(112rpx + env(safe-area-inset-top)) 52rpx calc(64rpx + env(safe-area-inset-bottom));
+  background: linear-gradient(180deg, #ffffff 0%, #fbfff7 100%);
+}
+
+.dogdan-logo {
+  width: 360rpx;
+  height: 390rpx;
+  animation: fadeRise 420ms ease both;
+}
+
+.guai-logo {
+  width: 620rpx;
+  height: 205rpx;
+  margin-top: 64rpx;
+  animation: fadeRise 460ms ease 80ms both;
+}
+
+.call-button {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 250rpx;
+  height: 250rpx;
+  margin-top: 112rpx;
+  overflow: visible;
+  border-radius: 50%;
+  background: linear-gradient(180deg, #ffffff 0%, #ecfff1 100%);
+  box-shadow: 0 20rpx 38rpx rgba(72, 188, 98, 0.22), inset 0 -10rpx 0 rgba(88, 201, 108, 0.13), inset 0 0 0 14rpx rgba(125, 218, 143, 0.17);
+  animation: fadeRise 500ms ease 140ms both;
+}
+
+.call-button::before {
+  position: absolute;
+  top: -28rpx;
+  right: -28rpx;
+  bottom: -28rpx;
+  left: -28rpx;
+  z-index: 0;
+  content: "";
+  border: 9rpx solid rgba(111, 216, 136, 0.15);
+  border-radius: 50%;
+  animation: pulseGlow 2.2s ease-in-out infinite;
+}
+
+.call-button image {
+  position: relative;
+  z-index: 1;
+  width: 190rpx;
+  height: 134rpx;
+}
+
+.calling-screen {
+  justify-content: center;
+  padding-top: calc(40rpx + env(safe-area-inset-top));
+  background: radial-gradient(circle at 50% 43%, rgba(255, 255, 255, 0.08), transparent 34%), linear-gradient(180deg, #211710 0%, #130f0c 62%, #16100d 100%);
+}
+
+.calling-avatar {
+  width: 330rpx;
+  height: 330rpx;
+  border-radius: 50%;
+  background: #ffffff;
+  box-shadow: 0 26rpx 60rpx rgba(0, 0, 0, 0.34);
+  animation: fadeRise 420ms ease both;
+}
+
+.calling-text {
+  margin-top: 80rpx;
+  color: #ffffff;
+  font-size: 42rpx;
+  font-weight: 900;
+  text-align: center;
+  text-shadow: 0 7rpx 20rpx rgba(0, 0, 0, 0.46);
+  animation: fadeRise 460ms ease 80ms both;
+}
+
+.done-screen {
+  padding-top: calc(122rpx + env(safe-area-inset-top));
+  background: #ffffff;
+}
+
+.done-dogdan {
+  width: 370rpx;
+  height: 400rpx;
+}
+
+.goodbye-logo {
+  width: 590rpx;
+  height: 216rpx;
+  margin-top: 76rpx;
+  animation: fadeRise 460ms ease 80ms both;
+}
+
+.again-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 330rpx;
+  height: 96rpx;
+  margin-top: 84rpx;
+  color: #ffffff;
+  font-size: 34rpx;
+  font-weight: 900;
+  border-radius: 54rpx;
+  background: linear-gradient(180deg, #6fd486 0%, #50c66f 100%);
+  box-shadow: 0 22rpx 36rpx rgba(83, 190, 112, 0.26), inset 0 -10rpx 0 rgba(44, 165, 82, 0.22);
+  animation: fadeRise 500ms ease 160ms both;
+}
+
+.call-screen {
+  position: relative;
+  overflow: hidden;
+  min-height: 100vh;
+  background: #10100f;
+}
+
+.call-video {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  opacity: 0;
+  transition: none;
+}
+
+.call-video.active {
+  opacity: 1;
+  z-index: 1;
+}
+
+.call-shade {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 3;
+  pointer-events: none;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.18) 0%, rgba(0, 0, 0, 0.04) 44%, rgba(0, 0, 0, 0.74) 100%);
+}
+
+.call-top {
+  position: relative;
+  z-index: 5;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: calc(70rpx + env(safe-area-inset-top)) 46rpx 0;
+  text-shadow: 0 4rpx 18rpx rgba(0, 0, 0, 0.5);
+}
+
+.callee {
+  font-size: 42rpx;
+  font-weight: 900;
+  line-height: 1.2;
+}
+
+.call-status {
+  margin-top: 12rpx;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 27rpx;
+  font-weight: 700;
+}
+
+.online {
+  position: absolute;
+  left: 46rpx;
+  top: calc(158rpx + env(safe-area-inset-top));
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 108rpx;
+  height: 58rpx;
+  color: #ffffff;
+  font-size: 27rpx;
+  font-weight: 900;
+  border-radius: 29rpx;
+  background: #ef3f36;
+  box-shadow: 0 10rpx 20rpx rgba(0, 0, 0, 0.24);
+}
+
+.timer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 132rpx;
+  height: 62rpx;
+  color: rgba(255, 255, 255, 0.92);
+  font-size: 31rpx;
+  font-weight: 800;
+  border-radius: 32rpx;
+  background: rgba(18, 18, 18, 0.58);
+  box-shadow: inset 0 0 0 2rpx rgba(255, 255, 255, 0.08);
+}
+
+.control-bar {
+  position: absolute;
+  z-index: 6;
+  right: 90rpx;
+  bottom: calc(74rpx + env(safe-area-inset-bottom));
+  left: 90rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 116rpx;
+}
+
+.control {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 0;
+  width: 104rpx;
+  height: 104rpx;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.94);
+  box-shadow: 0 18rpx 36rpx rgba(0, 0, 0, 0.26);
+  animation: softFloat 3.6s ease-in-out infinite;
+}
+
+.control:nth-child(2) {
+  animation-delay: 180ms;
+}
+
+.control:nth-child(3) {
+  animation-delay: 360ms;
+}
+
+.control[disabled] {
+  opacity: 0.58;
+}
+
+.control-image {
+  width: 88rpx;
+  height: 88rpx;
+}

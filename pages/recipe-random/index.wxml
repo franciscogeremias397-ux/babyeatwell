@@ -1,0 +1,46 @@
+<view class="page random-page">
+  <view class="random-head">
+    <text class="eyebrow">随机一餐</text>
+    <view class="title">今天抽到这一餐</view>
+    <view class="subtitle">{{profile.nickname}} · {{ageMonths}} 月龄</view>
+  </view>
+
+  <view wx:if="{{warning}}" class="empty-state">{{warning}}</view>
+
+  <block wx:elif="{{recipe}}">
+    <view class="result-card">
+      <image class="recipe-image" src="{{image}}" mode="aspectFill" />
+      <view class="recipe-name-pill">{{recipe.name}}</view>
+      <view class="recipe-meta">{{recipe.ageMinMonths}}-{{recipe.ageMaxMonths}} 月龄 · {{mealTypesText}}</view>
+      <button class="detail-link pressable" hover-class="pressing" bindtap="goDetail">查看完整做法 ›</button>
+    </view>
+
+    <view class="info-section">
+      <view class="section-heading">
+        <view class="section-title">食材用量</view>
+      </view>
+      <view class="chip-list">
+        <view wx:for="{{ingredientChips}}" wx:key="*this" class="chip">{{item}}</view>
+      </view>
+    </view>
+
+    <view class="info-section">
+      <view class="section-heading">
+        <view class="section-title">营养亮点</view>
+      </view>
+      <view wx:for="{{recipe.nutritionHighlights}}" wx:key="*this" class="paragraph">{{item}}</view>
+    </view>
+
+    <view class="info-section">
+      <view class="section-heading">
+        <view class="section-title">注意事项</view>
+      </view>
+      <view wx:for="{{recipe.cautions}}" wx:key="*this" class="paragraph">{{item}}</view>
+    </view>
+
+    <view class="random-actions bottom-safe">
+      <button class="secondary-button change-button" hover-class="pressing" bindtap="draw">换一餐</button>
+      <button class="primary-button download-button" hover-class="pressing" bindtap="downloadRecipe">下载食谱</button>
+    </view>
+  </block>
+</view>

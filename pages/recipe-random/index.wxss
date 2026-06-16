@@ -1,0 +1,143 @@
+.random-page {
+  padding: 76rpx 44rpx calc(156rpx + env(safe-area-inset-bottom));
+  background: linear-gradient(180deg, #fff8ef 0%, #f8f6ef 54%, #eef8ff 100%);
+}
+
+.random-head {
+  animation: fadeRise 360ms ease both;
+}
+
+.title {
+  margin-top: 12rpx;
+  color: #173051;
+  font-size: 50rpx;
+}
+
+.subtitle {
+  margin-top: 14rpx;
+  color: #7a978c;
+  font-size: 30rpx;
+  font-weight: 800;
+}
+
+.result-card {
+  position: relative;
+  margin-top: 38rpx;
+  padding: 34rpx 30rpx 38rpx;
+  text-align: center;
+  border-radius: 42rpx;
+  background: rgba(255, 255, 255, 0.94);
+  box-shadow: 0 20rpx 52rpx rgba(96, 86, 70, 0.1);
+  animation: fadeRise 420ms ease 60ms both;
+}
+
+.recipe-image {
+  display: block;
+  width: 430rpx;
+  height: 430rpx;
+  margin: 0 auto;
+  border-radius: 28rpx;
+  background: #fff8ef;
+}
+
+.recipe-name-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 430rpx;
+  min-height: 78rpx;
+  margin-top: 18rpx;
+  padding: 0 36rpx;
+  color: #173051;
+  font-size: 40rpx;
+  font-weight: 900;
+  border-radius: 39rpx;
+  background: transparent;
+}
+
+.recipe-meta {
+  margin-top: 14rpx;
+  color: #7a978c;
+  font-size: 28rpx;
+  font-weight: 700;
+}
+
+.detail-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 210rpx;
+  height: 62rpx;
+  margin-top: 24rpx;
+  padding: 0 28rpx;
+  color: #54b980;
+  font-size: 27rpx;
+  font-weight: 900;
+  border-radius: 31rpx;
+  background: #dbf8e7;
+}
+
+.info-section {
+  margin-top: 28rpx;
+  padding: 30rpx 28rpx;
+  border-radius: 30rpx;
+  background: rgba(255, 255, 255, 0.94);
+  box-shadow: 0 14rpx 36rpx rgba(96, 86, 70, 0.07);
+  animation: fadeRise 420ms ease 100ms both;
+}
+
+.section-heading {
+  display: flex;
+  align-items: center;
+  min-height: 48rpx;
+  padding-left: 18rpx;
+  border-left: 8rpx solid #75d48a;
+  border-radius: 4rpx;
+}
+
+.chip-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18rpx;
+  margin-top: 28rpx;
+}
+
+.chip {
+  display: flex;
+  align-items: center;
+  min-height: 64rpx;
+  padding: 0 24rpx;
+  color: #267be8;
+  font-size: 28rpx;
+  font-weight: 900;
+  border-radius: 32rpx;
+  border: 2rpx solid #b9d7ff;
+  background: #f3f9ff;
+}
+
+.paragraph {
+  margin-top: 24rpx;
+  color: #6c8178;
+  font-size: 29rpx;
+  line-height: 1.7;
+}
+
+.random-actions {
+  position: fixed;
+  right: 44rpx;
+  bottom: 0;
+  left: 44rpx;
+  z-index: 20;
+  display: grid;
+  grid-template-columns: 220rpx 1fr;
+  gap: 18rpx;
+  padding: 20rpx 0 30rpx;
+  background: linear-gradient(180deg, rgba(239, 248, 255, 0) 0%, rgba(239, 248, 255, 0.94) 42%, #eff8ff 100%);
+}
+
+.change-button,
+.download-button {
+  min-height: 88rpx;
+  font-size: 30rpx;
+  font-weight: 900;
+}

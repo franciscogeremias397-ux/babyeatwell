@@ -1,0 +1,51 @@
+<view class="page weekly-page">
+  <view class="weekly-hero">
+    <view class="hero-copy">
+      <view class="title">{{profile.nickname}}的一周食谱</view>
+      <view class="stage-line">{{ageMonths}} 月龄 · {{stageName}}</view>
+      <view class="usage-note">食材用量为家庭参考量 <text class="info-dot">i</text></view>
+    </view>
+    <image class="hero-image" src="/assets/recipes/default-meal.png" mode="aspectFill" />
+  </view>
+
+  <view wx:if="{{warning}}" class="empty-state">{{warning}}</view>
+
+  <block wx:else>
+    <view class="meal-board">
+      <view class="board-head">
+        <view class="head-date">日期</view>
+        <view class="head-meal">早餐</view>
+        <view class="head-meal">午餐</view>
+        <view class="head-meal">晚餐</view>
+      </view>
+
+      <view wx:for="{{displayDays}}" wx:key="dayName" class="day-row">
+        <view class="day-cell">
+          <view class="day-name-line">
+            <text class="day-dot" style="background: {{item.accent}};"></text>
+            <text class="day-name">{{item.dayName}}</text>
+          </view>
+          <view class="day-date">{{item.dateText}}</view>
+        </view>
+
+        <view
+          wx:for="{{item.meals}}"
+          wx:key="mealType"
+          wx:for-item="meal"
+          class="meal-cell pressable"
+          hover-class="pressing"
+          bindtap="goDetail"
+          data-id="{{meal.id}}"
+        >
+          <image class="meal-thumb" src="{{meal.image}}" mode="aspectFill" />
+          <view class="meal-name">{{meal.name}}</view>
+        </view>
+      </view>
+    </view>
+
+    <view class="weekly-actions bottom-safe">
+      <button class="secondary-button regenerate" hover-class="pressing" bindtap="generate">重新生成</button>
+      <button class="primary-button download-button" hover-class="pressing" bindtap="downloadWeekly">下载食谱</button>
+    </view>
+  </block>
+</view>
