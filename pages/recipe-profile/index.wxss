@@ -89,6 +89,14 @@
   margin-top: 20rpx;
 }
 
+.resolve-hint {
+  margin-top: 14rpx;
+  color: #6a7d99;
+  font-size: 24rpx;
+  font-weight: 800;
+  line-height: 1.4;
+}
+
 .save-bar {
   position: fixed;
   right: 40rpx;

@@ -6,6 +6,8 @@ const DAYS = ['周一', '周二', '周三', '周四', '周五', '周六', '周�
 const BREAKFAST = '早餐';
 const LUNCH = '午餐';
 const DINNER = '晚餐';
+const PROFILE_REQUIRED_MESSAGE = '请先添加宝宝档案，才能生成更合适的食谱。';
+const SUPPORTED_AGE_MESSAGE = '当前版本适合 12-36 月龄宝宝使用。';
 
 function calculateAgeMonths(birthDate, currentDate = new Date()) {
   const birth = new Date(birthDate);
@@ -30,6 +32,7 @@ function getStageName(stageId) {
   const names = {
     '12_18m': '幼儿餐过渡期',
     '19_36m': '幼儿餐稳定期',
+    profile_required: '待添加宝宝档案',
     unsupported_under_12m: '暂不覆盖辅食阶段',
     unsupported_over_36m: '暂不覆盖 3 岁以上'
   };
@@ -38,23 +41,22 @@ function getStageName(stageId) {
 
 function getSupportedMessage(stageId) {
   if (stageId === 'unsupported_under_12m') {
-    return '当前版本先覆盖 12-36 月龄三餐，12 月龄以下辅食阶段建议咨询儿保医生。';
+    return SUPPORTED_AGE_MESSAGE;
   }
   if (stageId === 'unsupported_over_36m') {
-    return '当前版本先覆盖 12-36 月龄，3 岁以上宝宝饮食更接近家庭餐，可先作为参考。';
+    return SUPPORTED_AGE_MESSAGE;
   }
   return '';
 }
 
 function getDefaultProfile() {
-  const now = new Date();
-  const birth = new Date(now.getFullYear(), now.getMonth() - 14, now.getDate());
   return {
-    babyId: 'baby_001',
-    nickname: '小柚子',
-    birthDate: formatDate(birth),
+    babyId: '',
+    nickname: '',
+    birthDate: '',
     allergyTags: [],
-    avoidTags: []
+    avoidTags: [],
+    profileCompleted: false
   };
 }
 
@@ -66,19 +68,81 @@ function formatDate(date) {
 }
 
 function getProfile() {
-  return wx.getStorageSync('babyProfile') || getDefaultProfile();
+  const profile = wx.getStorageSync('babyProfile');
+  if (!profile || isSeedProfile(profile)) return getDefaultProfile();
+  return profile;
+}
+
+function isSeedProfile(profile) {
+  if (!profile || profile.profileCompleted) return false;
+  const allergyTags = profile.allergyTags || [];
+  const avoidTags = profile.avoidTags || [];
+  return profile.babyId === 'baby_001' &&
+    profile.nickname === '小柚子' &&
+    allergyTags.length === 0 &&
+    avoidTags.length === 0;
+}
+
+function isProfileCompleted(profile) {
+  return !!profile &&
+    profile.profileCompleted === true &&
+    !!String(profile.nickname || '').trim() &&
+    !!String(profile.birthDate || '').trim();
+}
+
+function validateProfile(profile) {
+  const nickname = String(profile && profile.nickname || '').trim();
+  const birthDate = String(profile && profile.birthDate || '').trim();
+  if (!nickname) {
+    return {
+      ok: false,
+      message: '请填写宝宝昵称。'
+    };
+  }
+  if (!birthDate) {
+    return {
+      ok: false,
+      message: '请选择宝宝生日。'
+    };
+  }
+
+  const ageMonths = calculateAgeMonths(birthDate);
+  const stageId = getStageId(ageMonths);
+  if (stageId.indexOf('unsupported') === 0) {
+    return {
+      ok: false,
+      ageMonths,
+      stageId,
+      message: SUPPORTED_AGE_MESSAGE
+    };
+  }
+
+  return {
+    ok: true,
+    ageMonths,
+    stageId,
+    message: ''
+  };
 }
 
 function saveProfile(profile) {
+  const validation = validateProfile(profile);
+  if (!validation.ok) {
+    return validation;
+  }
+
   const now = new Date().toISOString();
   const existing = wx.getStorageSync('babyProfile') || {};
   const next = Object.assign({}, profile, {
     babyId: existing.babyId || 'baby_001',
     createdAt: existing.createdAt || now,
+    profileCompleted: true,
     updatedAt: now
   });
   wx.setStorageSync('babyProfile', next);
-  return next;
+  return Object.assign({}, validation, {
+    profile: next
+  });
 }
 
 function normalizeTag(input) {
@@ -93,10 +157,55 @@ function normalizeTag(input) {
   return found ? found.standardTag : text;
 }
 
-function makeTag(label) {
-  const standardTag = normalizeTag(label);
+function getTagMeta(standardTag) {
+  return ingredientTags.find((item) => item.standardTag === standardTag);
+}
+
+function getTagDisplayName(standardTag) {
+  const meta = getTagMeta(standardTag);
+  return meta ? meta.displayName : standardTag;
+}
+
+function resolveTag(input) {
+  const text = String(input || '').trim();
+  if (!text) {
+    return {
+      ok: true,
+      empty: true,
+      label: '',
+      standardTag: '',
+      sourceInput: ''
+    };
+  }
+
+  const standardTag = normalizeTag(text);
+  const meta = getTagMeta(standardTag);
+  if (!meta) {
+    return {
+      ok: false,
+      empty: false,
+      label: text,
+      standardTag: '',
+      sourceInput: text,
+      message: `暂未识别“${text}”，请换个叫法或从常用食材中选择。`
+    };
+  }
+
   return {
-    label,
+    ok: true,
+    empty: false,
+    label: meta.displayName,
+    standardTag,
+    sourceInput: text,
+    message: text === meta.displayName || text === standardTag ? '' : `已识别为：${meta.displayName}`
+  };
+}
+
+function makeTag(label) {
+  const resolved = resolveTag(label);
+  const standardTag = resolved.ok && !resolved.empty ? resolved.standardTag : normalizeTag(label);
+  return {
+    label: resolved.ok && !resolved.empty ? resolved.label : label,
     standardTag,
     sourceInput: label
   };
@@ -139,7 +248,8 @@ function recipeConflicts(recipe, blockedTags) {
     recipe.allergens || [],
     recipe.avoidTags || [],
     recipe.vegetableTags || [],
-    [recipe.proteinType, recipe.proteinCategory, recipe.mainStaple]
+    [recipe.proteinType, recipe.proteinCategory, recipe.mainStaple],
+    (recipe.ingredients || []).map((item) => item.name)
   ];
 
   for (let i = 0; i < fields.length; i += 1) {
@@ -157,6 +267,17 @@ function recipeConflicts(recipe, blockedTags) {
 }
 
 function getAvailableRecipes(profile) {
+  if (!isProfileCompleted(profile)) {
+    return {
+      profile: profile || getDefaultProfile(),
+      ageMonths: 0,
+      stageId: 'profile_required',
+      stageName: '待添加宝宝档案',
+      warning: PROFILE_REQUIRED_MESSAGE,
+      recipes: []
+    };
+  }
+
   const ageMonths = calculateAgeMonths(profile.birthDate);
   const stageId = getStageId(ageMonths);
   if (stageId.indexOf('unsupported') === 0) {
@@ -336,8 +457,10 @@ module.exports = {
   getProfile,
   getStageId,
   getStageName,
+  isProfileCompleted,
   makeTag,
   pickRandomMeal,
+  resolveTag,
   saveProfile,
   summarizeIngredients
 };

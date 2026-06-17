@@ -10,7 +10,8 @@ module.exports = [
       "蛋清",
       "蛋羹",
       "蛋花",
-      "蒸蛋"
+      "蒸蛋",
+      "熟蛋黄"
     ]
   },
   {
@@ -22,7 +23,10 @@ module.exports = [
       "牛奶",
       "配方奶",
       "纯牛奶",
+      "纯牛奶或配方奶",
+      "配方奶或纯牛奶",
       "奶酪",
+      "奶酪碎",
       "奶类",
       "芝士"
     ]
@@ -41,10 +45,46 @@ module.exports = [
       "意面",
       "馒头",
       "馄饨皮",
+      "小馄饨皮",
       "饺子皮",
       "面片",
       "小面片",
       "面食"
+    ]
+  },
+  {
+    "category": "谷物/面食",
+    "standardTag": "燕麦",
+    "displayName": "燕麦",
+    "isCommonAllergen": false,
+    "relatedTags": [
+      "燕麦",
+      "燕麦片",
+      "即食燕麦片"
+    ]
+  },
+  {
+    "category": "谷物/主食",
+    "standardTag": "大米",
+    "displayName": "大米/米饭",
+    "isCommonAllergen": false,
+    "relatedTags": [
+      "大米",
+      "米饭",
+      "软米饭",
+      "大米粥",
+      "白粥",
+      "米粥"
+    ]
+  },
+  {
+    "category": "谷物/主食",
+    "standardTag": "小米",
+    "displayName": "小米",
+    "isCommonAllergen": false,
+    "relatedTags": [
+      "小米",
+      "小米粥"
     ]
   },
   {
@@ -116,7 +156,8 @@ module.exports = [
       "猪肉末",
       "排骨",
       "排骨肉",
-      "猪肝"
+      "猪肝",
+      "猪肉丸"
     ]
   },
   {
@@ -140,7 +181,8 @@ module.exports = [
       "鸡肉末",
       "鸡肉丁",
       "鸡肉丝",
-      "鸡肉松"
+      "鸡肉松",
+      "鸡肉丸"
     ]
   },
   {
@@ -222,7 +264,8 @@ module.exports = [
     "isCommonAllergen": false,
     "relatedTags": [
       "土豆",
-      "马铃薯"
+      "马铃薯",
+      "洋芋"
     ]
   },
   {
@@ -281,6 +324,47 @@ module.exports = [
     "relatedTags": [
       "青豆",
       "豌豆"
+    ]
+  },
+  {
+    "category": "调味/辅料",
+    "standardTag": "海苔",
+    "displayName": "海苔",
+    "isCommonAllergen": false,
+    "relatedTags": [
+      "海苔",
+      "海苔碎"
+    ]
+  },
+  {
+    "category": "调味/辅料",
+    "standardTag": "植物油",
+    "displayName": "植物油",
+    "isCommonAllergen": false,
+    "relatedTags": [
+      "植物油",
+      "食用油"
+    ]
+  },
+  {
+    "category": "调味/辅料",
+    "standardTag": "咖喱粉",
+    "displayName": "咖喱粉",
+    "isCommonAllergen": false,
+    "relatedTags": [
+      "咖喱粉",
+      "无辣咖喱粉"
+    ]
+  },
+  {
+    "category": "辅料",
+    "standardTag": "水",
+    "displayName": "水",
+    "isCommonAllergen": false,
+    "relatedTags": [
+      "水",
+      "清水",
+      "温水"
     ]
   },
   {

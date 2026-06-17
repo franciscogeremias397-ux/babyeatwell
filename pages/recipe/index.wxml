@@ -9,15 +9,22 @@
     <image class="hero-image" src="/assets/generated/recipe-hero-today.png" mode="aspectFit" />
   </view>
 
-  <view class="baby-line pressable" hover-class="pressing" bindtap="goProfile">
+  <view wx:if="{{profileReady}}" class="baby-line pressable" hover-class="pressing" bindtap="goProfile">
     <image class="avatar" src="/assets/generated/baby-chef-avatar.png" mode="aspectFit" />
     <view class="baby-name">{{profile.nickname}} · {{ageMonths}} 月龄</view>
     <view class="edit-pill">✎</view>
   </view>
 
-  <view wx:if="{{warning}}" class="notice">{{warning}}</view>
+  <view wx:if="{{!profileReady}}" class="profile-guide">
+    <image class="guide-avatar" src="/assets/generated/baby-chef-avatar.png" mode="aspectFit" />
+    <view class="guide-title">先添加宝宝档案</view>
+    <view class="guide-copy">填写宝宝昵称、生日和需要避开的食材后，再生成更合适的食谱。</view>
+    <button class="primary-button guide-button" hover-class="pressing" bindtap="goProfile">添加宝宝档案</button>
+  </view>
 
-  <view class="actions">
+  <view wx:elif="{{warning}}" class="notice">{{warning}}</view>
+
+  <view wx:if="{{canUseRecipes}}" class="actions">
     <view class="action-card weekly pressable" hover-class="pressing" bindtap="goWeekly">
       <image class="action-image" src="/assets/recipes/default-meal.png" mode="aspectFit" />
       <view class="action-copy">

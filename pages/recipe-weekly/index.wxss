@@ -66,6 +66,11 @@
   animation: fadeRise 420ms ease 80ms both;
 }
 
+.empty-button {
+  width: 100%;
+  margin-top: 28rpx;
+}
+
 .board-head {
   display: grid;
   grid-template-columns: 112rpx repeat(3, 1fr);

@@ -9,7 +9,10 @@
     <image class="hero-image" src="/assets/recipes/default-meal.png" mode="aspectFill" />
   </view>
 
-  <view wx:if="{{warning}}" class="empty-state">{{warning}}</view>
+  <view wx:if="{{warning}}" class="empty-state">
+    <view>{{warning}}</view>
+    <button wx:if="{{needsProfileAction}}" class="primary-button empty-button" hover-class="pressing" bindtap="goProfile">完善宝宝档案</button>
+  </view>
 
   <block wx:else>
     <view class="meal-board">

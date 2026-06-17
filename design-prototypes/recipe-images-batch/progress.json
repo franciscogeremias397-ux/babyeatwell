@@ -1,0 +1,564 @@
+{
+  "generated": [
+    {
+      "id": "recipe_001",
+      "name": "南瓜小米粥",
+      "utensil": "一个勺子",
+      "sourceFile": "/Users/mima1234/.codex/generated_images/019ec923-5d2b-76a0-b64c-735ac4b42bea/ig_0fa4f5305f22ce7b016a32336457dc819889a4d6070e3acada.png",
+      "outputFile": "/Users/mima1234/Desktop/codex开发/开发项目/乖乖吃饭/design-prototypes/recipe-images-batch/optimized/recipe_001.jpg"
+    },
+    {
+      "id": "recipe_002",
+      "name": "山药红枣小米粥",
+      "utensil": "一个勺子",
+      "sourceFile": "/Users/mima1234/.codex/generated_images/019ec923-5d2b-76a0-b64c-735ac4b42bea/ig_0fa4f5305f22ce7b016a323383d3fc8198938055e4cd7e1c07.png",
+      "outputFile": "/Users/mima1234/Desktop/codex开发/开发项目/乖乖吃饭/design-prototypes/recipe-images-batch/optimized/recipe_002.jpg"
+    },
+    {
+      "id": "recipe_003",
+      "name": "鸡蛋青菜软面",
+      "utensil": "一套餐筷",
+      "sourceFile": "/Users/mima1234/.codex/generated_images/019ec923-5d2b-76a0-b64c-735ac4b42bea/ig_0fa4f5305f22ce7b016a3233cfe5a4819886858ab2b20e82bb.png",
+      "outputFile": "/Users/mima1234/Desktop/codex开发/开发项目/乖乖吃饭/design-prototypes/recipe-images-batch/optimized/recipe_003.jpg"
+    },
+    {
+      "id": "recipe_004",
+      "name": "胡萝卜鸡蛋软饼",
+      "utensil": "一个叉子",
+      "sourceFile": "/Users/mima1234/.codex/generated_images/019ec923-5d2b-76a0-b64c-735ac4b42bea/ig_0fa4f5305f22ce7b016a323405faa88198aa4d887353c38330.png",
+      "outputFile": "/Users/mima1234/Desktop/codex开发/开发项目/乖乖吃饭/design-prototypes/recipe-images-batch/optimized/recipe_004.jpg"
+    },
+    {
+      "id": "recipe_005",
+      "name": "苹果燕麦粥",
+      "utensil": "一个勺子",
+      "sourceFile": "/Users/mima1234/.codex/generated_images/019ec923-5d2b-76a0-b64c-735ac4b42bea/ig_0fa4f5305f22ce7b016a32343d1be08198a736f6b1d7f168ce.png",
+      "outputFile": "/Users/mima1234/Desktop/codex开发/开发项目/乖乖吃饭/design-prototypes/recipe-images-batch/optimized/recipe_005.jpg"
+    },
+    {
+      "id": "recipe_006",
+      "name": "紫薯米糊粥",
+      "utensil": "一个勺子",
+      "sourceFile": "/Users/mima1234/.codex/generated_images/019ec923-5d2b-76a0-b64c-735ac4b42bea/ig_0fa4f5305f22ce7b016a323465dc308198b1e1f3aad193cf59.png",
+      "outputFile": "/Users/mima1234/Desktop/codex开发/开发项目/乖乖吃饭/design-prototypes/recipe-images-batch/optimized/recipe_006.jpg"
+    },
+    {
+      "id": "recipe_007",
+      "name": "西兰花蛋黄粥",
+      "utensil": "一个勺子",
+      "sourceFile": "/Users/mima1234/.codex/generated_images/019ec923-5d2b-76a0-b64c-735ac4b42bea/ig_0fa4f5305f22ce7b016a32348d7018819898eac500e1cddf8a.png",
+      "outputFile": "/Users/mima1234/Desktop/codex开发/开发项目/乖乖吃饭/design-prototypes/recipe-images-batch/optimized/recipe_007.jpg"
+    },
+    {
+      "id": "recipe_008",
+      "name": "番茄碎碎面",
+      "utensil": "一套餐筷",
+      "sourceFile": "/Users/mima1234/.codex/generated_images/019ec923-5d2b-76a0-b64c-735ac4b42bea/ig_0fa4f5305f22ce7b016a3234b8e30c8198830e6f70928405dd.png",
+      "outputFile": "/Users/mima1234/Desktop/codex开发/开发项目/乖乖吃饭/design-prototypes/recipe-images-batch/optimized/recipe_008.jpg"
+    },
+    {
+      "id": "recipe_009",
+      "name": "奶香玉米粥",
+      "utensil": "一个勺子",
+      "sourceFile": "/Users/mima1234/.codex/generated_images/019ec923-5d2b-76a0-b64c-735ac4b42bea/ig_0fa4f5305f22ce7b016a3234e0d9508198bdb7d104cddeb6f3.png",
+      "outputFile": "/Users/mima1234/Desktop/codex开发/开发项目/乖乖吃饭/design-prototypes/recipe-images-batch/optimized/recipe_009.jpg"
+    },
+    {
+      "id": "recipe_010",
+      "name": "土豆胡萝卜软饼",
+      "utensil": "一个叉子",
+      "sourceFile": "/Users/mima1234/.codex/generated_images/019ec923-5d2b-76a0-b64c-735ac4b42bea/ig_0fa4f5305f22ce7b016a32350e73f88198a7ad798d57d0d86f.png",
+      "outputFile": "/Users/mima1234/Desktop/codex开发/开发项目/乖乖吃饭/design-prototypes/recipe-images-batch/optimized/recipe_010.jpg"
+    },
+    {
+      "id": "recipe_011",
+      "name": "香蕉燕麦小饼",
+      "utensil": "一个叉子",
+      "sourceFile": "/Users/mima1234/.codex/generated_images/019ec923-5d2b-76a0-b64c-735ac4b42bea/ig_0fa4f5305f22ce7b016a3235f93a148198835fc90652090c2b.png",
+      "outputFile": "/Users/mima1234/Desktop/codex开发/开发项目/乖乖吃饭/design-prototypes/recipe-images-batch/optimized/recipe_011.jpg"
+    },
+    {
+      "id": "recipe_012",
+      "name": "青菜肉末粥",
+      "utensil": "一个勺子",
+      "sourceFile": "/Users/mima1234/.codex/generated_images/019ec923-5d2b-76a0-b64c-735ac4b42bea/ig_0fa4f5305f22ce7b016a32364fae0c8198b4899c5d3126f62f.png",
+      "outputFile": "/Users/mima1234/Desktop/codex开发/开发项目/乖乖吃饭/design-prototypes/recipe-images-batch/optimized/recipe_012.jpg"
+    },
+    {
+      "id": "recipe_013",
+      "name": "南瓜鸡蛋羹",
+      "utensil": "一个勺子",
+      "sourceFile": "/Users/mima1234/.codex/generated_images/019ec923-5d2b-76a0-b64c-735ac4b42bea/ig_0fa4f5305f22ce7b016a323681fcbc8198b077e6d6a1c912e6.png",
+      "outputFile": "/Users/mima1234/Desktop/codex开发/开发项目/乖乖吃饭/design-prototypes/recipe-images-batch/optimized/recipe_013.jpg"
+    },
+    {
+      "id": "recipe_014",
+      "name": "小米山药蛋黄粥",
+      "utensil": "一个勺子",
+      "sourceFile": "/Users/mima1234/.codex/generated_images/019ec923-5d2b-76a0-b64c-735ac4b42bea/ig_0fa4f5305f22ce7b016a3236ad172c81989480a0427b586cc3.png",
+      "outputFile": "/Users/mima1234/Desktop/codex开发/开发项目/乖乖吃饭/design-prototypes/recipe-images-batch/optimized/recipe_014.jpg"
+    },
+    {
+      "id": "recipe_015",
+      "name": "豆腐青菜软粥",
+      "utensil": "一个勺子",
+      "sourceFile": "/Users/mima1234/.codex/generated_images/019ec923-5d2b-76a0-b64c-735ac4b42bea/ig_0fa4f5305f22ce7b016a3236ff304081989b518605acfe3d30.png",
+      "outputFile": "/Users/mima1234/Desktop/codex开发/开发项目/乖乖吃饭/design-prototypes/recipe-images-batch/optimized/recipe_015.jpg"
+    },
+    {
+      "id": "recipe_016",
+      "name": "南瓜鸡肉软饭",
+      "utensil": "一个叉子",
+      "sourceFile": "/Users/mima1234/.codex/generated_images/019ec923-5d2b-76a0-b64c-735ac4b42bea/ig_0fa4f5305f22ce7b016a32373445048198a9f1994397bd0203.png",
+      "outputFile": "/Users/mima1234/Desktop/codex开发/开发项目/乖乖吃饭/design-prototypes/recipe-images-batch/optimized/recipe_016.jpg"
+    },
+    {
+      "id": "recipe_017",
+      "name": "番茄牛肉碎碎面",
+      "utensil": "一套餐筷",
+      "sourceFile": "/Users/mima1234/.codex/generated_images/019ec923-5d2b-76a0-b64c-735ac4b42bea/ig_0fa4f5305f22ce7b016a32376dcad881988e85a542930f8460.png",
+      "outputFile": "/Users/mima1234/Desktop/codex开发/开发项目/乖乖吃饭/design-prototypes/recipe-images-batch/optimized/recipe_017.jpg"
+    },
+    {
+      "id": "recipe_018",
+      "name": "胡萝卜猪肉软饭",
+      "utensil": "一个叉子",
+      "sourceFile": "/Users/mima1234/.codex/generated_images/019ec923-5d2b-76a0-b64c-735ac4b42bea/ig_0fa4f5305f22ce7b016a3237c8f91c8198a84ddfb389206f52.png",
+      "outputFile": "/Users/mima1234/Desktop/codex开发/开发项目/乖乖吃饭/design-prototypes/recipe-images-batch/optimized/recipe_018.jpg"
+    },
+    {
+      "id": "recipe_019",
+      "name": "西兰花鳕鱼软饭",
+      "utensil": "一个叉子",
+      "sourceFile": "/Users/mima1234/.codex/generated_images/019ec923-5d2b-76a0-b64c-735ac4b42bea/ig_0fa4f5305f22ce7b016a32381a003c8198a1efe2331363844c.png",
+      "outputFile": "/Users/mima1234/Desktop/codex开发/开发项目/乖乖吃饭/design-prototypes/recipe-images-batch/optimized/recipe_019.jpg"
+    },
+    {
+      "id": "recipe_020",
+      "name": "香菇鸡肉烂面",
+      "utensil": "一套餐筷",
+      "sourceFile": "/Users/mima1234/.codex/generated_images/019ec923-5d2b-76a0-b64c-735ac4b42bea/ig_0fa4f5305f22ce7b016a32385772bc8198938aeb58a908307f.png",
+      "outputFile": "/Users/mima1234/Desktop/codex开发/开发项目/乖乖吃饭/design-prototypes/recipe-images-batch/optimized/recipe_020.jpg"
+    },
+    {
+      "id": "recipe_021",
+      "name": "豆腐青菜肉末饭",
+      "utensil": "一个叉子",
+      "sourceFile": "/Users/mima1234/.codex/generated_images/019ec923-5d2b-76a0-b64c-735ac4b42bea/ig_0fa4f5305f22ce7b016a32390cdd648198a4f5df2d8a27e707.png",
+      "outputFile": "/Users/mima1234/Desktop/codex开发/开发项目/乖乖吃饭/design-prototypes/recipe-images-batch/optimized/recipe_021.jpg"
+    },
+    {
+      "id": "recipe_022",
+      "name": "冬瓜虾仁软饭",
+      "utensil": "一个叉子",
+      "sourceFile": "/Users/mima1234/.codex/generated_images/019ec923-5d2b-76a0-b64c-735ac4b42bea/ig_0fa4f5305f22ce7b016a32396320bc81989f8796a9802ebb8b.png",
+      "outputFile": "/Users/mima1234/Desktop/codex开发/开发项目/乖乖吃饭/design-prototypes/recipe-images-batch/optimized/recipe_022.jpg"
+    },
+    {
+      "id": "recipe_023",
+      "name": "土豆牛肉泥软饭",
+      "utensil": "一个勺子",
+      "sourceFile": "/Users/mima1234/.codex/generated_images/019ec923-5d2b-76a0-b64c-735ac4b42bea/ig_0fa4f5305f22ce7b016a323993950081988f2d86d51357bd02.png",
+      "outputFile": "/Users/mima1234/Desktop/codex开发/开发项目/乖乖吃饭/design-prototypes/recipe-images-batch/optimized/recipe_023.jpg"
+    },
+    {
+      "id": "recipe_024",
+      "name": "番茄鸡蛋碎面",
+      "utensil": "一套餐筷",
+      "sourceFile": "/Users/mima1234/.codex/generated_images/019ec923-5d2b-76a0-b64c-735ac4b42bea/ig_0fa4f5305f22ce7b016a3239cef2b881988d6bce0dd2c69ddb.png",
+      "outputFile": "/Users/mima1234/Desktop/codex开发/开发项目/乖乖吃饭/design-prototypes/recipe-images-batch/optimized/recipe_024.jpg"
+    },
+    {
+      "id": "recipe_025",
+      "name": "菠菜猪肝粥",
+      "utensil": "一个勺子",
+      "sourceFile": "/Users/mima1234/.codex/generated_images/019ec923-5d2b-76a0-b64c-735ac4b42bea/ig_0fa4f5305f22ce7b016a3239ffba888198bd01084b31335fb5.png",
+      "outputFile": "/Users/mima1234/Desktop/codex开发/开发项目/乖乖吃饭/design-prototypes/recipe-images-batch/optimized/recipe_025.jpg"
+    },
+    {
+      "id": "recipe_026",
+      "name": "山药鸡肉粥",
+      "utensil": "一个勺子",
+      "sourceFile": "/Users/mima1234/.codex/generated_images/019ec923-5d2b-76a0-b64c-735ac4b42bea/ig_0fa4f5305f22ce7b016a323a5602208198ac7c9b5d7bb4e837.png",
+      "outputFile": "/Users/mima1234/Desktop/codex开发/开发项目/乖乖吃饭/design-prototypes/recipe-images-batch/optimized/recipe_026.jpg"
+    },
+    {
+      "id": "recipe_027",
+      "name": "胡萝卜鳕鱼粥",
+      "utensil": "一个勺子",
+      "sourceFile": "/Users/mima1234/.codex/generated_images/019ec923-5d2b-76a0-b64c-735ac4b42bea/ig_0fa4f5305f22ce7b016a323aac2c20819892b95e4129f49f55.png",
+      "outputFile": "/Users/mima1234/Desktop/codex开发/开发项目/乖乖吃饭/design-prototypes/recipe-images-batch/optimized/recipe_027.jpg"
+    },
+    {
+      "id": "recipe_028",
+      "name": "娃娃菜猪肉小馄饨",
+      "utensil": "一套餐筷",
+      "sourceFile": "/Users/mima1234/.codex/generated_images/019ec923-5d2b-76a0-b64c-735ac4b42bea/ig_0fa4f5305f22ce7b016a323ae5e3f4819898f2b772deb985c9.png",
+      "outputFile": "/Users/mima1234/Desktop/codex开发/开发项目/乖乖吃饭/design-prototypes/recipe-images-batch/optimized/recipe_028.jpg"
+    },
+    {
+      "id": "recipe_029",
+      "name": "南瓜牛肉粥",
+      "utensil": "一个勺子",
+      "sourceFile": "/Users/mima1234/.codex/generated_images/019ec923-5d2b-76a0-b64c-735ac4b42bea/ig_0fa4f5305f22ce7b016a323b2302808198b594035d3f690a86.png",
+      "outputFile": "/Users/mima1234/Desktop/codex开发/开发项目/乖乖吃饭/design-prototypes/recipe-images-batch/optimized/recipe_029.jpg"
+    },
+    {
+      "id": "recipe_030",
+      "name": "丝瓜鸡蛋软饭",
+      "utensil": "一个叉子",
+      "sourceFile": "/Users/mima1234/.codex/generated_images/019ec923-5d2b-76a0-b64c-735ac4b42bea/ig_0fa4f5305f22ce7b016a323b5fdc408198a6a424644ad7966c.png",
+      "outputFile": "/Users/mima1234/Desktop/codex开发/开发项目/乖乖吃饭/design-prototypes/recipe-images-batch/optimized/recipe_030.jpg"
+    },
+    {
+      "id": "recipe_031",
+      "name": "豆腐鳕鱼羹饭",
+      "utensil": "一个勺子",
+      "sourceFile": "/Users/mima1234/.codex/generated_images/019ec923-5d2b-76a0-b64c-735ac4b42bea/ig_0fa4f5305f22ce7b016a323c29c340819888045ef2e0dbb738.png",
+      "outputFile": "/Users/mima1234/Desktop/codex开发/开发项目/乖乖吃饭/design-prototypes/recipe-images-batch/optimized/recipe_031.jpg"
+    },
+    {
+      "id": "recipe_032",
+      "name": "西葫芦鸡肉面片汤",
+      "utensil": "一套餐筷",
+      "sourceFile": "/Users/mima1234/.codex/generated_images/019ec923-5d2b-76a0-b64c-735ac4b42bea/ig_0fa4f5305f22ce7b016a323c6d7df48198a9dc9d90995687f4.png",
+      "outputFile": "/Users/mima1234/Desktop/codex开发/开发项目/乖乖吃饭/design-prototypes/recipe-images-batch/optimized/recipe_032.jpg"
+    },
+    {
+      "id": "recipe_033",
+      "name": "玉米猪肉软饭",
+      "utensil": "一个叉子",
+      "sourceFile": "/Users/mima1234/.codex/generated_images/019ec923-5d2b-76a0-b64c-735ac4b42bea/ig_0fa4f5305f22ce7b016a323ccfa9748198aa134d903b078a52.png",
+      "outputFile": "/Users/mima1234/Desktop/codex开发/开发项目/乖乖吃饭/design-prototypes/recipe-images-batch/optimized/recipe_033.jpg"
+    },
+    {
+      "id": "recipe_034",
+      "name": "香菇牛肉碎饭",
+      "utensil": "一个叉子",
+      "sourceFile": "/Users/mima1234/.codex/generated_images/019ec923-5d2b-76a0-b64c-735ac4b42bea/ig_0fa4f5305f22ce7b016a323d14fe048198b288def12fe32594.png",
+      "outputFile": "/Users/mima1234/Desktop/codex开发/开发项目/乖乖吃饭/design-prototypes/recipe-images-batch/optimized/recipe_034.jpg"
+    },
+    {
+      "id": "recipe_035",
+      "name": "番茄豆腐软饭",
+      "utensil": "一个叉子",
+      "sourceFile": "/Users/mima1234/.codex/generated_images/019ec923-5d2b-76a0-b64c-735ac4b42bea/ig_0fa4f5305f22ce7b016a323d654ac481989654224189753024.png",
+      "outputFile": "/Users/mima1234/Desktop/codex开发/开发项目/乖乖吃饭/design-prototypes/recipe-images-batch/optimized/recipe_035.jpg"
+    },
+    {
+      "id": "recipe_036",
+      "name": "油菜鸡肉粥",
+      "utensil": "一个勺子",
+      "sourceFile": "/Users/mima1234/.codex/generated_images/019ec923-5d2b-76a0-b64c-735ac4b42bea/ig_0fa4f5305f22ce7b016a323dc0fbb48198962fd552bb10f860.png",
+      "outputFile": "/Users/mima1234/Desktop/codex开发/开发项目/乖乖吃饭/design-prototypes/recipe-images-batch/optimized/recipe_036.jpg"
+    },
+    {
+      "id": "recipe_037",
+      "name": "土豆鳕鱼软饭",
+      "utensil": "一个叉子",
+      "sourceFile": "/Users/mima1234/.codex/generated_images/019ec923-5d2b-76a0-b64c-735ac4b42bea/ig_0fa4f5305f22ce7b016a323dfdcdbc81989c276b2eb1b2c548.png",
+      "outputFile": "/Users/mima1234/Desktop/codex开发/开发项目/乖乖吃饭/design-prototypes/recipe-images-batch/optimized/recipe_037.jpg"
+    },
+    {
+      "id": "recipe_038",
+      "name": "胡萝卜虾仁碎面",
+      "utensil": "一套餐筷",
+      "sourceFile": "/Users/mima1234/.codex/generated_images/019ec923-5d2b-76a0-b64c-735ac4b42bea/ig_0fa4f5305f22ce7b016a323e5dfc6c8198ac03508fa4b109eb.png",
+      "outputFile": "/Users/mima1234/Desktop/codex开发/开发项目/乖乖吃饭/design-prototypes/recipe-images-batch/optimized/recipe_038.jpg"
+    },
+    {
+      "id": "recipe_039",
+      "name": "西兰花鸡蛋软饭",
+      "utensil": "一个叉子",
+      "sourceFile": "/Users/mima1234/.codex/generated_images/019ec923-5d2b-76a0-b64c-735ac4b42bea/ig_0fa4f5305f22ce7b016a323ebe884c8198b64d049b6855c38a.png",
+      "outputFile": "/Users/mima1234/Desktop/codex开发/开发项目/乖乖吃饭/design-prototypes/recipe-images-batch/optimized/recipe_039.jpg"
+    },
+    {
+      "id": "recipe_040",
+      "name": "冬瓜肉末面片汤",
+      "utensil": "一套餐筷",
+      "sourceFile": "/Users/mima1234/.codex/generated_images/019ec923-5d2b-76a0-b64c-735ac4b42bea/ig_0fa4f5305f22ce7b016a323fba5b58819897ef61e3116ca309.png",
+      "outputFile": "/Users/mima1234/Desktop/codex开发/开发项目/乖乖吃饭/design-prototypes/recipe-images-batch/optimized/recipe_040.jpg"
+    },
+    {
+      "id": "recipe_041",
+      "name": "番茄鸡蛋软面",
+      "utensil": "一套餐筷",
+      "sourceFile": "/Users/mima1234/.codex/generated_images/019ec923-5d2b-76a0-b64c-735ac4b42bea/ig_0fa4f5305f22ce7b016a32415d14248198babbfb21f1af3801.png",
+      "outputFile": "/Users/mima1234/Desktop/codex开发/开发项目/乖乖吃饭/design-prototypes/recipe-images-batch/optimized/recipe_041.jpg"
+    },
+    {
+      "id": "recipe_042",
+      "name": "奶香燕麦香蕉粥",
+      "utensil": "一个勺子",
+      "sourceFile": "/Users/mima1234/.codex/generated_images/019ec923-5d2b-76a0-b64c-735ac4b42bea/ig_0fa4f5305f22ce7b016a3241bba7288198a4c03079de1110ed.png",
+      "outputFile": "/Users/mima1234/Desktop/codex开发/开发项目/乖乖吃饭/design-prototypes/recipe-images-batch/optimized/recipe_042.jpg"
+    },
+    {
+      "id": "recipe_043",
+      "name": "鸡蛋蔬菜小饼",
+      "utensil": "一个叉子",
+      "sourceFile": "/Users/mima1234/.codex/generated_images/019ec923-5d2b-76a0-b64c-735ac4b42bea/ig_0fa4f5305f22ce7b016a32421c38a08198abec2986ab333d5c.png",
+      "outputFile": "/Users/mima1234/Desktop/codex开发/开发项目/乖乖吃饭/design-prototypes/recipe-images-batch/optimized/recipe_043.jpg"
+    },
+    {
+      "id": "recipe_044",
+      "name": "牛肉青菜粥",
+      "utensil": "一个勺子",
+      "sourceFile": "/Users/mima1234/.codex/generated_images/019ec923-5d2b-76a0-b64c-735ac4b42bea/ig_0fa4f5305f22ce7b016a32427a00d48198a96c992383cba0c5.png",
+      "outputFile": "/Users/mima1234/Desktop/codex开发/开发项目/乖乖吃饭/design-prototypes/recipe-images-batch/optimized/recipe_044.jpg"
+    },
+    {
+      "id": "recipe_045",
+      "name": "南瓜馒头丁蒸蛋",
+      "utensil": "一个勺子",
+      "sourceFile": "/Users/mima1234/.codex/generated_images/019ec923-5d2b-76a0-b64c-735ac4b42bea/ig_0fa4f5305f22ce7b016a3242bf66948198b7ddd2850df55c74.png",
+      "outputFile": "/Users/mima1234/Desktop/codex开发/开发项目/乖乖吃饭/design-prototypes/recipe-images-batch/optimized/recipe_045.jpg"
+    },
+    {
+      "id": "recipe_046",
+      "name": "山药小米粥配鸡肉松",
+      "utensil": "一个勺子",
+      "sourceFile": "/Users/mima1234/.codex/generated_images/019ec923-5d2b-76a0-b64c-735ac4b42bea/ig_0fa4f5305f22ce7b016a32432de51881988452e654254117e6.png",
+      "outputFile": "/Users/mima1234/Desktop/codex开发/开发项目/乖乖吃饭/design-prototypes/recipe-images-batch/optimized/recipe_046.jpg"
+    },
+    {
+      "id": "recipe_047",
+      "name": "玉米鸡蛋软饼",
+      "utensil": "一个叉子",
+      "sourceFile": "/Users/mima1234/.codex/generated_images/019ec923-5d2b-76a0-b64c-735ac4b42bea/ig_0fa4f5305f22ce7b016a3243851a588198be887a848a433125.png",
+      "outputFile": "/Users/mima1234/Desktop/codex开发/开发项目/乖乖吃饭/design-prototypes/recipe-images-batch/optimized/recipe_047.jpg"
+    },
+    {
+      "id": "recipe_048",
+      "name": "紫薯燕麦粥",
+      "utensil": "一个勺子",
+      "sourceFile": "/Users/mima1234/.codex/generated_images/019ec923-5d2b-76a0-b64c-735ac4b42bea/ig_0fa4f5305f22ce7b016a3243ec31fc8198bd0cb7fd9c88c295.png",
+      "outputFile": "/Users/mima1234/Desktop/codex开发/开发项目/乖乖吃饭/design-prototypes/recipe-images-batch/optimized/recipe_048.jpg"
+    },
+    {
+      "id": "recipe_049",
+      "name": "西兰花奶酪蛋饼",
+      "utensil": "一个叉子",
+      "sourceFile": "/Users/mima1234/.codex/generated_images/019ec923-5d2b-76a0-b64c-735ac4b42bea/ig_0fa4f5305f22ce7b016a3244cdab0c81989ebdec9cb787cf7d.png",
+      "outputFile": "/Users/mima1234/Desktop/codex开发/开发项目/乖乖吃饭/design-prototypes/recipe-images-batch/optimized/recipe_049.jpg"
+    },
+    {
+      "id": "recipe_050",
+      "name": "苹果胡萝卜燕麦粥",
+      "utensil": "一个勺子",
+      "sourceFile": "/Users/mima1234/.codex/generated_images/019ec923-5d2b-76a0-b64c-735ac4b42bea/ig_0fa4f5305f22ce7b016a32450f6eec8198be256abf62e0365b.png",
+      "outputFile": "/Users/mima1234/Desktop/codex开发/开发项目/乖乖吃饭/design-prototypes/recipe-images-batch/optimized/recipe_050.jpg"
+    },
+    {
+      "id": "recipe_051",
+      "name": "豆腐鸡蛋羹",
+      "utensil": "一个勺子",
+      "sourceFile": "/Users/mima1234/.codex/generated_images/019ec923-5d2b-76a0-b64c-735ac4b42bea/ig_0fa4f5305f22ce7b016a324636f2448198892468294383512f.png",
+      "outputFile": "/Users/mima1234/Desktop/codex开发/开发项目/乖乖吃饭/design-prototypes/recipe-images-batch/optimized/recipe_051.jpg"
+    },
+    {
+      "id": "recipe_052",
+      "name": "青菜虾仁小馄饨",
+      "utensil": "一套餐筷",
+      "sourceFile": "/Users/mima1234/.codex/generated_images/019ec923-5d2b-76a0-b64c-735ac4b42bea/ig_0fa4f5305f22ce7b016a3246a218c48198b7374671a7ba2f9b.png",
+      "outputFile": "/Users/mima1234/Desktop/codex开发/开发项目/乖乖吃饭/design-prototypes/recipe-images-batch/optimized/recipe_052.jpg"
+    },
+    {
+      "id": "recipe_053",
+      "name": "番茄牛肉面片汤",
+      "utensil": "一套餐筷",
+      "sourceFile": "/Users/mima1234/.codex/generated_images/019ec923-5d2b-76a0-b64c-735ac4b42bea/ig_0fa4f5305f22ce7b016a3247155b548198ae1478a51bef4bf8.png",
+      "outputFile": "/Users/mima1234/Desktop/codex开发/开发项目/乖乖吃饭/design-prototypes/recipe-images-batch/optimized/recipe_053.jpg"
+    },
+    {
+      "id": "recipe_054",
+      "name": "南瓜玉米粥",
+      "utensil": "一个勺子",
+      "sourceFile": "/Users/mima1234/.codex/generated_images/019ec923-5d2b-76a0-b64c-735ac4b42bea/ig_0fa4f5305f22ce7b016a32475aa1cc8198ae91f8b5ab0e8d47.png",
+      "outputFile": "/Users/mima1234/Desktop/codex开发/开发项目/乖乖吃饭/design-prototypes/recipe-images-batch/optimized/recipe_054.jpg"
+    },
+    {
+      "id": "recipe_055",
+      "name": "香蕉鸡蛋松饼",
+      "utensil": "一个叉子",
+      "sourceFile": "/Users/mima1234/.codex/generated_images/019ec923-5d2b-76a0-b64c-735ac4b42bea/ig_0fa4f5305f22ce7b016a3247a6b780819899dbeb3d1126a0d4.png",
+      "outputFile": "/Users/mima1234/Desktop/codex开发/开发项目/乖乖吃饭/design-prototypes/recipe-images-batch/optimized/recipe_055.jpg"
+    },
+    {
+      "id": "recipe_056",
+      "name": "香菇鸡肉焖饭",
+      "utensil": "一个叉子",
+      "sourceFile": "/Users/mima1234/.codex/generated_images/019ec923-5d2b-76a0-b64c-735ac4b42bea/ig_0fa4f5305f22ce7b016a32481379bc8198a654f3917e5a1502.png",
+      "outputFile": "/Users/mima1234/Desktop/codex开发/开发项目/乖乖吃饭/design-prototypes/recipe-images-batch/optimized/recipe_056.jpg"
+    },
+    {
+      "id": "recipe_057",
+      "name": "番茄牛肉意面",
+      "utensil": "一套餐筷",
+      "sourceFile": "/Users/mima1234/.codex/generated_images/019ec923-5d2b-76a0-b64c-735ac4b42bea/ig_0fa4f5305f22ce7b016a32486012ac8198bff5b72d75ba3f81.png",
+      "outputFile": "/Users/mima1234/Desktop/codex开发/开发项目/乖乖吃饭/design-prototypes/recipe-images-batch/optimized/recipe_057.jpg"
+    },
+    {
+      "id": "recipe_058",
+      "name": "胡萝卜土豆炖牛肉饭",
+      "utensil": "一个叉子",
+      "sourceFile": "/Users/mima1234/.codex/generated_images/019ec923-5d2b-76a0-b64c-735ac4b42bea/ig_0fa4f5305f22ce7b016a3248d8f52c8198a2b54e98f4d005d9.png",
+      "outputFile": "/Users/mima1234/Desktop/codex开发/开发项目/乖乖吃饭/design-prototypes/recipe-images-batch/optimized/recipe_058.jpg"
+    },
+    {
+      "id": "recipe_059",
+      "name": "西兰花虾仁软饭",
+      "utensil": "一个叉子",
+      "sourceFile": "/Users/mima1234/.codex/generated_images/019ec923-5d2b-76a0-b64c-735ac4b42bea/ig_0fa4f5305f22ce7b016a32499c9a188198ac9d9f2988c68bd1.png",
+      "outputFile": "/Users/mima1234/Desktop/codex开发/开发项目/乖乖吃饭/design-prototypes/recipe-images-batch/optimized/recipe_059.jpg"
+    },
+    {
+      "id": "recipe_060",
+      "name": "冬瓜肉丸汤配软饭",
+      "utensil": "一个勺子",
+      "sourceFile": "/Users/mima1234/.codex/generated_images/019ec923-5d2b-76a0-b64c-735ac4b42bea/ig_0fa4f5305f22ce7b016a3249df495c819892cdad507bdd6b34.png",
+      "outputFile": "/Users/mima1234/Desktop/codex开发/开发项目/乖乖吃饭/design-prototypes/recipe-images-batch/optimized/recipe_060.jpg"
+    },
+    {
+      "id": "recipe_061",
+      "name": "豆腐鱼肉蔬菜饭",
+      "utensil": "一个叉子",
+      "sourceFile": "/Users/mima1234/.codex/generated_images/019ec923-5d2b-76a0-b64c-735ac4b42bea/ig_0fa4f5305f22ce7b016a324b0924fc8198933aa1c9094c0ca6.png",
+      "outputFile": "/Users/mima1234/Desktop/codex开发/开发项目/乖乖吃饭/design-prototypes/recipe-images-batch/optimized/recipe_061.jpg"
+    },
+    {
+      "id": "recipe_062",
+      "name": "番茄鸡蛋牛肉面",
+      "utensil": "一套餐筷",
+      "sourceFile": "/Users/mima1234/.codex/generated_images/019ec923-5d2b-76a0-b64c-735ac4b42bea/ig_0fa4f5305f22ce7b016a324b6c35e48198b00a746065debd38.png",
+      "outputFile": "/Users/mima1234/Desktop/codex开发/开发项目/乖乖吃饭/design-prototypes/recipe-images-batch/optimized/recipe_062.jpg"
+    },
+    {
+      "id": "recipe_063",
+      "name": "玉米鸡肉饭团",
+      "utensil": "一个叉子",
+      "sourceFile": "/Users/mima1234/.codex/generated_images/019ec923-5d2b-76a0-b64c-735ac4b42bea/ig_0fa4f5305f22ce7b016a324badb4e08198a995037f64fd276a.png",
+      "outputFile": "/Users/mima1234/Desktop/codex开发/开发项目/乖乖吃饭/design-prototypes/recipe-images-batch/optimized/recipe_063.jpg"
+    },
+    {
+      "id": "recipe_064",
+      "name": "西葫芦猪肉小饺子",
+      "utensil": "一个叉子",
+      "sourceFile": "/Users/mima1234/.codex/generated_images/019ec923-5d2b-76a0-b64c-735ac4b42bea/ig_0fa4f5305f22ce7b016a324bf9e58c81989298b765b8914ee9.png",
+      "outputFile": "/Users/mima1234/Desktop/codex开发/开发项目/乖乖吃饭/design-prototypes/recipe-images-batch/optimized/recipe_064.jpg"
+    },
+    {
+      "id": "recipe_065",
+      "name": "山药排骨软饭",
+      "utensil": "一个叉子",
+      "sourceFile": "/Users/mima1234/.codex/generated_images/019ec923-5d2b-76a0-b64c-735ac4b42bea/ig_0fa4f5305f22ce7b016a324c5ccddc8198a237d8199dd194ea.png",
+      "outputFile": "/Users/mima1234/Desktop/codex开发/开发项目/乖乖吃饭/design-prototypes/recipe-images-batch/optimized/recipe_065.jpg"
+    },
+    {
+      "id": "recipe_066",
+      "name": "香菇油菜鸡肉面",
+      "utensil": "一套餐筷",
+      "sourceFile": "/Users/mima1234/.codex/generated_images/019ec923-5d2b-76a0-b64c-735ac4b42bea/ig_0fa4f5305f22ce7b016a324cbe73888198b5df4129fb6dad4e.png",
+      "outputFile": "/Users/mima1234/Desktop/codex开发/开发项目/乖乖吃饭/design-prototypes/recipe-images-batch/optimized/recipe_066.jpg"
+    },
+    {
+      "id": "recipe_067",
+      "name": "南瓜牛肉烩饭",
+      "utensil": "一个叉子",
+      "sourceFile": "/Users/mima1234/.codex/generated_images/019ec923-5d2b-76a0-b64c-735ac4b42bea/ig_0fa4f5305f22ce7b016a324d3be97c8198b19d7a7ea89902b1.png",
+      "outputFile": "/Users/mima1234/Desktop/codex开发/开发项目/乖乖吃饭/design-prototypes/recipe-images-batch/optimized/recipe_067.jpg"
+    },
+    {
+      "id": "recipe_068",
+      "name": "青菜豆腐肉末饭",
+      "utensil": "一个叉子",
+      "sourceFile": "/Users/mima1234/.codex/generated_images/019ec923-5d2b-76a0-b64c-735ac4b42bea/ig_0fa4f5305f22ce7b016a324d9dd658819885cbe74bc3b99784.png",
+      "outputFile": "/Users/mima1234/Desktop/codex开发/开发项目/乖乖吃饭/design-prototypes/recipe-images-batch/optimized/recipe_068.jpg"
+    },
+    {
+      "id": "recipe_069",
+      "name": "土豆鸡肉咖喱风软饭",
+      "utensil": "一个叉子",
+      "sourceFile": "/Users/mima1234/.codex/generated_images/019ec923-5d2b-76a0-b64c-735ac4b42bea/ig_0fa4f5305f22ce7b016a324eb1cbb8819891838d20801b19cf.png",
+      "outputFile": "/Users/mima1234/Desktop/codex开发/开发项目/乖乖吃饭/design-prototypes/recipe-images-batch/optimized/recipe_069.jpg"
+    },
+    {
+      "id": "recipe_070",
+      "name": "鳕鱼番茄蔬菜面",
+      "utensil": "一套餐筷",
+      "sourceFile": "/Users/mima1234/.codex/generated_images/019ec923-5d2b-76a0-b64c-735ac4b42bea/ig_0fa4f5305f22ce7b016a324f036a4881989a5020a27d58d4d3.png",
+      "outputFile": "/Users/mima1234/Desktop/codex开发/开发项目/乖乖吃饭/design-prototypes/recipe-images-batch/optimized/recipe_070.jpg"
+    },
+    {
+      "id": "recipe_071",
+      "name": "虾仁玉米豆腐羹饭",
+      "utensil": "一个勺子",
+      "sourceFile": "/Users/mima1234/.codex/generated_images/019ec923-5d2b-76a0-b64c-735ac4b42bea/ig_0fa4f5305f22ce7b016a3251e987148198a445a249ca03268d.png",
+      "outputFile": "/Users/mima1234/Desktop/codex开发/开发项目/乖乖吃饭/design-prototypes/recipe-images-batch/optimized/recipe_071.jpg"
+    },
+    {
+      "id": "recipe_072",
+      "name": "牛肉胡萝卜小馄饨",
+      "utensil": "一套餐筷",
+      "sourceFile": "/Users/mima1234/.codex/generated_images/019ec923-5d2b-76a0-b64c-735ac4b42bea/ig_0fa4f5305f22ce7b016a32522da4e881988422e813aad1ea6e.png",
+      "outputFile": "/Users/mima1234/Desktop/codex开发/开发项目/乖乖吃饭/design-prototypes/recipe-images-batch/optimized/recipe_072.jpg"
+    },
+    {
+      "id": "recipe_073",
+      "name": "鸡肉西兰花土豆泥饭",
+      "utensil": "一个勺子",
+      "sourceFile": "/Users/mima1234/.codex/generated_images/019ec923-5d2b-76a0-b64c-735ac4b42bea/ig_0fa4f5305f22ce7b016a32529f7ae08198b8dcd5321d4e23eb.png",
+      "outputFile": "/Users/mima1234/Desktop/codex开发/开发项目/乖乖吃饭/design-prototypes/recipe-images-batch/optimized/recipe_073.jpg"
+    },
+    {
+      "id": "recipe_074",
+      "name": "番茄豆腐鱼肉汤面",
+      "utensil": "一套餐筷",
+      "sourceFile": "/Users/mima1234/.codex/generated_images/019ec923-5d2b-76a0-b64c-735ac4b42bea/ig_0fa4f5305f22ce7b016a3252eb9e1481988a04ac0728846a06.png",
+      "outputFile": "/Users/mima1234/Desktop/codex开发/开发项目/乖乖吃饭/design-prototypes/recipe-images-batch/optimized/recipe_074.jpg"
+    },
+    {
+      "id": "recipe_075",
+      "name": "猪肉白菜软饺子",
+      "utensil": "一个叉子",
+      "sourceFile": "/Users/mima1234/.codex/generated_images/019ec923-5d2b-76a0-b64c-735ac4b42bea/ig_0fa4f5305f22ce7b016a32535303408198a15b453c187f1e1f.png",
+      "outputFile": "/Users/mima1234/Desktop/codex开发/开发项目/乖乖吃饭/design-prototypes/recipe-images-batch/optimized/recipe_075.jpg"
+    },
+    {
+      "id": "recipe_076",
+      "name": "彩蔬鸡蛋炒软饭",
+      "utensil": "一个叉子",
+      "sourceFile": "/Users/mima1234/.codex/generated_images/019ec923-5d2b-76a0-b64c-735ac4b42bea/ig_0fa4f5305f22ce7b016a3253c8586481988e777d2b38ec0f9f.png",
+      "outputFile": "/Users/mima1234/Desktop/codex开发/开发项目/乖乖吃饭/design-prototypes/recipe-images-batch/optimized/recipe_076.jpg"
+    },
+    {
+      "id": "recipe_077",
+      "name": "香菇牛肉粥",
+      "utensil": "一个勺子",
+      "sourceFile": "/Users/mima1234/.codex/generated_images/019ec923-5d2b-76a0-b64c-735ac4b42bea/ig_0fa4f5305f22ce7b016a32541459cc81988829eb6b62a2fbba.png",
+      "outputFile": "/Users/mima1234/Desktop/codex开发/开发项目/乖乖吃饭/design-prototypes/recipe-images-batch/optimized/recipe_077.jpg"
+    },
+    {
+      "id": "recipe_078",
+      "name": "茄汁鸡肉丸软饭",
+      "utensil": "一个叉子",
+      "sourceFile": "/Users/mima1234/.codex/generated_images/019ec923-5d2b-76a0-b64c-735ac4b42bea/ig_0fa4f5305f22ce7b016a32557a59d08198b6c15298e8dee2d2.png",
+      "outputFile": "/Users/mima1234/Desktop/codex开发/开发项目/乖乖吃饭/design-prototypes/recipe-images-batch/optimized/recipe_078.jpg"
+    },
+    {
+      "id": "recipe_079",
+      "name": "胡萝卜鳕鱼小饼配粥",
+      "utensil": "一个勺子",
+      "sourceFile": "/Users/mima1234/.codex/generated_images/019ec923-5d2b-76a0-b64c-735ac4b42bea/ig_0fa4f5305f22ce7b016a3255c6a12881989db685266c8d6bba.png",
+      "outputFile": "/Users/mima1234/Desktop/codex开发/开发项目/乖乖吃饭/design-prototypes/recipe-images-batch/optimized/recipe_079.jpg"
+    },
+    {
+      "id": "recipe_080",
+      "name": "冬瓜虾仁面片汤",
+      "utensil": "一套餐筷",
+      "sourceFile": "/Users/mima1234/.codex/generated_images/019ec923-5d2b-76a0-b64c-735ac4b42bea/ig_0fa4f5305f22ce7b016a3256408d148198884117f9983382c7.png",
+      "outputFile": "/Users/mima1234/Desktop/codex开发/开发项目/乖乖吃饭/design-prototypes/recipe-images-batch/optimized/recipe_080.jpg"
+    }
+  ]
+}

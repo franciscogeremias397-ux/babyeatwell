@@ -15,7 +15,7 @@
     <view class="field">
       <view class="label">宝宝生日</view>
       <picker mode="date" value="{{birthDate}}" end="{{today}}" bindchange="onBirthDateChange">
-        <view class="picker-value">{{birthDate}}</view>
+        <view class="picker-value">{{birthDateText}}</view>
       </picker>
     </view>
 
@@ -29,6 +29,8 @@
           </label>
         </view>
       </checkbox-group>
+      <input class="input custom-input" value="{{customAllergy}}" placeholder="可补充一个过敏食材" bindinput="onCustomAllergyInput" />
+      <view wx:if="{{customAllergyHint}}" class="resolve-hint">{{customAllergyHint}}</view>
     </view>
 
     <view class="field">
@@ -42,6 +44,7 @@
         </view>
       </checkbox-group>
       <input class="input custom-input" value="{{customAvoid}}" placeholder="可补充一个不吃食材" bindinput="onCustomAvoidInput" />
+      <view wx:if="{{customAvoidHint}}" class="resolve-hint">{{customAvoidHint}}</view>
     </view>
   </view>
 

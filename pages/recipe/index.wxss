@@ -96,6 +96,47 @@
   background: #fff1cf;
 }
 
+.profile-guide {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 28rpx;
+  padding: 42rpx 34rpx 38rpx;
+  text-align: center;
+  border-radius: 38rpx;
+  background: rgba(255, 255, 255, 0.94);
+  box-shadow: 0 18rpx 42rpx rgba(76, 118, 154, 0.1);
+  animation: fadeRise 440ms ease 90ms both;
+}
+
+.guide-avatar {
+  width: 142rpx;
+  height: 142rpx;
+  border-radius: 50%;
+  background: #ffffff;
+  box-shadow: 0 12rpx 30rpx rgba(76, 118, 154, 0.12);
+}
+
+.guide-title {
+  margin-top: 22rpx;
+  color: #173051;
+  font-size: 42rpx;
+  font-weight: 900;
+}
+
+.guide-copy {
+  margin-top: 16rpx;
+  color: #6a7d99;
+  font-size: 27rpx;
+  font-weight: 800;
+  line-height: 1.5;
+}
+
+.guide-button {
+  width: 100%;
+  margin-top: 32rpx;
+}
+
 .actions {
   display: flex;
   flex-direction: column;

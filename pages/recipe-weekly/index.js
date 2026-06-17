@@ -40,6 +40,7 @@ Page({
     ageMonths: 0,
     stageName: '',
     warning: '',
+    needsProfileAction: false,
     days: [],
     displayDays: []
   },
@@ -60,10 +61,19 @@ Page({
 
   generate() {
     const plan = recipe.generateWeeklyPlan();
-    wx.setStorageSync('latestWeeklyPlan', plan);
+    if (!plan.warning) {
+      wx.setStorageSync('latestWeeklyPlan', plan);
+    }
     this.setData(Object.assign({}, plan, {
+      needsProfileAction: plan.stageId === 'profile_required' || (plan.stageId || '').indexOf('unsupported') === 0,
       displayDays: buildDisplayDays(plan.days)
     }));
+  },
+
+  goProfile() {
+    wx.navigateTo({
+      url: '/pages/recipe-profile/index'
+    });
   },
 
   goDetail(event) {

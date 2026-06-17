@@ -11,12 +11,16 @@ Page({
   data: {
     nickname: '',
     birthDate: '',
+    birthDateText: '请选择出生年月日',
     today: formatDate(new Date()),
     allergyOptions: [],
     avoidOptions: [],
     selectedAllergies: [],
     selectedAvoids: [],
-    customAvoid: ''
+    customAllergy: '',
+    customAllergyHint: '',
+    customAvoid: '',
+    customAvoidHint: ''
   },
 
   onLoad() {
@@ -24,6 +28,7 @@ Page({
     this.setData({
       nickname: profile.nickname,
       birthDate: profile.birthDate,
+      birthDateText: profile.birthDate || '请选择出生年月日',
       selectedAllergies: (profile.allergyTags || []).map((item) => item.standardTag),
       selectedAvoids: (profile.avoidTags || []).map((item) => item.standardTag),
       allergyOptions: this.markOptions(recipe.getCommonAllergyTags(), profile.allergyTags),
@@ -56,7 +61,8 @@ Page({
 
   onBirthDateChange(event) {
     this.setData({
-      birthDate: event.detail.value
+      birthDate: event.detail.value,
+      birthDateText: event.detail.value
     });
   },
 
@@ -72,10 +78,26 @@ Page({
     });
   },
 
-  onCustomAvoidInput(event) {
+  onCustomAllergyInput(event) {
+    const value = event.detail.value;
     this.setData({
-      customAvoid: event.detail.value
+      customAllergy: value,
+      customAllergyHint: this.getResolveHint(value)
     });
+  },
+
+  onCustomAvoidInput(event) {
+    const value = event.detail.value;
+    this.setData({
+      customAvoid: value,
+      customAvoidHint: this.getResolveHint(value)
+    });
+  },
+
+  getResolveHint(value) {
+    const resolved = recipe.resolveTag(value);
+    if (resolved.empty) return '';
+    return resolved.ok ? (resolved.message || `已识别为：${resolved.label}`) : '暂未识别，请换个叫法或从选项中选择';
   },
 
   buildTags(values, options) {
@@ -89,6 +111,30 @@ Page({
     });
   },
 
+  addCustomTag(tags, input) {
+    const text = input.trim();
+    if (!text) return true;
+
+    const resolved = recipe.resolveTag(text);
+    if (!resolved.ok || resolved.empty) {
+      wx.showToast({
+        title: '请换个食材叫法',
+        icon: 'none'
+      });
+      return false;
+    }
+
+    const exists = tags.some((item) => item.standardTag === resolved.standardTag);
+    if (!exists) {
+      tags.push({
+        label: resolved.label,
+        standardTag: resolved.standardTag,
+        sourceInput: resolved.sourceInput
+      });
+    }
+    return true;
+  },
+
   save() {
     const nickname = this.data.nickname.trim();
     if (!nickname) {
@@ -99,22 +145,47 @@ Page({
       return;
     }
 
-    const avoidTags = this.buildTags(this.data.selectedAvoids, recipe.getCommonAvoidTags());
-    const custom = this.data.customAvoid.trim();
-    if (custom) {
-      avoidTags.push(recipe.makeTag(custom));
+    if (!this.data.birthDate) {
+      wx.showToast({
+        title: '请选择生日',
+        icon: 'none'
+      });
+      return;
     }
 
-    recipe.saveProfile({
+    const allergyTags = this.buildTags(this.data.selectedAllergies, recipe.getCommonAllergyTags());
+    if (!this.addCustomTag(allergyTags, this.data.customAllergy)) return;
+
+    const avoidTags = this.buildTags(this.data.selectedAvoids, recipe.getCommonAvoidTags());
+    if (!this.addCustomTag(avoidTags, this.data.customAvoid)) return;
+
+    const result = recipe.saveProfile({
       nickname,
       birthDate: this.data.birthDate,
-      allergyTags: this.buildTags(this.data.selectedAllergies, recipe.getCommonAllergyTags()),
+      allergyTags,
       avoidTags
     });
 
+    if (!result.ok) {
+      wx.showModal({
+        title: '暂不支持建档',
+        content: result.message,
+        showCancel: false
+      });
+      return;
+    }
+
     wx.showToast({
-      title: '已保存'
+      title: '档案已保存'
     });
-    setTimeout(() => wx.navigateBack(), 500);
+    setTimeout(() => {
+      wx.navigateBack({
+        fail() {
+          wx.redirectTo({
+            url: '/pages/recipe/index'
+          });
+        }
+      });
+    }, 500);
   }
 });

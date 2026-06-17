@@ -5,7 +5,9 @@ Page({
     profile: {},
     ageMonths: 0,
     stageName: '',
-    warning: ''
+    warning: '',
+    profileReady: false,
+    canUseRecipes: false
   },
 
   onShow() {
@@ -14,13 +16,17 @@ Page({
 
   refresh() {
     const profile = recipe.getProfile();
-    const ageMonths = recipe.calculateAgeMonths(profile.birthDate);
-    const stageId = recipe.getStageId(ageMonths);
+    const profileReady = recipe.isProfileCompleted(profile);
+    const ageMonths = profileReady ? recipe.calculateAgeMonths(profile.birthDate) : 0;
+    const stageId = profileReady ? recipe.getStageId(ageMonths) : 'profile_required';
+    const warning = profileReady && stageId.indexOf('unsupported') === 0 ? '当前版本适合 12-36 月龄宝宝使用。' : '';
     this.setData({
       profile,
       ageMonths,
       stageName: recipe.getStageName(stageId),
-      warning: stageId.indexOf('unsupported') === 0 ? (stageId === 'unsupported_under_12m' ? '当前版本暂不覆盖 12 月龄以下辅食阶段。' : '当前版本暂不覆盖 36 月龄以上儿童。') : ''
+      warning,
+      profileReady,
+      canUseRecipes: profileReady && !warning
     });
   },
 
@@ -41,12 +47,20 @@ Page({
   },
 
   goWeekly() {
+    if (!this.data.canUseRecipes) {
+      this.goProfile();
+      return;
+    }
     wx.navigateTo({
       url: '/pages/recipe-weekly/index'
     });
   },
 
   goRandom() {
+    if (!this.data.canUseRecipes) {
+      this.goProfile();
+      return;
+    }
     wx.navigateTo({
       url: '/pages/recipe-random/index'
     });

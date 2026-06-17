@@ -13,7 +13,8 @@ Page({
     image: '/assets/recipes/default-meal.png',
     isDrawing: false,
     rollingName: '宝宝餐',
-    emptyText: ''
+    emptyText: '',
+    needsProfileAction: false
   },
 
   onLoad() {
@@ -45,7 +46,8 @@ Page({
         mealTypesText: '',
         isDrawing: false,
         rollingName: '宝宝餐',
-        emptyText: result.warning
+        emptyText: result.warning,
+        needsProfileAction: result.stageId === 'profile_required' || (result.stageId || '').indexOf('unsupported') === 0
       }));
       return;
     }
@@ -73,7 +75,8 @@ Page({
       ingredientChips: [],
       mealTypesText: '',
       rollingName: names[0],
-      emptyText: ''
+      emptyText: '',
+      needsProfileAction: false
     });
 
     this.drawInterval = setInterval(() => {
@@ -100,7 +103,8 @@ Page({
         image: '/assets/recipes/default-meal.png',
         isDrawing: false,
         rollingName: '宝宝餐',
-        emptyText: '暂时没有匹配到合适的一餐，可以调整宝宝档案里的过敏或不吃食材后再试。'
+        emptyText: '暂时没有匹配到合适的一餐，可以调整宝宝档案里的过敏或不吃食材后再试。',
+        needsProfileAction: false
       });
       return;
     }
@@ -113,7 +117,8 @@ Page({
       image: '/assets/recipes/default-meal.png',
       isDrawing: false,
       rollingName: result.recipe ? result.recipe.name : '宝宝餐',
-      emptyText: ''
+      emptyText: '',
+      needsProfileAction: false
     }));
   },
 
@@ -133,6 +138,12 @@ Page({
     if (!this.data.recipe) return;
     wx.navigateTo({
       url: `/pages/recipe-detail/index?id=${this.data.recipe.id}`
+    });
+  },
+
+  goProfile() {
+    wx.navigateTo({
+      url: '/pages/recipe-profile/index'
     });
   },
 

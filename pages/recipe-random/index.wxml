@@ -5,7 +5,8 @@
     <image class="empty-image" src="/assets/ui/random-meal.png" mode="aspectFit" />
     <view class="empty-title">还没抽到合适的一餐</view>
     <view class="empty-copy">{{warning || emptyText}}</view>
-    <button class="detail-link retry-button pressable" hover-class="pressing" bindtap="draw">再抽一次</button>
+    <button wx:if="{{needsProfileAction}}" class="detail-link retry-button pressable" hover-class="pressing" bindtap="goProfile">完善宝宝档案</button>
+    <button wx:else class="detail-link retry-button pressable" hover-class="pressing" bindtap="draw">再抽一次</button>
   </view>
 
   <view wx:elif="{{isDrawing}}" class="draw-card">

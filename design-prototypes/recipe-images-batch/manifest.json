@@ -1,0 +1,1710 @@
+[
+  {
+    "index": 1,
+    "id": "recipe_001",
+    "name": "南瓜小米粥",
+    "stageId": "12_18m",
+    "dishType": "粥类",
+    "texture": "软烂粥状",
+    "mealTypes": [
+      "早餐"
+    ],
+    "ingredients": [
+      "小米",
+      "南瓜",
+      "清水"
+    ],
+    "utensil": "一个勺子",
+    "outputFile": "/Users/mima1234/Desktop/codex开发/开发项目/乖乖吃饭/design-prototypes/recipe-images-batch/optimized/recipe_001.jpg",
+    "prompt": "Use case: stylized-concept\nAsset type: baby recipe thumbnail, square image\nPrimary request: Create a cute 3D food thumbnail for the baby recipe \"南瓜小米粥\".\nSubject: 南瓜小米粥, made with 小米, 南瓜, toddler-friendly 软烂粥状.\nStyle/medium: polished cute 3D clay-like render, soft rounded shapes, appetizing, gentle, premium toddler recipe app style.\nComposition/framing: centered a cute plain baby bowl with no printed pattern, three-quarter view, generous padding. Around the dish, place only a few small matching food ingredients from this recipe: 小米, 南瓜. Include exactly one utensil total: one pastel baby spoon placed beside the bowl. No fork, no chopsticks, no second spoon, no other utensils.\nScene/backdrop: pure white background, clean and bright, very subtle soft shadows only under objects.\nColor palette: warm natural food colors, creamy white dishware, one pastel utensil accent in soft yellow or mint.\nMaterials/textures: smooth ceramic dishware, soft clay-like food texture, rounded friendly utensil shape.\nConstraints: exactly one utensil in the whole image; the food must visually match \"南瓜小米粥\" and its ingredients; no text, no logo, no watermark, no human, no face on the bowl, no printed pattern on the dishware, no clutter, no messy table, no extra unrelated ingredients."
+  },
+  {
+    "index": 2,
+    "id": "recipe_002",
+    "name": "山药红枣小米粥",
+    "stageId": "12_18m",
+    "dishType": "粥类",
+    "texture": "软烂粥状",
+    "mealTypes": [
+      "早餐"
+    ],
+    "ingredients": [
+      "小米",
+      "山药",
+      "红枣",
+      "清水"
+    ],
+    "utensil": "一个勺子",
+    "outputFile": "/Users/mima1234/Desktop/codex开发/开发项目/乖乖吃饭/design-prototypes/recipe-images-batch/optimized/recipe_002.jpg",
+    "prompt": "Use case: stylized-concept\nAsset type: baby recipe thumbnail, square image\nPrimary request: Create a cute 3D food thumbnail for the baby recipe \"山药红枣小米粥\".\nSubject: 山药红枣小米粥, made with 小米, 山药, 红枣, toddler-friendly 软烂粥状.\nStyle/medium: polished cute 3D clay-like render, soft rounded shapes, appetizing, gentle, premium toddler recipe app style.\nComposition/framing: centered a cute plain baby bowl with no printed pattern, three-quarter view, generous padding. Around the dish, place only a few small matching food ingredients from this recipe: 小米, 山药, 红枣. Include exactly one utensil total: one pastel baby spoon placed beside the bowl. No fork, no chopsticks, no second spoon, no other utensils.\nScene/backdrop: pure white background, clean and bright, very subtle soft shadows only under objects.\nColor palette: warm natural food colors, creamy white dishware, one pastel utensil accent in soft yellow or mint.\nMaterials/textures: smooth ceramic dishware, soft clay-like food texture, rounded friendly utensil shape.\nConstraints: exactly one utensil in the whole image; the food must visually match \"山药红枣小米粥\" and its ingredients; no text, no logo, no watermark, no human, no face on the bowl, no printed pattern on the dishware, no clutter, no messy table, no extra unrelated ingredients."
+  },
+  {
+    "index": 3,
+    "id": "recipe_003",
+    "name": "鸡蛋青菜软面",
+    "stageId": "12_18m",
+    "dishType": "软面",
+    "texture": "软烂碎面",
+    "mealTypes": [
+      "早餐"
+    ],
+    "ingredients": [
+      "宝宝面",
+      "鸡蛋",
+      "小青菜",
+      "植物油",
+      "清水"
+    ],
+    "utensil": "一套餐筷",
+    "outputFile": "/Users/mima1234/Desktop/codex开发/开发项目/乖乖吃饭/design-prototypes/recipe-images-batch/optimized/recipe_003.jpg",
+    "prompt": "Use case: stylized-concept\nAsset type: baby recipe thumbnail, square image\nPrimary request: Create a cute 3D food thumbnail for the baby recipe \"鸡蛋青菜软面\".\nSubject: 鸡蛋青菜软面, made with 宝宝面, 鸡蛋, 小青菜, toddler-friendly 软烂碎面.\nStyle/medium: polished cute 3D clay-like render, soft rounded shapes, appetizing, gentle, premium toddler recipe app style.\nComposition/framing: centered a cute plain baby bowl with no printed pattern, three-quarter view, generous padding. Around the dish, place only a few small matching food ingredients from this recipe: 宝宝面, 鸡蛋, 小青菜. Include exactly one utensil total: one pair of pastel toddler chopsticks placed beside the bowl as a single utensil set. No spoon, no fork, no second chopsticks, no other utensils.\nScene/backdrop: pure white background, clean and bright, very subtle soft shadows only under objects.\nColor palette: warm natural food colors, creamy white dishware, one pastel utensil accent in soft yellow or mint.\nMaterials/textures: smooth ceramic dishware, soft clay-like food texture, rounded friendly utensil shape.\nConstraints: exactly one utensil in the whole image; the food must visually match \"鸡蛋青菜软面\" and its ingredients; no text, no logo, no watermark, no human, no face on the bowl, no printed pattern on the dishware, no clutter, no messy table, no extra unrelated ingredients."
+  },
+  {
+    "index": 4,
+    "id": "recipe_004",
+    "name": "胡萝卜鸡蛋软饼",
+    "stageId": "12_18m",
+    "dishType": "软饼",
+    "texture": "软饼、小块",
+    "mealTypes": [
+      "早餐"
+    ],
+    "ingredients": [
+      "鸡蛋",
+      "面粉",
+      "胡萝卜",
+      "清水",
+      "植物油"
+    ],
+    "utensil": "一个叉子",
+    "outputFile": "/Users/mima1234/Desktop/codex开发/开发项目/乖乖吃饭/design-prototypes/recipe-images-batch/optimized/recipe_004.jpg",
+    "prompt": "Use case: stylized-concept\nAsset type: baby recipe thumbnail, square image\nPrimary request: Create a cute 3D food thumbnail for the baby recipe \"胡萝卜鸡蛋软饼\".\nSubject: 胡萝卜鸡蛋软饼, made with 鸡蛋, 面粉, 胡萝卜, toddler-friendly 软饼、小块.\nStyle/medium: polished cute 3D clay-like render, soft rounded shapes, appetizing, gentle, premium toddler recipe app style.\nComposition/framing: centered a cute plain toddler plate or shallow bowl with no printed pattern, three-quarter view, generous padding. Around the dish, place only a few small matching food ingredients from this recipe: 鸡蛋, 面粉, 胡萝卜. Include exactly one utensil total: one pastel baby fork placed beside the dish. No spoon, no chopsticks, no second fork, no other utensils.\nScene/backdrop: pure white background, clean and bright, very subtle soft shadows only under objects.\nColor palette: warm natural food colors, creamy white dishware, one pastel utensil accent in soft yellow or mint.\nMaterials/textures: smooth ceramic dishware, soft clay-like food texture, rounded friendly utensil shape.\nConstraints: exactly one utensil in the whole image; the food must visually match \"胡萝卜鸡蛋软饼\" and its ingredients; no text, no logo, no watermark, no human, no face on the bowl, no printed pattern on the dishware, no clutter, no messy table, no extra unrelated ingredients."
+  },
+  {
+    "index": 5,
+    "id": "recipe_005",
+    "name": "苹果燕麦粥",
+    "stageId": "12_18m",
+    "dishType": "粥类",
+    "texture": "软烂粥状",
+    "mealTypes": [
+      "早餐"
+    ],
+    "ingredients": [
+      "即食燕麦片",
+      "苹果",
+      "清水"
+    ],
+    "utensil": "一个勺子",
+    "outputFile": "/Users/mima1234/Desktop/codex开发/开发项目/乖乖吃饭/design-prototypes/recipe-images-batch/optimized/recipe_005.jpg",
+    "prompt": "Use case: stylized-concept\nAsset type: baby recipe thumbnail, square image\nPrimary request: Create a cute 3D food thumbnail for the baby recipe \"苹果燕麦粥\".\nSubject: 苹果燕麦粥, made with 即食燕麦片, 苹果, toddler-friendly 软烂粥状.\nStyle/medium: polished cute 3D clay-like render, soft rounded shapes, appetizing, gentle, premium toddler recipe app style.\nComposition/framing: centered a cute plain baby bowl with no printed pattern, three-quarter view, generous padding. Around the dish, place only a few small matching food ingredients from this recipe: 即食燕麦片, 苹果. Include exactly one utensil total: one pastel baby spoon placed beside the bowl. No fork, no chopsticks, no second spoon, no other utensils.\nScene/backdrop: pure white background, clean and bright, very subtle soft shadows only under objects.\nColor palette: warm natural food colors, creamy white dishware, one pastel utensil accent in soft yellow or mint.\nMaterials/textures: smooth ceramic dishware, soft clay-like food texture, rounded friendly utensil shape.\nConstraints: exactly one utensil in the whole image; the food must visually match \"苹果燕麦粥\" and its ingredients; no text, no logo, no watermark, no human, no face on the bowl, no printed pattern on the dishware, no clutter, no messy table, no extra unrelated ingredients."
+  },
+  {
+    "index": 6,
+    "id": "recipe_006",
+    "name": "紫薯米糊粥",
+    "stageId": "12_18m",
+    "dishType": "粥类",
+    "texture": "细腻软粥",
+    "mealTypes": [
+      "早餐"
+    ],
+    "ingredients": [
+      "大米",
+      "紫薯",
+      "清水"
+    ],
+    "utensil": "一个勺子",
+    "outputFile": "/Users/mima1234/Desktop/codex开发/开发项目/乖乖吃饭/design-prototypes/recipe-images-batch/optimized/recipe_006.jpg",
+    "prompt": "Use case: stylized-concept\nAsset type: baby recipe thumbnail, square image\nPrimary request: Create a cute 3D food thumbnail for the baby recipe \"紫薯米糊粥\".\nSubject: 紫薯米糊粥, made with 大米, 紫薯, toddler-friendly 细腻软粥.\nStyle/medium: polished cute 3D clay-like render, soft rounded shapes, appetizing, gentle, premium toddler recipe app style.\nComposition/framing: centered a cute plain baby bowl with no printed pattern, three-quarter view, generous padding. Around the dish, place only a few small matching food ingredients from this recipe: 大米, 紫薯. Include exactly one utensil total: one pastel baby spoon placed beside the bowl. No fork, no chopsticks, no second spoon, no other utensils.\nScene/backdrop: pure white background, clean and bright, very subtle soft shadows only under objects.\nColor palette: warm natural food colors, creamy white dishware, one pastel utensil accent in soft yellow or mint.\nMaterials/textures: smooth ceramic dishware, soft clay-like food texture, rounded friendly utensil shape.\nConstraints: exactly one utensil in the whole image; the food must visually match \"紫薯米糊粥\" and its ingredients; no text, no logo, no watermark, no human, no face on the bowl, no printed pattern on the dishware, no clutter, no messy table, no extra unrelated ingredients."
+  },
+  {
+    "index": 7,
+    "id": "recipe_007",
+    "name": "西兰花蛋黄粥",
+    "stageId": "12_18m",
+    "dishType": "粥类",
+    "texture": "软烂粥状",
+    "mealTypes": [
+      "早餐"
+    ],
+    "ingredients": [
+      "大米",
+      "熟蛋黄",
+      "西兰花",
+      "清水"
+    ],
+    "utensil": "一个勺子",
+    "outputFile": "/Users/mima1234/Desktop/codex开发/开发项目/乖乖吃饭/design-prototypes/recipe-images-batch/optimized/recipe_007.jpg",
+    "prompt": "Use case: stylized-concept\nAsset type: baby recipe thumbnail, square image\nPrimary request: Create a cute 3D food thumbnail for the baby recipe \"西兰花蛋黄粥\".\nSubject: 西兰花蛋黄粥, made with 大米, 熟蛋黄, 西兰花, toddler-friendly 软烂粥状.\nStyle/medium: polished cute 3D clay-like render, soft rounded shapes, appetizing, gentle, premium toddler recipe app style.\nComposition/framing: centered a cute plain baby bowl with no printed pattern, three-quarter view, generous padding. Around the dish, place only a few small matching food ingredients from this recipe: 大米, 熟蛋黄, 西兰花. Include exactly one utensil total: one pastel baby spoon placed beside the bowl. No fork, no chopsticks, no second spoon, no other utensils.\nScene/backdrop: pure white background, clean and bright, very subtle soft shadows only under objects.\nColor palette: warm natural food colors, creamy white dishware, one pastel utensil accent in soft yellow or mint.\nMaterials/textures: smooth ceramic dishware, soft clay-like food texture, rounded friendly utensil shape.\nConstraints: exactly one utensil in the whole image; the food must visually match \"西兰花蛋黄粥\" and its ingredients; no text, no logo, no watermark, no human, no face on the bowl, no printed pattern on the dishware, no clutter, no messy table, no extra unrelated ingredients."
+  },
+  {
+    "index": 8,
+    "id": "recipe_008",
+    "name": "番茄碎碎面",
+    "stageId": "12_18m",
+    "dishType": "软面",
+    "texture": "软烂碎面",
+    "mealTypes": [
+      "早餐"
+    ],
+    "ingredients": [
+      "宝宝面",
+      "番茄",
+      "小青菜",
+      "植物油",
+      "清水"
+    ],
+    "utensil": "一套餐筷",
+    "outputFile": "/Users/mima1234/Desktop/codex开发/开发项目/乖乖吃饭/design-prototypes/recipe-images-batch/optimized/recipe_008.jpg",
+    "prompt": "Use case: stylized-concept\nAsset type: baby recipe thumbnail, square image\nPrimary request: Create a cute 3D food thumbnail for the baby recipe \"番茄碎碎面\".\nSubject: 番茄碎碎面, made with 宝宝面, 番茄, 小青菜, toddler-friendly 软烂碎面.\nStyle/medium: polished cute 3D clay-like render, soft rounded shapes, appetizing, gentle, premium toddler recipe app style.\nComposition/framing: centered a cute plain baby bowl with no printed pattern, three-quarter view, generous padding. Around the dish, place only a few small matching food ingredients from this recipe: 宝宝面, 番茄, 小青菜. Include exactly one utensil total: one pair of pastel toddler chopsticks placed beside the bowl as a single utensil set. No spoon, no fork, no second chopsticks, no other utensils.\nScene/backdrop: pure white background, clean and bright, very subtle soft shadows only under objects.\nColor palette: warm natural food colors, creamy white dishware, one pastel utensil accent in soft yellow or mint.\nMaterials/textures: smooth ceramic dishware, soft clay-like food texture, rounded friendly utensil shape.\nConstraints: exactly one utensil in the whole image; the food must visually match \"番茄碎碎面\" and its ingredients; no text, no logo, no watermark, no human, no face on the bowl, no printed pattern on the dishware, no clutter, no messy table, no extra unrelated ingredients."
+  },
+  {
+    "index": 9,
+    "id": "recipe_009",
+    "name": "奶香玉米粥",
+    "stageId": "12_18m",
+    "dishType": "粥类",
+    "texture": "软烂粥状",
+    "mealTypes": [
+      "早餐"
+    ],
+    "ingredients": [
+      "大米",
+      "鲜玉米粒",
+      "配方奶或纯牛奶",
+      "清水"
+    ],
+    "utensil": "一个勺子",
+    "outputFile": "/Users/mima1234/Desktop/codex开发/开发项目/乖乖吃饭/design-prototypes/recipe-images-batch/optimized/recipe_009.jpg",
+    "prompt": "Use case: stylized-concept\nAsset type: baby recipe thumbnail, square image\nPrimary request: Create a cute 3D food thumbnail for the baby recipe \"奶香玉米粥\".\nSubject: 奶香玉米粥, made with 大米, 鲜玉米粒, 配方奶或纯牛奶, toddler-friendly 软烂粥状.\nStyle/medium: polished cute 3D clay-like render, soft rounded shapes, appetizing, gentle, premium toddler recipe app style.\nComposition/framing: centered a cute plain baby bowl with no printed pattern, three-quarter view, generous padding. Around the dish, place only a few small matching food ingredients from this recipe: 大米, 鲜玉米粒, 配方奶或纯牛奶. Include exactly one utensil total: one pastel baby spoon placed beside the bowl. No fork, no chopsticks, no second spoon, no other utensils.\nScene/backdrop: pure white background, clean and bright, very subtle soft shadows only under objects.\nColor palette: warm natural food colors, creamy white dishware, one pastel utensil accent in soft yellow or mint.\nMaterials/textures: smooth ceramic dishware, soft clay-like food texture, rounded friendly utensil shape.\nConstraints: exactly one utensil in the whole image; the food must visually match \"奶香玉米粥\" and its ingredients; no text, no logo, no watermark, no human, no face on the bowl, no printed pattern on the dishware, no clutter, no messy table, no extra unrelated ingredients."
+  },
+  {
+    "index": 10,
+    "id": "recipe_010",
+    "name": "土豆胡萝卜软饼",
+    "stageId": "12_18m",
+    "dishType": "软饼",
+    "texture": "软饼、小块",
+    "mealTypes": [
+      "早餐"
+    ],
+    "ingredients": [
+      "土豆",
+      "胡萝卜",
+      "面粉",
+      "植物油",
+      "清水"
+    ],
+    "utensil": "一个叉子",
+    "outputFile": "/Users/mima1234/Desktop/codex开发/开发项目/乖乖吃饭/design-prototypes/recipe-images-batch/optimized/recipe_010.jpg",
+    "prompt": "Use case: stylized-concept\nAsset type: baby recipe thumbnail, square image\nPrimary request: Create a cute 3D food thumbnail for the baby recipe \"土豆胡萝卜软饼\".\nSubject: 土豆胡萝卜软饼, made with 土豆, 胡萝卜, 面粉, toddler-friendly 软饼、小块.\nStyle/medium: polished cute 3D clay-like render, soft rounded shapes, appetizing, gentle, premium toddler recipe app style.\nComposition/framing: centered a cute plain toddler plate or shallow bowl with no printed pattern, three-quarter view, generous padding. Around the dish, place only a few small matching food ingredients from this recipe: 土豆, 胡萝卜, 面粉. Include exactly one utensil total: one pastel baby fork placed beside the dish. No spoon, no chopsticks, no second fork, no other utensils.\nScene/backdrop: pure white background, clean and bright, very subtle soft shadows only under objects.\nColor palette: warm natural food colors, creamy white dishware, one pastel utensil accent in soft yellow or mint.\nMaterials/textures: smooth ceramic dishware, soft clay-like food texture, rounded friendly utensil shape.\nConstraints: exactly one utensil in the whole image; the food must visually match \"土豆胡萝卜软饼\" and its ingredients; no text, no logo, no watermark, no human, no face on the bowl, no printed pattern on the dishware, no clutter, no messy table, no extra unrelated ingredients."
+  },
+  {
+    "index": 11,
+    "id": "recipe_011",
+    "name": "香蕉燕麦小饼",
+    "stageId": "12_18m",
+    "dishType": "软饼",
+    "texture": "软饼、小块",
+    "mealTypes": [
+      "早餐"
+    ],
+    "ingredients": [
+      "香蕉",
+      "即食燕麦片",
+      "鸡蛋",
+      "植物油"
+    ],
+    "utensil": "一个叉子",
+    "outputFile": "/Users/mima1234/Desktop/codex开发/开发项目/乖乖吃饭/design-prototypes/recipe-images-batch/optimized/recipe_011.jpg",
+    "prompt": "Use case: stylized-concept\nAsset type: baby recipe thumbnail, square image\nPrimary request: Create a cute 3D food thumbnail for the baby recipe \"香蕉燕麦小饼\".\nSubject: 香蕉燕麦小饼, made with 香蕉, 即食燕麦片, 鸡蛋, toddler-friendly 软饼、小块.\nStyle/medium: polished cute 3D clay-like render, soft rounded shapes, appetizing, gentle, premium toddler recipe app style.\nComposition/framing: centered a cute plain toddler plate or shallow bowl with no printed pattern, three-quarter view, generous padding. Around the dish, place only a few small matching food ingredients from this recipe: 香蕉, 即食燕麦片, 鸡蛋. Include exactly one utensil total: one pastel baby fork placed beside the dish. No spoon, no chopsticks, no second fork, no other utensils.\nScene/backdrop: pure white background, clean and bright, very subtle soft shadows only under objects.\nColor palette: warm natural food colors, creamy white dishware, one pastel utensil accent in soft yellow or mint.\nMaterials/textures: smooth ceramic dishware, soft clay-like food texture, rounded friendly utensil shape.\nConstraints: exactly one utensil in the whole image; the food must visually match \"香蕉燕麦小饼\" and its ingredients; no text, no logo, no watermark, no human, no face on the bowl, no printed pattern on the dishware, no clutter, no messy table, no extra unrelated ingredients."
+  },
+  {
+    "index": 12,
+    "id": "recipe_012",
+    "name": "青菜肉末粥",
+    "stageId": "12_18m",
+    "dishType": "粥类",
+    "texture": "软烂粥状",
+    "mealTypes": [
+      "早餐"
+    ],
+    "ingredients": [
+      "大米",
+      "猪肉末",
+      "小青菜",
+      "植物油",
+      "清水"
+    ],
+    "utensil": "一个勺子",
+    "outputFile": "/Users/mima1234/Desktop/codex开发/开发项目/乖乖吃饭/design-prototypes/recipe-images-batch/optimized/recipe_012.jpg",
+    "prompt": "Use case: stylized-concept\nAsset type: baby recipe thumbnail, square image\nPrimary request: Create a cute 3D food thumbnail for the baby recipe \"青菜肉末粥\".\nSubject: 青菜肉末粥, made with 大米, 猪肉末, 小青菜, toddler-friendly 软烂粥状.\nStyle/medium: polished cute 3D clay-like render, soft rounded shapes, appetizing, gentle, premium toddler recipe app style.\nComposition/framing: centered a cute plain baby bowl with no printed pattern, three-quarter view, generous padding. Around the dish, place only a few small matching food ingredients from this recipe: 大米, 猪肉末, 小青菜. Include exactly one utensil total: one pastel baby spoon placed beside the bowl. No fork, no chopsticks, no second spoon, no other utensils.\nScene/backdrop: pure white background, clean and bright, very subtle soft shadows only under objects.\nColor palette: warm natural food colors, creamy white dishware, one pastel utensil accent in soft yellow or mint.\nMaterials/textures: smooth ceramic dishware, soft clay-like food texture, rounded friendly utensil shape.\nConstraints: exactly one utensil in the whole image; the food must visually match \"青菜肉末粥\" and its ingredients; no text, no logo, no watermark, no human, no face on the bowl, no printed pattern on the dishware, no clutter, no messy table, no extra unrelated ingredients."
+  },
+  {
+    "index": 13,
+    "id": "recipe_013",
+    "name": "南瓜鸡蛋羹",
+    "stageId": "12_18m",
+    "dishType": "蒸羹",
+    "texture": "细嫩蒸羹",
+    "mealTypes": [
+      "早餐"
+    ],
+    "ingredients": [
+      "鸡蛋",
+      "南瓜",
+      "温水"
+    ],
+    "utensil": "一个勺子",
+    "outputFile": "/Users/mima1234/Desktop/codex开发/开发项目/乖乖吃饭/design-prototypes/recipe-images-batch/optimized/recipe_013.jpg",
+    "prompt": "Use case: stylized-concept\nAsset type: baby recipe thumbnail, square image\nPrimary request: Create a cute 3D food thumbnail for the baby recipe \"南瓜鸡蛋羹\".\nSubject: 南瓜鸡蛋羹, made with 鸡蛋, 南瓜, toddler-friendly 细嫩蒸羹.\nStyle/medium: polished cute 3D clay-like render, soft rounded shapes, appetizing, gentle, premium toddler recipe app style.\nComposition/framing: centered a cute plain baby bowl with no printed pattern, three-quarter view, generous padding. Around the dish, place only a few small matching food ingredients from this recipe: 鸡蛋, 南瓜. Include exactly one utensil total: one pastel baby spoon placed beside the bowl. No fork, no chopsticks, no second spoon, no other utensils.\nScene/backdrop: pure white background, clean and bright, very subtle soft shadows only under objects.\nColor palette: warm natural food colors, creamy white dishware, one pastel utensil accent in soft yellow or mint.\nMaterials/textures: smooth ceramic dishware, soft clay-like food texture, rounded friendly utensil shape.\nConstraints: exactly one utensil in the whole image; the food must visually match \"南瓜鸡蛋羹\" and its ingredients; no text, no logo, no watermark, no human, no face on the bowl, no printed pattern on the dishware, no clutter, no messy table, no extra unrelated ingredients."
+  },
+  {
+    "index": 14,
+    "id": "recipe_014",
+    "name": "小米山药蛋黄粥",
+    "stageId": "12_18m",
+    "dishType": "粥类",
+    "texture": "软烂粥状",
+    "mealTypes": [
+      "早餐"
+    ],
+    "ingredients": [
+      "小米",
+      "山药",
+      "熟蛋黄",
+      "清水"
+    ],
+    "utensil": "一个勺子",
+    "outputFile": "/Users/mima1234/Desktop/codex开发/开发项目/乖乖吃饭/design-prototypes/recipe-images-batch/optimized/recipe_014.jpg",
+    "prompt": "Use case: stylized-concept\nAsset type: baby recipe thumbnail, square image\nPrimary request: Create a cute 3D food thumbnail for the baby recipe \"小米山药蛋黄粥\".\nSubject: 小米山药蛋黄粥, made with 小米, 山药, 熟蛋黄, toddler-friendly 软烂粥状.\nStyle/medium: polished cute 3D clay-like render, soft rounded shapes, appetizing, gentle, premium toddler recipe app style.\nComposition/framing: centered a cute plain baby bowl with no printed pattern, three-quarter view, generous padding. Around the dish, place only a few small matching food ingredients from this recipe: 小米, 山药, 熟蛋黄. Include exactly one utensil total: one pastel baby spoon placed beside the bowl. No fork, no chopsticks, no second spoon, no other utensils.\nScene/backdrop: pure white background, clean and bright, very subtle soft shadows only under objects.\nColor palette: warm natural food colors, creamy white dishware, one pastel utensil accent in soft yellow or mint.\nMaterials/textures: smooth ceramic dishware, soft clay-like food texture, rounded friendly utensil shape.\nConstraints: exactly one utensil in the whole image; the food must visually match \"小米山药蛋黄粥\" and its ingredients; no text, no logo, no watermark, no human, no face on the bowl, no printed pattern on the dishware, no clutter, no messy table, no extra unrelated ingredients."
+  },
+  {
+    "index": 15,
+    "id": "recipe_015",
+    "name": "豆腐青菜软粥",
+    "stageId": "12_18m",
+    "dishType": "粥类",
+    "texture": "软烂粥状",
+    "mealTypes": [
+      "早餐"
+    ],
+    "ingredients": [
+      "大米",
+      "嫩豆腐",
+      "小青菜",
+      "植物油",
+      "清水"
+    ],
+    "utensil": "一个勺子",
+    "outputFile": "/Users/mima1234/Desktop/codex开发/开发项目/乖乖吃饭/design-prototypes/recipe-images-batch/optimized/recipe_015.jpg",
+    "prompt": "Use case: stylized-concept\nAsset type: baby recipe thumbnail, square image\nPrimary request: Create a cute 3D food thumbnail for the baby recipe \"豆腐青菜软粥\".\nSubject: 豆腐青菜软粥, made with 大米, 嫩豆腐, 小青菜, toddler-friendly 软烂粥状.\nStyle/medium: polished cute 3D clay-like render, soft rounded shapes, appetizing, gentle, premium toddler recipe app style.\nComposition/framing: centered a cute plain baby bowl with no printed pattern, three-quarter view, generous padding. Around the dish, place only a few small matching food ingredients from this recipe: 大米, 嫩豆腐, 小青菜. Include exactly one utensil total: one pastel baby spoon placed beside the bowl. No fork, no chopsticks, no second spoon, no other utensils.\nScene/backdrop: pure white background, clean and bright, very subtle soft shadows only under objects.\nColor palette: warm natural food colors, creamy white dishware, one pastel utensil accent in soft yellow or mint.\nMaterials/textures: smooth ceramic dishware, soft clay-like food texture, rounded friendly utensil shape.\nConstraints: exactly one utensil in the whole image; the food must visually match \"豆腐青菜软粥\" and its ingredients; no text, no logo, no watermark, no human, no face on the bowl, no printed pattern on the dishware, no clutter, no messy table, no extra unrelated ingredients."
+  },
+  {
+    "index": 16,
+    "id": "recipe_016",
+    "name": "南瓜鸡肉软饭",
+    "stageId": "12_18m",
+    "dishType": "软饭",
+    "texture": "软饭、碎小",
+    "mealTypes": [
+      "午餐",
+      "晚餐"
+    ],
+    "ingredients": [
+      "软米饭",
+      "鸡肉末",
+      "南瓜",
+      "西兰花",
+      "植物油"
+    ],
+    "utensil": "一个叉子",
+    "outputFile": "/Users/mima1234/Desktop/codex开发/开发项目/乖乖吃饭/design-prototypes/recipe-images-batch/optimized/recipe_016.jpg",
+    "prompt": "Use case: stylized-concept\nAsset type: baby recipe thumbnail, square image\nPrimary request: Create a cute 3D food thumbnail for the baby recipe \"南瓜鸡肉软饭\".\nSubject: 南瓜鸡肉软饭, made with 软米饭, 鸡肉末, 南瓜, 西兰花, toddler-friendly 软饭、碎小.\nStyle/medium: polished cute 3D clay-like render, soft rounded shapes, appetizing, gentle, premium toddler recipe app style.\nComposition/framing: centered a cute plain baby bowl with no printed pattern, three-quarter view, generous padding. Around the dish, place only a few small matching food ingredients from this recipe: 软米饭, 鸡肉末, 南瓜, 西兰花. Include exactly one utensil total: one pastel baby fork placed beside the dish. No spoon, no chopsticks, no second fork, no other utensils.\nScene/backdrop: pure white background, clean and bright, very subtle soft shadows only under objects.\nColor palette: warm natural food colors, creamy white dishware, one pastel utensil accent in soft yellow or mint.\nMaterials/textures: smooth ceramic dishware, soft clay-like food texture, rounded friendly utensil shape.\nConstraints: exactly one utensil in the whole image; the food must visually match \"南瓜鸡肉软饭\" and its ingredients; no text, no logo, no watermark, no human, no face on the bowl, no printed pattern on the dishware, no clutter, no messy table, no extra unrelated ingredients."
+  },
+  {
+    "index": 17,
+    "id": "recipe_017",
+    "name": "番茄牛肉碎碎面",
+    "stageId": "12_18m",
+    "dishType": "软面",
+    "texture": "软烂碎面",
+    "mealTypes": [
+      "午餐",
+      "晚餐"
+    ],
+    "ingredients": [
+      "宝宝面",
+      "牛肉末",
+      "番茄",
+      "小青菜",
+      "植物油"
+    ],
+    "utensil": "一套餐筷",
+    "outputFile": "/Users/mima1234/Desktop/codex开发/开发项目/乖乖吃饭/design-prototypes/recipe-images-batch/optimized/recipe_017.jpg",
+    "prompt": "Use case: stylized-concept\nAsset type: baby recipe thumbnail, square image\nPrimary request: Create a cute 3D food thumbnail for the baby recipe \"番茄牛肉碎碎面\".\nSubject: 番茄牛肉碎碎面, made with 宝宝面, 牛肉末, 番茄, 小青菜, toddler-friendly 软烂碎面.\nStyle/medium: polished cute 3D clay-like render, soft rounded shapes, appetizing, gentle, premium toddler recipe app style.\nComposition/framing: centered a cute plain baby bowl with no printed pattern, three-quarter view, generous padding. Around the dish, place only a few small matching food ingredients from this recipe: 宝宝面, 牛肉末, 番茄, 小青菜. Include exactly one utensil total: one pair of pastel toddler chopsticks placed beside the bowl as a single utensil set. No spoon, no fork, no second chopsticks, no other utensils.\nScene/backdrop: pure white background, clean and bright, very subtle soft shadows only under objects.\nColor palette: warm natural food colors, creamy white dishware, one pastel utensil accent in soft yellow or mint.\nMaterials/textures: smooth ceramic dishware, soft clay-like food texture, rounded friendly utensil shape.\nConstraints: exactly one utensil in the whole image; the food must visually match \"番茄牛肉碎碎面\" and its ingredients; no text, no logo, no watermark, no human, no face on the bowl, no printed pattern on the dishware, no clutter, no messy table, no extra unrelated ingredients."
+  },
+  {
+    "index": 18,
+    "id": "recipe_018",
+    "name": "胡萝卜猪肉软饭",
+    "stageId": "12_18m",
+    "dishType": "软饭",
+    "texture": "软饭、碎小",
+    "mealTypes": [
+      "午餐",
+      "晚餐"
+    ],
+    "ingredients": [
+      "软米饭",
+      "猪肉末",
+      "胡萝卜",
+      "油菜",
+      "植物油"
+    ],
+    "utensil": "一个叉子",
+    "outputFile": "/Users/mima1234/Desktop/codex开发/开发项目/乖乖吃饭/design-prototypes/recipe-images-batch/optimized/recipe_018.jpg",
+    "prompt": "Use case: stylized-concept\nAsset type: baby recipe thumbnail, square image\nPrimary request: Create a cute 3D food thumbnail for the baby recipe \"胡萝卜猪肉软饭\".\nSubject: 胡萝卜猪肉软饭, made with 软米饭, 猪肉末, 胡萝卜, 油菜, toddler-friendly 软饭、碎小.\nStyle/medium: polished cute 3D clay-like render, soft rounded shapes, appetizing, gentle, premium toddler recipe app style.\nComposition/framing: centered a cute plain baby bowl with no printed pattern, three-quarter view, generous padding. Around the dish, place only a few small matching food ingredients from this recipe: 软米饭, 猪肉末, 胡萝卜, 油菜. Include exactly one utensil total: one pastel baby fork placed beside the dish. No spoon, no chopsticks, no second fork, no other utensils.\nScene/backdrop: pure white background, clean and bright, very subtle soft shadows only under objects.\nColor palette: warm natural food colors, creamy white dishware, one pastel utensil accent in soft yellow or mint.\nMaterials/textures: smooth ceramic dishware, soft clay-like food texture, rounded friendly utensil shape.\nConstraints: exactly one utensil in the whole image; the food must visually match \"胡萝卜猪肉软饭\" and its ingredients; no text, no logo, no watermark, no human, no face on the bowl, no printed pattern on the dishware, no clutter, no messy table, no extra unrelated ingredients."
+  },
+  {
+    "index": 19,
+    "id": "recipe_019",
+    "name": "西兰花鳕鱼软饭",
+    "stageId": "12_18m",
+    "dishType": "软饭",
+    "texture": "软饭、碎小",
+    "mealTypes": [
+      "午餐",
+      "晚餐"
+    ],
+    "ingredients": [
+      "软米饭",
+      "鳕鱼肉",
+      "西兰花",
+      "胡萝卜",
+      "植物油"
+    ],
+    "utensil": "一个叉子",
+    "outputFile": "/Users/mima1234/Desktop/codex开发/开发项目/乖乖吃饭/design-prototypes/recipe-images-batch/optimized/recipe_019.jpg",
+    "prompt": "Use case: stylized-concept\nAsset type: baby recipe thumbnail, square image\nPrimary request: Create a cute 3D food thumbnail for the baby recipe \"西兰花鳕鱼软饭\".\nSubject: 西兰花鳕鱼软饭, made with 软米饭, 鳕鱼肉, 西兰花, 胡萝卜, toddler-friendly 软饭、碎小.\nStyle/medium: polished cute 3D clay-like render, soft rounded shapes, appetizing, gentle, premium toddler recipe app style.\nComposition/framing: centered a cute plain baby bowl with no printed pattern, three-quarter view, generous padding. Around the dish, place only a few small matching food ingredients from this recipe: 软米饭, 鳕鱼肉, 西兰花, 胡萝卜. Include exactly one utensil total: one pastel baby fork placed beside the dish. No spoon, no chopsticks, no second fork, no other utensils.\nScene/backdrop: pure white background, clean and bright, very subtle soft shadows only under objects.\nColor palette: warm natural food colors, creamy white dishware, one pastel utensil accent in soft yellow or mint.\nMaterials/textures: smooth ceramic dishware, soft clay-like food texture, rounded friendly utensil shape.\nConstraints: exactly one utensil in the whole image; the food must visually match \"西兰花鳕鱼软饭\" and its ingredients; no text, no logo, no watermark, no human, no face on the bowl, no printed pattern on the dishware, no clutter, no messy table, no extra unrelated ingredients."
+  },
+  {
+    "index": 20,
+    "id": "recipe_020",
+    "name": "香菇鸡肉烂面",
+    "stageId": "12_18m",
+    "dishType": "软面",
+    "texture": "软烂碎面",
+    "mealTypes": [
+      "午餐",
+      "晚餐"
+    ],
+    "ingredients": [
+      "宝宝面",
+      "鸡肉末",
+      "香菇",
+      "小青菜",
+      "植物油"
+    ],
+    "utensil": "一套餐筷",
+    "outputFile": "/Users/mima1234/Desktop/codex开发/开发项目/乖乖吃饭/design-prototypes/recipe-images-batch/optimized/recipe_020.jpg",
+    "prompt": "Use case: stylized-concept\nAsset type: baby recipe thumbnail, square image\nPrimary request: Create a cute 3D food thumbnail for the baby recipe \"香菇鸡肉烂面\".\nSubject: 香菇鸡肉烂面, made with 宝宝面, 鸡肉末, 香菇, 小青菜, toddler-friendly 软烂碎面.\nStyle/medium: polished cute 3D clay-like render, soft rounded shapes, appetizing, gentle, premium toddler recipe app style.\nComposition/framing: centered a cute plain baby bowl with no printed pattern, three-quarter view, generous padding. Around the dish, place only a few small matching food ingredients from this recipe: 宝宝面, 鸡肉末, 香菇, 小青菜. Include exactly one utensil total: one pair of pastel toddler chopsticks placed beside the bowl as a single utensil set. No spoon, no fork, no second chopsticks, no other utensils.\nScene/backdrop: pure white background, clean and bright, very subtle soft shadows only under objects.\nColor palette: warm natural food colors, creamy white dishware, one pastel utensil accent in soft yellow or mint.\nMaterials/textures: smooth ceramic dishware, soft clay-like food texture, rounded friendly utensil shape.\nConstraints: exactly one utensil in the whole image; the food must visually match \"香菇鸡肉烂面\" and its ingredients; no text, no logo, no watermark, no human, no face on the bowl, no printed pattern on the dishware, no clutter, no messy table, no extra unrelated ingredients."
+  },
+  {
+    "index": 21,
+    "id": "recipe_021",
+    "name": "豆腐青菜肉末饭",
+    "stageId": "12_18m",
+    "dishType": "软饭",
+    "texture": "软饭、碎小",
+    "mealTypes": [
+      "午餐",
+      "晚餐"
+    ],
+    "ingredients": [
+      "软米饭",
+      "猪肉末",
+      "嫩豆腐",
+      "小青菜",
+      "植物油"
+    ],
+    "utensil": "一个叉子",
+    "outputFile": "/Users/mima1234/Desktop/codex开发/开发项目/乖乖吃饭/design-prototypes/recipe-images-batch/optimized/recipe_021.jpg",
+    "prompt": "Use case: stylized-concept\nAsset type: baby recipe thumbnail, square image\nPrimary request: Create a cute 3D food thumbnail for the baby recipe \"豆腐青菜肉末饭\".\nSubject: 豆腐青菜肉末饭, made with 软米饭, 猪肉末, 嫩豆腐, 小青菜, toddler-friendly 软饭、碎小.\nStyle/medium: polished cute 3D clay-like render, soft rounded shapes, appetizing, gentle, premium toddler recipe app style.\nComposition/framing: centered a cute plain baby bowl with no printed pattern, three-quarter view, generous padding. Around the dish, place only a few small matching food ingredients from this recipe: 软米饭, 猪肉末, 嫩豆腐, 小青菜. Include exactly one utensil total: one pastel baby fork placed beside the dish. No spoon, no chopsticks, no second fork, no other utensils.\nScene/backdrop: pure white background, clean and bright, very subtle soft shadows only under objects.\nColor palette: warm natural food colors, creamy white dishware, one pastel utensil accent in soft yellow or mint.\nMaterials/textures: smooth ceramic dishware, soft clay-like food texture, rounded friendly utensil shape.\nConstraints: exactly one utensil in the whole image; the food must visually match \"豆腐青菜肉末饭\" and its ingredients; no text, no logo, no watermark, no human, no face on the bowl, no printed pattern on the dishware, no clutter, no messy table, no extra unrelated ingredients."
+  },
+  {
+    "index": 22,
+    "id": "recipe_022",
+    "name": "冬瓜虾仁软饭",
+    "stageId": "12_18m",
+    "dishType": "软饭",
+    "texture": "软饭、碎小",
+    "mealTypes": [
+      "午餐",
+      "晚餐"
+    ],
+    "ingredients": [
+      "软米饭",
+      "虾仁",
+      "冬瓜",
+      "小油菜",
+      "植物油"
+    ],
+    "utensil": "一个叉子",
+    "outputFile": "/Users/mima1234/Desktop/codex开发/开发项目/乖乖吃饭/design-prototypes/recipe-images-batch/optimized/recipe_022.jpg",
+    "prompt": "Use case: stylized-concept\nAsset type: baby recipe thumbnail, square image\nPrimary request: Create a cute 3D food thumbnail for the baby recipe \"冬瓜虾仁软饭\".\nSubject: 冬瓜虾仁软饭, made with 软米饭, 虾仁, 冬瓜, 小油菜, toddler-friendly 软饭、碎小.\nStyle/medium: polished cute 3D clay-like render, soft rounded shapes, appetizing, gentle, premium toddler recipe app style.\nComposition/framing: centered a cute plain baby bowl with no printed pattern, three-quarter view, generous padding. Around the dish, place only a few small matching food ingredients from this recipe: 软米饭, 虾仁, 冬瓜, 小油菜. Include exactly one utensil total: one pastel baby fork placed beside the dish. No spoon, no chopsticks, no second fork, no other utensils.\nScene/backdrop: pure white background, clean and bright, very subtle soft shadows only under objects.\nColor palette: warm natural food colors, creamy white dishware, one pastel utensil accent in soft yellow or mint.\nMaterials/textures: smooth ceramic dishware, soft clay-like food texture, rounded friendly utensil shape.\nConstraints: exactly one utensil in the whole image; the food must visually match \"冬瓜虾仁软饭\" and its ingredients; no text, no logo, no watermark, no human, no face on the bowl, no printed pattern on the dishware, no clutter, no messy table, no extra unrelated ingredients."
+  },
+  {
+    "index": 23,
+    "id": "recipe_023",
+    "name": "土豆牛肉泥软饭",
+    "stageId": "12_18m",
+    "dishType": "软饭",
+    "texture": "软饭、泥状",
+    "mealTypes": [
+      "午餐",
+      "晚餐"
+    ],
+    "ingredients": [
+      "软米饭",
+      "牛肉末",
+      "土豆",
+      "胡萝卜",
+      "植物油"
+    ],
+    "utensil": "一个勺子",
+    "outputFile": "/Users/mima1234/Desktop/codex开发/开发项目/乖乖吃饭/design-prototypes/recipe-images-batch/optimized/recipe_023.jpg",
+    "prompt": "Use case: stylized-concept\nAsset type: baby recipe thumbnail, square image\nPrimary request: Create a cute 3D food thumbnail for the baby recipe \"土豆牛肉泥软饭\".\nSubject: 土豆牛肉泥软饭, made with 软米饭, 牛肉末, 土豆, 胡萝卜, toddler-friendly 软饭、泥状.\nStyle/medium: polished cute 3D clay-like render, soft rounded shapes, appetizing, gentle, premium toddler recipe app style.\nComposition/framing: centered a cute plain baby bowl with no printed pattern, three-quarter view, generous padding. Around the dish, place only a few small matching food ingredients from this recipe: 软米饭, 牛肉末, 土豆, 胡萝卜. Include exactly one utensil total: one pastel baby spoon placed beside the bowl. No fork, no chopsticks, no second spoon, no other utensils.\nScene/backdrop: pure white background, clean and bright, very subtle soft shadows only under objects.\nColor palette: warm natural food colors, creamy white dishware, one pastel utensil accent in soft yellow or mint.\nMaterials/textures: smooth ceramic dishware, soft clay-like food texture, rounded friendly utensil shape.\nConstraints: exactly one utensil in the whole image; the food must visually match \"土豆牛肉泥软饭\" and its ingredients; no text, no logo, no watermark, no human, no face on the bowl, no printed pattern on the dishware, no clutter, no messy table, no extra unrelated ingredients."
+  },
+  {
+    "index": 24,
+    "id": "recipe_024",
+    "name": "番茄鸡蛋碎面",
+    "stageId": "12_18m",
+    "dishType": "软面",
+    "texture": "软烂碎面",
+    "mealTypes": [
+      "午餐",
+      "晚餐"
+    ],
+    "ingredients": [
+      "宝宝面",
+      "鸡蛋",
+      "番茄",
+      "小青菜",
+      "植物油"
+    ],
+    "utensil": "一套餐筷",
+    "outputFile": "/Users/mima1234/Desktop/codex开发/开发项目/乖乖吃饭/design-prototypes/recipe-images-batch/optimized/recipe_024.jpg",
+    "prompt": "Use case: stylized-concept\nAsset type: baby recipe thumbnail, square image\nPrimary request: Create a cute 3D food thumbnail for the baby recipe \"番茄鸡蛋碎面\".\nSubject: 番茄鸡蛋碎面, made with 宝宝面, 鸡蛋, 番茄, 小青菜, toddler-friendly 软烂碎面.\nStyle/medium: polished cute 3D clay-like render, soft rounded shapes, appetizing, gentle, premium toddler recipe app style.\nComposition/framing: centered a cute plain baby bowl with no printed pattern, three-quarter view, generous padding. Around the dish, place only a few small matching food ingredients from this recipe: 宝宝面, 鸡蛋, 番茄, 小青菜. Include exactly one utensil total: one pair of pastel toddler chopsticks placed beside the bowl as a single utensil set. No spoon, no fork, no second chopsticks, no other utensils.\nScene/backdrop: pure white background, clean and bright, very subtle soft shadows only under objects.\nColor palette: warm natural food colors, creamy white dishware, one pastel utensil accent in soft yellow or mint.\nMaterials/textures: smooth ceramic dishware, soft clay-like food texture, rounded friendly utensil shape.\nConstraints: exactly one utensil in the whole image; the food must visually match \"番茄鸡蛋碎面\" and its ingredients; no text, no logo, no watermark, no human, no face on the bowl, no printed pattern on the dishware, no clutter, no messy table, no extra unrelated ingredients."
+  },
+  {
+    "index": 25,
+    "id": "recipe_025",
+    "name": "菠菜猪肝粥",
+    "stageId": "12_18m",
+    "dishType": "粥类",
+    "texture": "软烂粥状",
+    "mealTypes": [
+      "午餐",
+      "晚餐"
+    ],
+    "ingredients": [
+      "大米",
+      "猪肝",
+      "菠菜",
+      "清水",
+      "植物油"
+    ],
+    "utensil": "一个勺子",
+    "outputFile": "/Users/mima1234/Desktop/codex开发/开发项目/乖乖吃饭/design-prototypes/recipe-images-batch/optimized/recipe_025.jpg",
+    "prompt": "Use case: stylized-concept\nAsset type: baby recipe thumbnail, square image\nPrimary request: Create a cute 3D food thumbnail for the baby recipe \"菠菜猪肝粥\".\nSubject: 菠菜猪肝粥, made with 大米, 猪肝, 菠菜, toddler-friendly 软烂粥状.\nStyle/medium: polished cute 3D clay-like render, soft rounded shapes, appetizing, gentle, premium toddler recipe app style.\nComposition/framing: centered a cute plain baby bowl with no printed pattern, three-quarter view, generous padding. Around the dish, place only a few small matching food ingredients from this recipe: 大米, 猪肝, 菠菜. Include exactly one utensil total: one pastel baby spoon placed beside the bowl. No fork, no chopsticks, no second spoon, no other utensils.\nScene/backdrop: pure white background, clean and bright, very subtle soft shadows only under objects.\nColor palette: warm natural food colors, creamy white dishware, one pastel utensil accent in soft yellow or mint.\nMaterials/textures: smooth ceramic dishware, soft clay-like food texture, rounded friendly utensil shape.\nConstraints: exactly one utensil in the whole image; the food must visually match \"菠菜猪肝粥\" and its ingredients; no text, no logo, no watermark, no human, no face on the bowl, no printed pattern on the dishware, no clutter, no messy table, no extra unrelated ingredients."
+  },
+  {
+    "index": 26,
+    "id": "recipe_026",
+    "name": "山药鸡肉粥",
+    "stageId": "12_18m",
+    "dishType": "粥类",
+    "texture": "软烂粥状",
+    "mealTypes": [
+      "午餐",
+      "晚餐"
+    ],
+    "ingredients": [
+      "大米",
+      "山药",
+      "鸡肉末",
+      "青菜",
+      "植物油"
+    ],
+    "utensil": "一个勺子",
+    "outputFile": "/Users/mima1234/Desktop/codex开发/开发项目/乖乖吃饭/design-prototypes/recipe-images-batch/optimized/recipe_026.jpg",
+    "prompt": "Use case: stylized-concept\nAsset type: baby recipe thumbnail, square image\nPrimary request: Create a cute 3D food thumbnail for the baby recipe \"山药鸡肉粥\".\nSubject: 山药鸡肉粥, made with 大米, 山药, 鸡肉末, 青菜, toddler-friendly 软烂粥状.\nStyle/medium: polished cute 3D clay-like render, soft rounded shapes, appetizing, gentle, premium toddler recipe app style.\nComposition/framing: centered a cute plain baby bowl with no printed pattern, three-quarter view, generous padding. Around the dish, place only a few small matching food ingredients from this recipe: 大米, 山药, 鸡肉末, 青菜. Include exactly one utensil total: one pastel baby spoon placed beside the bowl. No fork, no chopsticks, no second spoon, no other utensils.\nScene/backdrop: pure white background, clean and bright, very subtle soft shadows only under objects.\nColor palette: warm natural food colors, creamy white dishware, one pastel utensil accent in soft yellow or mint.\nMaterials/textures: smooth ceramic dishware, soft clay-like food texture, rounded friendly utensil shape.\nConstraints: exactly one utensil in the whole image; the food must visually match \"山药鸡肉粥\" and its ingredients; no text, no logo, no watermark, no human, no face on the bowl, no printed pattern on the dishware, no clutter, no messy table, no extra unrelated ingredients."
+  },
+  {
+    "index": 27,
+    "id": "recipe_027",
+    "name": "胡萝卜鳕鱼粥",
+    "stageId": "12_18m",
+    "dishType": "粥类",
+    "texture": "软烂粥状",
+    "mealTypes": [
+      "午餐",
+      "晚餐"
+    ],
+    "ingredients": [
+      "大米",
+      "鳕鱼肉",
+      "胡萝卜",
+      "青菜",
+      "植物油"
+    ],
+    "utensil": "一个勺子",
+    "outputFile": "/Users/mima1234/Desktop/codex开发/开发项目/乖乖吃饭/design-prototypes/recipe-images-batch/optimized/recipe_027.jpg",
+    "prompt": "Use case: stylized-concept\nAsset type: baby recipe thumbnail, square image\nPrimary request: Create a cute 3D food thumbnail for the baby recipe \"胡萝卜鳕鱼粥\".\nSubject: 胡萝卜鳕鱼粥, made with 大米, 鳕鱼肉, 胡萝卜, 青菜, toddler-friendly 软烂粥状.\nStyle/medium: polished cute 3D clay-like render, soft rounded shapes, appetizing, gentle, premium toddler recipe app style.\nComposition/framing: centered a cute plain baby bowl with no printed pattern, three-quarter view, generous padding. Around the dish, place only a few small matching food ingredients from this recipe: 大米, 鳕鱼肉, 胡萝卜, 青菜. Include exactly one utensil total: one pastel baby spoon placed beside the bowl. No fork, no chopsticks, no second spoon, no other utensils.\nScene/backdrop: pure white background, clean and bright, very subtle soft shadows only under objects.\nColor palette: warm natural food colors, creamy white dishware, one pastel utensil accent in soft yellow or mint.\nMaterials/textures: smooth ceramic dishware, soft clay-like food texture, rounded friendly utensil shape.\nConstraints: exactly one utensil in the whole image; the food must visually match \"胡萝卜鳕鱼粥\" and its ingredients; no text, no logo, no watermark, no human, no face on the bowl, no printed pattern on the dishware, no clutter, no messy table, no extra unrelated ingredients."
+  },
+  {
+    "index": 28,
+    "id": "recipe_028",
+    "name": "娃娃菜猪肉小馄饨",
+    "stageId": "12_18m",
+    "dishType": "馄饨",
+    "texture": "小馄饨",
+    "mealTypes": [
+      "午餐",
+      "晚餐"
+    ],
+    "ingredients": [
+      "小馄饨皮",
+      "猪肉末",
+      "娃娃菜",
+      "清水",
+      "植物油"
+    ],
+    "utensil": "一套餐筷",
+    "outputFile": "/Users/mima1234/Desktop/codex开发/开发项目/乖乖吃饭/design-prototypes/recipe-images-batch/optimized/recipe_028.jpg",
+    "prompt": "Use case: stylized-concept\nAsset type: baby recipe thumbnail, square image\nPrimary request: Create a cute 3D food thumbnail for the baby recipe \"娃娃菜猪肉小馄饨\".\nSubject: 娃娃菜猪肉小馄饨, made with 小馄饨皮, 猪肉末, 娃娃菜, toddler-friendly 小馄饨.\nStyle/medium: polished cute 3D clay-like render, soft rounded shapes, appetizing, gentle, premium toddler recipe app style.\nComposition/framing: centered a cute plain baby bowl with no printed pattern, three-quarter view, generous padding. Around the dish, place only a few small matching food ingredients from this recipe: 小馄饨皮, 猪肉末, 娃娃菜. Include exactly one utensil total: one pair of pastel toddler chopsticks placed beside the bowl as a single utensil set. No spoon, no fork, no second chopsticks, no other utensils.\nScene/backdrop: pure white background, clean and bright, very subtle soft shadows only under objects.\nColor palette: warm natural food colors, creamy white dishware, one pastel utensil accent in soft yellow or mint.\nMaterials/textures: smooth ceramic dishware, soft clay-like food texture, rounded friendly utensil shape.\nConstraints: exactly one utensil in the whole image; the food must visually match \"娃娃菜猪肉小馄饨\" and its ingredients; no text, no logo, no watermark, no human, no face on the bowl, no printed pattern on the dishware, no clutter, no messy table, no extra unrelated ingredients."
+  },
+  {
+    "index": 29,
+    "id": "recipe_029",
+    "name": "南瓜牛肉粥",
+    "stageId": "12_18m",
+    "dishType": "粥类",
+    "texture": "软烂粥状",
+    "mealTypes": [
+      "午餐",
+      "晚餐"
+    ],
+    "ingredients": [
+      "大米",
+      "牛肉末",
+      "南瓜",
+      "青菜",
+      "植物油"
+    ],
+    "utensil": "一个勺子",
+    "outputFile": "/Users/mima1234/Desktop/codex开发/开发项目/乖乖吃饭/design-prototypes/recipe-images-batch/optimized/recipe_029.jpg",
+    "prompt": "Use case: stylized-concept\nAsset type: baby recipe thumbnail, square image\nPrimary request: Create a cute 3D food thumbnail for the baby recipe \"南瓜牛肉粥\".\nSubject: 南瓜牛肉粥, made with 大米, 牛肉末, 南瓜, 青菜, toddler-friendly 软烂粥状.\nStyle/medium: polished cute 3D clay-like render, soft rounded shapes, appetizing, gentle, premium toddler recipe app style.\nComposition/framing: centered a cute plain baby bowl with no printed pattern, three-quarter view, generous padding. Around the dish, place only a few small matching food ingredients from this recipe: 大米, 牛肉末, 南瓜, 青菜. Include exactly one utensil total: one pastel baby spoon placed beside the bowl. No fork, no chopsticks, no second spoon, no other utensils.\nScene/backdrop: pure white background, clean and bright, very subtle soft shadows only under objects.\nColor palette: warm natural food colors, creamy white dishware, one pastel utensil accent in soft yellow or mint.\nMaterials/textures: smooth ceramic dishware, soft clay-like food texture, rounded friendly utensil shape.\nConstraints: exactly one utensil in the whole image; the food must visually match \"南瓜牛肉粥\" and its ingredients; no text, no logo, no watermark, no human, no face on the bowl, no printed pattern on the dishware, no clutter, no messy table, no extra unrelated ingredients."
+  },
+  {
+    "index": 30,
+    "id": "recipe_030",
+    "name": "丝瓜鸡蛋软饭",
+    "stageId": "12_18m",
+    "dishType": "软饭",
+    "texture": "软饭、碎小",
+    "mealTypes": [
+      "午餐",
+      "晚餐"
+    ],
+    "ingredients": [
+      "软米饭",
+      "鸡蛋",
+      "丝瓜",
+      "胡萝卜",
+      "植物油"
+    ],
+    "utensil": "一个叉子",
+    "outputFile": "/Users/mima1234/Desktop/codex开发/开发项目/乖乖吃饭/design-prototypes/recipe-images-batch/optimized/recipe_030.jpg",
+    "prompt": "Use case: stylized-concept\nAsset type: baby recipe thumbnail, square image\nPrimary request: Create a cute 3D food thumbnail for the baby recipe \"丝瓜鸡蛋软饭\".\nSubject: 丝瓜鸡蛋软饭, made with 软米饭, 鸡蛋, 丝瓜, 胡萝卜, toddler-friendly 软饭、碎小.\nStyle/medium: polished cute 3D clay-like render, soft rounded shapes, appetizing, gentle, premium toddler recipe app style.\nComposition/framing: centered a cute plain baby bowl with no printed pattern, three-quarter view, generous padding. Around the dish, place only a few small matching food ingredients from this recipe: 软米饭, 鸡蛋, 丝瓜, 胡萝卜. Include exactly one utensil total: one pastel baby fork placed beside the dish. No spoon, no chopsticks, no second fork, no other utensils.\nScene/backdrop: pure white background, clean and bright, very subtle soft shadows only under objects.\nColor palette: warm natural food colors, creamy white dishware, one pastel utensil accent in soft yellow or mint.\nMaterials/textures: smooth ceramic dishware, soft clay-like food texture, rounded friendly utensil shape.\nConstraints: exactly one utensil in the whole image; the food must visually match \"丝瓜鸡蛋软饭\" and its ingredients; no text, no logo, no watermark, no human, no face on the bowl, no printed pattern on the dishware, no clutter, no messy table, no extra unrelated ingredients."
+  },
+  {
+    "index": 31,
+    "id": "recipe_031",
+    "name": "豆腐鳕鱼羹饭",
+    "stageId": "12_18m",
+    "dishType": "汤饭",
+    "texture": "羹饭",
+    "mealTypes": [
+      "午餐",
+      "晚餐"
+    ],
+    "ingredients": [
+      "软米饭",
+      "鳕鱼肉",
+      "嫩豆腐",
+      "青菜",
+      "植物油"
+    ],
+    "utensil": "一个勺子",
+    "outputFile": "/Users/mima1234/Desktop/codex开发/开发项目/乖乖吃饭/design-prototypes/recipe-images-batch/optimized/recipe_031.jpg",
+    "prompt": "Use case: stylized-concept\nAsset type: baby recipe thumbnail, square image\nPrimary request: Create a cute 3D food thumbnail for the baby recipe \"豆腐鳕鱼羹饭\".\nSubject: 豆腐鳕鱼羹饭, made with 软米饭, 鳕鱼肉, 嫩豆腐, 青菜, toddler-friendly 羹饭.\nStyle/medium: polished cute 3D clay-like render, soft rounded shapes, appetizing, gentle, premium toddler recipe app style.\nComposition/framing: centered a cute plain baby bowl with no printed pattern, three-quarter view, generous padding. Around the dish, place only a few small matching food ingredients from this recipe: 软米饭, 鳕鱼肉, 嫩豆腐, 青菜. Include exactly one utensil total: one pastel baby spoon placed beside the bowl. No fork, no chopsticks, no second spoon, no other utensils.\nScene/backdrop: pure white background, clean and bright, very subtle soft shadows only under objects.\nColor palette: warm natural food colors, creamy white dishware, one pastel utensil accent in soft yellow or mint.\nMaterials/textures: smooth ceramic dishware, soft clay-like food texture, rounded friendly utensil shape.\nConstraints: exactly one utensil in the whole image; the food must visually match \"豆腐鳕鱼羹饭\" and its ingredients; no text, no logo, no watermark, no human, no face on the bowl, no printed pattern on the dishware, no clutter, no messy table, no extra unrelated ingredients."
+  },
+  {
+    "index": 32,
+    "id": "recipe_032",
+    "name": "西葫芦鸡肉面片汤",
+    "stageId": "12_18m",
+    "dishType": "面片汤",
+    "texture": "面片汤",
+    "mealTypes": [
+      "午餐",
+      "晚餐"
+    ],
+    "ingredients": [
+      "小面片",
+      "鸡肉末",
+      "西葫芦",
+      "胡萝卜",
+      "植物油"
+    ],
+    "utensil": "一套餐筷",
+    "outputFile": "/Users/mima1234/Desktop/codex开发/开发项目/乖乖吃饭/design-prototypes/recipe-images-batch/optimized/recipe_032.jpg",
+    "prompt": "Use case: stylized-concept\nAsset type: baby recipe thumbnail, square image\nPrimary request: Create a cute 3D food thumbnail for the baby recipe \"西葫芦鸡肉面片汤\".\nSubject: 西葫芦鸡肉面片汤, made with 小面片, 鸡肉末, 西葫芦, 胡萝卜, toddler-friendly 面片汤.\nStyle/medium: polished cute 3D clay-like render, soft rounded shapes, appetizing, gentle, premium toddler recipe app style.\nComposition/framing: centered a cute plain baby bowl with no printed pattern, three-quarter view, generous padding. Around the dish, place only a few small matching food ingredients from this recipe: 小面片, 鸡肉末, 西葫芦, 胡萝卜. Include exactly one utensil total: one pair of pastel toddler chopsticks placed beside the bowl as a single utensil set. No spoon, no fork, no second chopsticks, no other utensils.\nScene/backdrop: pure white background, clean and bright, very subtle soft shadows only under objects.\nColor palette: warm natural food colors, creamy white dishware, one pastel utensil accent in soft yellow or mint.\nMaterials/textures: smooth ceramic dishware, soft clay-like food texture, rounded friendly utensil shape.\nConstraints: exactly one utensil in the whole image; the food must visually match \"西葫芦鸡肉面片汤\" and its ingredients; no text, no logo, no watermark, no human, no face on the bowl, no printed pattern on the dishware, no clutter, no messy table, no extra unrelated ingredients."
+  },
+  {
+    "index": 33,
+    "id": "recipe_033",
+    "name": "玉米猪肉软饭",
+    "stageId": "12_18m",
+    "dishType": "软饭",
+    "texture": "软饭、碎小",
+    "mealTypes": [
+      "午餐",
+      "晚餐"
+    ],
+    "ingredients": [
+      "软米饭",
+      "猪肉末",
+      "玉米粒",
+      "青豆",
+      "植物油"
+    ],
+    "utensil": "一个叉子",
+    "outputFile": "/Users/mima1234/Desktop/codex开发/开发项目/乖乖吃饭/design-prototypes/recipe-images-batch/optimized/recipe_033.jpg",
+    "prompt": "Use case: stylized-concept\nAsset type: baby recipe thumbnail, square image\nPrimary request: Create a cute 3D food thumbnail for the baby recipe \"玉米猪肉软饭\".\nSubject: 玉米猪肉软饭, made with 软米饭, 猪肉末, 玉米粒, 青豆, toddler-friendly 软饭、碎小.\nStyle/medium: polished cute 3D clay-like render, soft rounded shapes, appetizing, gentle, premium toddler recipe app style.\nComposition/framing: centered a cute plain baby bowl with no printed pattern, three-quarter view, generous padding. Around the dish, place only a few small matching food ingredients from this recipe: 软米饭, 猪肉末, 玉米粒, 青豆. Include exactly one utensil total: one pastel baby fork placed beside the dish. No spoon, no chopsticks, no second fork, no other utensils.\nScene/backdrop: pure white background, clean and bright, very subtle soft shadows only under objects.\nColor palette: warm natural food colors, creamy white dishware, one pastel utensil accent in soft yellow or mint.\nMaterials/textures: smooth ceramic dishware, soft clay-like food texture, rounded friendly utensil shape.\nConstraints: exactly one utensil in the whole image; the food must visually match \"玉米猪肉软饭\" and its ingredients; no text, no logo, no watermark, no human, no face on the bowl, no printed pattern on the dishware, no clutter, no messy table, no extra unrelated ingredients."
+  },
+  {
+    "index": 34,
+    "id": "recipe_034",
+    "name": "香菇牛肉碎饭",
+    "stageId": "12_18m",
+    "dishType": "软饭",
+    "texture": "软饭、碎小",
+    "mealTypes": [
+      "午餐",
+      "晚餐"
+    ],
+    "ingredients": [
+      "软米饭",
+      "牛肉末",
+      "香菇",
+      "胡萝卜",
+      "植物油"
+    ],
+    "utensil": "一个叉子",
+    "outputFile": "/Users/mima1234/Desktop/codex开发/开发项目/乖乖吃饭/design-prototypes/recipe-images-batch/optimized/recipe_034.jpg",
+    "prompt": "Use case: stylized-concept\nAsset type: baby recipe thumbnail, square image\nPrimary request: Create a cute 3D food thumbnail for the baby recipe \"香菇牛肉碎饭\".\nSubject: 香菇牛肉碎饭, made with 软米饭, 牛肉末, 香菇, 胡萝卜, toddler-friendly 软饭、碎小.\nStyle/medium: polished cute 3D clay-like render, soft rounded shapes, appetizing, gentle, premium toddler recipe app style.\nComposition/framing: centered a cute plain baby bowl with no printed pattern, three-quarter view, generous padding. Around the dish, place only a few small matching food ingredients from this recipe: 软米饭, 牛肉末, 香菇, 胡萝卜. Include exactly one utensil total: one pastel baby fork placed beside the dish. No spoon, no chopsticks, no second fork, no other utensils.\nScene/backdrop: pure white background, clean and bright, very subtle soft shadows only under objects.\nColor palette: warm natural food colors, creamy white dishware, one pastel utensil accent in soft yellow or mint.\nMaterials/textures: smooth ceramic dishware, soft clay-like food texture, rounded friendly utensil shape.\nConstraints: exactly one utensil in the whole image; the food must visually match \"香菇牛肉碎饭\" and its ingredients; no text, no logo, no watermark, no human, no face on the bowl, no printed pattern on the dishware, no clutter, no messy table, no extra unrelated ingredients."
+  },
+  {
+    "index": 35,
+    "id": "recipe_035",
+    "name": "番茄豆腐软饭",
+    "stageId": "12_18m",
+    "dishType": "软饭",
+    "texture": "软饭、碎小",
+    "mealTypes": [
+      "午餐",
+      "晚餐"
+    ],
+    "ingredients": [
+      "软米饭",
+      "嫩豆腐",
+      "番茄",
+      "青菜",
+      "植物油"
+    ],
+    "utensil": "一个叉子",
+    "outputFile": "/Users/mima1234/Desktop/codex开发/开发项目/乖乖吃饭/design-prototypes/recipe-images-batch/optimized/recipe_035.jpg",
+    "prompt": "Use case: stylized-concept\nAsset type: baby recipe thumbnail, square image\nPrimary request: Create a cute 3D food thumbnail for the baby recipe \"番茄豆腐软饭\".\nSubject: 番茄豆腐软饭, made with 软米饭, 嫩豆腐, 番茄, 青菜, toddler-friendly 软饭、碎小.\nStyle/medium: polished cute 3D clay-like render, soft rounded shapes, appetizing, gentle, premium toddler recipe app style.\nComposition/framing: centered a cute plain baby bowl with no printed pattern, three-quarter view, generous padding. Around the dish, place only a few small matching food ingredients from this recipe: 软米饭, 嫩豆腐, 番茄, 青菜. Include exactly one utensil total: one pastel baby fork placed beside the dish. No spoon, no chopsticks, no second fork, no other utensils.\nScene/backdrop: pure white background, clean and bright, very subtle soft shadows only under objects.\nColor palette: warm natural food colors, creamy white dishware, one pastel utensil accent in soft yellow or mint.\nMaterials/textures: smooth ceramic dishware, soft clay-like food texture, rounded friendly utensil shape.\nConstraints: exactly one utensil in the whole image; the food must visually match \"番茄豆腐软饭\" and its ingredients; no text, no logo, no watermark, no human, no face on the bowl, no printed pattern on the dishware, no clutter, no messy table, no extra unrelated ingredients."
+  },
+  {
+    "index": 36,
+    "id": "recipe_036",
+    "name": "油菜鸡肉粥",
+    "stageId": "12_18m",
+    "dishType": "粥类",
+    "texture": "软烂粥状",
+    "mealTypes": [
+      "午餐",
+      "晚餐"
+    ],
+    "ingredients": [
+      "大米",
+      "鸡肉末",
+      "油菜",
+      "胡萝卜",
+      "植物油"
+    ],
+    "utensil": "一个勺子",
+    "outputFile": "/Users/mima1234/Desktop/codex开发/开发项目/乖乖吃饭/design-prototypes/recipe-images-batch/optimized/recipe_036.jpg",
+    "prompt": "Use case: stylized-concept\nAsset type: baby recipe thumbnail, square image\nPrimary request: Create a cute 3D food thumbnail for the baby recipe \"油菜鸡肉粥\".\nSubject: 油菜鸡肉粥, made with 大米, 鸡肉末, 油菜, 胡萝卜, toddler-friendly 软烂粥状.\nStyle/medium: polished cute 3D clay-like render, soft rounded shapes, appetizing, gentle, premium toddler recipe app style.\nComposition/framing: centered a cute plain baby bowl with no printed pattern, three-quarter view, generous padding. Around the dish, place only a few small matching food ingredients from this recipe: 大米, 鸡肉末, 油菜, 胡萝卜. Include exactly one utensil total: one pastel baby spoon placed beside the bowl. No fork, no chopsticks, no second spoon, no other utensils.\nScene/backdrop: pure white background, clean and bright, very subtle soft shadows only under objects.\nColor palette: warm natural food colors, creamy white dishware, one pastel utensil accent in soft yellow or mint.\nMaterials/textures: smooth ceramic dishware, soft clay-like food texture, rounded friendly utensil shape.\nConstraints: exactly one utensil in the whole image; the food must visually match \"油菜鸡肉粥\" and its ingredients; no text, no logo, no watermark, no human, no face on the bowl, no printed pattern on the dishware, no clutter, no messy table, no extra unrelated ingredients."
+  },
+  {
+    "index": 37,
+    "id": "recipe_037",
+    "name": "土豆鳕鱼软饭",
+    "stageId": "12_18m",
+    "dishType": "软饭",
+    "texture": "软饭、碎小",
+    "mealTypes": [
+      "午餐",
+      "晚餐"
+    ],
+    "ingredients": [
+      "软米饭",
+      "鳕鱼肉",
+      "土豆",
+      "西兰花",
+      "植物油"
+    ],
+    "utensil": "一个叉子",
+    "outputFile": "/Users/mima1234/Desktop/codex开发/开发项目/乖乖吃饭/design-prototypes/recipe-images-batch/optimized/recipe_037.jpg",
+    "prompt": "Use case: stylized-concept\nAsset type: baby recipe thumbnail, square image\nPrimary request: Create a cute 3D food thumbnail for the baby recipe \"土豆鳕鱼软饭\".\nSubject: 土豆鳕鱼软饭, made with 软米饭, 鳕鱼肉, 土豆, 西兰花, toddler-friendly 软饭、碎小.\nStyle/medium: polished cute 3D clay-like render, soft rounded shapes, appetizing, gentle, premium toddler recipe app style.\nComposition/framing: centered a cute plain baby bowl with no printed pattern, three-quarter view, generous padding. Around the dish, place only a few small matching food ingredients from this recipe: 软米饭, 鳕鱼肉, 土豆, 西兰花. Include exactly one utensil total: one pastel baby fork placed beside the dish. No spoon, no chopsticks, no second fork, no other utensils.\nScene/backdrop: pure white background, clean and bright, very subtle soft shadows only under objects.\nColor palette: warm natural food colors, creamy white dishware, one pastel utensil accent in soft yellow or mint.\nMaterials/textures: smooth ceramic dishware, soft clay-like food texture, rounded friendly utensil shape.\nConstraints: exactly one utensil in the whole image; the food must visually match \"土豆鳕鱼软饭\" and its ingredients; no text, no logo, no watermark, no human, no face on the bowl, no printed pattern on the dishware, no clutter, no messy table, no extra unrelated ingredients."
+  },
+  {
+    "index": 38,
+    "id": "recipe_038",
+    "name": "胡萝卜虾仁碎面",
+    "stageId": "12_18m",
+    "dishType": "软面",
+    "texture": "软烂碎面",
+    "mealTypes": [
+      "午餐",
+      "晚餐"
+    ],
+    "ingredients": [
+      "宝宝面",
+      "虾仁",
+      "胡萝卜",
+      "青菜",
+      "植物油"
+    ],
+    "utensil": "一套餐筷",
+    "outputFile": "/Users/mima1234/Desktop/codex开发/开发项目/乖乖吃饭/design-prototypes/recipe-images-batch/optimized/recipe_038.jpg",
+    "prompt": "Use case: stylized-concept\nAsset type: baby recipe thumbnail, square image\nPrimary request: Create a cute 3D food thumbnail for the baby recipe \"胡萝卜虾仁碎面\".\nSubject: 胡萝卜虾仁碎面, made with 宝宝面, 虾仁, 胡萝卜, 青菜, toddler-friendly 软烂碎面.\nStyle/medium: polished cute 3D clay-like render, soft rounded shapes, appetizing, gentle, premium toddler recipe app style.\nComposition/framing: centered a cute plain baby bowl with no printed pattern, three-quarter view, generous padding. Around the dish, place only a few small matching food ingredients from this recipe: 宝宝面, 虾仁, 胡萝卜, 青菜. Include exactly one utensil total: one pair of pastel toddler chopsticks placed beside the bowl as a single utensil set. No spoon, no fork, no second chopsticks, no other utensils.\nScene/backdrop: pure white background, clean and bright, very subtle soft shadows only under objects.\nColor palette: warm natural food colors, creamy white dishware, one pastel utensil accent in soft yellow or mint.\nMaterials/textures: smooth ceramic dishware, soft clay-like food texture, rounded friendly utensil shape.\nConstraints: exactly one utensil in the whole image; the food must visually match \"胡萝卜虾仁碎面\" and its ingredients; no text, no logo, no watermark, no human, no face on the bowl, no printed pattern on the dishware, no clutter, no messy table, no extra unrelated ingredients."
+  },
+  {
+    "index": 39,
+    "id": "recipe_039",
+    "name": "西兰花鸡蛋软饭",
+    "stageId": "12_18m",
+    "dishType": "软饭",
+    "texture": "软饭、碎小",
+    "mealTypes": [
+      "午餐",
+      "晚餐"
+    ],
+    "ingredients": [
+      "软米饭",
+      "鸡蛋",
+      "西兰花",
+      "胡萝卜",
+      "植物油"
+    ],
+    "utensil": "一个叉子",
+    "outputFile": "/Users/mima1234/Desktop/codex开发/开发项目/乖乖吃饭/design-prototypes/recipe-images-batch/optimized/recipe_039.jpg",
+    "prompt": "Use case: stylized-concept\nAsset type: baby recipe thumbnail, square image\nPrimary request: Create a cute 3D food thumbnail for the baby recipe \"西兰花鸡蛋软饭\".\nSubject: 西兰花鸡蛋软饭, made with 软米饭, 鸡蛋, 西兰花, 胡萝卜, toddler-friendly 软饭、碎小.\nStyle/medium: polished cute 3D clay-like render, soft rounded shapes, appetizing, gentle, premium toddler recipe app style.\nComposition/framing: centered a cute plain baby bowl with no printed pattern, three-quarter view, generous padding. Around the dish, place only a few small matching food ingredients from this recipe: 软米饭, 鸡蛋, 西兰花, 胡萝卜. Include exactly one utensil total: one pastel baby fork placed beside the dish. No spoon, no chopsticks, no second fork, no other utensils.\nScene/backdrop: pure white background, clean and bright, very subtle soft shadows only under objects.\nColor palette: warm natural food colors, creamy white dishware, one pastel utensil accent in soft yellow or mint.\nMaterials/textures: smooth ceramic dishware, soft clay-like food texture, rounded friendly utensil shape.\nConstraints: exactly one utensil in the whole image; the food must visually match \"西兰花鸡蛋软饭\" and its ingredients; no text, no logo, no watermark, no human, no face on the bowl, no printed pattern on the dishware, no clutter, no messy table, no extra unrelated ingredients."
+  },
+  {
+    "index": 40,
+    "id": "recipe_040",
+    "name": "冬瓜肉末面片汤",
+    "stageId": "12_18m",
+    "dishType": "面片汤",
+    "texture": "面片汤",
+    "mealTypes": [
+      "午餐",
+      "晚餐"
+    ],
+    "ingredients": [
+      "小面片",
+      "猪肉末",
+      "冬瓜",
+      "青菜",
+      "植物油"
+    ],
+    "utensil": "一套餐筷",
+    "outputFile": "/Users/mima1234/Desktop/codex开发/开发项目/乖乖吃饭/design-prototypes/recipe-images-batch/optimized/recipe_040.jpg",
+    "prompt": "Use case: stylized-concept\nAsset type: baby recipe thumbnail, square image\nPrimary request: Create a cute 3D food thumbnail for the baby recipe \"冬瓜肉末面片汤\".\nSubject: 冬瓜肉末面片汤, made with 小面片, 猪肉末, 冬瓜, 青菜, toddler-friendly 面片汤.\nStyle/medium: polished cute 3D clay-like render, soft rounded shapes, appetizing, gentle, premium toddler recipe app style.\nComposition/framing: centered a cute plain baby bowl with no printed pattern, three-quarter view, generous padding. Around the dish, place only a few small matching food ingredients from this recipe: 小面片, 猪肉末, 冬瓜, 青菜. Include exactly one utensil total: one pair of pastel toddler chopsticks placed beside the bowl as a single utensil set. No spoon, no fork, no second chopsticks, no other utensils.\nScene/backdrop: pure white background, clean and bright, very subtle soft shadows only under objects.\nColor palette: warm natural food colors, creamy white dishware, one pastel utensil accent in soft yellow or mint.\nMaterials/textures: smooth ceramic dishware, soft clay-like food texture, rounded friendly utensil shape.\nConstraints: exactly one utensil in the whole image; the food must visually match \"冬瓜肉末面片汤\" and its ingredients; no text, no logo, no watermark, no human, no face on the bowl, no printed pattern on the dishware, no clutter, no messy table, no extra unrelated ingredients."
+  },
+  {
+    "index": 41,
+    "id": "recipe_041",
+    "name": "番茄鸡蛋软面",
+    "stageId": "19_36m",
+    "dishType": "软面",
+    "texture": "软面",
+    "mealTypes": [
+      "早餐"
+    ],
+    "ingredients": [
+      "儿童面",
+      "鸡蛋",
+      "番茄",
+      "青菜",
+      "植物油"
+    ],
+    "utensil": "一套餐筷",
+    "outputFile": "/Users/mima1234/Desktop/codex开发/开发项目/乖乖吃饭/design-prototypes/recipe-images-batch/optimized/recipe_041.jpg",
+    "prompt": "Use case: stylized-concept\nAsset type: baby recipe thumbnail, square image\nPrimary request: Create a cute 3D food thumbnail for the baby recipe \"番茄鸡蛋软面\".\nSubject: 番茄鸡蛋软面, made with 儿童面, 鸡蛋, 番茄, 青菜, toddler-friendly 软面.\nStyle/medium: polished cute 3D clay-like render, soft rounded shapes, appetizing, gentle, premium toddler recipe app style.\nComposition/framing: centered a cute plain baby bowl with no printed pattern, three-quarter view, generous padding. Around the dish, place only a few small matching food ingredients from this recipe: 儿童面, 鸡蛋, 番茄, 青菜. Include exactly one utensil total: one pair of pastel toddler chopsticks placed beside the bowl as a single utensil set. No spoon, no fork, no second chopsticks, no other utensils.\nScene/backdrop: pure white background, clean and bright, very subtle soft shadows only under objects.\nColor palette: warm natural food colors, creamy white dishware, one pastel utensil accent in soft yellow or mint.\nMaterials/textures: smooth ceramic dishware, soft clay-like food texture, rounded friendly utensil shape.\nConstraints: exactly one utensil in the whole image; the food must visually match \"番茄鸡蛋软面\" and its ingredients; no text, no logo, no watermark, no human, no face on the bowl, no printed pattern on the dishware, no clutter, no messy table, no extra unrelated ingredients."
+  },
+  {
+    "index": 42,
+    "id": "recipe_042",
+    "name": "奶香燕麦香蕉粥",
+    "stageId": "19_36m",
+    "dishType": "粥类",
+    "texture": "奶香软粥",
+    "mealTypes": [
+      "早餐"
+    ],
+    "ingredients": [
+      "即食燕麦片",
+      "香蕉",
+      "纯牛奶或配方奶",
+      "清水"
+    ],
+    "utensil": "一个勺子",
+    "outputFile": "/Users/mima1234/Desktop/codex开发/开发项目/乖乖吃饭/design-prototypes/recipe-images-batch/optimized/recipe_042.jpg",
+    "prompt": "Use case: stylized-concept\nAsset type: baby recipe thumbnail, square image\nPrimary request: Create a cute 3D food thumbnail for the baby recipe \"奶香燕麦香蕉粥\".\nSubject: 奶香燕麦香蕉粥, made with 即食燕麦片, 香蕉, 纯牛奶或配方奶, toddler-friendly 奶香软粥.\nStyle/medium: polished cute 3D clay-like render, soft rounded shapes, appetizing, gentle, premium toddler recipe app style.\nComposition/framing: centered a cute plain baby bowl with no printed pattern, three-quarter view, generous padding. Around the dish, place only a few small matching food ingredients from this recipe: 即食燕麦片, 香蕉, 纯牛奶或配方奶. Include exactly one utensil total: one pastel baby spoon placed beside the bowl. No fork, no chopsticks, no second spoon, no other utensils.\nScene/backdrop: pure white background, clean and bright, very subtle soft shadows only under objects.\nColor palette: warm natural food colors, creamy white dishware, one pastel utensil accent in soft yellow or mint.\nMaterials/textures: smooth ceramic dishware, soft clay-like food texture, rounded friendly utensil shape.\nConstraints: exactly one utensil in the whole image; the food must visually match \"奶香燕麦香蕉粥\" and its ingredients; no text, no logo, no watermark, no human, no face on the bowl, no printed pattern on the dishware, no clutter, no messy table, no extra unrelated ingredients."
+  },
+  {
+    "index": 43,
+    "id": "recipe_043",
+    "name": "鸡蛋蔬菜小饼",
+    "stageId": "19_36m",
+    "dishType": "软饼",
+    "texture": "软饼、小块",
+    "mealTypes": [
+      "早餐"
+    ],
+    "ingredients": [
+      "鸡蛋",
+      "面粉",
+      "胡萝卜",
+      "西兰花",
+      "植物油"
+    ],
+    "utensil": "一个叉子",
+    "outputFile": "/Users/mima1234/Desktop/codex开发/开发项目/乖乖吃饭/design-prototypes/recipe-images-batch/optimized/recipe_043.jpg",
+    "prompt": "Use case: stylized-concept\nAsset type: baby recipe thumbnail, square image\nPrimary request: Create a cute 3D food thumbnail for the baby recipe \"鸡蛋蔬菜小饼\".\nSubject: 鸡蛋蔬菜小饼, made with 鸡蛋, 面粉, 胡萝卜, 西兰花, toddler-friendly 软饼、小块.\nStyle/medium: polished cute 3D clay-like render, soft rounded shapes, appetizing, gentle, premium toddler recipe app style.\nComposition/framing: centered a cute plain toddler plate or shallow bowl with no printed pattern, three-quarter view, generous padding. Around the dish, place only a few small matching food ingredients from this recipe: 鸡蛋, 面粉, 胡萝卜, 西兰花. Include exactly one utensil total: one pastel baby fork placed beside the dish. No spoon, no chopsticks, no second fork, no other utensils.\nScene/backdrop: pure white background, clean and bright, very subtle soft shadows only under objects.\nColor palette: warm natural food colors, creamy white dishware, one pastel utensil accent in soft yellow or mint.\nMaterials/textures: smooth ceramic dishware, soft clay-like food texture, rounded friendly utensil shape.\nConstraints: exactly one utensil in the whole image; the food must visually match \"鸡蛋蔬菜小饼\" and its ingredients; no text, no logo, no watermark, no human, no face on the bowl, no printed pattern on the dishware, no clutter, no messy table, no extra unrelated ingredients."
+  },
+  {
+    "index": 44,
+    "id": "recipe_044",
+    "name": "牛肉青菜粥",
+    "stageId": "19_36m",
+    "dishType": "粥类",
+    "texture": "软烂粥状",
+    "mealTypes": [
+      "早餐"
+    ],
+    "ingredients": [
+      "大米",
+      "牛肉末",
+      "小青菜",
+      "胡萝卜",
+      "植物油"
+    ],
+    "utensil": "一个勺子",
+    "outputFile": "/Users/mima1234/Desktop/codex开发/开发项目/乖乖吃饭/design-prototypes/recipe-images-batch/optimized/recipe_044.jpg",
+    "prompt": "Use case: stylized-concept\nAsset type: baby recipe thumbnail, square image\nPrimary request: Create a cute 3D food thumbnail for the baby recipe \"牛肉青菜粥\".\nSubject: 牛肉青菜粥, made with 大米, 牛肉末, 小青菜, 胡萝卜, toddler-friendly 软烂粥状.\nStyle/medium: polished cute 3D clay-like render, soft rounded shapes, appetizing, gentle, premium toddler recipe app style.\nComposition/framing: centered a cute plain baby bowl with no printed pattern, three-quarter view, generous padding. Around the dish, place only a few small matching food ingredients from this recipe: 大米, 牛肉末, 小青菜, 胡萝卜. Include exactly one utensil total: one pastel baby spoon placed beside the bowl. No fork, no chopsticks, no second spoon, no other utensils.\nScene/backdrop: pure white background, clean and bright, very subtle soft shadows only under objects.\nColor palette: warm natural food colors, creamy white dishware, one pastel utensil accent in soft yellow or mint.\nMaterials/textures: smooth ceramic dishware, soft clay-like food texture, rounded friendly utensil shape.\nConstraints: exactly one utensil in the whole image; the food must visually match \"牛肉青菜粥\" and its ingredients; no text, no logo, no watermark, no human, no face on the bowl, no printed pattern on the dishware, no clutter, no messy table, no extra unrelated ingredients."
+  },
+  {
+    "index": 45,
+    "id": "recipe_045",
+    "name": "南瓜馒头丁蒸蛋",
+    "stageId": "19_36m",
+    "dishType": "蒸羹",
+    "texture": "细嫩蒸羹",
+    "mealTypes": [
+      "早餐"
+    ],
+    "ingredients": [
+      "鸡蛋",
+      "南瓜",
+      "馒头",
+      "温水"
+    ],
+    "utensil": "一个勺子",
+    "outputFile": "/Users/mima1234/Desktop/codex开发/开发项目/乖乖吃饭/design-prototypes/recipe-images-batch/optimized/recipe_045.jpg",
+    "prompt": "Use case: stylized-concept\nAsset type: baby recipe thumbnail, square image\nPrimary request: Create a cute 3D food thumbnail for the baby recipe \"南瓜馒头丁蒸蛋\".\nSubject: 南瓜馒头丁蒸蛋, made with 鸡蛋, 南瓜, 馒头, toddler-friendly 细嫩蒸羹.\nStyle/medium: polished cute 3D clay-like render, soft rounded shapes, appetizing, gentle, premium toddler recipe app style.\nComposition/framing: centered a cute plain baby bowl with no printed pattern, three-quarter view, generous padding. Around the dish, place only a few small matching food ingredients from this recipe: 鸡蛋, 南瓜, 馒头. Include exactly one utensil total: one pastel baby spoon placed beside the bowl. No fork, no chopsticks, no second spoon, no other utensils.\nScene/backdrop: pure white background, clean and bright, very subtle soft shadows only under objects.\nColor palette: warm natural food colors, creamy white dishware, one pastel utensil accent in soft yellow or mint.\nMaterials/textures: smooth ceramic dishware, soft clay-like food texture, rounded friendly utensil shape.\nConstraints: exactly one utensil in the whole image; the food must visually match \"南瓜馒头丁蒸蛋\" and its ingredients; no text, no logo, no watermark, no human, no face on the bowl, no printed pattern on the dishware, no clutter, no messy table, no extra unrelated ingredients."
+  },
+  {
+    "index": 46,
+    "id": "recipe_046",
+    "name": "山药小米粥配鸡肉松",
+    "stageId": "19_36m",
+    "dishType": "粥类",
+    "texture": "软烂粥状",
+    "mealTypes": [
+      "早餐"
+    ],
+    "ingredients": [
+      "小米",
+      "山药",
+      "鸡肉松",
+      "清水"
+    ],
+    "utensil": "一个勺子",
+    "outputFile": "/Users/mima1234/Desktop/codex开发/开发项目/乖乖吃饭/design-prototypes/recipe-images-batch/optimized/recipe_046.jpg",
+    "prompt": "Use case: stylized-concept\nAsset type: baby recipe thumbnail, square image\nPrimary request: Create a cute 3D food thumbnail for the baby recipe \"山药小米粥配鸡肉松\".\nSubject: 山药小米粥配鸡肉松, made with 小米, 山药, 鸡肉松, toddler-friendly 软烂粥状.\nStyle/medium: polished cute 3D clay-like render, soft rounded shapes, appetizing, gentle, premium toddler recipe app style.\nComposition/framing: centered a cute plain baby bowl with no printed pattern, three-quarter view, generous padding. Around the dish, place only a few small matching food ingredients from this recipe: 小米, 山药, 鸡肉松. Include exactly one utensil total: one pastel baby spoon placed beside the bowl. No fork, no chopsticks, no second spoon, no other utensils.\nScene/backdrop: pure white background, clean and bright, very subtle soft shadows only under objects.\nColor palette: warm natural food colors, creamy white dishware, one pastel utensil accent in soft yellow or mint.\nMaterials/textures: smooth ceramic dishware, soft clay-like food texture, rounded friendly utensil shape.\nConstraints: exactly one utensil in the whole image; the food must visually match \"山药小米粥配鸡肉松\" and its ingredients; no text, no logo, no watermark, no human, no face on the bowl, no printed pattern on the dishware, no clutter, no messy table, no extra unrelated ingredients."
+  },
+  {
+    "index": 47,
+    "id": "recipe_047",
+    "name": "玉米鸡蛋软饼",
+    "stageId": "19_36m",
+    "dishType": "软饼",
+    "texture": "软饼、小块",
+    "mealTypes": [
+      "早餐"
+    ],
+    "ingredients": [
+      "鸡蛋",
+      "玉米粒",
+      "面粉",
+      "植物油"
+    ],
+    "utensil": "一个叉子",
+    "outputFile": "/Users/mima1234/Desktop/codex开发/开发项目/乖乖吃饭/design-prototypes/recipe-images-batch/optimized/recipe_047.jpg",
+    "prompt": "Use case: stylized-concept\nAsset type: baby recipe thumbnail, square image\nPrimary request: Create a cute 3D food thumbnail for the baby recipe \"玉米鸡蛋软饼\".\nSubject: 玉米鸡蛋软饼, made with 鸡蛋, 玉米粒, 面粉, toddler-friendly 软饼、小块.\nStyle/medium: polished cute 3D clay-like render, soft rounded shapes, appetizing, gentle, premium toddler recipe app style.\nComposition/framing: centered a cute plain toddler plate or shallow bowl with no printed pattern, three-quarter view, generous padding. Around the dish, place only a few small matching food ingredients from this recipe: 鸡蛋, 玉米粒, 面粉. Include exactly one utensil total: one pastel baby fork placed beside the dish. No spoon, no chopsticks, no second fork, no other utensils.\nScene/backdrop: pure white background, clean and bright, very subtle soft shadows only under objects.\nColor palette: warm natural food colors, creamy white dishware, one pastel utensil accent in soft yellow or mint.\nMaterials/textures: smooth ceramic dishware, soft clay-like food texture, rounded friendly utensil shape.\nConstraints: exactly one utensil in the whole image; the food must visually match \"玉米鸡蛋软饼\" and its ingredients; no text, no logo, no watermark, no human, no face on the bowl, no printed pattern on the dishware, no clutter, no messy table, no extra unrelated ingredients."
+  },
+  {
+    "index": 48,
+    "id": "recipe_048",
+    "name": "紫薯燕麦粥",
+    "stageId": "19_36m",
+    "dishType": "粥类",
+    "texture": "软烂粥状",
+    "mealTypes": [
+      "早餐"
+    ],
+    "ingredients": [
+      "即食燕麦片",
+      "紫薯",
+      "清水"
+    ],
+    "utensil": "一个勺子",
+    "outputFile": "/Users/mima1234/Desktop/codex开发/开发项目/乖乖吃饭/design-prototypes/recipe-images-batch/optimized/recipe_048.jpg",
+    "prompt": "Use case: stylized-concept\nAsset type: baby recipe thumbnail, square image\nPrimary request: Create a cute 3D food thumbnail for the baby recipe \"紫薯燕麦粥\".\nSubject: 紫薯燕麦粥, made with 即食燕麦片, 紫薯, toddler-friendly 软烂粥状.\nStyle/medium: polished cute 3D clay-like render, soft rounded shapes, appetizing, gentle, premium toddler recipe app style.\nComposition/framing: centered a cute plain baby bowl with no printed pattern, three-quarter view, generous padding. Around the dish, place only a few small matching food ingredients from this recipe: 即食燕麦片, 紫薯. Include exactly one utensil total: one pastel baby spoon placed beside the bowl. No fork, no chopsticks, no second spoon, no other utensils.\nScene/backdrop: pure white background, clean and bright, very subtle soft shadows only under objects.\nColor palette: warm natural food colors, creamy white dishware, one pastel utensil accent in soft yellow or mint.\nMaterials/textures: smooth ceramic dishware, soft clay-like food texture, rounded friendly utensil shape.\nConstraints: exactly one utensil in the whole image; the food must visually match \"紫薯燕麦粥\" and its ingredients; no text, no logo, no watermark, no human, no face on the bowl, no printed pattern on the dishware, no clutter, no messy table, no extra unrelated ingredients."
+  },
+  {
+    "index": 49,
+    "id": "recipe_049",
+    "name": "西兰花奶酪蛋饼",
+    "stageId": "19_36m",
+    "dishType": "软饼",
+    "texture": "软饼、小块",
+    "mealTypes": [
+      "早餐"
+    ],
+    "ingredients": [
+      "鸡蛋",
+      "西兰花",
+      "奶酪碎",
+      "面粉",
+      "植物油"
+    ],
+    "utensil": "一个叉子",
+    "outputFile": "/Users/mima1234/Desktop/codex开发/开发项目/乖乖吃饭/design-prototypes/recipe-images-batch/optimized/recipe_049.jpg",
+    "prompt": "Use case: stylized-concept\nAsset type: baby recipe thumbnail, square image\nPrimary request: Create a cute 3D food thumbnail for the baby recipe \"西兰花奶酪蛋饼\".\nSubject: 西兰花奶酪蛋饼, made with 鸡蛋, 西兰花, 奶酪碎, 面粉, toddler-friendly 软饼、小块.\nStyle/medium: polished cute 3D clay-like render, soft rounded shapes, appetizing, gentle, premium toddler recipe app style.\nComposition/framing: centered a cute plain toddler plate or shallow bowl with no printed pattern, three-quarter view, generous padding. Around the dish, place only a few small matching food ingredients from this recipe: 鸡蛋, 西兰花, 奶酪碎, 面粉. Include exactly one utensil total: one pastel baby fork placed beside the dish. No spoon, no chopsticks, no second fork, no other utensils.\nScene/backdrop: pure white background, clean and bright, very subtle soft shadows only under objects.\nColor palette: warm natural food colors, creamy white dishware, one pastel utensil accent in soft yellow or mint.\nMaterials/textures: smooth ceramic dishware, soft clay-like food texture, rounded friendly utensil shape.\nConstraints: exactly one utensil in the whole image; the food must visually match \"西兰花奶酪蛋饼\" and its ingredients; no text, no logo, no watermark, no human, no face on the bowl, no printed pattern on the dishware, no clutter, no messy table, no extra unrelated ingredients."
+  },
+  {
+    "index": 50,
+    "id": "recipe_050",
+    "name": "苹果胡萝卜燕麦粥",
+    "stageId": "19_36m",
+    "dishType": "粥类",
+    "texture": "软烂粥状",
+    "mealTypes": [
+      "早餐"
+    ],
+    "ingredients": [
+      "即食燕麦片",
+      "苹果",
+      "胡萝卜",
+      "清水"
+    ],
+    "utensil": "一个勺子",
+    "outputFile": "/Users/mima1234/Desktop/codex开发/开发项目/乖乖吃饭/design-prototypes/recipe-images-batch/optimized/recipe_050.jpg",
+    "prompt": "Use case: stylized-concept\nAsset type: baby recipe thumbnail, square image\nPrimary request: Create a cute 3D food thumbnail for the baby recipe \"苹果胡萝卜燕麦粥\".\nSubject: 苹果胡萝卜燕麦粥, made with 即食燕麦片, 苹果, 胡萝卜, toddler-friendly 软烂粥状.\nStyle/medium: polished cute 3D clay-like render, soft rounded shapes, appetizing, gentle, premium toddler recipe app style.\nComposition/framing: centered a cute plain baby bowl with no printed pattern, three-quarter view, generous padding. Around the dish, place only a few small matching food ingredients from this recipe: 即食燕麦片, 苹果, 胡萝卜. Include exactly one utensil total: one pastel baby spoon placed beside the bowl. No fork, no chopsticks, no second spoon, no other utensils.\nScene/backdrop: pure white background, clean and bright, very subtle soft shadows only under objects.\nColor palette: warm natural food colors, creamy white dishware, one pastel utensil accent in soft yellow or mint.\nMaterials/textures: smooth ceramic dishware, soft clay-like food texture, rounded friendly utensil shape.\nConstraints: exactly one utensil in the whole image; the food must visually match \"苹果胡萝卜燕麦粥\" and its ingredients; no text, no logo, no watermark, no human, no face on the bowl, no printed pattern on the dishware, no clutter, no messy table, no extra unrelated ingredients."
+  },
+  {
+    "index": 51,
+    "id": "recipe_051",
+    "name": "豆腐鸡蛋羹",
+    "stageId": "19_36m",
+    "dishType": "蒸羹",
+    "texture": "细嫩蒸羹",
+    "mealTypes": [
+      "早餐"
+    ],
+    "ingredients": [
+      "鸡蛋",
+      "嫩豆腐",
+      "温水"
+    ],
+    "utensil": "一个勺子",
+    "outputFile": "/Users/mima1234/Desktop/codex开发/开发项目/乖乖吃饭/design-prototypes/recipe-images-batch/optimized/recipe_051.jpg",
+    "prompt": "Use case: stylized-concept\nAsset type: baby recipe thumbnail, square image\nPrimary request: Create a cute 3D food thumbnail for the baby recipe \"豆腐鸡蛋羹\".\nSubject: 豆腐鸡蛋羹, made with 鸡蛋, 嫩豆腐, toddler-friendly 细嫩蒸羹.\nStyle/medium: polished cute 3D clay-like render, soft rounded shapes, appetizing, gentle, premium toddler recipe app style.\nComposition/framing: centered a cute plain baby bowl with no printed pattern, three-quarter view, generous padding. Around the dish, place only a few small matching food ingredients from this recipe: 鸡蛋, 嫩豆腐. Include exactly one utensil total: one pastel baby spoon placed beside the bowl. No fork, no chopsticks, no second spoon, no other utensils.\nScene/backdrop: pure white background, clean and bright, very subtle soft shadows only under objects.\nColor palette: warm natural food colors, creamy white dishware, one pastel utensil accent in soft yellow or mint.\nMaterials/textures: smooth ceramic dishware, soft clay-like food texture, rounded friendly utensil shape.\nConstraints: exactly one utensil in the whole image; the food must visually match \"豆腐鸡蛋羹\" and its ingredients; no text, no logo, no watermark, no human, no face on the bowl, no printed pattern on the dishware, no clutter, no messy table, no extra unrelated ingredients."
+  },
+  {
+    "index": 52,
+    "id": "recipe_052",
+    "name": "青菜虾仁小馄饨",
+    "stageId": "19_36m",
+    "dishType": "馄饨",
+    "texture": "小馄饨",
+    "mealTypes": [
+      "早餐"
+    ],
+    "ingredients": [
+      "小馄饨皮",
+      "虾仁",
+      "青菜",
+      "植物油",
+      "清水"
+    ],
+    "utensil": "一套餐筷",
+    "outputFile": "/Users/mima1234/Desktop/codex开发/开发项目/乖乖吃饭/design-prototypes/recipe-images-batch/optimized/recipe_052.jpg",
+    "prompt": "Use case: stylized-concept\nAsset type: baby recipe thumbnail, square image\nPrimary request: Create a cute 3D food thumbnail for the baby recipe \"青菜虾仁小馄饨\".\nSubject: 青菜虾仁小馄饨, made with 小馄饨皮, 虾仁, 青菜, toddler-friendly 小馄饨.\nStyle/medium: polished cute 3D clay-like render, soft rounded shapes, appetizing, gentle, premium toddler recipe app style.\nComposition/framing: centered a cute plain baby bowl with no printed pattern, three-quarter view, generous padding. Around the dish, place only a few small matching food ingredients from this recipe: 小馄饨皮, 虾仁, 青菜. Include exactly one utensil total: one pair of pastel toddler chopsticks placed beside the bowl as a single utensil set. No spoon, no fork, no second chopsticks, no other utensils.\nScene/backdrop: pure white background, clean and bright, very subtle soft shadows only under objects.\nColor palette: warm natural food colors, creamy white dishware, one pastel utensil accent in soft yellow or mint.\nMaterials/textures: smooth ceramic dishware, soft clay-like food texture, rounded friendly utensil shape.\nConstraints: exactly one utensil in the whole image; the food must visually match \"青菜虾仁小馄饨\" and its ingredients; no text, no logo, no watermark, no human, no face on the bowl, no printed pattern on the dishware, no clutter, no messy table, no extra unrelated ingredients."
+  },
+  {
+    "index": 53,
+    "id": "recipe_053",
+    "name": "番茄牛肉面片汤",
+    "stageId": "19_36m",
+    "dishType": "面片汤",
+    "texture": "面片汤",
+    "mealTypes": [
+      "早餐"
+    ],
+    "ingredients": [
+      "小面片",
+      "牛肉末",
+      "番茄",
+      "青菜",
+      "植物油"
+    ],
+    "utensil": "一套餐筷",
+    "outputFile": "/Users/mima1234/Desktop/codex开发/开发项目/乖乖吃饭/design-prototypes/recipe-images-batch/optimized/recipe_053.jpg",
+    "prompt": "Use case: stylized-concept\nAsset type: baby recipe thumbnail, square image\nPrimary request: Create a cute 3D food thumbnail for the baby recipe \"番茄牛肉面片汤\".\nSubject: 番茄牛肉面片汤, made with 小面片, 牛肉末, 番茄, 青菜, toddler-friendly 面片汤.\nStyle/medium: polished cute 3D clay-like render, soft rounded shapes, appetizing, gentle, premium toddler recipe app style.\nComposition/framing: centered a cute plain baby bowl with no printed pattern, three-quarter view, generous padding. Around the dish, place only a few small matching food ingredients from this recipe: 小面片, 牛肉末, 番茄, 青菜. Include exactly one utensil total: one pair of pastel toddler chopsticks placed beside the bowl as a single utensil set. No spoon, no fork, no second chopsticks, no other utensils.\nScene/backdrop: pure white background, clean and bright, very subtle soft shadows only under objects.\nColor palette: warm natural food colors, creamy white dishware, one pastel utensil accent in soft yellow or mint.\nMaterials/textures: smooth ceramic dishware, soft clay-like food texture, rounded friendly utensil shape.\nConstraints: exactly one utensil in the whole image; the food must visually match \"番茄牛肉面片汤\" and its ingredients; no text, no logo, no watermark, no human, no face on the bowl, no printed pattern on the dishware, no clutter, no messy table, no extra unrelated ingredients."
+  },
+  {
+    "index": 54,
+    "id": "recipe_054",
+    "name": "南瓜玉米粥",
+    "stageId": "19_36m",
+    "dishType": "粥类",
+    "texture": "软烂粥状",
+    "mealTypes": [
+      "早餐"
+    ],
+    "ingredients": [
+      "大米",
+      "南瓜",
+      "玉米粒",
+      "清水"
+    ],
+    "utensil": "一个勺子",
+    "outputFile": "/Users/mima1234/Desktop/codex开发/开发项目/乖乖吃饭/design-prototypes/recipe-images-batch/optimized/recipe_054.jpg",
+    "prompt": "Use case: stylized-concept\nAsset type: baby recipe thumbnail, square image\nPrimary request: Create a cute 3D food thumbnail for the baby recipe \"南瓜玉米粥\".\nSubject: 南瓜玉米粥, made with 大米, 南瓜, 玉米粒, toddler-friendly 软烂粥状.\nStyle/medium: polished cute 3D clay-like render, soft rounded shapes, appetizing, gentle, premium toddler recipe app style.\nComposition/framing: centered a cute plain baby bowl with no printed pattern, three-quarter view, generous padding. Around the dish, place only a few small matching food ingredients from this recipe: 大米, 南瓜, 玉米粒. Include exactly one utensil total: one pastel baby spoon placed beside the bowl. No fork, no chopsticks, no second spoon, no other utensils.\nScene/backdrop: pure white background, clean and bright, very subtle soft shadows only under objects.\nColor palette: warm natural food colors, creamy white dishware, one pastel utensil accent in soft yellow or mint.\nMaterials/textures: smooth ceramic dishware, soft clay-like food texture, rounded friendly utensil shape.\nConstraints: exactly one utensil in the whole image; the food must visually match \"南瓜玉米粥\" and its ingredients; no text, no logo, no watermark, no human, no face on the bowl, no printed pattern on the dishware, no clutter, no messy table, no extra unrelated ingredients."
+  },
+  {
+    "index": 55,
+    "id": "recipe_055",
+    "name": "香蕉鸡蛋松饼",
+    "stageId": "19_36m",
+    "dishType": "松饼",
+    "texture": "松饼、小块",
+    "mealTypes": [
+      "早餐"
+    ],
+    "ingredients": [
+      "香蕉",
+      "鸡蛋",
+      "面粉",
+      "植物油"
+    ],
+    "utensil": "一个叉子",
+    "outputFile": "/Users/mima1234/Desktop/codex开发/开发项目/乖乖吃饭/design-prototypes/recipe-images-batch/optimized/recipe_055.jpg",
+    "prompt": "Use case: stylized-concept\nAsset type: baby recipe thumbnail, square image\nPrimary request: Create a cute 3D food thumbnail for the baby recipe \"香蕉鸡蛋松饼\".\nSubject: 香蕉鸡蛋松饼, made with 香蕉, 鸡蛋, 面粉, toddler-friendly 松饼、小块.\nStyle/medium: polished cute 3D clay-like render, soft rounded shapes, appetizing, gentle, premium toddler recipe app style.\nComposition/framing: centered a cute plain toddler plate or shallow bowl with no printed pattern, three-quarter view, generous padding. Around the dish, place only a few small matching food ingredients from this recipe: 香蕉, 鸡蛋, 面粉. Include exactly one utensil total: one pastel baby fork placed beside the dish. No spoon, no chopsticks, no second fork, no other utensils.\nScene/backdrop: pure white background, clean and bright, very subtle soft shadows only under objects.\nColor palette: warm natural food colors, creamy white dishware, one pastel utensil accent in soft yellow or mint.\nMaterials/textures: smooth ceramic dishware, soft clay-like food texture, rounded friendly utensil shape.\nConstraints: exactly one utensil in the whole image; the food must visually match \"香蕉鸡蛋松饼\" and its ingredients; no text, no logo, no watermark, no human, no face on the bowl, no printed pattern on the dishware, no clutter, no messy table, no extra unrelated ingredients."
+  },
+  {
+    "index": 56,
+    "id": "recipe_056",
+    "name": "香菇鸡肉焖饭",
+    "stageId": "19_36m",
+    "dishType": "焖饭",
+    "texture": "焖饭、小块",
+    "mealTypes": [
+      "午餐",
+      "晚餐"
+    ],
+    "ingredients": [
+      "米饭",
+      "鸡肉丁",
+      "香菇",
+      "胡萝卜",
+      "青豆",
+      "植物油"
+    ],
+    "utensil": "一个叉子",
+    "outputFile": "/Users/mima1234/Desktop/codex开发/开发项目/乖乖吃饭/design-prototypes/recipe-images-batch/optimized/recipe_056.jpg",
+    "prompt": "Use case: stylized-concept\nAsset type: baby recipe thumbnail, square image\nPrimary request: Create a cute 3D food thumbnail for the baby recipe \"香菇鸡肉焖饭\".\nSubject: 香菇鸡肉焖饭, made with 米饭, 鸡肉丁, 香菇, 胡萝卜, 青豆, toddler-friendly 焖饭、小块.\nStyle/medium: polished cute 3D clay-like render, soft rounded shapes, appetizing, gentle, premium toddler recipe app style.\nComposition/framing: centered a cute plain baby bowl with no printed pattern, three-quarter view, generous padding. Around the dish, place only a few small matching food ingredients from this recipe: 米饭, 鸡肉丁, 香菇, 胡萝卜, 青豆. Include exactly one utensil total: one pastel baby fork placed beside the dish. No spoon, no chopsticks, no second fork, no other utensils.\nScene/backdrop: pure white background, clean and bright, very subtle soft shadows only under objects.\nColor palette: warm natural food colors, creamy white dishware, one pastel utensil accent in soft yellow or mint.\nMaterials/textures: smooth ceramic dishware, soft clay-like food texture, rounded friendly utensil shape.\nConstraints: exactly one utensil in the whole image; the food must visually match \"香菇鸡肉焖饭\" and its ingredients; no text, no logo, no watermark, no human, no face on the bowl, no printed pattern on the dishware, no clutter, no messy table, no extra unrelated ingredients."
+  },
+  {
+    "index": 57,
+    "id": "recipe_057",
+    "name": "番茄牛肉意面",
+    "stageId": "19_36m",
+    "dishType": "软面",
+    "texture": "软面",
+    "mealTypes": [
+      "午餐",
+      "晚餐"
+    ],
+    "ingredients": [
+      "意面",
+      "牛肉末",
+      "番茄",
+      "西兰花",
+      "植物油"
+    ],
+    "utensil": "一套餐筷",
+    "outputFile": "/Users/mima1234/Desktop/codex开发/开发项目/乖乖吃饭/design-prototypes/recipe-images-batch/optimized/recipe_057.jpg",
+    "prompt": "Use case: stylized-concept\nAsset type: baby recipe thumbnail, square image\nPrimary request: Create a cute 3D food thumbnail for the baby recipe \"番茄牛肉意面\".\nSubject: 番茄牛肉意面, made with 意面, 牛肉末, 番茄, 西兰花, toddler-friendly 软面.\nStyle/medium: polished cute 3D clay-like render, soft rounded shapes, appetizing, gentle, premium toddler recipe app style.\nComposition/framing: centered a cute plain baby bowl with no printed pattern, three-quarter view, generous padding. Around the dish, place only a few small matching food ingredients from this recipe: 意面, 牛肉末, 番茄, 西兰花. Include exactly one utensil total: one pair of pastel toddler chopsticks placed beside the bowl as a single utensil set. No spoon, no fork, no second chopsticks, no other utensils.\nScene/backdrop: pure white background, clean and bright, very subtle soft shadows only under objects.\nColor palette: warm natural food colors, creamy white dishware, one pastel utensil accent in soft yellow or mint.\nMaterials/textures: smooth ceramic dishware, soft clay-like food texture, rounded friendly utensil shape.\nConstraints: exactly one utensil in the whole image; the food must visually match \"番茄牛肉意面\" and its ingredients; no text, no logo, no watermark, no human, no face on the bowl, no printed pattern on the dishware, no clutter, no messy table, no extra unrelated ingredients."
+  },
+  {
+    "index": 58,
+    "id": "recipe_058",
+    "name": "胡萝卜土豆炖牛肉饭",
+    "stageId": "19_36m",
+    "dishType": "软饭",
+    "texture": "软饭、小块",
+    "mealTypes": [
+      "午餐",
+      "晚餐"
+    ],
+    "ingredients": [
+      "米饭",
+      "牛肉丁",
+      "土豆",
+      "胡萝卜",
+      "植物油"
+    ],
+    "utensil": "一个叉子",
+    "outputFile": "/Users/mima1234/Desktop/codex开发/开发项目/乖乖吃饭/design-prototypes/recipe-images-batch/optimized/recipe_058.jpg",
+    "prompt": "Use case: stylized-concept\nAsset type: baby recipe thumbnail, square image\nPrimary request: Create a cute 3D food thumbnail for the baby recipe \"胡萝卜土豆炖牛肉饭\".\nSubject: 胡萝卜土豆炖牛肉饭, made with 米饭, 牛肉丁, 土豆, 胡萝卜, toddler-friendly 软饭、小块.\nStyle/medium: polished cute 3D clay-like render, soft rounded shapes, appetizing, gentle, premium toddler recipe app style.\nComposition/framing: centered a cute plain baby bowl with no printed pattern, three-quarter view, generous padding. Around the dish, place only a few small matching food ingredients from this recipe: 米饭, 牛肉丁, 土豆, 胡萝卜. Include exactly one utensil total: one pastel baby fork placed beside the dish. No spoon, no chopsticks, no second fork, no other utensils.\nScene/backdrop: pure white background, clean and bright, very subtle soft shadows only under objects.\nColor palette: warm natural food colors, creamy white dishware, one pastel utensil accent in soft yellow or mint.\nMaterials/textures: smooth ceramic dishware, soft clay-like food texture, rounded friendly utensil shape.\nConstraints: exactly one utensil in the whole image; the food must visually match \"胡萝卜土豆炖牛肉饭\" and its ingredients; no text, no logo, no watermark, no human, no face on the bowl, no printed pattern on the dishware, no clutter, no messy table, no extra unrelated ingredients."
+  },
+  {
+    "index": 59,
+    "id": "recipe_059",
+    "name": "西兰花虾仁软饭",
+    "stageId": "19_36m",
+    "dishType": "软饭",
+    "texture": "软饭、小块",
+    "mealTypes": [
+      "午餐",
+      "晚餐"
+    ],
+    "ingredients": [
+      "米饭",
+      "虾仁",
+      "西兰花",
+      "玉米粒",
+      "植物油"
+    ],
+    "utensil": "一个叉子",
+    "outputFile": "/Users/mima1234/Desktop/codex开发/开发项目/乖乖吃饭/design-prototypes/recipe-images-batch/optimized/recipe_059.jpg",
+    "prompt": "Use case: stylized-concept\nAsset type: baby recipe thumbnail, square image\nPrimary request: Create a cute 3D food thumbnail for the baby recipe \"西兰花虾仁软饭\".\nSubject: 西兰花虾仁软饭, made with 米饭, 虾仁, 西兰花, 玉米粒, toddler-friendly 软饭、小块.\nStyle/medium: polished cute 3D clay-like render, soft rounded shapes, appetizing, gentle, premium toddler recipe app style.\nComposition/framing: centered a cute plain baby bowl with no printed pattern, three-quarter view, generous padding. Around the dish, place only a few small matching food ingredients from this recipe: 米饭, 虾仁, 西兰花, 玉米粒. Include exactly one utensil total: one pastel baby fork placed beside the dish. No spoon, no chopsticks, no second fork, no other utensils.\nScene/backdrop: pure white background, clean and bright, very subtle soft shadows only under objects.\nColor palette: warm natural food colors, creamy white dishware, one pastel utensil accent in soft yellow or mint.\nMaterials/textures: smooth ceramic dishware, soft clay-like food texture, rounded friendly utensil shape.\nConstraints: exactly one utensil in the whole image; the food must visually match \"西兰花虾仁软饭\" and its ingredients; no text, no logo, no watermark, no human, no face on the bowl, no printed pattern on the dishware, no clutter, no messy table, no extra unrelated ingredients."
+  },
+  {
+    "index": 60,
+    "id": "recipe_060",
+    "name": "冬瓜肉丸汤配软饭",
+    "stageId": "19_36m",
+    "dishType": "汤饭",
+    "texture": "汤饭",
+    "mealTypes": [
+      "午餐",
+      "晚餐"
+    ],
+    "ingredients": [
+      "米饭",
+      "猪肉丸",
+      "冬瓜",
+      "小青菜",
+      "植物油"
+    ],
+    "utensil": "一个勺子",
+    "outputFile": "/Users/mima1234/Desktop/codex开发/开发项目/乖乖吃饭/design-prototypes/recipe-images-batch/optimized/recipe_060.jpg",
+    "prompt": "Use case: stylized-concept\nAsset type: baby recipe thumbnail, square image\nPrimary request: Create a cute 3D food thumbnail for the baby recipe \"冬瓜肉丸汤配软饭\".\nSubject: 冬瓜肉丸汤配软饭, made with 米饭, 猪肉丸, 冬瓜, 小青菜, toddler-friendly 汤饭.\nStyle/medium: polished cute 3D clay-like render, soft rounded shapes, appetizing, gentle, premium toddler recipe app style.\nComposition/framing: centered a cute plain toddler plate or shallow bowl with no printed pattern, three-quarter view, generous padding. Around the dish, place only a few small matching food ingredients from this recipe: 米饭, 猪肉丸, 冬瓜, 小青菜. Include exactly one utensil total: one pastel baby spoon placed beside the bowl. No fork, no chopsticks, no second spoon, no other utensils.\nScene/backdrop: pure white background, clean and bright, very subtle soft shadows only under objects.\nColor palette: warm natural food colors, creamy white dishware, one pastel utensil accent in soft yellow or mint.\nMaterials/textures: smooth ceramic dishware, soft clay-like food texture, rounded friendly utensil shape.\nConstraints: exactly one utensil in the whole image; the food must visually match \"冬瓜肉丸汤配软饭\" and its ingredients; no text, no logo, no watermark, no human, no face on the bowl, no printed pattern on the dishware, no clutter, no messy table, no extra unrelated ingredients."
+  },
+  {
+    "index": 61,
+    "id": "recipe_061",
+    "name": "豆腐鱼肉蔬菜饭",
+    "stageId": "19_36m",
+    "dishType": "软饭",
+    "texture": "软饭、小块",
+    "mealTypes": [
+      "午餐",
+      "晚餐"
+    ],
+    "ingredients": [
+      "米饭",
+      "鱼肉",
+      "嫩豆腐",
+      "胡萝卜",
+      "青菜",
+      "植物油"
+    ],
+    "utensil": "一个叉子",
+    "outputFile": "/Users/mima1234/Desktop/codex开发/开发项目/乖乖吃饭/design-prototypes/recipe-images-batch/optimized/recipe_061.jpg",
+    "prompt": "Use case: stylized-concept\nAsset type: baby recipe thumbnail, square image\nPrimary request: Create a cute 3D food thumbnail for the baby recipe \"豆腐鱼肉蔬菜饭\".\nSubject: 豆腐鱼肉蔬菜饭, made with 米饭, 鱼肉, 嫩豆腐, 胡萝卜, 青菜, toddler-friendly 软饭、小块.\nStyle/medium: polished cute 3D clay-like render, soft rounded shapes, appetizing, gentle, premium toddler recipe app style.\nComposition/framing: centered a cute plain baby bowl with no printed pattern, three-quarter view, generous padding. Around the dish, place only a few small matching food ingredients from this recipe: 米饭, 鱼肉, 嫩豆腐, 胡萝卜, 青菜. Include exactly one utensil total: one pastel baby fork placed beside the dish. No spoon, no chopsticks, no second fork, no other utensils.\nScene/backdrop: pure white background, clean and bright, very subtle soft shadows only under objects.\nColor palette: warm natural food colors, creamy white dishware, one pastel utensil accent in soft yellow or mint.\nMaterials/textures: smooth ceramic dishware, soft clay-like food texture, rounded friendly utensil shape.\nConstraints: exactly one utensil in the whole image; the food must visually match \"豆腐鱼肉蔬菜饭\" and its ingredients; no text, no logo, no watermark, no human, no face on the bowl, no printed pattern on the dishware, no clutter, no messy table, no extra unrelated ingredients."
+  },
+  {
+    "index": 62,
+    "id": "recipe_062",
+    "name": "番茄鸡蛋牛肉面",
+    "stageId": "19_36m",
+    "dishType": "软面",
+    "texture": "软面",
+    "mealTypes": [
+      "午餐",
+      "晚餐"
+    ],
+    "ingredients": [
+      "儿童面",
+      "牛肉末",
+      "鸡蛋",
+      "番茄",
+      "植物油"
+    ],
+    "utensil": "一套餐筷",
+    "outputFile": "/Users/mima1234/Desktop/codex开发/开发项目/乖乖吃饭/design-prototypes/recipe-images-batch/optimized/recipe_062.jpg",
+    "prompt": "Use case: stylized-concept\nAsset type: baby recipe thumbnail, square image\nPrimary request: Create a cute 3D food thumbnail for the baby recipe \"番茄鸡蛋牛肉面\".\nSubject: 番茄鸡蛋牛肉面, made with 儿童面, 牛肉末, 鸡蛋, 番茄, toddler-friendly 软面.\nStyle/medium: polished cute 3D clay-like render, soft rounded shapes, appetizing, gentle, premium toddler recipe app style.\nComposition/framing: centered a cute plain baby bowl with no printed pattern, three-quarter view, generous padding. Around the dish, place only a few small matching food ingredients from this recipe: 儿童面, 牛肉末, 鸡蛋, 番茄. Include exactly one utensil total: one pair of pastel toddler chopsticks placed beside the bowl as a single utensil set. No spoon, no fork, no second chopsticks, no other utensils.\nScene/backdrop: pure white background, clean and bright, very subtle soft shadows only under objects.\nColor palette: warm natural food colors, creamy white dishware, one pastel utensil accent in soft yellow or mint.\nMaterials/textures: smooth ceramic dishware, soft clay-like food texture, rounded friendly utensil shape.\nConstraints: exactly one utensil in the whole image; the food must visually match \"番茄鸡蛋牛肉面\" and its ingredients; no text, no logo, no watermark, no human, no face on the bowl, no printed pattern on the dishware, no clutter, no messy table, no extra unrelated ingredients."
+  },
+  {
+    "index": 63,
+    "id": "recipe_063",
+    "name": "玉米鸡肉饭团",
+    "stageId": "19_36m",
+    "dishType": "饭团",
+    "texture": "饭团",
+    "mealTypes": [
+      "午餐",
+      "晚餐"
+    ],
+    "ingredients": [
+      "米饭",
+      "鸡肉末",
+      "玉米粒",
+      "胡萝卜",
+      "海苔碎"
+    ],
+    "utensil": "一个叉子",
+    "outputFile": "/Users/mima1234/Desktop/codex开发/开发项目/乖乖吃饭/design-prototypes/recipe-images-batch/optimized/recipe_063.jpg",
+    "prompt": "Use case: stylized-concept\nAsset type: baby recipe thumbnail, square image\nPrimary request: Create a cute 3D food thumbnail for the baby recipe \"玉米鸡肉饭团\".\nSubject: 玉米鸡肉饭团, made with 米饭, 鸡肉末, 玉米粒, 胡萝卜, 海苔碎, toddler-friendly 饭团.\nStyle/medium: polished cute 3D clay-like render, soft rounded shapes, appetizing, gentle, premium toddler recipe app style.\nComposition/framing: centered a cute plain toddler plate or shallow bowl with no printed pattern, three-quarter view, generous padding. Around the dish, place only a few small matching food ingredients from this recipe: 米饭, 鸡肉末, 玉米粒, 胡萝卜, 海苔碎. Include exactly one utensil total: one pastel baby fork placed beside the dish. No spoon, no chopsticks, no second fork, no other utensils.\nScene/backdrop: pure white background, clean and bright, very subtle soft shadows only under objects.\nColor palette: warm natural food colors, creamy white dishware, one pastel utensil accent in soft yellow or mint.\nMaterials/textures: smooth ceramic dishware, soft clay-like food texture, rounded friendly utensil shape.\nConstraints: exactly one utensil in the whole image; the food must visually match \"玉米鸡肉饭团\" and its ingredients; no text, no logo, no watermark, no human, no face on the bowl, no printed pattern on the dishware, no clutter, no messy table, no extra unrelated ingredients."
+  },
+  {
+    "index": 64,
+    "id": "recipe_064",
+    "name": "西葫芦猪肉小饺子",
+    "stageId": "19_36m",
+    "dishType": "饺子",
+    "texture": "小饺子",
+    "mealTypes": [
+      "午餐",
+      "晚餐"
+    ],
+    "ingredients": [
+      "饺子皮",
+      "猪肉末",
+      "西葫芦",
+      "胡萝卜"
+    ],
+    "utensil": "一个叉子",
+    "outputFile": "/Users/mima1234/Desktop/codex开发/开发项目/乖乖吃饭/design-prototypes/recipe-images-batch/optimized/recipe_064.jpg",
+    "prompt": "Use case: stylized-concept\nAsset type: baby recipe thumbnail, square image\nPrimary request: Create a cute 3D food thumbnail for the baby recipe \"西葫芦猪肉小饺子\".\nSubject: 西葫芦猪肉小饺子, made with 饺子皮, 猪肉末, 西葫芦, 胡萝卜, toddler-friendly 小饺子.\nStyle/medium: polished cute 3D clay-like render, soft rounded shapes, appetizing, gentle, premium toddler recipe app style.\nComposition/framing: centered a cute plain baby bowl with no printed pattern, three-quarter view, generous padding. Around the dish, place only a few small matching food ingredients from this recipe: 饺子皮, 猪肉末, 西葫芦, 胡萝卜. Include exactly one utensil total: one pastel baby fork placed beside the dish. No spoon, no chopsticks, no second fork, no other utensils.\nScene/backdrop: pure white background, clean and bright, very subtle soft shadows only under objects.\nColor palette: warm natural food colors, creamy white dishware, one pastel utensil accent in soft yellow or mint.\nMaterials/textures: smooth ceramic dishware, soft clay-like food texture, rounded friendly utensil shape.\nConstraints: exactly one utensil in the whole image; the food must visually match \"西葫芦猪肉小饺子\" and its ingredients; no text, no logo, no watermark, no human, no face on the bowl, no printed pattern on the dishware, no clutter, no messy table, no extra unrelated ingredients."
+  },
+  {
+    "index": 65,
+    "id": "recipe_065",
+    "name": "山药排骨软饭",
+    "stageId": "19_36m",
+    "dishType": "软饭",
+    "texture": "软饭、小块",
+    "mealTypes": [
+      "午餐",
+      "晚餐"
+    ],
+    "ingredients": [
+      "米饭",
+      "排骨肉",
+      "山药",
+      "胡萝卜",
+      "植物油"
+    ],
+    "utensil": "一个叉子",
+    "outputFile": "/Users/mima1234/Desktop/codex开发/开发项目/乖乖吃饭/design-prototypes/recipe-images-batch/optimized/recipe_065.jpg",
+    "prompt": "Use case: stylized-concept\nAsset type: baby recipe thumbnail, square image\nPrimary request: Create a cute 3D food thumbnail for the baby recipe \"山药排骨软饭\".\nSubject: 山药排骨软饭, made with 米饭, 排骨肉, 山药, 胡萝卜, toddler-friendly 软饭、小块.\nStyle/medium: polished cute 3D clay-like render, soft rounded shapes, appetizing, gentle, premium toddler recipe app style.\nComposition/framing: centered a cute plain baby bowl with no printed pattern, three-quarter view, generous padding. Around the dish, place only a few small matching food ingredients from this recipe: 米饭, 排骨肉, 山药, 胡萝卜. Include exactly one utensil total: one pastel baby fork placed beside the dish. No spoon, no chopsticks, no second fork, no other utensils.\nScene/backdrop: pure white background, clean and bright, very subtle soft shadows only under objects.\nColor palette: warm natural food colors, creamy white dishware, one pastel utensil accent in soft yellow or mint.\nMaterials/textures: smooth ceramic dishware, soft clay-like food texture, rounded friendly utensil shape.\nConstraints: exactly one utensil in the whole image; the food must visually match \"山药排骨软饭\" and its ingredients; no text, no logo, no watermark, no human, no face on the bowl, no printed pattern on the dishware, no clutter, no messy table, no extra unrelated ingredients."
+  },
+  {
+    "index": 66,
+    "id": "recipe_066",
+    "name": "香菇油菜鸡肉面",
+    "stageId": "19_36m",
+    "dishType": "软面",
+    "texture": "软面",
+    "mealTypes": [
+      "午餐",
+      "晚餐"
+    ],
+    "ingredients": [
+      "儿童面",
+      "鸡肉丝",
+      "香菇",
+      "油菜",
+      "植物油"
+    ],
+    "utensil": "一套餐筷",
+    "outputFile": "/Users/mima1234/Desktop/codex开发/开发项目/乖乖吃饭/design-prototypes/recipe-images-batch/optimized/recipe_066.jpg",
+    "prompt": "Use case: stylized-concept\nAsset type: baby recipe thumbnail, square image\nPrimary request: Create a cute 3D food thumbnail for the baby recipe \"香菇油菜鸡肉面\".\nSubject: 香菇油菜鸡肉面, made with 儿童面, 鸡肉丝, 香菇, 油菜, toddler-friendly 软面.\nStyle/medium: polished cute 3D clay-like render, soft rounded shapes, appetizing, gentle, premium toddler recipe app style.\nComposition/framing: centered a cute plain baby bowl with no printed pattern, three-quarter view, generous padding. Around the dish, place only a few small matching food ingredients from this recipe: 儿童面, 鸡肉丝, 香菇, 油菜. Include exactly one utensil total: one pair of pastel toddler chopsticks placed beside the bowl as a single utensil set. No spoon, no fork, no second chopsticks, no other utensils.\nScene/backdrop: pure white background, clean and bright, very subtle soft shadows only under objects.\nColor palette: warm natural food colors, creamy white dishware, one pastel utensil accent in soft yellow or mint.\nMaterials/textures: smooth ceramic dishware, soft clay-like food texture, rounded friendly utensil shape.\nConstraints: exactly one utensil in the whole image; the food must visually match \"香菇油菜鸡肉面\" and its ingredients; no text, no logo, no watermark, no human, no face on the bowl, no printed pattern on the dishware, no clutter, no messy table, no extra unrelated ingredients."
+  },
+  {
+    "index": 67,
+    "id": "recipe_067",
+    "name": "南瓜牛肉烩饭",
+    "stageId": "19_36m",
+    "dishType": "烩饭",
+    "texture": "烩饭",
+    "mealTypes": [
+      "午餐",
+      "晚餐"
+    ],
+    "ingredients": [
+      "米饭",
+      "牛肉末",
+      "南瓜",
+      "豌豆",
+      "植物油"
+    ],
+    "utensil": "一个叉子",
+    "outputFile": "/Users/mima1234/Desktop/codex开发/开发项目/乖乖吃饭/design-prototypes/recipe-images-batch/optimized/recipe_067.jpg",
+    "prompt": "Use case: stylized-concept\nAsset type: baby recipe thumbnail, square image\nPrimary request: Create a cute 3D food thumbnail for the baby recipe \"南瓜牛肉烩饭\".\nSubject: 南瓜牛肉烩饭, made with 米饭, 牛肉末, 南瓜, 豌豆, toddler-friendly 烩饭.\nStyle/medium: polished cute 3D clay-like render, soft rounded shapes, appetizing, gentle, premium toddler recipe app style.\nComposition/framing: centered a cute plain baby bowl with no printed pattern, three-quarter view, generous padding. Around the dish, place only a few small matching food ingredients from this recipe: 米饭, 牛肉末, 南瓜, 豌豆. Include exactly one utensil total: one pastel baby fork placed beside the dish. No spoon, no chopsticks, no second fork, no other utensils.\nScene/backdrop: pure white background, clean and bright, very subtle soft shadows only under objects.\nColor palette: warm natural food colors, creamy white dishware, one pastel utensil accent in soft yellow or mint.\nMaterials/textures: smooth ceramic dishware, soft clay-like food texture, rounded friendly utensil shape.\nConstraints: exactly one utensil in the whole image; the food must visually match \"南瓜牛肉烩饭\" and its ingredients; no text, no logo, no watermark, no human, no face on the bowl, no printed pattern on the dishware, no clutter, no messy table, no extra unrelated ingredients."
+  },
+  {
+    "index": 68,
+    "id": "recipe_068",
+    "name": "青菜豆腐肉末饭",
+    "stageId": "19_36m",
+    "dishType": "软饭",
+    "texture": "软饭、小块",
+    "mealTypes": [
+      "午餐",
+      "晚餐"
+    ],
+    "ingredients": [
+      "米饭",
+      "猪肉末",
+      "嫩豆腐",
+      "青菜",
+      "植物油"
+    ],
+    "utensil": "一个叉子",
+    "outputFile": "/Users/mima1234/Desktop/codex开发/开发项目/乖乖吃饭/design-prototypes/recipe-images-batch/optimized/recipe_068.jpg",
+    "prompt": "Use case: stylized-concept\nAsset type: baby recipe thumbnail, square image\nPrimary request: Create a cute 3D food thumbnail for the baby recipe \"青菜豆腐肉末饭\".\nSubject: 青菜豆腐肉末饭, made with 米饭, 猪肉末, 嫩豆腐, 青菜, toddler-friendly 软饭、小块.\nStyle/medium: polished cute 3D clay-like render, soft rounded shapes, appetizing, gentle, premium toddler recipe app style.\nComposition/framing: centered a cute plain baby bowl with no printed pattern, three-quarter view, generous padding. Around the dish, place only a few small matching food ingredients from this recipe: 米饭, 猪肉末, 嫩豆腐, 青菜. Include exactly one utensil total: one pastel baby fork placed beside the dish. No spoon, no chopsticks, no second fork, no other utensils.\nScene/backdrop: pure white background, clean and bright, very subtle soft shadows only under objects.\nColor palette: warm natural food colors, creamy white dishware, one pastel utensil accent in soft yellow or mint.\nMaterials/textures: smooth ceramic dishware, soft clay-like food texture, rounded friendly utensil shape.\nConstraints: exactly one utensil in the whole image; the food must visually match \"青菜豆腐肉末饭\" and its ingredients; no text, no logo, no watermark, no human, no face on the bowl, no printed pattern on the dishware, no clutter, no messy table, no extra unrelated ingredients."
+  },
+  {
+    "index": 69,
+    "id": "recipe_069",
+    "name": "土豆鸡肉咖喱风软饭",
+    "stageId": "19_36m",
+    "dishType": "软饭",
+    "texture": "软饭、小块",
+    "mealTypes": [
+      "午餐",
+      "晚餐"
+    ],
+    "ingredients": [
+      "米饭",
+      "鸡肉丁",
+      "土豆",
+      "胡萝卜",
+      "无辣咖喱粉",
+      "植物油"
+    ],
+    "utensil": "一个叉子",
+    "outputFile": "/Users/mima1234/Desktop/codex开发/开发项目/乖乖吃饭/design-prototypes/recipe-images-batch/optimized/recipe_069.jpg",
+    "prompt": "Use case: stylized-concept\nAsset type: baby recipe thumbnail, square image\nPrimary request: Create a cute 3D food thumbnail for the baby recipe \"土豆鸡肉咖喱风软饭\".\nSubject: 土豆鸡肉咖喱风软饭, made with 米饭, 鸡肉丁, 土豆, 胡萝卜, 无辣咖喱粉, toddler-friendly 软饭、小块.\nStyle/medium: polished cute 3D clay-like render, soft rounded shapes, appetizing, gentle, premium toddler recipe app style.\nComposition/framing: centered a cute plain baby bowl with no printed pattern, three-quarter view, generous padding. Around the dish, place only a few small matching food ingredients from this recipe: 米饭, 鸡肉丁, 土豆, 胡萝卜, 无辣咖喱粉. Include exactly one utensil total: one pastel baby fork placed beside the dish. No spoon, no chopsticks, no second fork, no other utensils.\nScene/backdrop: pure white background, clean and bright, very subtle soft shadows only under objects.\nColor palette: warm natural food colors, creamy white dishware, one pastel utensil accent in soft yellow or mint.\nMaterials/textures: smooth ceramic dishware, soft clay-like food texture, rounded friendly utensil shape.\nConstraints: exactly one utensil in the whole image; the food must visually match \"土豆鸡肉咖喱风软饭\" and its ingredients; no text, no logo, no watermark, no human, no face on the bowl, no printed pattern on the dishware, no clutter, no messy table, no extra unrelated ingredients."
+  },
+  {
+    "index": 70,
+    "id": "recipe_070",
+    "name": "鳕鱼番茄蔬菜面",
+    "stageId": "19_36m",
+    "dishType": "软面",
+    "texture": "软面",
+    "mealTypes": [
+      "午餐",
+      "晚餐"
+    ],
+    "ingredients": [
+      "儿童面",
+      "鳕鱼肉",
+      "番茄",
+      "西兰花",
+      "植物油"
+    ],
+    "utensil": "一套餐筷",
+    "outputFile": "/Users/mima1234/Desktop/codex开发/开发项目/乖乖吃饭/design-prototypes/recipe-images-batch/optimized/recipe_070.jpg",
+    "prompt": "Use case: stylized-concept\nAsset type: baby recipe thumbnail, square image\nPrimary request: Create a cute 3D food thumbnail for the baby recipe \"鳕鱼番茄蔬菜面\".\nSubject: 鳕鱼番茄蔬菜面, made with 儿童面, 鳕鱼肉, 番茄, 西兰花, toddler-friendly 软面.\nStyle/medium: polished cute 3D clay-like render, soft rounded shapes, appetizing, gentle, premium toddler recipe app style.\nComposition/framing: centered a cute plain baby bowl with no printed pattern, three-quarter view, generous padding. Around the dish, place only a few small matching food ingredients from this recipe: 儿童面, 鳕鱼肉, 番茄, 西兰花. Include exactly one utensil total: one pair of pastel toddler chopsticks placed beside the bowl as a single utensil set. No spoon, no fork, no second chopsticks, no other utensils.\nScene/backdrop: pure white background, clean and bright, very subtle soft shadows only under objects.\nColor palette: warm natural food colors, creamy white dishware, one pastel utensil accent in soft yellow or mint.\nMaterials/textures: smooth ceramic dishware, soft clay-like food texture, rounded friendly utensil shape.\nConstraints: exactly one utensil in the whole image; the food must visually match \"鳕鱼番茄蔬菜面\" and its ingredients; no text, no logo, no watermark, no human, no face on the bowl, no printed pattern on the dishware, no clutter, no messy table, no extra unrelated ingredients."
+  },
+  {
+    "index": 71,
+    "id": "recipe_071",
+    "name": "虾仁玉米豆腐羹饭",
+    "stageId": "19_36m",
+    "dishType": "汤饭",
+    "texture": "羹饭",
+    "mealTypes": [
+      "午餐",
+      "晚餐"
+    ],
+    "ingredients": [
+      "米饭",
+      "虾仁",
+      "玉米粒",
+      "嫩豆腐",
+      "青菜",
+      "植物油"
+    ],
+    "utensil": "一个勺子",
+    "outputFile": "/Users/mima1234/Desktop/codex开发/开发项目/乖乖吃饭/design-prototypes/recipe-images-batch/optimized/recipe_071.jpg",
+    "prompt": "Use case: stylized-concept\nAsset type: baby recipe thumbnail, square image\nPrimary request: Create a cute 3D food thumbnail for the baby recipe \"虾仁玉米豆腐羹饭\".\nSubject: 虾仁玉米豆腐羹饭, made with 米饭, 虾仁, 玉米粒, 嫩豆腐, 青菜, toddler-friendly 羹饭.\nStyle/medium: polished cute 3D clay-like render, soft rounded shapes, appetizing, gentle, premium toddler recipe app style.\nComposition/framing: centered a cute plain baby bowl with no printed pattern, three-quarter view, generous padding. Around the dish, place only a few small matching food ingredients from this recipe: 米饭, 虾仁, 玉米粒, 嫩豆腐, 青菜. Include exactly one utensil total: one pastel baby spoon placed beside the bowl. No fork, no chopsticks, no second spoon, no other utensils.\nScene/backdrop: pure white background, clean and bright, very subtle soft shadows only under objects.\nColor palette: warm natural food colors, creamy white dishware, one pastel utensil accent in soft yellow or mint.\nMaterials/textures: smooth ceramic dishware, soft clay-like food texture, rounded friendly utensil shape.\nConstraints: exactly one utensil in the whole image; the food must visually match \"虾仁玉米豆腐羹饭\" and its ingredients; no text, no logo, no watermark, no human, no face on the bowl, no printed pattern on the dishware, no clutter, no messy table, no extra unrelated ingredients."
+  },
+  {
+    "index": 72,
+    "id": "recipe_072",
+    "name": "牛肉胡萝卜小馄饨",
+    "stageId": "19_36m",
+    "dishType": "馄饨",
+    "texture": "小馄饨",
+    "mealTypes": [
+      "午餐",
+      "晚餐"
+    ],
+    "ingredients": [
+      "小馄饨皮",
+      "牛肉末",
+      "胡萝卜",
+      "青菜"
+    ],
+    "utensil": "一套餐筷",
+    "outputFile": "/Users/mima1234/Desktop/codex开发/开发项目/乖乖吃饭/design-prototypes/recipe-images-batch/optimized/recipe_072.jpg",
+    "prompt": "Use case: stylized-concept\nAsset type: baby recipe thumbnail, square image\nPrimary request: Create a cute 3D food thumbnail for the baby recipe \"牛肉胡萝卜小馄饨\".\nSubject: 牛肉胡萝卜小馄饨, made with 小馄饨皮, 牛肉末, 胡萝卜, 青菜, toddler-friendly 小馄饨.\nStyle/medium: polished cute 3D clay-like render, soft rounded shapes, appetizing, gentle, premium toddler recipe app style.\nComposition/framing: centered a cute plain baby bowl with no printed pattern, three-quarter view, generous padding. Around the dish, place only a few small matching food ingredients from this recipe: 小馄饨皮, 牛肉末, 胡萝卜, 青菜. Include exactly one utensil total: one pair of pastel toddler chopsticks placed beside the bowl as a single utensil set. No spoon, no fork, no second chopsticks, no other utensils.\nScene/backdrop: pure white background, clean and bright, very subtle soft shadows only under objects.\nColor palette: warm natural food colors, creamy white dishware, one pastel utensil accent in soft yellow or mint.\nMaterials/textures: smooth ceramic dishware, soft clay-like food texture, rounded friendly utensil shape.\nConstraints: exactly one utensil in the whole image; the food must visually match \"牛肉胡萝卜小馄饨\" and its ingredients; no text, no logo, no watermark, no human, no face on the bowl, no printed pattern on the dishware, no clutter, no messy table, no extra unrelated ingredients."
+  },
+  {
+    "index": 73,
+    "id": "recipe_073",
+    "name": "鸡肉西兰花土豆泥饭",
+    "stageId": "19_36m",
+    "dishType": "软饭",
+    "texture": "软饭、小块",
+    "mealTypes": [
+      "午餐",
+      "晚餐"
+    ],
+    "ingredients": [
+      "米饭",
+      "鸡肉丁",
+      "土豆",
+      "西兰花",
+      "植物油"
+    ],
+    "utensil": "一个勺子",
+    "outputFile": "/Users/mima1234/Desktop/codex开发/开发项目/乖乖吃饭/design-prototypes/recipe-images-batch/optimized/recipe_073.jpg",
+    "prompt": "Use case: stylized-concept\nAsset type: baby recipe thumbnail, square image\nPrimary request: Create a cute 3D food thumbnail for the baby recipe \"鸡肉西兰花土豆泥饭\".\nSubject: 鸡肉西兰花土豆泥饭, made with 米饭, 鸡肉丁, 土豆, 西兰花, toddler-friendly 软饭、小块.\nStyle/medium: polished cute 3D clay-like render, soft rounded shapes, appetizing, gentle, premium toddler recipe app style.\nComposition/framing: centered a cute plain baby bowl with no printed pattern, three-quarter view, generous padding. Around the dish, place only a few small matching food ingredients from this recipe: 米饭, 鸡肉丁, 土豆, 西兰花. Include exactly one utensil total: one pastel baby spoon placed beside the bowl. No fork, no chopsticks, no second spoon, no other utensils.\nScene/backdrop: pure white background, clean and bright, very subtle soft shadows only under objects.\nColor palette: warm natural food colors, creamy white dishware, one pastel utensil accent in soft yellow or mint.\nMaterials/textures: smooth ceramic dishware, soft clay-like food texture, rounded friendly utensil shape.\nConstraints: exactly one utensil in the whole image; the food must visually match \"鸡肉西兰花土豆泥饭\" and its ingredients; no text, no logo, no watermark, no human, no face on the bowl, no printed pattern on the dishware, no clutter, no messy table, no extra unrelated ingredients."
+  },
+  {
+    "index": 74,
+    "id": "recipe_074",
+    "name": "番茄豆腐鱼肉汤面",
+    "stageId": "19_36m",
+    "dishType": "汤面",
+    "texture": "汤面",
+    "mealTypes": [
+      "午餐",
+      "晚餐"
+    ],
+    "ingredients": [
+      "儿童面",
+      "鱼肉",
+      "嫩豆腐",
+      "番茄",
+      "青菜"
+    ],
+    "utensil": "一套餐筷",
+    "outputFile": "/Users/mima1234/Desktop/codex开发/开发项目/乖乖吃饭/design-prototypes/recipe-images-batch/optimized/recipe_074.jpg",
+    "prompt": "Use case: stylized-concept\nAsset type: baby recipe thumbnail, square image\nPrimary request: Create a cute 3D food thumbnail for the baby recipe \"番茄豆腐鱼肉汤面\".\nSubject: 番茄豆腐鱼肉汤面, made with 儿童面, 鱼肉, 嫩豆腐, 番茄, 青菜, toddler-friendly 汤面.\nStyle/medium: polished cute 3D clay-like render, soft rounded shapes, appetizing, gentle, premium toddler recipe app style.\nComposition/framing: centered a cute plain baby bowl with no printed pattern, three-quarter view, generous padding. Around the dish, place only a few small matching food ingredients from this recipe: 儿童面, 鱼肉, 嫩豆腐, 番茄, 青菜. Include exactly one utensil total: one pair of pastel toddler chopsticks placed beside the bowl as a single utensil set. No spoon, no fork, no second chopsticks, no other utensils.\nScene/backdrop: pure white background, clean and bright, very subtle soft shadows only under objects.\nColor palette: warm natural food colors, creamy white dishware, one pastel utensil accent in soft yellow or mint.\nMaterials/textures: smooth ceramic dishware, soft clay-like food texture, rounded friendly utensil shape.\nConstraints: exactly one utensil in the whole image; the food must visually match \"番茄豆腐鱼肉汤面\" and its ingredients; no text, no logo, no watermark, no human, no face on the bowl, no printed pattern on the dishware, no clutter, no messy table, no extra unrelated ingredients."
+  },
+  {
+    "index": 75,
+    "id": "recipe_075",
+    "name": "猪肉白菜软饺子",
+    "stageId": "19_36m",
+    "dishType": "饺子",
+    "texture": "小饺子",
+    "mealTypes": [
+      "午餐",
+      "晚餐"
+    ],
+    "ingredients": [
+      "饺子皮",
+      "猪肉末",
+      "白菜",
+      "胡萝卜"
+    ],
+    "utensil": "一个叉子",
+    "outputFile": "/Users/mima1234/Desktop/codex开发/开发项目/乖乖吃饭/design-prototypes/recipe-images-batch/optimized/recipe_075.jpg",
+    "prompt": "Use case: stylized-concept\nAsset type: baby recipe thumbnail, square image\nPrimary request: Create a cute 3D food thumbnail for the baby recipe \"猪肉白菜软饺子\".\nSubject: 猪肉白菜软饺子, made with 饺子皮, 猪肉末, 白菜, 胡萝卜, toddler-friendly 小饺子.\nStyle/medium: polished cute 3D clay-like render, soft rounded shapes, appetizing, gentle, premium toddler recipe app style.\nComposition/framing: centered a cute plain baby bowl with no printed pattern, three-quarter view, generous padding. Around the dish, place only a few small matching food ingredients from this recipe: 饺子皮, 猪肉末, 白菜, 胡萝卜. Include exactly one utensil total: one pastel baby fork placed beside the dish. No spoon, no chopsticks, no second fork, no other utensils.\nScene/backdrop: pure white background, clean and bright, very subtle soft shadows only under objects.\nColor palette: warm natural food colors, creamy white dishware, one pastel utensil accent in soft yellow or mint.\nMaterials/textures: smooth ceramic dishware, soft clay-like food texture, rounded friendly utensil shape.\nConstraints: exactly one utensil in the whole image; the food must visually match \"猪肉白菜软饺子\" and its ingredients; no text, no logo, no watermark, no human, no face on the bowl, no printed pattern on the dishware, no clutter, no messy table, no extra unrelated ingredients."
+  },
+  {
+    "index": 76,
+    "id": "recipe_076",
+    "name": "彩蔬鸡蛋炒软饭",
+    "stageId": "19_36m",
+    "dishType": "软饭",
+    "texture": "软饭、小块",
+    "mealTypes": [
+      "午餐",
+      "晚餐"
+    ],
+    "ingredients": [
+      "米饭",
+      "鸡蛋",
+      "胡萝卜",
+      "玉米粒",
+      "青豆",
+      "植物油"
+    ],
+    "utensil": "一个叉子",
+    "outputFile": "/Users/mima1234/Desktop/codex开发/开发项目/乖乖吃饭/design-prototypes/recipe-images-batch/optimized/recipe_076.jpg",
+    "prompt": "Use case: stylized-concept\nAsset type: baby recipe thumbnail, square image\nPrimary request: Create a cute 3D food thumbnail for the baby recipe \"彩蔬鸡蛋炒软饭\".\nSubject: 彩蔬鸡蛋炒软饭, made with 米饭, 鸡蛋, 胡萝卜, 玉米粒, 青豆, toddler-friendly 软饭、小块.\nStyle/medium: polished cute 3D clay-like render, soft rounded shapes, appetizing, gentle, premium toddler recipe app style.\nComposition/framing: centered a cute plain baby bowl with no printed pattern, three-quarter view, generous padding. Around the dish, place only a few small matching food ingredients from this recipe: 米饭, 鸡蛋, 胡萝卜, 玉米粒, 青豆. Include exactly one utensil total: one pastel baby fork placed beside the dish. No spoon, no chopsticks, no second fork, no other utensils.\nScene/backdrop: pure white background, clean and bright, very subtle soft shadows only under objects.\nColor palette: warm natural food colors, creamy white dishware, one pastel utensil accent in soft yellow or mint.\nMaterials/textures: smooth ceramic dishware, soft clay-like food texture, rounded friendly utensil shape.\nConstraints: exactly one utensil in the whole image; the food must visually match \"彩蔬鸡蛋炒软饭\" and its ingredients; no text, no logo, no watermark, no human, no face on the bowl, no printed pattern on the dishware, no clutter, no messy table, no extra unrelated ingredients."
+  },
+  {
+    "index": 77,
+    "id": "recipe_077",
+    "name": "香菇牛肉粥",
+    "stageId": "19_36m",
+    "dishType": "粥类",
+    "texture": "软烂粥状",
+    "mealTypes": [
+      "午餐",
+      "晚餐"
+    ],
+    "ingredients": [
+      "大米",
+      "牛肉末",
+      "香菇",
+      "青菜",
+      "植物油"
+    ],
+    "utensil": "一个勺子",
+    "outputFile": "/Users/mima1234/Desktop/codex开发/开发项目/乖乖吃饭/design-prototypes/recipe-images-batch/optimized/recipe_077.jpg",
+    "prompt": "Use case: stylized-concept\nAsset type: baby recipe thumbnail, square image\nPrimary request: Create a cute 3D food thumbnail for the baby recipe \"香菇牛肉粥\".\nSubject: 香菇牛肉粥, made with 大米, 牛肉末, 香菇, 青菜, toddler-friendly 软烂粥状.\nStyle/medium: polished cute 3D clay-like render, soft rounded shapes, appetizing, gentle, premium toddler recipe app style.\nComposition/framing: centered a cute plain baby bowl with no printed pattern, three-quarter view, generous padding. Around the dish, place only a few small matching food ingredients from this recipe: 大米, 牛肉末, 香菇, 青菜. Include exactly one utensil total: one pastel baby spoon placed beside the bowl. No fork, no chopsticks, no second spoon, no other utensils.\nScene/backdrop: pure white background, clean and bright, very subtle soft shadows only under objects.\nColor palette: warm natural food colors, creamy white dishware, one pastel utensil accent in soft yellow or mint.\nMaterials/textures: smooth ceramic dishware, soft clay-like food texture, rounded friendly utensil shape.\nConstraints: exactly one utensil in the whole image; the food must visually match \"香菇牛肉粥\" and its ingredients; no text, no logo, no watermark, no human, no face on the bowl, no printed pattern on the dishware, no clutter, no messy table, no extra unrelated ingredients."
+  },
+  {
+    "index": 78,
+    "id": "recipe_078",
+    "name": "茄汁鸡肉丸软饭",
+    "stageId": "19_36m",
+    "dishType": "软饭",
+    "texture": "软饭、小块",
+    "mealTypes": [
+      "午餐",
+      "晚餐"
+    ],
+    "ingredients": [
+      "米饭",
+      "鸡肉丸",
+      "番茄",
+      "西兰花",
+      "植物油"
+    ],
+    "utensil": "一个叉子",
+    "outputFile": "/Users/mima1234/Desktop/codex开发/开发项目/乖乖吃饭/design-prototypes/recipe-images-batch/optimized/recipe_078.jpg",
+    "prompt": "Use case: stylized-concept\nAsset type: baby recipe thumbnail, square image\nPrimary request: Create a cute 3D food thumbnail for the baby recipe \"茄汁鸡肉丸软饭\".\nSubject: 茄汁鸡肉丸软饭, made with 米饭, 鸡肉丸, 番茄, 西兰花, toddler-friendly 软饭、小块.\nStyle/medium: polished cute 3D clay-like render, soft rounded shapes, appetizing, gentle, premium toddler recipe app style.\nComposition/framing: centered a cute plain toddler plate or shallow bowl with no printed pattern, three-quarter view, generous padding. Around the dish, place only a few small matching food ingredients from this recipe: 米饭, 鸡肉丸, 番茄, 西兰花. Include exactly one utensil total: one pastel baby fork placed beside the dish. No spoon, no chopsticks, no second fork, no other utensils.\nScene/backdrop: pure white background, clean and bright, very subtle soft shadows only under objects.\nColor palette: warm natural food colors, creamy white dishware, one pastel utensil accent in soft yellow or mint.\nMaterials/textures: smooth ceramic dishware, soft clay-like food texture, rounded friendly utensil shape.\nConstraints: exactly one utensil in the whole image; the food must visually match \"茄汁鸡肉丸软饭\" and its ingredients; no text, no logo, no watermark, no human, no face on the bowl, no printed pattern on the dishware, no clutter, no messy table, no extra unrelated ingredients."
+  },
+  {
+    "index": 79,
+    "id": "recipe_079",
+    "name": "胡萝卜鳕鱼小饼配粥",
+    "stageId": "19_36m",
+    "dishType": "软饼",
+    "texture": "软饼配粥",
+    "mealTypes": [
+      "午餐",
+      "晚餐"
+    ],
+    "ingredients": [
+      "鳕鱼肉",
+      "胡萝卜",
+      "面粉",
+      "大米粥",
+      "植物油"
+    ],
+    "utensil": "一个勺子",
+    "outputFile": "/Users/mima1234/Desktop/codex开发/开发项目/乖乖吃饭/design-prototypes/recipe-images-batch/optimized/recipe_079.jpg",
+    "prompt": "Use case: stylized-concept\nAsset type: baby recipe thumbnail, square image\nPrimary request: Create a cute 3D food thumbnail for the baby recipe \"胡萝卜鳕鱼小饼配粥\".\nSubject: 胡萝卜鳕鱼小饼配粥, made with 鳕鱼肉, 胡萝卜, 面粉, 大米粥, toddler-friendly 软饼配粥.\nStyle/medium: polished cute 3D clay-like render, soft rounded shapes, appetizing, gentle, premium toddler recipe app style.\nComposition/framing: centered a cute plain toddler plate or shallow bowl with no printed pattern, three-quarter view, generous padding. Around the dish, place only a few small matching food ingredients from this recipe: 鳕鱼肉, 胡萝卜, 面粉, 大米粥. Include exactly one utensil total: one pastel baby spoon placed beside the bowl. No fork, no chopsticks, no second spoon, no other utensils.\nScene/backdrop: pure white background, clean and bright, very subtle soft shadows only under objects.\nColor palette: warm natural food colors, creamy white dishware, one pastel utensil accent in soft yellow or mint.\nMaterials/textures: smooth ceramic dishware, soft clay-like food texture, rounded friendly utensil shape.\nConstraints: exactly one utensil in the whole image; the food must visually match \"胡萝卜鳕鱼小饼配粥\" and its ingredients; no text, no logo, no watermark, no human, no face on the bowl, no printed pattern on the dishware, no clutter, no messy table, no extra unrelated ingredients."
+  },
+  {
+    "index": 80,
+    "id": "recipe_080",
+    "name": "冬瓜虾仁面片汤",
+    "stageId": "19_36m",
+    "dishType": "面片汤",
+    "texture": "面片汤",
+    "mealTypes": [
+      "午餐",
+      "晚餐"
+    ],
+    "ingredients": [
+      "小面片",
+      "虾仁",
+      "冬瓜",
+      "小青菜",
+      "植物油"
+    ],
+    "utensil": "一套餐筷",
+    "outputFile": "/Users/mima1234/Desktop/codex开发/开发项目/乖乖吃饭/design-prototypes/recipe-images-batch/optimized/recipe_080.jpg",
+    "prompt": "Use case: stylized-concept\nAsset type: baby recipe thumbnail, square image\nPrimary request: Create a cute 3D food thumbnail for the baby recipe \"冬瓜虾仁面片汤\".\nSubject: 冬瓜虾仁面片汤, made with 小面片, 虾仁, 冬瓜, 小青菜, toddler-friendly 面片汤.\nStyle/medium: polished cute 3D clay-like render, soft rounded shapes, appetizing, gentle, premium toddler recipe app style.\nComposition/framing: centered a cute plain baby bowl with no printed pattern, three-quarter view, generous padding. Around the dish, place only a few small matching food ingredients from this recipe: 小面片, 虾仁, 冬瓜, 小青菜. Include exactly one utensil total: one pair of pastel toddler chopsticks placed beside the bowl as a single utensil set. No spoon, no fork, no second chopsticks, no other utensils.\nScene/backdrop: pure white background, clean and bright, very subtle soft shadows only under objects.\nColor palette: warm natural food colors, creamy white dishware, one pastel utensil accent in soft yellow or mint.\nMaterials/textures: smooth ceramic dishware, soft clay-like food texture, rounded friendly utensil shape.\nConstraints: exactly one utensil in the whole image; the food must visually match \"冬瓜虾仁面片汤\" and its ingredients; no text, no logo, no watermark, no human, no face on the bowl, no printed pattern on the dishware, no clutter, no messy table, no extra unrelated ingredients."
+  }
+]
