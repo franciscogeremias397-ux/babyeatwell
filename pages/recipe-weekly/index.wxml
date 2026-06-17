@@ -6,7 +6,7 @@
       <view class="stage-line">{{profile.nickname}} · {{ageMonths}} 月龄 · {{stageName}}</view>
       <view class="usage-note">食材用量为家庭参考量 <text class="info-dot">i</text></view>
     </view>
-    <image class="hero-image" src="/assets/recipes/default-meal.png" mode="aspectFill" />
+    <image class="hero-image" src="{{heroImage}}" mode="aspectFill" />
   </view>
 
   <view wx:if="{{warning}}" class="empty-state">
@@ -49,7 +49,8 @@
 
     <view class="weekly-actions bottom-safe">
       <button class="secondary-button regenerate" hover-class="pressing" bindtap="generate">重新生成</button>
-      <button class="primary-button download-button" hover-class="pressing" bindtap="downloadWeekly">下载食谱</button>
+      <button class="primary-button download-button" hover-class="pressing" bindtap="downloadWeekly">保存长图</button>
     </view>
   </block>
+  <canvas canvas-id="weeklyCardCanvas" class="save-canvas" style="width: 750px; height: {{weeklyCanvasHeight}}px;"></canvas>
 </view>

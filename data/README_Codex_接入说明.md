@@ -20,7 +20,7 @@
 5. 注意事项必须直接读取 `recipe.cautions`。
 6. 过敏/忌口过滤必须使用 `recipe.allergens + recipe.avoidTags` 与宝宝档案标准标签比对。
 7. 如果经过过滤后食谱池不足，必须提示“可用食谱不足”，不得临时编造新食谱。
-8. 图片路径必须使用 `recipe.image`，文件名格式为 `/assets/recipes/recipe_001.png` 到 `/assets/recipes/recipe_080.png`。
+8. 食谱图片展示必须通过 `utils/media.js` 的 `recipeImage(recipe)` 获取。80 张正式图上传到云存储后，统一在媒体配置里切换；不要把云端域名或云文件 ID 分散写进页面。
 
 ## 宝宝档案要求
 

@@ -1,6 +1,7 @@
 const recipe = require('../../utils/recipe');
+const media = require('../../utils/media');
+const card = require('../../utils/card');
 
-const DEFAULT_MEAL_IMAGE = '/assets/recipes/default-meal.png';
 const DAY_COLORS = ['#64a8ff', '#81cf55', '#ff9a2e', '#ff7aa3', '#64a8ff', '#81cf55', '#ff9a2e'];
 
 function formatMonthDay(date) {
@@ -26,7 +27,7 @@ function buildDisplayDays(days) {
       accent: DAY_COLORS[index % DAY_COLORS.length],
       meals: (day.meals || []).map((meal) => Object.assign({}, meal, {
         id: meal.recipe ? meal.recipe.id : '',
-        image: DEFAULT_MEAL_IMAGE,
+        image: media.recipeImage(meal.recipe),
         name: meal.recipe ? meal.recipe.name : '暂无食谱',
         desc: meal.recipe ? `${meal.recipe.texture} · ${meal.recipe.mainStaple}` : ''
       }))
@@ -41,6 +42,8 @@ Page({
     stageName: '',
     warning: '',
     needsProfileAction: false,
+    heroImage: media.recipePlaceholder,
+    weeklyCanvasHeight: 2200,
     days: [],
     displayDays: []
   },
@@ -66,6 +69,7 @@ Page({
     }
     this.setData(Object.assign({}, plan, {
       needsProfileAction: plan.stageId === 'profile_required' || (plan.stageId || '').indexOf('unsupported') === 0,
+      heroImage: media.recipeImage(plan.days && plan.days[0] && plan.days[0].meals && plan.days[0].meals[0] && plan.days[0].meals[0].recipe),
       displayDays: buildDisplayDays(plan.days)
     }));
   },
@@ -85,23 +89,15 @@ Page({
   },
 
   downloadWeekly() {
-    const lines = [`${this.data.profile.nickname}的一周食谱`, `${this.data.ageMonths} 月龄 · ${this.data.stageName}`, ''];
-    this.data.days.forEach((day) => {
-      lines.push(day.dayName);
-      day.meals.forEach((meal) => {
-        lines.push(`${meal.mealType}：${meal.recipe ? meal.recipe.name : '暂无食谱'}`);
-      });
-      lines.push('');
-    });
-    lines.push('本食谱为家庭饮食参考，不替代医生或营养师建议。');
-
-    wx.setClipboardData({
-      data: lines.join('\n'),
-      success() {
-        wx.showToast({
-          title: '已复制食谱'
-        });
-      }
+    if (!this.data.displayDays.length) return;
+    card.saveWeeklyCard({
+      page: this,
+      canvasId: 'weeklyCardCanvas',
+      heightKey: 'weeklyCanvasHeight',
+      nickname: this.data.profile.nickname,
+      ageMonths: this.data.ageMonths,
+      stageName: this.data.stageName,
+      days: this.data.displayDays
     });
   }
 });

@@ -135,6 +135,15 @@ button::after {
   box-shadow: 0 10rpx 24rpx rgba(64, 104, 144, 0.12);
 }
 
+.save-canvas {
+  position: fixed;
+  left: -9999px;
+  top: 0;
+  z-index: -1;
+  opacity: 0;
+  pointer-events: none;
+}
+
 @keyframes fadeRise {
   from {
     opacity: 0;

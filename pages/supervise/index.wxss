@@ -146,12 +146,21 @@
   width: 100vw;
   height: 100vh;
   opacity: 0;
+  z-index: 1;
+  background: #10100f;
   transition: opacity 180ms ease;
+  will-change: opacity;
 }
 
 .call-video.active {
   opacity: 1;
+  z-index: 2;
+}
+
+.call-video.standby {
+  opacity: 0;
   z-index: 1;
+  pointer-events: none;
 }
 
 .call-shade {
@@ -246,10 +255,6 @@
   border-radius: 50%;
   background: transparent;
   box-shadow: none;
-}
-
-.control[disabled] {
-  opacity: 0.58;
 }
 
 .control-image {

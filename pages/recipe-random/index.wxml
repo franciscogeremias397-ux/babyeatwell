@@ -56,7 +56,7 @@
 
     <view class="random-actions bottom-safe">
       <button class="secondary-button change-button" hover-class="pressing" bindtap="draw" disabled="{{isDrawing}}">换一餐</button>
-      <button class="primary-button download-button" hover-class="pressing" bindtap="downloadRecipe">下载食谱</button>
+      <button class="primary-button download-button" hover-class="pressing" bindtap="downloadRecipe">保存食谱卡</button>
     </view>
   </view>
 
@@ -66,4 +66,5 @@
     <view class="empty-copy">如果页面停在这里，可以点下面重新抽取。</view>
     <button class="detail-link retry-button pressable" hover-class="pressing" bindtap="draw">开始抽取</button>
   </view>
+  <canvas canvas-id="recipeCardCanvas" class="save-canvas" style="width: 750px; height: {{cardCanvasHeight}}px;"></canvas>
 </view>

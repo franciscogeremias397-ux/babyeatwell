@@ -23,6 +23,26 @@
         "type": "file"
       },
       {
+        "value": "assets/audio/ringtone.m4a",
+        "type": "file"
+      },
+      {
+        "value": "assets/ui/dogdan-logo.png",
+        "type": "file"
+      },
+      {
+        "value": "assets/ui/guai-logo.png",
+        "type": "file"
+      },
+      {
+        "value": "assets/ui/goodbye.png",
+        "type": "file"
+      },
+      {
+        "value": "assets/ui/call-button.png",
+        "type": "file"
+      },
+      {
         "value": "preview-*.png",
         "type": "glob"
       },

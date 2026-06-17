@@ -8,7 +8,7 @@
     </view>
 
     <view class="detail-hero">
-      <image class="hero-image" src="{{image}}" mode="aspectFill" />
+      <image class="hero-image" src="{{image}}" mode="aspectFit" />
     </view>
 
     <view class="stats-card">
@@ -65,9 +65,10 @@
     </view>
 
     <view class="detail-actions bottom-safe">
-      <button class="primary-button detail-download" hover-class="pressing" bindtap="downloadRecipe">下载食谱卡</button>
+      <button class="primary-button detail-download" hover-class="pressing" bindtap="downloadRecipe">保存食谱卡</button>
     </view>
   </view>
 
   <view wx:else class="empty-state">没有找到这道食谱。</view>
+  <canvas canvas-id="recipeCardCanvas" class="save-canvas" style="width: 750px; height: {{cardCanvasHeight}}px;"></canvas>
 </view>

@@ -1,10 +1,13 @@
 const recipeUtil = require('../../utils/recipe');
+const media = require('../../utils/media');
+const card = require('../../utils/card');
 
 Page({
   data: {
     recipe: null,
     ingredientChips: [],
-    image: '/assets/recipes/default-meal.png'
+    image: media.recipePlaceholder,
+    cardCanvasHeight: 1600
   },
 
   onLoad(query) {
@@ -15,7 +18,7 @@ Page({
         mealTypesText: (item.mealTypes || []).join(' / ')
       }),
       ingredientChips: (item.ingredients || []).map((ingredient) => `${ingredient.name} ${ingredient.amount}${ingredient.unit}`),
-      image: '/assets/recipes/default-meal.png'
+      image: media.recipeImage(item)
     });
   },
 
@@ -32,36 +35,13 @@ Page({
   downloadRecipe() {
     const item = this.data.recipe;
     if (!item) return;
-    const lines = [
-      item.name,
-      `${item.ageMinMonths}-${item.ageMaxMonths} 月龄 · ${item.texture}`,
-      '',
-      `食材：${recipeUtil.summarizeIngredients(item)}`,
-      '',
-      '制作步骤：'
-    ]
-      .concat((item.steps || []).map((step, index) => `${index + 1}. ${step}`))
-      .concat([
-        '',
-        '营养亮点：'
-      ])
-      .concat(item.nutritionHighlights || [])
-      .concat([
-      '',
-        '注意事项：'
-      ])
-      .concat(item.cautions || [])
-      .concat([
-        '',
-        '本食谱为家庭饮食参考，不替代医生或营养师建议。'
-      ]);
-    wx.setClipboardData({
-      data: lines.join('\n'),
-      success() {
-        wx.showToast({
-          title: '已复制食谱'
-        });
-      }
+    card.saveRecipeCard({
+      page: this,
+      canvasId: 'recipeCardCanvas',
+      heightKey: 'cardCanvasHeight',
+      recipe: item,
+      image: this.data.image,
+      metaText: `${item.ageMinMonths}-${item.ageMaxMonths} 月龄 · ${item.mealTypesText}`
     });
   }
 });

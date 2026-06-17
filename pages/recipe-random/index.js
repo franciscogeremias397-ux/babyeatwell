@@ -1,4 +1,6 @@
 const recipeUtil = require('../../utils/recipe');
+const media = require('../../utils/media');
+const card = require('../../utils/card');
 
 Page({
   data: {
@@ -10,11 +12,12 @@ Page({
     ingredients: '',
     ingredientChips: [],
     mealTypesText: '',
-    image: '/assets/recipes/default-meal.png',
+    image: media.recipePlaceholder,
     isDrawing: false,
     rollingName: '宝宝餐',
     emptyText: '',
-    needsProfileAction: false
+    needsProfileAction: false,
+    cardCanvasHeight: 1600
   },
 
   onLoad() {
@@ -100,7 +103,7 @@ Page({
         ingredients: '',
         ingredientChips: [],
         mealTypesText: '',
-        image: '/assets/recipes/default-meal.png',
+        image: media.recipePlaceholder,
         isDrawing: false,
         rollingName: '宝宝餐',
         emptyText: '暂时没有匹配到合适的一餐，可以调整宝宝档案里的过敏或不吃食材后再试。',
@@ -114,7 +117,7 @@ Page({
       ingredients: result.recipe ? recipeUtil.summarizeIngredients(result.recipe) : '',
       ingredientChips,
       mealTypesText: result.recipe ? (result.recipe.mealTypes || []).join(' / ') : '',
-      image: '/assets/recipes/default-meal.png',
+      image: media.recipeImage(result.recipe),
       isDrawing: false,
       rollingName: result.recipe ? result.recipe.name : '宝宝餐',
       emptyText: '',
@@ -150,31 +153,13 @@ Page({
   downloadRecipe() {
     if (!this.data.recipe) return;
     const item = this.data.recipe;
-    const lines = [
-      item.name,
-      `${this.data.ageMonths} 月龄 · ${item.texture}`,
-      '',
-      `食材：${recipeUtil.summarizeIngredients(item)}`,
-      '',
-      '制作步骤：'
-    ]
-      .concat((item.steps || []).map((step, index) => `${index + 1}. ${step}`))
-      .concat([
-        '',
-        '营养亮点：'
-      ])
-      .concat(item.nutritionHighlights || [])
-      .concat([
-      '',
-        '本食谱为家庭饮食参考，不替代医生或营养师建议。'
-      ]);
-    wx.setClipboardData({
-      data: lines.join('\n'),
-      success() {
-        wx.showToast({
-          title: '已复制食谱'
-        });
-      }
+    card.saveRecipeCard({
+      page: this,
+      canvasId: 'recipeCardCanvas',
+      heightKey: 'cardCanvasHeight',
+      recipe: item,
+      image: this.data.image,
+      metaText: `${item.ageMinMonths}-${item.ageMaxMonths} 月龄 · ${this.data.mealTypesText}`
     });
   }
 });

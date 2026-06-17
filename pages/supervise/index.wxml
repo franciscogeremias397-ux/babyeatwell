@@ -21,17 +21,40 @@
 
   <view wx:else class="call-screen">
     <video
-      wx:if="{{currentVideo}}"
-      id="callVideo"
-      class="call-video active"
-      src="{{currentVideo}}"
+      wx:if="{{frontVideo}}"
+      id="frontVideo"
+      data-layer="front"
+      class="call-video {{activeLayer === 'front' ? 'active' : 'standby'}}"
+      src="{{frontVideo}}"
       object-fit="cover"
       autoplay="{{true}}"
-      loop="{{isLooping}}"
+      loop="{{frontLoop}}"
+      muted="{{frontMuted}}"
       controls="{{false}}"
       show-center-play-btn="{{false}}"
       show-fullscreen-btn="{{false}}"
       enable-progress-gesture="{{false}}"
+      poster="/assets/ui/idle-poster.jpg"
+      bindcanplay="onVideoReady"
+      bindloadedmetadata="onVideoReady"
+      binderror="onVideoError"
+      bindended="onVideoEnded"
+    />
+    <video
+      wx:if="{{backVideo}}"
+      id="backVideo"
+      data-layer="back"
+      class="call-video {{activeLayer === 'back' ? 'active' : 'standby'}}"
+      src="{{backVideo}}"
+      object-fit="cover"
+      autoplay="{{true}}"
+      loop="{{backLoop}}"
+      muted="{{backMuted}}"
+      controls="{{false}}"
+      show-center-play-btn="{{false}}"
+      show-fullscreen-btn="{{false}}"
+      enable-progress-gesture="{{false}}"
+      poster="/assets/ui/idle-poster.jpg"
       bindcanplay="onVideoReady"
       bindloadedmetadata="onVideoReady"
       binderror="onVideoError"
@@ -50,15 +73,15 @@
     </view>
 
     <view wx:if="{{stage === 'connected' && videoMode !== 'opening'}}" class="control-bar">
-      <button class="control warn pressable" hover-class="pressing" bindtap="playWarning" disabled="{{isSwitching || videoMode !== 'idle'}}">
+      <view class="control warn" bindtap="playWarning">
         <image class="control-image" src="/assets/ui/action-remind.png" mode="aspectFit" />
-      </button>
-      <button class="control praise pressable" hover-class="pressing" bindtap="playPraise" disabled="{{isSwitching || videoMode !== 'idle'}}">
+      </view>
+      <view class="control praise" bindtap="playPraise">
         <image class="control-image" src="/assets/ui/action-praise.png" mode="aspectFit" />
-      </button>
-      <button class="control finish pressable" hover-class="pressing" bindtap="finishCall" disabled="{{isSwitching}}">
+      </view>
+      <view class="control finish" bindtap="finishCall">
         <image class="control-image" src="/assets/ui/action-wave.png" mode="aspectFit" />
-      </button>
+      </view>
     </view>
   </view>
 </view>

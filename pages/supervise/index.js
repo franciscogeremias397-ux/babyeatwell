@@ -1,8 +1,34 @@
 const assets = require('./assets');
 
+const VIDEO_FADE_MS = 220;
+
 function toList(candidates) {
   if (!Array.isArray(candidates)) return candidates ? [candidates] : [];
   return candidates.filter(Boolean);
+}
+
+function otherLayer(layer) {
+  return layer === 'front' ? 'back' : 'front';
+}
+
+function videoKey(layer) {
+  return `${layer}Video`;
+}
+
+function loopKey(layer) {
+  return `${layer}Loop`;
+}
+
+function mutedKey(layer) {
+  return `${layer}Muted`;
+}
+
+function layerPatch(layer, values) {
+  const patch = {};
+  if (Object.prototype.hasOwnProperty.call(values, 'video')) patch[videoKey(layer)] = values.video;
+  if (Object.prototype.hasOwnProperty.call(values, 'loop')) patch[loopKey(layer)] = !!values.loop;
+  if (Object.prototype.hasOwnProperty.call(values, 'muted')) patch[mutedKey(layer)] = !!values.muted;
+  return patch;
 }
 
 Page({
@@ -11,6 +37,13 @@ Page({
     timerText: '00:00',
     callingTimerText: '00:00',
     currentVideo: '',
+    frontVideo: '',
+    backVideo: '',
+    activeLayer: 'front',
+    frontLoop: false,
+    backLoop: false,
+    frontMuted: false,
+    backMuted: true,
     isLooping: false,
     isSwitching: false,
     callStatusText: '通话中',
@@ -28,6 +61,13 @@ Page({
       timerText: '00:00',
       callingTimerText: '00:00',
       currentVideo: '',
+      frontVideo: '',
+      backVideo: '',
+      activeLayer: 'front',
+      frontLoop: false,
+      backLoop: false,
+      frontMuted: false,
+      backMuted: true,
       isLooping: false,
       isSwitching: false,
       callStatusText: '正在呼叫',
@@ -59,6 +99,13 @@ Page({
       timerText: '00:00',
       callingTimerText: '00:00',
       currentVideo: '',
+      frontVideo: '',
+      backVideo: '',
+      activeLayer: 'front',
+      frontLoop: false,
+      backLoop: false,
+      frontMuted: false,
+      backMuted: true,
       isLooping: false,
       isSwitching: false,
       callStatusText: '通话中',
@@ -77,7 +124,7 @@ Page({
   },
 
   playWarning() {
-    if (this.data.stage !== 'connected' || this.data.videoMode !== 'idle') return;
+    if (this.data.stage !== 'connected' || this.data.isSwitching || this.data.videoMode !== 'idle') return;
     const group = this.randomItem(assets.videos.warning);
     this.playVideo(group, {
       mode: 'action',
@@ -86,7 +133,7 @@ Page({
   },
 
   playPraise() {
-    if (this.data.stage !== 'connected' || this.data.videoMode !== 'idle') return;
+    if (this.data.stage !== 'connected' || this.data.isSwitching || this.data.videoMode !== 'idle') return;
     const group = this.randomItem(assets.videos.praise);
     this.playVideo(group, {
       mode: 'action',
@@ -95,7 +142,7 @@ Page({
   },
 
   finishCall() {
-    if (this.data.stage === 'ending') return;
+    if (this.data.stage === 'ending' || this.data.isSwitching) return;
     this.stopRingtone();
     this.setData({
       stage: 'ending',
@@ -117,17 +164,46 @@ Page({
     const list = toList(candidates);
     if (!list.length) return;
 
+    const mode = options.mode || 'action';
+    const loop = !!options.loop;
+    const activeLayer = this.data.activeLayer || 'front';
+    const hasActiveVideo = !!this.data[videoKey(activeLayer)];
+    const targetLayer = hasActiveVideo ? otherLayer(activeLayer) : activeLayer;
+
     this.videoCandidates = list;
     this.videoCandidateIndex = 0;
+    this.prepareVideoLayer(targetLayer, list[0], {
+      mode,
+      loop,
+      direct: !hasActiveVideo
+    });
+  },
+
+  prepareVideoLayer(layer, src, options = {}) {
+    this.pendingLayer = layer;
+    this.pendingVideoMode = options.mode || 'action';
+    this.pendingVideoLoop = !!options.loop;
     this.clearVideoReadyGuard();
-    this.setData({
-      currentVideo: list[0],
-      videoMode: options.mode || 'action',
+
+    const patch = Object.assign({
+      currentVideo: src,
       isLooping: !!options.loop,
       isSwitching: true
-    }, () => {
-      this.scheduleVideoReadyGuard();
-      this.playCurrentVideo();
+    }, layerPatch(layer, {
+      video: src,
+      loop: !!options.loop,
+      muted: !options.direct
+    }));
+
+    if (options.direct) {
+      patch.activeLayer = layer;
+      patch.videoMode = this.pendingVideoMode;
+      patch[mutedKey(layer)] = false;
+    }
+
+    this.setData(patch, () => {
+      this.scheduleVideoReadyGuard(layer);
+      this.playLayer(layer);
     });
   },
 
@@ -138,37 +214,69 @@ Page({
     });
   },
 
-  onVideoReady() {
-    if (!this.data.isSwitching) return;
-    this.clearVideoReadyGuard();
-    this.setData({
+  onVideoReady(event) {
+    const layer = event && event.currentTarget && event.currentTarget.dataset
+      ? event.currentTarget.dataset.layer
+      : '';
+    if (!layer || layer !== this.pendingLayer) return;
+    this.activatePendingVideo(layer);
+  },
+
+  activatePendingVideo(layer) {
+    if (!this.data.isSwitching || layer !== this.pendingLayer) return;
+
+    const oldLayer = this.data.activeLayer && this.data.activeLayer !== layer ? this.data.activeLayer : '';
+    const mode = this.pendingVideoMode || 'action';
+    const loop = !!this.pendingVideoLoop;
+    const patch = {
+      activeLayer: layer,
+      videoMode: mode,
+      isLooping: loop,
       isSwitching: false
-    }, () => {
-      this.playCurrentVideo();
+    };
+
+    patch[mutedKey(layer)] = false;
+    if (oldLayer) {
+      patch[mutedKey(oldLayer)] = true;
+    }
+
+    this.clearVideoReadyGuard();
+    this.pendingLayer = '';
+    this.setData(patch, () => {
+      this.playLayer(layer, true);
+      if (oldLayer) {
+        this.releaseLayerAfterFade(oldLayer);
+      }
     });
   },
 
-  onVideoError() {
+  onVideoError(event) {
+    const layer = event && event.currentTarget && event.currentTarget.dataset
+      ? event.currentTarget.dataset.layer
+      : this.pendingLayer;
     const list = this.videoCandidates || [];
     const nextIndex = (this.videoCandidateIndex || 0) + 1;
-    if (nextIndex < list.length) {
+
+    if (layer === this.pendingLayer && nextIndex < list.length) {
       this.videoCandidateIndex = nextIndex;
-      this.clearVideoReadyGuard();
-      this.setData({
-        currentVideo: list[nextIndex],
-        isSwitching: true
-      }, () => {
-        this.scheduleVideoReadyGuard();
-        this.playCurrentVideo();
+      this.prepareVideoLayer(layer, list[nextIndex], {
+        mode: this.pendingVideoMode,
+        loop: this.pendingVideoLoop,
+        direct: layer === this.data.activeLayer && !this.data[videoKey(otherLayer(layer))]
       });
       return;
     }
 
-    const mode = this.data.videoMode;
+    const mode = this.pendingVideoMode || this.data.videoMode;
+    const resetFailedLayer = layer && layer !== this.data.activeLayer
+      ? layerPatch(layer, { video: '', loop: false, muted: true })
+      : {};
+
     this.clearVideoReadyGuard();
-    this.setData({
+    this.pendingLayer = '';
+    this.setData(Object.assign({
       isSwitching: false
-    });
+    }, resetFailedLayer));
 
     if (mode === 'finish') {
       this.finishToDone();
@@ -188,7 +296,12 @@ Page({
     }
   },
 
-  onVideoEnded() {
+  onVideoEnded(event) {
+    const layer = event && event.currentTarget && event.currentTarget.dataset
+      ? event.currentTarget.dataset.layer
+      : this.data.activeLayer;
+    if (layer !== this.data.activeLayer) return;
+
     const mode = this.data.videoMode;
     if (mode === 'finish') {
       this.finishToDone();
@@ -199,15 +312,36 @@ Page({
     }
   },
 
-  playCurrentVideo() {
-    if (!this.data.currentVideo) return;
-    const context = wx.createVideoContext('callVideo', this);
+  playLayer(layer, restart = false) {
+    if (!this.data[videoKey(layer)]) return;
+    const context = wx.createVideoContext(`${layer}Video`, this);
+    if (restart) {
+      context.seek(0);
+    }
     context.play();
   },
 
-  stopCurrentVideo() {
-    const context = wx.createVideoContext('callVideo', this);
+  stopLayer(layer) {
+    const context = wx.createVideoContext(`${layer}Video`, this);
     context.stop();
+  },
+
+  releaseLayerAfterFade(layer) {
+    this.clearLayerReleaseTimer();
+    this.layerReleaseTimer = setTimeout(() => {
+      if (this.data.activeLayer === layer) return;
+      this.stopLayer(layer);
+      this.setData(layerPatch(layer, {
+        video: '',
+        loop: false,
+        muted: true
+      }));
+    }, VIDEO_FADE_MS);
+  },
+
+  stopCurrentVideo() {
+    this.stopLayer('front');
+    this.stopLayer('back');
   },
 
   playRingtone() {
@@ -284,20 +418,32 @@ Page({
   finishToDone() {
     this.stopTimer();
     this.clearVideoReadyGuard();
+    this.clearLayerReleaseTimer();
+    this.stopCurrentVideo();
+    this.pendingLayer = '';
     this.setData({
       stage: 'done',
       currentVideo: '',
+      frontVideo: '',
+      backVideo: '',
+      activeLayer: 'front',
+      frontLoop: false,
+      backLoop: false,
+      frontMuted: false,
+      backMuted: true,
       isLooping: false,
       isSwitching: false,
       videoMode: 'idle'
     });
   },
 
-  scheduleVideoReadyGuard() {
+  scheduleVideoReadyGuard(layer) {
     this.clearVideoReadyGuard();
     this.videoReadyGuard = setTimeout(() => {
-      this.onVideoReady();
-    }, 1200);
+      if (this.pendingLayer === layer) {
+        this.activatePendingVideo(layer);
+      }
+    }, 900);
   },
 
   clearVideoReadyGuard() {
@@ -306,18 +452,26 @@ Page({
     this.videoReadyGuard = null;
   },
 
+  clearLayerReleaseTimer() {
+    if (!this.layerReleaseTimer) return;
+    clearTimeout(this.layerReleaseTimer);
+    this.layerReleaseTimer = null;
+  },
+
   clearAllRuntime() {
     this.stopTimer();
     this.stopCallingTimer();
     this.stopRingtone();
     this.stopCurrentVideo();
-    this.clearFinishTimer();
+    this.clearConnectTimer();
     this.clearVideoReadyGuard();
+    this.clearLayerReleaseTimer();
     this.videoCandidates = [];
     this.videoCandidateIndex = 0;
+    this.pendingLayer = '';
   },
 
-  clearFinishTimer() {
+  clearConnectTimer() {
     if (this.connectTimer) {
       clearTimeout(this.connectTimer);
       this.connectTimer = null;
