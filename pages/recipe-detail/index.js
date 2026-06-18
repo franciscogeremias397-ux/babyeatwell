@@ -40,6 +40,7 @@ Page({
       canvasId: 'recipeCardCanvas',
       heightKey: 'cardCanvasHeight',
       recipe: item,
+      cardImage: media.recipeCardImage(item),
       image: this.data.image,
       metaText: `${item.ageMinMonths}-${item.ageMaxMonths} 月龄 · ${item.mealTypesText}`
     });

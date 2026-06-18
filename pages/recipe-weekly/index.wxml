@@ -49,7 +49,7 @@
 
     <view class="weekly-actions bottom-safe">
       <button class="secondary-button regenerate" hover-class="pressing" bindtap="generate">重新生成</button>
-      <button class="primary-button download-button" hover-class="pressing" bindtap="downloadWeekly">保存长图</button>
+      <button class="primary-button download-button" hover-class="pressing" bindtap="downloadWeekly">保存食谱</button>
     </view>
   </block>
   <canvas canvas-id="weeklyCardCanvas" class="save-canvas" style="width: 750px; height: {{weeklyCanvasHeight}}px;"></canvas>

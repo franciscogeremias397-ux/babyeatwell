@@ -1,5 +1,5 @@
 .weekly-page {
-  padding: calc(104rpx + env(safe-area-inset-top)) 30rpx calc(150rpx + env(safe-area-inset-bottom));
+  padding: calc(104rpx + env(safe-area-inset-top)) 30rpx calc(178rpx + env(safe-area-inset-bottom));
   background: #ffffff;
 }
 
@@ -167,20 +167,34 @@
 
 .weekly-actions {
   position: fixed;
-  right: 30rpx;
+  right: 0;
   bottom: 0;
-  left: 30rpx;
+  left: 0;
   z-index: 20;
-  display: grid;
-  grid-template-columns: 230rpx 1fr;
-  gap: 18rpx;
-  padding: 20rpx 0 30rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 32rpx;
+  padding: 18rpx 30rpx calc(36rpx + env(safe-area-inset-bottom));
   background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.95) 38%, #ffffff 100%);
 }
 
 .regenerate,
 .download-button {
-  min-height: 88rpx;
-  font-size: 30rpx;
+  flex: 0 0 auto;
+  height: 76rpx;
+  min-height: 76rpx;
+  font-size: 27rpx;
   font-weight: 900;
+  border-radius: 38rpx;
+  white-space: nowrap;
+}
+
+.regenerate {
+  width: 222rpx;
+}
+
+.download-button {
+  width: 252rpx;
+  box-shadow: 0 14rpx 24rpx rgba(83, 190, 112, 0.22);
 }

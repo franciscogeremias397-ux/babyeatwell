@@ -1,5 +1,5 @@
 .random-page {
-  padding: calc(112rpx + env(safe-area-inset-top)) 44rpx calc(156rpx + env(safe-area-inset-bottom));
+  padding: calc(112rpx + env(safe-area-inset-top)) 44rpx calc(184rpx + env(safe-area-inset-bottom));
   background: linear-gradient(180deg, #fff8ef 0%, #f8f6ef 54%, #eef8ff 100%);
 }
 
@@ -230,22 +230,36 @@
 
 .random-actions {
   position: fixed;
-  right: 44rpx;
+  right: 0;
   bottom: 0;
-  left: 44rpx;
+  left: 0;
   z-index: 20;
-  display: grid;
-  grid-template-columns: 220rpx 1fr;
-  gap: 18rpx;
-  padding: 20rpx 0 30rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 32rpx;
+  padding: 18rpx 44rpx calc(36rpx + env(safe-area-inset-bottom));
   background: linear-gradient(180deg, rgba(239, 248, 255, 0) 0%, rgba(239, 248, 255, 0.94) 42%, #eff8ff 100%);
 }
 
 .change-button,
 .download-button {
-  min-height: 88rpx;
-  font-size: 30rpx;
+  flex: 0 0 auto;
+  height: 76rpx;
+  min-height: 76rpx;
+  font-size: 27rpx;
   font-weight: 900;
+  border-radius: 38rpx;
+  white-space: nowrap;
+}
+
+.change-button {
+  width: 202rpx;
+}
+
+.download-button {
+  width: 256rpx;
+  box-shadow: 0 14rpx 24rpx rgba(83, 190, 112, 0.22);
 }
 
 @keyframes drawPulse {

@@ -4,6 +4,7 @@ const INK = '#173051';
 const MUTED = '#78928a';
 const GREEN = '#58b784';
 const BLUE = '#5d93d6';
+const FALLBACK_RECIPE_IMAGE = '/assets/recipes/default-meal.png';
 
 function wait(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));
@@ -157,7 +158,51 @@ function drawParagraphList(ctx, items, x, y, options = {}) {
   return cursorY;
 }
 
-function getImageInfo(src) {
+function isNetworkImage(src) {
+  return /^https?:\/\//.test(String(src || ''));
+}
+
+function isCloudImage(src) {
+  return /^cloud:\/\//.test(String(src || ''));
+}
+
+function downloadNetworkImage(src) {
+  return new Promise((resolve) => {
+    wx.downloadFile({
+      url: src,
+      success(res) {
+        if (res.statusCode >= 200 && res.statusCode < 300 && res.tempFilePath) {
+          resolve(res.tempFilePath);
+          return;
+        }
+        resolve('');
+      },
+      fail() {
+        resolve('');
+      }
+    });
+  });
+}
+
+function downloadCloudImage(fileID) {
+  return new Promise((resolve) => {
+    if (!wx.cloud || !wx.cloud.downloadFile) {
+      resolve('');
+      return;
+    }
+    wx.cloud.downloadFile({
+      fileID,
+      success(res) {
+        resolve(res.tempFilePath || '');
+      },
+      fail() {
+        resolve('');
+      }
+    });
+  });
+}
+
+function getLocalImageInfo(src) {
   return new Promise((resolve) => {
     if (!src) {
       resolve(null);
@@ -165,7 +210,12 @@ function getImageInfo(src) {
     }
     wx.getImageInfo({
       src,
-      success: resolve,
+      success(res) {
+        resolve(Object.assign({}, res, {
+          drawPath: src,
+          path: res.path || src
+        }));
+      },
       fail() {
         resolve(null);
       }
@@ -173,9 +223,67 @@ function getImageInfo(src) {
   });
 }
 
+async function getFirstImageInfo(paths) {
+  const candidates = [];
+  (paths || []).forEach((path) => {
+    const source = String(path || '').trim();
+    if (!source) return;
+    candidates.push(source);
+    if (source.indexOf('/') === 0) {
+      candidates.push(source.replace(/^\/+/, ''));
+    } else if (!isNetworkImage(source) && !isCloudImage(source)) {
+      candidates.push(`/${source}`);
+    }
+  });
+
+  for (let index = 0; index < candidates.length; index += 1) {
+    const image = await getLocalImageInfo(candidates[index]);
+    if (image && image.path) {
+      return image;
+    }
+  }
+  return null;
+}
+
+async function getImageInfo(src, fallbackSrc = FALLBACK_RECIPE_IMAGE) {
+  const source = String(src || '').trim();
+  let localPath = source;
+
+  if (isNetworkImage(source)) {
+    localPath = await downloadNetworkImage(source);
+  } else if (isCloudImage(source)) {
+    localPath = await downloadCloudImage(source);
+  }
+
+  let image = await getFirstImageInfo([localPath, source]);
+  if (image && image.path) {
+    return image;
+  }
+
+  if (fallbackSrc && fallbackSrc !== source) {
+    image = await getFirstImageInfo([fallbackSrc]);
+  }
+  return image;
+}
+
 function drawImageContain(ctx, image, x, y, width, height, radius) {
   fillRoundedRect(ctx, x, y, width, height, radius || 24, '#ffffff');
-  if (!image || !image.path) return;
+  if (!image || !image.path) {
+    fillRoundedRect(ctx, x + 54, y + 54, width - 108, height - 108, 36, '#fff8ef');
+    ctx.setFillStyle('#ffbe4f');
+    ctx.beginPath();
+    ctx.arc(x + width / 2, y + height / 2 - 18, 52, 0, Math.PI * 2);
+    ctx.fill();
+    drawText(ctx, '宝宝餐', x + width / 2, y + height / 2 + 82, {
+      fontSize: 28,
+      lineHeight: 34,
+      color: '#8a9a93',
+      align: 'center',
+      maxWidth: width - 120,
+      maxLines: 1
+    });
+    return;
+  }
 
   const imageWidth = image.width || width;
   const imageHeight = image.height || height;
@@ -185,11 +293,11 @@ function drawImageContain(ctx, image, x, y, width, height, radius) {
   const drawX = x + (width - drawWidth) / 2;
   const drawY = y + (height - drawHeight) / 2;
 
-  ctx.save();
-  roundedRect(ctx, x, y, width, height, radius || 24);
-  ctx.clip();
-  ctx.drawImage(image.path, drawX, drawY, drawWidth, drawHeight);
-  ctx.restore();
+  const paths = [image.drawPath, image.path].filter(Boolean);
+  const uniquePaths = paths.filter((path, index) => paths.indexOf(path) === index);
+  uniquePaths.forEach((path) => {
+    ctx.drawImage(path, drawX, drawY, drawWidth, drawHeight);
+  });
 }
 
 function recipeIngredients(recipe) {
@@ -401,7 +509,7 @@ async function saveRecipeCard(options) {
   try {
     await setCanvasHeight(page, heightKey, height);
     const ctx = wx.createCanvasContext(canvasId, page);
-    await drawRecipeCard(ctx, recipe, options.image, options.metaText || '', height);
+    await drawRecipeCard(ctx, recipe, options.cardImage || options.image, options.metaText || '', height);
     await drawCanvas(ctx);
     const filePath = await cardToTempFile(page, canvasId, height);
     wx.hideLoading();
@@ -452,7 +560,7 @@ async function drawWeeklyCard(ctx, options, height) {
   const allMeals = [];
   days.forEach((day) => {
     (day.meals || []).forEach((meal) => {
-      if (meal.image) allMeals.push(meal.image);
+      if (meal.cardImage || meal.image) allMeals.push(meal.cardImage || meal.image);
     });
   });
   const imageMap = {};
@@ -486,7 +594,8 @@ async function drawWeeklyCard(ctx, options, height) {
     const mealWidth = bodyWidth - 166;
     (day.meals || []).slice(0, 3).forEach((meal, mealIndex) => {
       const rowY = cardY + 22 + mealIndex * 66;
-      drawImageContain(ctx, imageMap[meal.image], mealX, rowY, 52, 52, 12);
+      const mealImage = meal.cardImage || meal.image;
+      drawImageContain(ctx, imageMap[mealImage], mealX, rowY, 52, 52, 12);
       drawText(ctx, meal.mealType || '', mealX + 68, rowY + 24, {
         fontSize: 21,
         lineHeight: 25,
@@ -524,7 +633,7 @@ async function saveWeeklyCard(options) {
   const height = estimateWeeklyHeight(days);
 
   wx.showLoading({
-    title: '正在生成长图',
+    title: '正在生成食谱',
     mask: true
   });
 

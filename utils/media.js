@@ -72,9 +72,16 @@ function recipeImage(recipe) {
   return resolveMedia(cloudKey, MEDIA_CONFIG.localRecipePlaceholder);
 }
 
+function recipeCardImage(recipe) {
+  const recipeId = recipe && recipe.id ? String(recipe.id) : '';
+  if (!recipeId) return MEDIA_CONFIG.localRecipePlaceholder;
+  return `/assets/recipe-card-thumbs/${recipeId}.jpg`;
+}
+
 module.exports = {
   MEDIA_CONFIG,
   mediaCandidates,
+  recipeCardImage,
   recipeImage,
   recipePlaceholder: MEDIA_CONFIG.localRecipePlaceholder,
   resolveMedia

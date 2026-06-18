@@ -27,6 +27,7 @@ function buildDisplayDays(days) {
       accent: DAY_COLORS[index % DAY_COLORS.length],
       meals: (day.meals || []).map((meal) => Object.assign({}, meal, {
         id: meal.recipe ? meal.recipe.id : '',
+        cardImage: media.recipeCardImage(meal.recipe),
         image: media.recipeImage(meal.recipe),
         name: meal.recipe ? meal.recipe.name : '暂无食谱',
         desc: meal.recipe ? `${meal.recipe.texture} · ${meal.recipe.mainStaple}` : ''
