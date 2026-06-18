@@ -1,4 +1,5 @@
 const recipe = require('../../utils/recipe');
+const share = require('../../utils/share');
 
 function formatDate(date) {
   const year = date.getFullYear();
@@ -24,6 +25,7 @@ Page({
   },
 
   onLoad() {
+    share.enableShareMenu();
     const profile = recipe.getProfile();
     this.setData({
       nickname: profile.nickname,
@@ -34,6 +36,10 @@ Page({
       allergyOptions: this.markOptions(recipe.getCommonAllergyTags(), profile.allergyTags),
       avoidOptions: this.markOptions(recipe.getCommonAvoidTags(), profile.avoidTags)
     });
+  },
+
+  onShareAppMessage() {
+    return share.recipeHomeAppMessage();
   },
 
   goBack() {

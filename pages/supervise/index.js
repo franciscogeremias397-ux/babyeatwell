@@ -1,4 +1,5 @@
 const assets = require('./assets');
+const share = require('../../utils/share');
 
 const VIDEO_FADE_MS = 220;
 
@@ -48,6 +49,20 @@ Page({
     isSwitching: false,
     callStatusText: '通话中',
     videoMode: 'idle'
+  },
+
+  onLoad() {
+    share.enableShareMenu({
+      timeline: true
+    });
+  },
+
+  onShareAppMessage() {
+    return share.superviseAppMessage();
+  },
+
+  onShareTimeline() {
+    return share.superviseTimeline();
   },
 
   onUnload() {

@@ -1,4 +1,5 @@
 const recipe = require('../../utils/recipe');
+const share = require('../../utils/share');
 
 Page({
   data: {
@@ -11,7 +12,18 @@ Page({
   },
 
   onShow() {
+    share.enableShareMenu({
+      timeline: true
+    });
     this.refresh();
+  },
+
+  onShareAppMessage() {
+    return share.recipeHomeAppMessage();
+  },
+
+  onShareTimeline() {
+    return share.recipeHomeTimeline();
   },
 
   refresh() {

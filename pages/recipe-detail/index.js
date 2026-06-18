@@ -1,6 +1,7 @@
 const recipeUtil = require('../../utils/recipe');
 const media = require('../../utils/media');
 const card = require('../../utils/card');
+const share = require('../../utils/share');
 
 Page({
   data: {
@@ -11,6 +12,9 @@ Page({
   },
 
   onLoad(query) {
+    share.enableShareMenu({
+      timeline: true
+    });
     const item = recipeUtil.findRecipe(query.id);
     if (!item) return;
     this.setData({
@@ -20,6 +24,16 @@ Page({
       ingredientChips: (item.ingredients || []).map((ingredient) => `${ingredient.name} ${ingredient.amount}${ingredient.unit}`),
       image: media.recipeImage(item)
     });
+  },
+
+  onShareAppMessage() {
+    const item = this.data.recipe;
+    return share.recipeDetailAppMessage(item && item.id);
+  },
+
+  onShareTimeline() {
+    const item = this.data.recipe;
+    return share.recipeDetailTimeline(item && item.id);
   },
 
   goBack() {

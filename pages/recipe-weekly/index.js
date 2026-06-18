@@ -1,6 +1,7 @@
 const recipe = require('../../utils/recipe');
 const media = require('../../utils/media');
 const card = require('../../utils/card');
+const share = require('../../utils/share');
 
 const DAY_COLORS = ['#64a8ff', '#81cf55', '#ff9a2e', '#ff7aa3', '#64a8ff', '#81cf55', '#ff9a2e'];
 
@@ -50,7 +51,12 @@ Page({
   },
 
   onLoad() {
+    share.enableShareMenu();
     this.generate();
+  },
+
+  onShareAppMessage() {
+    return share.recipeHomeAppMessage();
   },
 
   goBack() {

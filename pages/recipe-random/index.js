@@ -1,6 +1,7 @@
 const recipeUtil = require('../../utils/recipe');
 const media = require('../../utils/media');
 const card = require('../../utils/card');
+const share = require('../../utils/share');
 
 Page({
   data: {
@@ -21,7 +22,13 @@ Page({
   },
 
   onLoad() {
+    share.enableShareMenu();
     this.draw();
+  },
+
+  onShareAppMessage() {
+    const item = this.data.recipe;
+    return item ? share.recipeDetailAppMessage(item.id) : share.recipeHomeAppMessage();
   },
 
   onUnload() {
