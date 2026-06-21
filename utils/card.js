@@ -452,23 +452,131 @@ function saveImage(filePath) {
   });
 }
 
-function handleSaveFail(error, retry) {
-  const message = String(error && error.errMsg || '');
-  if (message.indexOf('auth') >= 0 || message.indexOf('authorize') >= 0 || message.indexOf('permission') >= 0) {
+function getSetting() {
+  return new Promise((resolve) => {
+    if (!wx.getSetting) {
+      resolve({});
+      return;
+    }
+    wx.getSetting({
+      success(res) {
+        resolve(res.authSetting || {});
+      },
+      fail() {
+        resolve({});
+      }
+    });
+  });
+}
+
+function authorizeAlbum() {
+  return new Promise((resolve, reject) => {
+    if (!wx.authorize) {
+      resolve();
+      return;
+    }
+    wx.authorize({
+      scope: 'scope.writePhotosAlbum',
+      success: resolve,
+      fail: reject
+    });
+  });
+}
+
+function openAlbumSetting() {
+  return new Promise((resolve, reject) => {
     wx.showModal({
       title: '需要相册权限',
       content: '请允许保存到相册，才能下载食谱图片。',
       confirmText: '去设置',
       success(res) {
-        if (!res.confirm) return;
+        if (!res.confirm) {
+          reject(new Error('user_cancel_album_setting'));
+          return;
+        }
         wx.openSetting({
           success(setting) {
             if (setting.authSetting && setting.authSetting['scope.writePhotosAlbum']) {
-              retry();
+              resolve();
+              return;
             }
-          }
+            reject(new Error('album_permission_denied'));
+          },
+          fail: reject
         });
+      },
+      fail: reject
+    });
+  });
+}
+
+async function ensureAlbumPermission() {
+  const authSetting = await getSetting();
+  if (authSetting['scope.writePhotosAlbum']) return;
+
+  if (authSetting['scope.writePhotosAlbum'] === false) {
+    await openAlbumSetting();
+    return;
+  }
+
+  try {
+    await authorizeAlbum();
+  } catch (error) {
+    await openAlbumSetting();
+  }
+}
+
+function requirePrivacyAuthorize() {
+  return new Promise((resolve, reject) => {
+    if (!wx.getPrivacySetting || !wx.requirePrivacyAuthorize) {
+      resolve();
+      return;
+    }
+
+    wx.getPrivacySetting({
+      success(res) {
+        if (!res.needAuthorization) {
+          resolve();
+          return;
+        }
+        wx.requirePrivacyAuthorize({
+          success: resolve,
+          fail: reject
+        });
+      },
+      fail() {
+        resolve();
       }
+    });
+  });
+}
+
+function isPrivacyError(message) {
+  return message.indexOf('privacy') >= 0 || message.indexOf('隐私') >= 0;
+}
+
+function isAlbumAuthError(message) {
+  return message.indexOf('auth') >= 0 || message.indexOf('authorize') >= 0 || message.indexOf('permission') >= 0 || message.indexOf('deny') >= 0;
+}
+
+function handleSaveFail(error, retry) {
+  const message = String(error && error.errMsg || '');
+  if (isPrivacyError(message)) {
+    requirePrivacyAuthorize().then(retry).catch(() => {
+      wx.showToast({
+        title: '请同意隐私授权后再保存',
+        icon: 'none'
+      });
+    });
+    return;
+  }
+
+  if (isAlbumAuthError(message)) {
+    openAlbumSetting().then(retry).catch(() => {
+      wx.showToast({
+        title: '请允许保存到相册',
+        icon: 'none'
+      });
     });
     return;
   }
@@ -481,6 +589,8 @@ function handleSaveFail(error, retry) {
 
 async function saveFileToAlbum(filePath) {
   try {
+    await requirePrivacyAuthorize();
+    await ensureAlbumPermission();
     await saveImage(filePath);
     wx.showToast({
       title: '已保存到相册'
