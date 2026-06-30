@@ -2,6 +2,7 @@ const recipeUtil = require('../../utils/recipe');
 const media = require('../../utils/media');
 const card = require('../../utils/card');
 const share = require('../../utils/share');
+const rewardedAd = require('../../utils/rewarded-ad');
 
 Page({
   data: {
@@ -15,6 +16,7 @@ Page({
     share.enableShareMenu({
       timeline: true
     });
+    rewardedAd.preloadRecipeSaveAd();
     const item = recipeUtil.findRecipe(query.id);
     if (!item) return;
     this.setData({
@@ -46,9 +48,13 @@ Page({
     });
   },
 
-  downloadRecipe() {
+  async downloadRecipe() {
     const item = this.data.recipe;
     if (!item) return;
+    const canSaveAlbum = await card.prepareSaveToAlbum();
+    if (!canSaveAlbum) return;
+    const canSave = await rewardedAd.requestRecipeSaveReward();
+    if (!canSave) return;
     card.saveRecipeCard({
       page: this,
       canvasId: 'recipeCardCanvas',

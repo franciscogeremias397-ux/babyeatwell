@@ -19,6 +19,7 @@ id_ed25519
 project.private.config.json
 sessions/
 preview-*.png
+preview-*.jpg
 preview-*.json
 upload-*.json
 random-draw-preview.gif

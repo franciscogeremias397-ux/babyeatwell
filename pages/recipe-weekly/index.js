@@ -2,6 +2,7 @@ const recipe = require('../../utils/recipe');
 const media = require('../../utils/media');
 const card = require('../../utils/card');
 const share = require('../../utils/share');
+const rewardedAd = require('../../utils/rewarded-ad');
 
 const DAY_COLORS = ['#64a8ff', '#81cf55', '#ff9a2e', '#ff7aa3', '#64a8ff', '#81cf55', '#ff9a2e'];
 
@@ -52,6 +53,7 @@ Page({
 
   onLoad() {
     share.enableShareMenu();
+    rewardedAd.preloadRecipeSaveAd();
     this.generate();
   },
 
@@ -95,8 +97,12 @@ Page({
     });
   },
 
-  downloadWeekly() {
+  async downloadWeekly() {
     if (!this.data.displayDays.length) return;
+    const canSaveAlbum = await card.prepareSaveToAlbum();
+    if (!canSaveAlbum) return;
+    const canSave = await rewardedAd.requestRecipeSaveReward();
+    if (!canSave) return;
     card.saveWeeklyCard({
       page: this,
       canvasId: 'weeklyCardCanvas',

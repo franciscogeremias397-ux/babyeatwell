@@ -587,6 +587,21 @@ function handleSaveFail(error, retry) {
   });
 }
 
+async function prepareSaveToAlbum() {
+  try {
+    await requirePrivacyAuthorize();
+    await ensureAlbumPermission();
+    return true;
+  } catch (error) {
+    const message = String(error && error.errMsg || error && error.message || '');
+    wx.showToast({
+      title: isPrivacyError(message) ? '请同意隐私授权后再保存' : '请允许保存到相册',
+      icon: 'none'
+    });
+    return false;
+  }
+}
+
 async function saveFileToAlbum(filePath) {
   try {
     await requirePrivacyAuthorize();
@@ -765,6 +780,7 @@ async function saveWeeklyCard(options) {
 }
 
 module.exports = {
+  prepareSaveToAlbum,
   saveRecipeCard,
   saveWeeklyCard
 };
