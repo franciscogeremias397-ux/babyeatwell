@@ -13,28 +13,6 @@ function showToast(title) {
   });
 }
 
-function showConfirm(options = {}) {
-  return new Promise((resolve) => {
-    if (!wx.showModal) {
-      resolve(true);
-      return;
-    }
-
-    wx.showModal({
-      title: options.title || '保存食谱',
-      content: options.content || '看完视频后保存食谱到相册',
-      confirmText: options.confirmText || '去观看',
-      cancelText: options.cancelText || '取消',
-      success(res) {
-        resolve(!!res.confirm);
-      },
-      fail() {
-        resolve(true);
-      }
-    });
-  });
-}
-
 function canUseRewardedAd() {
   return typeof wx !== 'undefined' && !!wx.createRewardedVideoAd;
 }
@@ -59,8 +37,8 @@ function bindEvents(ad) {
   ad.onError(() => {
     if (!pendingResolve) return;
     finish({
-      completed: true,
-      fallback: true
+      completed: false,
+      unavailable: true
     });
   });
 }
@@ -86,8 +64,8 @@ function playVideoAd() {
   const ad = getVideoAd();
   if (!ad) {
     return Promise.resolve({
-      completed: true,
-      fallback: true
+      completed: false,
+      unavailable: true
     });
   }
 
@@ -101,8 +79,8 @@ function playVideoAd() {
       .then(() => ad.show())
       .catch(() => {
         finish({
-          completed: true,
-          fallback: true
+          completed: false,
+          unavailable: true
         });
       });
   });
@@ -111,9 +89,6 @@ function playVideoAd() {
 }
 
 async function requestRecipeSaveReward() {
-  const confirmed = await showConfirm();
-  if (!confirmed) return false;
-
   if (isShowing) {
     showToast('广告正在准备，请稍等');
     return false;
@@ -121,8 +96,12 @@ async function requestRecipeSaveReward() {
 
   const result = await playVideoAd();
   if (result.completed) {
-    if (result.fallback) showToast('广告暂不可用，正在保存');
     return true;
+  }
+
+  if (result.unavailable) {
+    showToast('广告暂不可用，请稍后再试');
+    return false;
   }
 
   showToast('看完视频后才能保存哦');

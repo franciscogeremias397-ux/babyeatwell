@@ -51,8 +51,6 @@ Page({
   async downloadRecipe() {
     const item = this.data.recipe;
     if (!item) return;
-    const canSaveAlbum = await card.prepareSaveToAlbum();
-    if (!canSaveAlbum) return;
     const canSave = await rewardedAd.requestRecipeSaveReward();
     if (!canSave) return;
     card.saveRecipeCard({

@@ -47,6 +47,10 @@
         "type": "glob"
       },
       {
+        "value": "preview-*.jpg",
+        "type": "glob"
+      },
+      {
         "value": "preview-*.json",
         "type": "glob"
       },

@@ -161,8 +161,6 @@ Page({
 
   async downloadRecipe() {
     if (!this.data.recipe) return;
-    const canSaveAlbum = await card.prepareSaveToAlbum();
-    if (!canSaveAlbum) return;
     const canSave = await rewardedAd.requestRecipeSaveReward();
     if (!canSave) return;
     const item = this.data.recipe;

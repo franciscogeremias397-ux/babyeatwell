@@ -99,8 +99,6 @@ Page({
 
   async downloadWeekly() {
     if (!this.data.displayDays.length) return;
-    const canSaveAlbum = await card.prepareSaveToAlbum();
-    if (!canSaveAlbum) return;
     const canSave = await rewardedAd.requestRecipeSaveReward();
     if (!canSave) return;
     card.saveWeeklyCard({
